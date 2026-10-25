@@ -20,5 +20,9 @@
     "POSIX",
     "Windows backslashes",
     "Windows forward slashes"
-  ]
+  ],
+  "solid_zstd_archive_files_verified": 1206,
+  "solid_zstd_archive_bytes": 1661035938,
+  "zstd_pack_restore_roundtrip": "passed",
+  "restore_refuses_existing_different_files": true
 }

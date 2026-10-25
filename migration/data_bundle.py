@@ -1,6 +1,7 @@
 """Pack or restore persisted runs/output with exact, portable SHA-256 checks."""
 from pathlib import Path
 import argparse, hashlib, json, os, shutil, tarfile
+from contextlib import contextmanager
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'migration/data_manifest.json'
 
@@ -13,24 +14,28 @@ def sha(path):
 def pack(folder):
     folder.mkdir(parents=True,exist_ok=True)
     paths=sorted(p for name in ['runs','output'] for p in (ROOT/name).rglob('*') if p.is_file() and p.name!='.DS_Store')
-    files={};groups=[];group=[];size=0
-    for p in paths:
-        assert not p.is_symlink(),p
-        n=p.stat().st_size
-        if group and size+n>450*1024**2:groups.append(group);group=[];size=0
-        group.append(p);size+=n
-        files[p.relative_to(ROOT).as_posix()]={'bytes':n,'sha256':sha(p)}
-    if group:groups.append(group)
-    archives=[]
-    for i,group in enumerate(groups,1):
-        path=folder/f'persisted-data-{i:03d}.tar.gz'
-        with tarfile.open(path,'w:gz',compresslevel=1) as tar:
-            for p in group:tar.add(p,arcname=p.relative_to(ROOT).as_posix(),recursive=False)
-        archives.append({'name':path.name,'bytes':path.stat().st_size,'sha256':sha(path),'files':len(group)})
-        print(f'{i}/{len(groups)} {path.name}: {path.stat().st_size/1024**2:.1f} MiB',flush=True)
+    import zstandard
+    files={p.relative_to(ROOT).as_posix():{'bytes':p.stat().st_size,'sha256':sha(p)} for p in paths}
+    path=folder/'persisted-data.tar.zst'
+    params=zstandard.ZstdCompressionParameters.from_level(10,window_log=30,threads=4)
+    with path.open('wb') as raw,zstandard.ZstdCompressor(compression_params=params).stream_writer(raw) as writer:
+        with tarfile.open(fileobj=writer,mode='w|') as tar:
+            for p in paths:
+                assert not p.is_symlink(),p
+                tar.add(p,arcname=p.relative_to(ROOT).as_posix(),recursive=False)
+    archives=[{'name':path.name,'bytes':path.stat().st_size,'sha256':sha(path),'files':len(files)}]
     result={'release_tag':'migration-data-20261025','repository':'Nuseche/tesis-aerogenerador-matlab-tecplot','archives':archives,'files':files}
     MANIFEST.write_text(json.dumps(result,indent=2)+'\n')
     print(f'{len(files)} files preserved; manifest saved.',flush=True)
+
+@contextmanager
+def open_archive(path):
+    if path.name.endswith('.zst'):
+        import zstandard
+        with path.open('rb') as raw,zstandard.ZstdDecompressor(max_window_size=2**31).stream_reader(raw) as stream:
+            with tarfile.open(fileobj=stream,mode='r|') as tar:yield tar
+    else:
+        with tarfile.open(path,'r:gz') as tar:yield tar
 
 def restore(folder):
     manifest=json.loads(MANIFEST.read_text())
@@ -43,7 +48,7 @@ def restore(folder):
         if dest.exists() and sha(dest)!=record['sha256']:raise ValueError('Existing different file; restore into a clean clone: '+name)
     seen=set()
     for a in manifest['archives']:
-        with tarfile.open(folder/a['name'],'r:gz') as tar:
+        with open_archive(folder/a['name']) as tar:
             for member in tar:
                 if not member.isfile() or member.name not in manifest['files']:raise ValueError('Unexpected archive member: '+member.name)
                 name=member.name;record=manifest['files'][name];dest=(ROOT/name).resolve()

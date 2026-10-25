@@ -3,76 +3,10 @@
   "repository": "Nuseche/tesis-aerogenerador-matlab-tecplot",
   "archives": [
     {
-      "name": "persisted-data-001.tar.gz",
-      "bytes": 278774405,
-      "sha256": "9114ff3388dc3461636fd7a395e97e2d6a52028605d5aa0be17526c4b03e5dc0",
-      "files": 444
-    },
-    {
-      "name": "persisted-data-002.tar.gz",
-      "bytes": 271991762,
-      "sha256": "fed1de0dfa18a7845a32954b60042d33eb6ed0d4c59a328f3727701e86a02850",
-      "files": 16
-    },
-    {
-      "name": "persisted-data-003.tar.gz",
-      "bytes": 318897208,
-      "sha256": "bc9c4dfb2c97216483071cc44587abab743eb613ca229bf6b505c9ce9f2926a6",
-      "files": 17
-    },
-    {
-      "name": "persisted-data-004.tar.gz",
-      "bytes": 291459268,
-      "sha256": "db43f03da6ec49e1dace5c9b0507e1a56c641c56221f6ef275ef92b5146b8a6e",
-      "files": 29
-    },
-    {
-      "name": "persisted-data-005.tar.gz",
-      "bytes": 317421424,
-      "sha256": "685d99741d47597458f49049191bf66dc88fc12b3fd27478d819ff2a6c7ea08c",
-      "files": 21
-    },
-    {
-      "name": "persisted-data-006.tar.gz",
-      "bytes": 433208639,
-      "sha256": "6db40851646ecfdd8f596fa7a4589017543da9fd8f7f9fabdba908a730d61e42",
-      "files": 49
-    },
-    {
-      "name": "persisted-data-007.tar.gz",
-      "bytes": 308119803,
-      "sha256": "c904ab5b74327c591e920a5b5de7de213c9a1fd752cc26104f62fa2cf180bcf3",
-      "files": 14
-    },
-    {
-      "name": "persisted-data-008.tar.gz",
-      "bytes": 434788859,
-      "sha256": "f548731c6279b9af1c1de552dc6d365e61c0d7c9325d836b1904431a159493fb",
-      "files": 81
-    },
-    {
-      "name": "persisted-data-009.tar.gz",
-      "bytes": 385516074,
-      "sha256": "b4524114952da8d7e9c7dcb2e448492da46a6e56dd44412dedb2f29ef03ae529",
-      "files": 195
-    },
-    {
-      "name": "persisted-data-010.tar.gz",
-      "bytes": 388789162,
-      "sha256": "d3cfc1286d9af860640c9ca4499ddef6f8176fe75519c553060e0865914485d4",
-      "files": 96
-    },
-    {
-      "name": "persisted-data-011.tar.gz",
-      "bytes": 411913652,
-      "sha256": "9d3a8a08750075a3c341852c39fc70a672768c778a2b5222f4e95610011567fd",
-      "files": 104
-    },
-    {
-      "name": "persisted-data-012.tar.gz",
-      "bytes": 423834759,
-      "sha256": "6a676fa6f9d2c639a25ddae6554b1bcb3ccd254da0bf773d2bbfb8bad12573d9",
-      "files": 140
+      "name": "persisted-data.tar.zst",
+      "bytes": 1661035938,
+      "sha256": "eb9844e02478a2e0f9c1ed99adea172125a043194aaae2dda380d59a25896a92",
+      "files": 1206
     }
   ],
   "files": {
@@ -4900,5 +4834,6 @@
       "bytes": 3532929,
       "sha256": "da8d36ccdaf8d3ba2671396c692446417225e12e1e7ad5785a14a7e0e5913593"
     }
-  }
+  },
+  "format": "tar.zst"
 }

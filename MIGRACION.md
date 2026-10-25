@@ -89,16 +89,18 @@ La ejecución nativa con la licencia completa queda por comprobar en el destino.
 
 ## Restaurar todas las corridas y salidas guardadas
 
-Con GitHub CLI autenticado, desde la raíz del clon:
+La restauración histórica es opcional para MATLAB y para `--export-only`.
+La release se publica al terminar y verificar su carga; esperar a que aparezca
+`persisted-data.tar.zst` antes de descargar. Con GitHub CLI autenticado, desde la raíz del clon:
 
 ```sh
-gh release download migration-data-20261025 --repo Nuseche/tesis-aerogenerador-matlab-tecplot --pattern 'persisted-data-*.tar.gz' --dir .migration-cache
+gh release download migration-data-20261025 --repo Nuseche/tesis-aerogenerador-matlab-tecplot --pattern 'persisted-data.tar.zst' --dir .migration-cache
 python migration/data_bundle.py restore --asset-dir .migration-cache
 python migration/preflight.py
 ```
 
-También pueden descargarse los mismos archivos desde la release y pasarse su
-carpeta a `--asset-dir`. Reservar espacio para los paquetes y unos 5 GB adicionales
+También puede descargarse el mismo archivo desde la release y pasarse su
+carpeta a `--asset-dir`. Reservar espacio para el paquete (aproximadamente 1,55 GB) y unos 5 GB adicionales
 para los datos extraídos. La restauración verifica hashes, impide rutas fuera del
 clon y rechaza archivos existentes diferentes: usar un clon limpio si ya hay
 corridas locales. No elimina ni modifica resultados diferentes para hacerlos coincidir.

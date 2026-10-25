@@ -16,3 +16,4 @@ reportlab==4.5.1
 scipy==1.18.1
 six==1.17.0
 tzdata==2026.5
+zstandard==0.25.0
