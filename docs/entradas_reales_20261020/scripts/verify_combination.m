@@ -1,5 +1,5 @@
 % Independent direct combined-load check using the EXISTING seismic API.
-root='/Users/nuseche/Desktop/Tesis_codigos';addpath(root);addpath(fullfile(root,'cases'));
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));addpath(root);addpath(fullfile(root,'cases'));
 docs=fullfile(root,'docs/entradas_reales_20261020');folder=fullfile(root,'runs/sensitivity/real_inputs_20261020');
 s=jsondecode(fileread(fullfile(docs,'analysis_summary.json')));Fref=s.referenceMeanThrustKN;
 study=sensitivity.config_local();cfg=study.nominal;data=io.load_model_data(cfg);

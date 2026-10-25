@@ -1,0 +1,9 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/4j5brv","index":21,"layout":{"id":"ly/gr2lsral","name":"Blank"},"backgroundColor":"rgba(255,255,255,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/1cnyh836","kind":"textbox","position":{"left":64,"top":36,"width":1152,"height":88},"text":"Decisiones para la siguiente etapa","style":{"fontSize":44,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/e9wfmdkf","kind":"textbox","position":{"left":1195,"top":678,"width":40,"height":26},"text":"22","style":{"fontSize":18,"typeface":"Arial","color":"#777777","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/fa5gfil0","kind":"textbox","position":{"left":72,"top":158,"width":1110,"height":93},"text":"Justificar rangos físicos con fuentes o mediciones","style":{"fontSize":33,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/snuxk329","kind":"textbox","position":{"left":72,"top":269,"width":1110,"height":93},"text":"Verificar frecuencias y sensibilidades con refinamiento en operación","style":{"fontSize":33,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/t83yd83u","kind":"textbox","position":{"left":72,"top":380,"width":1110,"height":93},"text":"Contrastar varias respuestas para identificar masa y rigidez","style":{"fontSize":33,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/6lcfit4j","kind":"textbox","position":{"left":72,"top":491,"width":1110,"height":93},"text":"Acordar el alcance de las afirmaciones sobre estabilidad","style":{"fontSize":33,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0}
+]}

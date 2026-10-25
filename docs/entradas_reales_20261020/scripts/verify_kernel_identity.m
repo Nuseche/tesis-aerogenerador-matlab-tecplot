@@ -1,4 +1,4 @@
-root='/Users/nuseche/Desktop/Tesis_codigos';addpath(root);addpath(fullfile(root,'cases'));
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));addpath(root);addpath(fullfile(root,'cases'));
 docs=fullfile(root,'docs/entradas_reales_20261020');addpath(fullfile(docs,'scripts'));
 cfg=config_action08_mbc_qep_campbell();data=io.load_model_data(cfg);md=model.build_model(data,cfg);
 rng(6720,'twister');n=md.dofs.number;states=[zeros(n,1),1e-5*randn(n,1),1e-4*randn(n,1)];

@@ -3,11 +3,13 @@ from pathlib import Path
 import csv, hashlib, json, math, subprocess, os
 import numpy as np
 import re
+import shutil
 
 HERE = Path(__file__).resolve().parents[1]
 ROOT = HERE.parents[1]
-THESIS = Path('/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929')
-TEC = Path(os.environ.get('TESIS_TECPLOT', '/Applications/Tecplot 360 EX 2025 R2/Tecplot 360 EX 2025 R2.app/Contents/MacOS/Tecplot 360 EX 2025 R2'))
+THESIS = Path(os.environ.get('TESIS_DOCUMENTS', str(ROOT/'docs/tesis_cinematica_20260929')))
+TEC = Path(os.environ.get('TESIS_TECPLOT') or shutil.which('tec360') or shutil.which('tec360.exe') or '/Applications/Tecplot 360 EX 2025 R2/Tecplot 360 EX 2025 R2.app/Contents/MacOS/Tecplot 360 EX 2025 R2')
+GHOSTSCRIPT = os.environ.get('TESIS_GHOSTSCRIPT') or shutil.which('gs') or shutil.which('gswin64c') or 'gs'
 for d in ['data','macros','layouts','figures','logs','qa','reports','archive','packages']:
     (HERE/d).mkdir(exist_ok=True)
 COLORS = ['CUSTOM1','CUSTOM2','CUSTOM3','CUSTOM4','CUSTOM5','CUSTOM6','CUSTOM7','CUSTOM8']
@@ -152,6 +154,8 @@ def write_figure(fig):
     return dict(id=name,purpose=fig.title,representation=fig.kind,sources=[str(x) for x in fig.source],documents=fig.document,units=dict(x=fig.xlabel,y=fig.ylabel),configuration=dict(bounds=bounds,logx=fig.logx,logy=fig.logy,**fig.config),dataset=f'data/{name}.dat',macro=f'macros/{name}.mcr',layout=f'layouts/{name}.lay',package=f'layouts/{name}.lpk',exports=[f'figures/{name}.{e}' for e in ['eps','pdf','png']],notes=fig.notes,generator='Tecplot 360 EX 2025 R2, official batch macros; EPS to PDF by Ghostscript without scientific redraw')
 
 def run_macro(path):
+    if not TEC.is_file():
+        raise FileNotFoundError('Set TESIS_TECPLOT to the licensed Tecplot executable: '+str(TEC))
     for ext in ['png','eps','pdf']:
         (HERE/'figures'/f'{Path(path).stem}.{ext}').unlink(missing_ok=True)
     p=subprocess.run([str(TEC),'-b','-quiet',str(path)],cwd=HERE/'logs',capture_output=True,text=True,timeout=180)
@@ -180,7 +184,7 @@ def eps_pdf(name):
         ref=writer._add_object(pixels.flate_encode());page[NameObject('/Resources')]=DictionaryObject({NameObject('/XObject'):DictionaryObject({NameObject('/Im0'):ref})})
         stream=DecodedStreamObject();stream.set_data(f'q {w} 0 0 {h} 0 0 cm /Im0 Do Q'.encode());page[NameObject('/Contents')]=writer._add_object(stream.flate_encode());writer.write(dst)
         return dst
-    subprocess.run(['gs','-q','-dSAFER','-dBATCH','-dNOPAUSE','-sDEVICE=pdfwrite','-dEPSCrop','-dEmbedAllFonts=true','-dCompatibilityLevel=1.5',f'-sOutputFile={dst}',str(src)],check=True,capture_output=True)
+    subprocess.run([GHOSTSCRIPT,'-q','-dSAFER','-dBATCH','-dNOPAUSE','-sDEVICE=pdfwrite','-dEPSCrop','-dEmbedAllFonts=true','-dCompatibilityLevel=1.5',f'-sOutputFile={dst}',str(src)],check=True,capture_output=True)
     # Tecplot's PostScript sets PageSize after Ghostscript processes EPSCrop.
     # Preserve the vector drawing and use the native EPS bounding box as the
     # PDF page boundary; otherwise LaTeX scales a full Letter sheet instead.

@@ -1,5 +1,5 @@
 % Scientific figures using the authorized existing monochrome style.
-root='/Users/nuseche/Desktop/Tesis_codigos';docs=fullfile(root,'docs/entradas_reales_20261020');
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));docs=fullfile(root,'docs/entradas_reales_20261020');
 folder=fullfile(root,'runs/sensitivity/real_inputs_20261020');figs=fullfile(docs,'figures');
 s=jsondecode(fileread(fullfile(docs,'analysis_summary.json')));
 set(groot,'DefaultFigureVisible','off','DefaultAxesFontName','Arial','DefaultTextFontName','Arial', ...

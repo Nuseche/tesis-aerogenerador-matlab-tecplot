@@ -3,7 +3,7 @@ from pathlib import Path
 import csv, hashlib, itertools, json, math
 import numpy as np
 
-ROOT = Path('/Users/nuseche/Desktop/Tesis_codigos')
+ROOT = Path(__file__).resolve().parents[3]
 DOCS = ROOT/'docs/sensibilidad_complementaria_20261014'
 RUNS = ROOT/'runs/sensitivity/grid_completion_20261014'
 OLD = ROOT/'runs/sensitivity/morris_20261006'

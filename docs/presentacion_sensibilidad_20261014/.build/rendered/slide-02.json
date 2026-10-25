@@ -1,0 +1,9 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/485zln","index":1,"layout":{"id":"ly/gr2lsral","name":"Blank"},"backgroundColor":"rgba(255,255,255,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/tsjqp4ra","kind":"textbox","position":{"left":64,"top":36,"width":1152,"height":88},"text":"Pregunta y alcance del estudio","style":{"fontSize":44,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/6ps7epsj","kind":"textbox","position":{"left":1195,"top":678,"width":40,"height":26},"text":"02","style":{"fontSize":18,"typeface":"Arial","color":"#777777","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"im/614jid4b","kind":"image","position":{"left":55,"top":144,"width":605,"height":475},"fit":"contain","alt":"Modelo del aerogenerador generado en Tecplot"},
+{"id":"sh/knqpcfat","kind":"textbox","position":{"left":690,"top":166,"width":510,"height":134},"text":"Influencia de masa/inercia, rigidez de palas y velocidad del rotor","style":{"fontSize":34,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/lojqlkbe","kind":"textbox","position":{"left":690,"top":330,"width":510,"height":122},"text":"Cada escenario recalcula el equilibrio y las propiedades modales","style":{"fontSize":32,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/yl87apsn","kind":"textbox","position":{"left":690,"top":489,"width":510,"height":112},"text":"Giro prescrito, azimut congelado y espectro parcial","style":{"fontSize":30,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0}
+]}

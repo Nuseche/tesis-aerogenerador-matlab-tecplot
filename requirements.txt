@@ -1,0 +1,10 @@
+# Portable Python 3.11+ dependencies. Proprietary applications are separate.
+# No local file:// paths or Codex-specific runtime packages.
+numpy>=1.26,<3
+scipy>=1.11,<2
+h5py>=3.9,<4
+hdf5storage>=0.2,<0.3
+Pillow>=10,<13
+pypdf>=5,<7
+matplotlib>=3.8,<4
+reportlab>=4,<5

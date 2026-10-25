@@ -4,6 +4,11 @@ Este directorio contiene el reemplazo modular del modelo heredado. El punto de
 entrada es `main.m`; las fuentes originales permanecen en `Codigos_sergio/` y
 su copia congelada y verificable se conserva en `legacy/`.
 
+## Migración y repositorio
+
+Para clonar el proyecto, preparar MATLAB/Python/Tecplot y restaurar todas las
+corridas guardadas, seguir [MIGRACION.md](MIGRACION.md). El repositorio es privado.
+
 ## Ejecución
 
 Se requiere MATLAB R2026a o una versión compatible con paquetes, `eigs`,

@@ -1,6 +1,6 @@
 % Complete only missing points of the previously approved four-level domain.
 % Existing physical and sensitivity functions remain unchanged.
-root='/Users/nuseche/Desktop/Tesis_codigos';addpath(root);addpath(fullfile(root,'cases'));
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));addpath(root);addpath(fullfile(root,'cases'));
 oldFolder=fullfile(root,'runs/sensitivity/morris_20261006');
 newFolder=fullfile(root,'runs/sensitivity/grid_completion_20261014');
 docs=fullfile(root,'docs/sensibilidad_complementaria_20261014');

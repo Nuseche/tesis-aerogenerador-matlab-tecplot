@@ -1,0 +1,7 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/5igttq","index":8,"layout":{"id":"ly/8z2hcrml","name":"Blank"},"backgroundColor":"rgba(255,255,255,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/o3qd4jil","kind":"textbox","position":{"left":64,"top":34,"width":1152,"height":100},"text":"Sensibilidad según la entrada","style":{"fontSize":42,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/32hwvehg","kind":"textbox","position":{"left":1195,"top":680,"width":45,"height":24},"text":"09","style":{"fontSize":18,"typeface":"Arial","color":"#777777","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"im/n69gbm10","kind":"image","position":{"left":64,"top":140,"width":1152,"height":465},"fit":"contain","alt":"sensibilidad_refinada"},
+{"id":"sh/10zet4za","kind":"textbox","position":{"left":70,"top":618,"width":1120,"height":58},"text":"Símbolos llenos: filtros numéricos superados; símbolos vacíos: sensibilidad no aceptada","style":{"fontSize":24,"typeface":"Arial","color":"#444444","alignment":"left"},"geometry":"rect","lineWidth":0}
+]}

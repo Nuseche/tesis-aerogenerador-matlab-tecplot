@@ -2,7 +2,7 @@ function output=real_seismic_case(csvFile,factors,dt,chunkSize)
 % Same operating-point physics as sensitivity.evaluate_case; bounded memory.
 % Existing Newmark, influence and physical snapshot recovery are reused.
 if nargin<4,chunkSize=500;end
-root='/Users/nuseche/Desktop/Tesis_codigos';addpath(root);addpath(fullfile(root,'cases'));
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));addpath(root);addpath(fullfile(root,'cases'));
 started=tic;study=sensitivity.config_local();cfg=study.nominal;
 raw=readmatrix(csvFile);
 cfg.seismic=struct('record',struct('t',raw(:,1),'acceleration',raw(:,2), ...

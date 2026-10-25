@@ -1,0 +1,7 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/d3lokd","index":16,"layout":{"id":"ly/gr2lsral","name":"Blank"},"backgroundColor":"rgba(255,255,255,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/n2p03m1g","kind":"textbox","position":{"left":64,"top":36,"width":1152,"height":88},"text":"Compensación parcial entre masa y rigidez","style":{"fontSize":44,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/o3y1w721","kind":"textbox","position":{"left":1195,"top":678,"width":40,"height":26},"text":"17","style":{"fontSize":18,"typeface":"Arial","color":"#777777","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"im/kfq50fe5","kind":"image","position":{"left":64,"top":137,"width":1152,"height":476},"fit":"contain","alt":"compensacion_rejilla"},
+{"id":"sh/exwjqxkz","kind":"textbox","position":{"left":68,"top":631,"width":1120,"height":46},"text":"Variación diagonal: 0.40–0.42 % de f₀ entre factores iguales 0.90 y 1.10","style":{"fontSize":24,"typeface":"Arial","color":"#444444","alignment":"left"},"geometry":"rect","lineWidth":0}
+]}

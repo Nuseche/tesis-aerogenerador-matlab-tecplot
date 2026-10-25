@@ -8,9 +8,9 @@ import zipfile
 from PIL import Image, ImageChops
 from pypdf import PdfReader
 
-ROOT=Path('/Users/nuseche/Desktop/Tesis_codigos')
+ROOT=Path(__file__).resolve().parents[3]
 DOCS=ROOT/'docs/entradas_reales_20261020'
-DECK=Path('/Users/nuseche/Documents/ChatGPT/Tesis/output/presentacion_comparativa_20261020')
+DECK=ROOT/'docs/presentacion_comparativa_20261020'
 PPTX=DECK/'entrega/Resultados_comparativos_20261020.pptx'
 TEX=ROOT/'docs/sensibilidad_morris_20261006/SECCION_MORRIS_REVISION.tex'
 PDF=TEX.with_suffix('.pdf')

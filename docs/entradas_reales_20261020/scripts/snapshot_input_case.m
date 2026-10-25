@@ -7,7 +7,7 @@ if nargin<6,durationLimit=Inf;end
 if nargin<7,excitationDirection=2;end
 if nargin<8,derivativeScale=1;end
 assert(ismember(excitationDirection,[1 2]),'Only explicit horizontal X or Y scenarios');
-root='/Users/nuseche/Desktop/Tesis_codigos';addpath(root);addpath(fullfile(root,'cases'));
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));addpath(root);addpath(fullfile(root,'cases'));
 started=tic;study=sensitivity.config_local();cfg=study.nominal;
 data=io.load_model_data(cfg);[data,cfg]=sensitivity.apply_parameters(data,cfg,factors);
 oldRng=rng;cleanup=onCleanup(@()rng(oldRng));rng(study.seed,'twister');

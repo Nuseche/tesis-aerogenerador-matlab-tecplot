@@ -1,4 +1,4 @@
-root='/Users/nuseche/Desktop/Tesis_codigos';addpath(root);addpath(fullfile(root,'cases'));
+root=fileparts(fileparts(fileparts(mfilename('fullpath'))));addpath(root);addpath(fullfile(root,'cases'));
 s=sensitivity.config_local();s.parameters=s.parameters(1,:);
 s.parameters.name="drivetrain_stiffness";s.parameters.category="physical";
 s.parameters.definition="all six inherited illustrative drivetrain stiffnesses";

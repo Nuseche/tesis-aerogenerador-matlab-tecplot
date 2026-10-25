@@ -2,7 +2,7 @@
 from pathlib import Path
 import csv, json, re, shutil, hashlib
 
-ROOT=Path('/Users/nuseche/Desktop/Tesis_codigos');D=ROOT/'docs/sensibilidad_complementaria_20261014'
+ROOT=Path(__file__).resolve().parents[3];D=ROOT/'docs/sensibilidad_complementaria_20261014'
 OLD=ROOT/'docs/sensibilidad_morris_20261006';P=OLD/'SECCION_MORRIS_REVISION.tex'
 S=json.loads((D/'analysis_summary.json').read_text());source=P.read_text()
 backup=D/'source_before_complement.txt'

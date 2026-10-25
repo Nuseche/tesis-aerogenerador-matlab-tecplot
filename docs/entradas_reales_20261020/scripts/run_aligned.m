@@ -1,5 +1,5 @@
 % Follow-up within the same cumulative 900 s solver budget, no core changes.
-root='/Users/nuseche/Desktop/Tesis_codigos';docs=fullfile(root,'docs/entradas_reales_20261020');
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));docs=fullfile(root,'docs/entradas_reales_20261020');
 folder=fullfile(root,'runs/sensitivity/real_inputs_20261020');addpath(fullfile(docs,'scripts'));
 z=load(fullfile(folder,'comparison_design.mat'),'cases');cases=z.cases;
 cases=cases([cases.kind]=="earthquake");

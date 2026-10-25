@@ -1,0 +1,10 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/8mtjt2","index":4,"layout":{"id":"ly/8z2hcrml","name":"Blank"},"backgroundColor":"rgba(255,255,255,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/3a18vm9g","kind":"textbox","position":{"left":64,"top":34,"width":1152,"height":100},"text":"Del viento medido al empuje parametrizado","style":{"fontSize":42,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/4bup4rq1","kind":"textbox","position":{"left":1195,"top":680,"width":45,"height":24},"text":"05","style":{"fontSize":18,"typeface":"Arial","color":"#777777","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/pc3qxwrm","kind":"textbox","position":{"left":78,"top":180,"width":1100,"height":72},"text":"F(t) = F̄ · U(t)² / ⟨U²⟩","style":{"fontSize":44,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/qdc7618r","kind":"textbox","position":{"left":72,"top":294,"width":1120,"height":87},"text":"F̄ permanece como parámetro; la respuesta se entrega por 1 kN medio","style":{"fontSize":31,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/rel8z69c","kind":"textbox","position":{"left":72,"top":396,"width":1120,"height":87},"text":"Carga axial en el buje, según el eje 129–130 del modelo","style":{"fontSize":31,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/cfup8bqx","kind":"textbox","position":{"left":72,"top":498,"width":1120,"height":87},"text":"Misma historia de viento para cada perturbación mecánica","style":{"fontSize":31,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/dg3q1wri","kind":"textbox","position":{"left":78,"top":610,"width":1110,"height":58},"text":"Fref = 554.7 kN es una escala de comparación calculada, sin valor de diseño","style":{"fontSize":26,"typeface":"Arial","color":"#444444","alignment":"left"},"geometry":"rect","lineWidth":0}
+]}

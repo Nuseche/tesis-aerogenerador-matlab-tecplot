@@ -1,0 +1,94 @@
+\documentclass[11pt,a4paper,oneside]{report}
+\usepackage[spanish,es-nodecimaldot,es-noquoting]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,bm,mathtools}
+\usepackage{graphicx,booktabs,longtable,tabularx,array}
+\usepackage{microtype,setspace,enumitem,fancyhdr}
+\usepackage[section]{placeins}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+\setstretch{1.12}
+\setlength{\parskip}{0.35em}
+\setlength{\abovecaptionskip}{12pt}
+\setlength{\belowcaptionskip}{6pt}
+\setlength{\floatsep}{24pt plus 4pt minus 2pt}
+\setlength{\textfloatsep}{24pt plus 4pt minus 2pt}
+\setlength{\intextsep}{22pt plus 4pt minus 2pt}
+\setlength{\emergencystretch}{3em}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+\allowdisplaybreaks[2]
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\nouppercase{\leftmark}}\fancyfoot[C]{\thepage}
+\newcommand{\vct}[1]{\bm{#1}}
+\newcommand{\ten}[1]{\boldsymbol{#1}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Id}{\mathbf I}
+\newcommand{\tr}{\mathsf T}
+\newcommand{\sk}[1]{[\bm{#1}]_{\times}}
+\newcommand{\Grad}{\operatorname{Grad}}
+\newcommand{\grad}{\operatorname{grad}}
+\newcommand{\sym}{\operatorname{sym}}
+\newcommand{\ax}{\operatorname{axl}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\SO}{\operatorname{SO}(3)}
+\newcommand{\R}{\mathbb R}
+\newcommand{\frameN}{\mathcal F_{\!N}}
+\hypersetup{pdftitle={Modelado de la dinámica estructural de un aerogenerador de eje horizontal con rotación prescrita},pdfauthor={Nicolás Andrés Useche Castillo}}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering\vspace*{10mm}
+{\Large Universidad de los Andes\par}
+\vspace{3mm}{Facultad de Ingeniería\\Departamento de Ingeniería Mecánica\par}
+\vspace{22mm}
+{\LARGE\bfseries Modelado de la dinámica estructural de un aerogenerador de eje horizontal con rotación prescrita\par}
+\vspace{18mm}{\Large Nicolás Andrés Useche Castillo\par}
+\vspace{20mm}
+{Director\\Omar Darío López Mejía\par}
+\vspace{7mm}{Codirector\\Sergio Preidikman\par}
+\vfill
+{Bogotá, Colombia\\2026\par}
+\end{titlepage}
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\chapter*{Resumen}\addcontentsline{toc}{chapter}{Resumen}
+El comportamiento dinámico de un aerogenerador de eje horizontal depende de la flexibilidad de la torre y las palas, de la distribución de masa de sus componentes y de la rotación del rotor. Cuando la estructura recibe cargas aerodinámicas y excitación sísmica, estos mecanismos intervienen de manera simultánea. Su representación requiere distinguir el movimiento de cuerpo rígido asociado a la operación de la máquina de los desplazamientos y las rotaciones debidos a la deformación estructural.
+
+Se desarrolla un modelo formado por cuerpos rígidos y vigas flexibles, con velocidad de rotación prescrita y conexiones mecánicas entre componentes. La descripción parte del cuerpo material y de sus configuraciones de referencia y actual. A continuación se establecen los sistemas de referencia de la base, la torre, la góndola, el cubo y las palas, junto con las transformaciones necesarias para calcular posiciones, velocidades y aceleraciones. Las propiedades geométricas y de masa se obtienen mediante integrales tensoriales, y la discretización estructural se formula con elementos de viga de Timoshenko.
+
+Las ecuaciones de movimiento se linealizan alrededor de un estado de operación. La formulación distingue las contribuciones de inercia, elasticidad, disipación y cargas dependientes de la configuración, y deduce los efectos giroscópicos a partir de la cinemática del sistema. Finalmente se establecen las ecuaciones de las vibraciones y de la respuesta forzada, manteniendo la diferencia entre equilibrio relativo, movimiento periódico y perturbación estructural.
+
+\noindent\textbf{Palabras clave:} dinámica estructural; aerogeneradores; cinemática; efectos giroscópicos; elementos finitos.
+
+\chapter*{Alcance de las ilustraciones}\addcontentsline{toc}{chapter}{Alcance de las ilustraciones}
+Los esquemas cinemáticos son representaciones espaciales originales en escala de grises. Los volúmenes, las separaciones y las amplitudes permiten leer las relaciones mecánicas; no constituyen resultados de simulación. Su composición toma como referencia el uso de envolventes, líneas de referencia y directores en Wasmer y Betsch \cite{wasmer2024}, conservando aquí el director 1 como dirección longitudinal. Las figuras no contienen títulos ni pies incorporados: su definición y procedencia se indican en el texto y en cada descripción.
+
+Las vistas del aerogenerador utilizan las coordenadas y la conectividad de vigas existentes. Las superficies de pala, las carcasas y los detalles exteriores son envolventes ilustrativas; no se dispone de la geometría CAD ni de perfiles aerodinámicos suficientes para reproducir una turbina comercial específica. La malla estructural continúa siendo unidimensional. Esta revisión gráfica conserva la formulación y los resultados almacenados.
+
+\tableofcontents\listoffigures
+\clearpage\pagenumbering{arabic}
+\input{capitulos/00_introduccion}
+\input{capitulos/01_problema}
+\input{capitulos/02_cinematica}
+\input{capitulos/03_propiedades}
+\input{capitulos/04_elementos}
+\input{capitulos/05_operacion}
+\input{capitulos/06_notacion}
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibitem{holzapfel} Holzapfel, G. A. (2000). \emph{Nonlinear Solid Mechanics: A Continuum Approach for Engineering}. John Wiley \& Sons. ISBN 978-0-471-82319-3.
+\bibitem{meirovitch} Meirovitch, L. (1997). \emph{Principles and Techniques of Vibrations}. Prentice Hall. Secciones 4.1 y 4.4, pp. 142--145 y 162--166: sistemas no naturales y linealización alrededor del equilibrio.
+\bibitem{reddy} Reddy, J. N. (2006). \emph{An Introduction to the Finite Element Method}. Tercera edición, McGraw-Hill.
+\bibitem{shabana} Shabana, A. A. (2013). \emph{Dynamics of Multibody Systems}. Cuarta edición, Cambridge University Press. \url{https://doi.org/10.1017/CBO9781107337213}.
+\bibitem{bir} Bir, G. S. (2008). \emph{Multiblade Coordinate Transformation and Its Application to Wind Turbine Analysis}. NREL/CP-500-42553. \url{https://www.osti.gov/servlets/purl/922553}.
+\bibitem{tisseur} Tisseur, F. y Meerbergen, K. (2001). The quadratic eigenvalue problem. \emph{SIAM Review}, 43(2), 235--286. \url{https://doi.org/10.1137/S0036144500381988}.
+\bibitem{gebhardt2008} Gebhardt, C., Preidikman, S., Massa, J. C. y Weber, G. (2008). Comportamiento aerodinámico y aeroelástico de rotores de generadores eólicos de eje horizontal y de gran potencia. \emph{Mecánica Computacional}, 27, 519--539. \url{https://cimec.org.ar/ojs/index.php/mc/article/view/1435}.
+\bibitem{simo1985} Simo, J. C. (1985). A finite strain beam formulation. The three-dimensional dynamic problem. Part I. \emph{Computer Methods in Applied Mechanics and Engineering}, 49(1), 55--70. \url{https://doi.org/10.1016/0045-7825(85)90050-7}.
+\bibitem{wang2017} Wang, Q., Sprague, M. A., Jonkman, J., Johnson, N. y Jonkman, B. (2017). BeamDyn: A high-fidelity wind turbine blade solver in the FAST modular framework. \emph{Wind Energy}, 20(8), 1439--1462. \url{https://doi.org/10.1002/we.2101}.
+\bibitem{faccio2019} Faccio Júnior, C. J., Cardozo, A. C. P., Monteiro Júnior, V. y Gay Neto, A. (2019). Modeling wind turbine blades by geometrically-exact beam and shell elements: A comparative approach. \emph{Engineering Structures}, 180, 357--378. \url{https://doi.org/10.1016/j.engstruct.2018.09.032}.
+\bibitem{maza2017} Maza, M. S., Preidikman, S. y Flores, F. G. (2017). Aeroelasticidad computacional de grandes aerogeneradores: estado del arte, desafíos y áreas de vacancia. \emph{Mecánica Computacional}, 35(25), 1351--1378. \url{https://sedici.unlp.edu.ar/handle/10915/103855}.
+\bibitem{turello2023} Turello, D. F., Maza, M. S., Preidikman, S., Flores, F. G. y Pinto, F. (2023). Interacción suelo-estructura no-lineal en el modelado de torres eólicas de eje horizontal ante carga sísmica. \emph{Mecánica Computacional}, 40, 639--650. \url{https://amcaonline.org.ar/ojs/index.php/mc/article/view/6595}.
+\bibitem{wasmer2024} Wasmer, P. y Betsch, P. (2024). A projection-based quaternion discretization of the geometrically exact beam model. \emph{International Journal for Numerical Methods in Engineering}, 125(20), e7538. \url{https://doi.org/10.1002/nme.7538}.
+\end{thebibliography}
+\end{document}

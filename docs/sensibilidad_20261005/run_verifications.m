@@ -1,4 +1,4 @@
-root='/Users/nuseche/Desktop/Tesis_codigos';addpath(root);addpath(fullfile(root,'cases'));
+root=fileparts(fileparts(fileparts(mfilename('fullpath'))));addpath(root);addpath(fullfile(root,'cases'));
 folder=fullfile(root,'runs','sensitivity','initial_20261005');
 diary(fullfile(folder,'verification_execution.log'));
 for phase=["verification" "seismic" "foundation"]

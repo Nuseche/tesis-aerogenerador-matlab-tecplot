@@ -1,0 +1,7 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/asw0vm","index":24,"layout":{"id":"ly/gr2lsral","name":"Blank"},"backgroundColor":"rgba(255,255,255,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/gj65c7it","kind":"textbox","position":{"left":64,"top":36,"width":1152,"height":88},"text":"Apéndice: comparación de secantes","style":{"fontSize":44,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/fix4j2h8","kind":"textbox","position":{"left":1195,"top":678,"width":40,"height":26},"text":"25","style":{"fontSize":18,"typeface":"Arial","color":"#777777","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"tb/v6d4fyx8","kind":"table","position":{"left":64,"top":158,"width":1152,"height":365},"text":"Grupo\tMasa/inercia\tRigidez\tVelocidad\n3\t-0.561 / -0.562\t0.385 / 0.388\t-0.298 / -0.305\n4+5\t-0.567 / -0.561\t0.394 / 0.394\tNo resuelto / -0.174\n6+7\t-0.308 / -0.307\t0.243 / 0.244\t0.346 / 0.344\n8+9\t-0.427 / -0.424\t0.365 / 0.364\t0.115 / 0.113\n10+11\t-0.383 / -0.380\t0.359 / 0.359\t0.184 / 0.182","rows":6,"cols":4},
+{"id":"sh/tgvmhsz2","kind":"textbox","position":{"left":68,"top":590,"width":1120,"height":46},"text":"Cada celda: Morris / secante de extremos. El grupo 4+5 conserva su reserva","style":{"fontSize":24,"typeface":"Arial","color":"#444444","alignment":"left"},"geometry":"rect","lineWidth":0}
+]}

@@ -1,0 +1,61 @@
+\chapter{Notación}
+\small
+\section{Entidades geométricas y sistemas de referencia}
+\begin{longtable}{p{.24\textwidth}p{.69\textwidth}}
+\toprule Símbolo & Significado \\\midrule\endhead
+$\mathcal B$ & Cuerpo material: conjunto de partículas identificables.\\
+$\mathcal B_0,\mathcal B_t$ & Configuraciones de referencia y actual.\\
+$\vct X,\vct x$ & Posiciones material de referencia y espacial actual.\\
+$\vct\chi$ & Movimiento que asigna $\vct x=\vct\chi(\vct X,t)$.\\
+$\vct u$ & Desplazamiento; su referencia concreta se indica en cada representación.\\
+$\mathcal F_A$ & Sistema de referencia con origen $O_A$ y base ortonormal dextrógira.\\
+$N,B,G,H,P_b$ & Newtoniano, base, góndola, cubo y montaje de pala $b$.\\
+${}^AQ_B$ & Cambio de componentes de la base $B$ a la base $A$.\\
+$\overline{(\cdot)}$ & Cantidad nominal o sistema de referencia de movimiento prescrito.\\
+$\psi,\Omega$ & Azimut prescrito y velocidad angular nominal constante.\\
+$[\vct a]_\times$ & Matriz del producto vectorial: $[\vct a]_\times\vct b=\vct a\times\vct b$.\\
+$\Grad,\grad$ & Derivadas espaciales respecto de coordenadas materiales y actuales, respectivamente.\\
+$\ten F,J$ & Gradiente de deformación y su determinante.\\
+$\ten C,\ten E$ & Tensor derecho de Cauchy--Green y deformación de Green--Lagrange.\\
+$\ten R,\ten U,\ten V$ & Rotación polar y estiramientos derecho e izquierdo.\\
+\bottomrule
+\end{longtable}
+
+\section{Vigas y propiedades físicas}
+\begin{longtable}{p{.24\textwidth}p{.69\textwidth}}
+\toprule Símbolo & Significado y unidades \\\midrule\endhead
+$S,\xi_2,\xi_3$ & Coordenadas materiales de línea y sección, $\mathrm m$.\\
+$\vct R,\vct r$ & Posición de la línea de referencia y posición actual de esa línea, $\mathrm m$.\\
+$\vct D_i,\vct d_i$ & Directores de sección de referencia y actuales.\\
+$\vct\gamma,\vct\kappa$ & Extensión/cortantes y cambio de curvatura/torsión, $1$ y $\mathrm{m^{-1}}$.\\
+$\vct n,\vct m$ & Resultantes seccionales de fuerza y momento, $\mathrm N$ y $\mathrm{N\,m}$.\\
+$A,\vct c_A$ & Área y centro de área relativo al origen seccional, $\mathrm{m^2}$ y $\mathrm m$.\\
+$\ten S_A,\ten I_A$ & Tensores geométricos de segundo momento, $\mathrm{m^4}$.\\
+$J_t$ & Constante torsional de Saint-Venant, $\mathrm{m^4}$.\\
+$\rho_0,\mu,m$ & Densidad de referencia, masa por longitud y masa total, $\mathrm{kg/m^3}$, $\mathrm{kg/m}$ y $\mathrm{kg}$.\\
+$\vct c_m$ & Vector de excentricidad del centro de masa seccional, $\mathrm m$.\\
+$\ten j_C,\ten J_C$ & Inercia centroidal por longitud y total, $\mathrm{kg\,m}$ y $\mathrm{kg\,m^2}$.\\
+$\mathsf M_s,\mathsf C_s$ & Matrices seccionales de masa y rigidez, con unidades diferentes entre bloques.\\
+$E,G,\nu$ & Módulos de Young y cortante, y coeficiente de Poisson.\\
+$A_{s2},A_{s3}$ & Áreas efectivas de cortante, $\mathrm{m^2}$.\\
+\bottomrule
+\end{longtable}
+
+\section{Discretización y dinámica}
+\begin{longtable}{p{.24\textwidth}p{.69\textwidth}}
+\toprule Símbolo & Significado \\\midrule\endhead
+$\vct q_e$ & Coordenadas de un elemento; doce antes de restricciones para la viga de dos nodos.\\
+$N,B$ & Interpolación cinemática y relación discreta deformación--coordenadas.\\
+$\mathsf M,\mathsf K$ & Matrices discretas de masa y rigidez; los índices especifican elemento, reducción o tangente.\\
+$\mathsf G$ & Matriz antisimétrica de efectos giroscópicos en las coordenadas declaradas.\\
+$\mathsf C_d,\mathsf D$ & Amortiguamiento estructural y coeficiente total de velocidades.\\
+$\vct q_0,\vct\eta$ & Estado de equilibrio relativo y perturbación respecto de él.\\
+$T_2,T_1,T_0$ & Partes de la energía cinética de grados dos, uno y cero en velocidades generalizadas.\\
+$U_{\rm eff}$ & Potencial efectivo $V-T_0$ bajo las hipótesis de movimiento prescrito indicadas.\\
+$\lambda,\vct\phi$ & Autovalor y autovector del problema de perturbaciones.\\
+\bottomrule
+\end{longtable}
+Un punto sobre una cantidad indica derivada temporal manteniendo fijas las coordenadas materiales o relativas especificadas. Una prima en la cinemática de viga indica derivada respecto de $S$; en la interpolación normalizada debe aplicarse la regla de la cadena. El superíndice $\tr$ denota transposición, no derivada. Los índices $i,j$ son índices de componentes; $b$ identifica pala y $e$ elemento. Las matrices de seis o doce coordenadas se escriben por bloques para no confundirlas con tensores físicos tridimensionales.
+
+Al pasar de un capítulo a otro, las mismas letras pueden representar la entidad geométrica y su matriz de componentes cuando la base ya está fijada. Las ecuaciones que mezclan sistemas de referencia incorporan explícitamente los cambios ${}^AQ_B$. Ninguna comparación entre matrices de masa, inercia o efectos de giro es válida sin comprobar antes origen, orientación, orden de coordenadas y unidades.
+\normalsize

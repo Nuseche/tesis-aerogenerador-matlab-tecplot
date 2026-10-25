@@ -1,0 +1,8 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/l742bf","index":17,"layout":{"id":"ly/gr2lsral","name":"Blank"},"backgroundColor":"rgba(255,255,255,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/n61one9w","kind":"textbox","position":{"left":64,"top":36,"width":1152,"height":88},"text":"Contraste de efectos combinados","style":{"fontSize":44,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/o7a5gzah","kind":"textbox","position":{"left":1195,"top":678,"width":40,"height":26},"text":"18","style":{"fontSize":18,"typeface":"Arial","color":"#777777","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/p8j6p4r2","kind":"textbox","position":{"left":82,"top":152,"width":1100,"height":90},"text":"Iᵢⱼ = f₊₊ − f₊₋ − f₋₊ + f₋₋","style":{"fontSize":44,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"tb/nupo7ix0","kind":"table","position":{"left":64,"top":280,"width":1152,"height":283},"text":"Par en 10+11\t|I| [Hz]\tSeñal / b\tLectura\nMasa–rigidez\t0.00926–0.00940\t26.5–26.9\tSupera el umbral\nMasa–velocidad\t0.00356–0.00362\t10.2–10.3\tApenas sobre el umbral\nRigidez–velocidad\t0.00331–0.00342\t9.5–9.8\tNo resuelto","rows":4,"cols":4},
+{"id":"sh/f2hoju90","kind":"textbox","position":{"left":68,"top":602,"width":1120,"height":46},"text":"Umbral empírico: 10. Cada par se examina con cuatro valores del tercer factor","style":{"fontSize":24,"typeface":"Arial","color":"#444444","alignment":"left"},"geometry":"rect","lineWidth":0}
+]}

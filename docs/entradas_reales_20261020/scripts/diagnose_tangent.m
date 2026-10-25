@@ -1,4 +1,4 @@
-root='/Users/nuseche/Desktop/Tesis_codigos';docs=fullfile(root,'docs/entradas_reales_20261020');
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));docs=fullfile(root,'docs/entradas_reales_20261020');
 folder=fullfile(root,'runs/sensitivity/real_inputs_20261020/numerical_diagnostic');if ~isfolder(folder),mkdir(folder);end
 addpath(fullfile(docs,'scripts'));file=fullfile(docs,'tables/ARL360_SI.csv');
 design=struct('id',{},'scale',{},'factor',{});

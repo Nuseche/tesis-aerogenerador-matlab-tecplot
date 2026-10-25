@@ -1,6 +1,6 @@
 % Scientific figures authorized by the user while Tecplot's license is expired.
 % Data are loaded from saved CSV/JSON; this script does not call the solver.
-root='/Users/nuseche/Desktop/Tesis_codigos';docs=fullfile(root,'docs/sensibilidad_complementaria_20261014');
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));docs=fullfile(root,'docs/sensibilidad_complementaria_20261014');
 folder=fullfile(docs,'figures');if ~isfolder(folder),mkdir(folder);end
 s=jsondecode(fileread(fullfile(docs,'analysis_summary.json')));
 m=jsondecode(fileread(fullfile(root,'docs/sensibilidad_morris_20261006/report_data.json')));

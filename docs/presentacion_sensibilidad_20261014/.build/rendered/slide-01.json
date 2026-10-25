@@ -1,0 +1,7 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/w1fnft","index":0,"layout":{"id":"ly/gr2lsral","name":"Blank"},"backgroundColor":"rgba(255,255,255,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/wvyxgzu9","kind":"textbox","position":{"left":70,"top":170,"width":1100,"height":100},"text":"Sensibilidad del aerogenerador","style":{"fontSize":60,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/bupwnudo","kind":"textbox","position":{"left":74,"top":288,"width":1090,"height":112},"text":"Método, resultados y comprobación de efectos combinados","style":{"fontSize":38,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/a9gvepc3","kind":"textbox","position":{"left":74,"top":472,"width":1060,"height":42},"text":"Nicolás Andrés Useche Castillo","style":{"fontSize":30,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/987elkvi","kind":"textbox","position":{"left":74,"top":536,"width":1090,"height":38},"text":"Actualización del 14 de octubre de 2026","style":{"fontSize":28,"typeface":"Arial","color":"#555555","alignment":"left"},"geometry":"rect","lineWidth":0}
+]}

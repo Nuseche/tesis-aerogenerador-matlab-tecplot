@@ -3,8 +3,9 @@ from common import *
 from concurrent.futures import ThreadPoolExecutor
 from pypdf import PdfReader
 import argparse
+import shutil
 
-TECTONIC=Path('/Users/nuseche/Documents/ChatGPT/Tesis/tmp/tools/tectonic')
+TECTONIC=Path(os.environ.get('TESIS_TECTONIC') or shutil.which('tectonic') or 'tectonic')
 def compile_one(name):
     p=Path(name);tag=p.parent.name+'_'+p.stem;log=HERE/'logs'/('latex_'+tag+'.txt')
     r=subprocess.run([str(TECTONIC),'--keep-logs','--keep-intermediates',p.name],cwd=p.parent,capture_output=True,text=True,timeout=300)

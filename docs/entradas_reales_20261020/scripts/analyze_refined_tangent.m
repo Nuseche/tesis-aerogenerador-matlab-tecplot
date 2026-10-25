@@ -1,4 +1,4 @@
-root='/Users/nuseche/Desktop/Tesis_codigos';docs=fullfile(root,'docs/entradas_reales_20261020');
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));docs=fullfile(root,'docs/entradas_reales_20261020');
 folder=fullfile(root,'runs/sensitivity/real_inputs_20261020/refined_tangent');
 source=readtable(fullfile(docs,'tables/local_sensitivities.csv'),'TextType','string');
 names=unique(source.response,'stable');units=strings(size(names));

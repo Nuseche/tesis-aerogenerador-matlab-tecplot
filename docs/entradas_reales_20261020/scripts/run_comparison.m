@@ -1,5 +1,5 @@
 % Reproducible, restartable comparison. Existing campaigns are read only.
-root='/Users/nuseche/Desktop/Tesis_codigos';docs=fullfile(root,'docs/entradas_reales_20261020');
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));docs=fullfile(root,'docs/entradas_reales_20261020');
 addpath(root);addpath(fullfile(docs,'scripts'));
 out=fullfile(root,'runs/sensitivity/real_inputs_20261020');
 started=tic;maximumWallSeconds=900;

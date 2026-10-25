@@ -1,0 +1,9 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/ealjz1","index":1,"layout":{"id":"ly/8z2hcrml","name":"Blank"},"backgroundColor":"rgba(255,255,255,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/5w7ytcju","kind":"textbox","position":{"left":64,"top":34,"width":1152,"height":100},"text":"Alcance de la comparación","style":{"fontSize":42,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/itgfihkj","kind":"textbox","position":{"left":1195,"top":680,"width":45,"height":24},"text":"02","style":{"fontSize":18,"typeface":"Arial","color":"#777777","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/jupgrm14","kind":"textbox","position":{"left":72,"top":158,"width":1120,"height":96},"text":"Registros reales de fuentes independientes; sin simultaneidad observada","style":{"fontSize":31,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/szyxor2l","kind":"textbox","position":{"left":72,"top":269,"width":1120,"height":96},"text":"Viento convertido a empuje axial prescrito con valor medio libre","style":{"fontSize":31,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/t07yxwj6","kind":"textbox","position":{"left":72,"top":380,"width":1120,"height":96},"text":"Operadores congelados: comparación estructural exploratoria","style":{"fontSize":31,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/6xgfmhkf","kind":"textbox","position":{"left":72,"top":491,"width":1120,"height":96},"text":"La respuesta no incluye retroalimentación aerodinámica","style":{"fontSize":31,"typeface":"Arial","color":"#151515","alignment":"left"},"geometry":"rect","lineWidth":0}
+]}

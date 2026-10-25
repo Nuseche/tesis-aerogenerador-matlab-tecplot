@@ -4,8 +4,8 @@ import csv, hashlib, json, tarfile, re
 from pypdf import PdfReader
 from PIL import Image
 
-ROOT=Path('/Users/nuseche/Desktop/Tesis_codigos');D=ROOT/'docs/sensibilidad_complementaria_20261014';OLD=D.parent/'sensibilidad_morris_20261006'
-RUNS=ROOT/'runs/sensitivity/grid_completion_20261014';W=Path('/Users/nuseche/Documents/ChatGPT/Tesis/output/presentacion_sensibilidad_20261014')
+ROOT=Path(__file__).resolve().parents[3];D=ROOT/'docs/sensibilidad_complementaria_20261014';OLD=D.parent/'sensibilidad_morris_20261006'
+RUNS=ROOT/'runs/sensitivity/grid_completion_20261014';W=ROOT/'docs/presentacion_sensibilidad_20261014'
 def sha(p):
     h=hashlib.sha256()
     with p.open('rb') as f:

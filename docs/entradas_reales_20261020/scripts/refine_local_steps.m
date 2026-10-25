@@ -1,5 +1,5 @@
 % Targeted refinement after failed h-dependence checks; no domain expansion.
-root='/Users/nuseche/Desktop/Tesis_codigos';docs=fullfile(root,'docs/entradas_reales_20261020');
+root=fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));docs=fullfile(root,'docs/entradas_reales_20261020');
 folder=fullfile(root,'runs/sensitivity/real_inputs_20261020');addpath(fullfile(docs,'scripts'));
 started=tic;spent=0;files=dir(fullfile(folder,'*.mat'));
 for j=1:numel(files)

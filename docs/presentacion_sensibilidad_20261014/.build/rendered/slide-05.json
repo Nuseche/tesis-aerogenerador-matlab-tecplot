@@ -1,0 +1,7 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/ufvm5t","index":4,"layout":{"id":"ly/gr2lsral","name":"Blank"},"backgroundColor":"rgba(255,255,255,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/z6p8ve5g","kind":"textbox","position":{"left":64,"top":36,"width":1152,"height":88},"text":"Grupos seguidos por sus formas","style":{"fontSize":44,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/k7y94j61","kind":"textbox","position":{"left":1195,"top":678,"width":40,"height":26},"text":"05","style":{"fontSize":18,"typeface":"Arial","color":"#777777","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"tb/snet036l","kind":"table","position":{"left":64,"top":143,"width":1152,"height":425},"text":"Grupo\tf nominal [Hz]\tMayor influencia Morris\tEstado\n1+2\t0.158\tNinguna aceptada\tRuido\n3\t0.231\tMasa/inercia\tAceptado\n4+5\t0.409\tMasa/inercia\tGiro no resuelto\n6+7\t0.587\tVelocidad\tAceptado\n8+9\t0.844\tMasa/inercia\tAceptado\n10+11\t1.225\tMasa/inercia\tAceptado\n12\t1.595\tSin estimadores\tFrontera espectral","rows":8,"cols":4},
+{"id":"sh/m9gr6to7","kind":"textbox","position":{"left":68,"top":592,"width":1120,"height":46},"text":"10+11 reúne dos ramas. La respuesta del grupo es su frecuencia media","style":{"fontSize":24,"typeface":"Arial","color":"#444444","alignment":"left"},"geometry":"rect","lineWidth":0}
+]}

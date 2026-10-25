@@ -1,0 +1,8 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/d7jcp2","index":22,"layout":{"id":"ly/gr2lsral","name":"Blank"},"backgroundColor":"rgba(255,255,255,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/aloz6pwb","kind":"textbox","position":{"left":64,"top":36,"width":1152,"height":88},"text":"Apéndice: curvatura individual y ruido","style":{"fontSize":44,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/x8zi14fm","kind":"textbox","position":{"left":1195,"top":678,"width":40,"height":26},"text":"23","style":{"fontSize":18,"typeface":"Arial","color":"#777777","alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"sh/w7qh8zeh","kind":"textbox","position":{"left":82,"top":150,"width":1090,"height":80},"text":"Cᵢ = fᵢ₊₁ − 2fᵢ + fᵢ₋₁","style":{"fontSize":42,"typeface":"Arial","color":"#151515","bold":true,"alignment":"left"},"geometry":"rect","lineWidth":0},
+{"id":"tb/atcned4v","kind":"table","position":{"left":64,"top":277,"width":1152,"height":284},"text":"Factor, grupo 10+11\tContrastes\tSuperan el umbral\nMasa/inercia\t32\t6\nRigidez\t32\t0\nVelocidad\t32\t0","rows":4,"cols":3},
+{"id":"sh/y98za9w7","kind":"textbox","position":{"left":68,"top":602,"width":1120,"height":46},"text":"Ausencia de resolución permite conservar la limitación sobre curvatura","style":{"fontSize":24,"typeface":"Arial","color":"#444444","alignment":"left"},"geometry":"rect","lineWidth":0}
+]}

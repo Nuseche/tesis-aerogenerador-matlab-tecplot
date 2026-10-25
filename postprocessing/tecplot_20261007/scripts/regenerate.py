@@ -7,8 +7,9 @@ def retarget_macro(path):
     """Allow export-only from a copied bundle of the already converted data."""
     s=path.read_text();m=re.search(r'ReadDataSet\s+\'"([^"\n]+)"\'',s)
     if not m:raise ValueError('Missing dataset path: '+str(path))
-    previous=Path(m.group(1)).parents[1]
-    if previous!=HERE:path.write_text(s.replace(str(previous),str(HERE)))
+    previous=m.group(1).replace('\\','/').rsplit('/data/',1)[0]
+    if previous!=HERE.as_posix():
+        path.write_text(s.replace(previous,HERE.as_posix()))
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--prepare-only',action='store_true');p.add_argument('--export-only',action='store_true');p.add_argument('--only',nargs='*');a=p.parse_args()

@@ -5,7 +5,7 @@ import hashlib
 import json
 import math
 
-ROOT=Path('/Users/nuseche/Desktop/Tesis_codigos')
+ROOT=Path(__file__).resolve().parents[3]
 DOCS=ROOT/'docs/entradas_reales_20261020'
 SOURCE=ROOT/'docs/sensibilidad_morris_20261006/SECCION_MORRIS_REVISION.tex'
 
