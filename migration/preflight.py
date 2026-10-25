@@ -5,6 +5,9 @@ ROOT=Path(__file__).resolve().parents[1]
 LIB=ROOT/'postprocessing/tecplot_20261007'
 
 def main():
+    if sys.version_info < (3,11):
+        print('Python 3.11+ is required; use Python 3.12 to create the virtual environment.')
+        return 1
     missing=[]
     for module in ['numpy','scipy','h5py','hdf5storage','PIL','pypdf']:
         try:importlib.import_module(module)

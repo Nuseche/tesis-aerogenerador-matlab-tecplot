@@ -17,7 +17,9 @@ completa debe estar configurada en el equipo de destino; no se copia desde este 
 
 ## Clonar y preparar Python
 
-Se recomienda Python 3.12 y un entorno nuevo. Desde una terminal:
+Se requiere Python 3.11 o superior; se recomienda Python 3.12 y un entorno nuevo.
+Comprobar primero `python --version` (el Python 3.9 del sistema macOS no sirve).
+Desde una terminal:
 
 ```sh
 git clone https://github.com/Nuseche/tesis-aerogenerador-matlab-tecplot.git

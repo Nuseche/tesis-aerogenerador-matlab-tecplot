@@ -19,6 +19,8 @@ def compile_one(name):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--only',nargs='*');a=ap.parse_args()
     docs=json.loads((HERE/'reports/updated_documents.json').read_text())
+    # Historical manifests retain the original host; compile the current clone.
+    docs=[x.replace('/Users/nuseche/Desktop/Tesis_codigos',str(ROOT)).replace('/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929',str(THESIS)) for x in docs]
     if a.only:docs=[x for x in docs if Path(x).stem in a.only]
     with ThreadPoolExecutor(max_workers=4) as pool:records=list(pool.map(compile_one,docs))
     path=HERE/'reports/document_checks.json';old=json.loads(path.read_text()) if path.exists() else [];merged={r['source']:r for r in old+records};dump(path,list(merged.values()))

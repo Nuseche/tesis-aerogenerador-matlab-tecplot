@@ -34,3 +34,6 @@ __pycache__/
 **/qa/
 **/qa_*/
 postprocessing/tecplot_20261007/packages/
+# Frozen legacy evidence is part of its source manifest, not a LaTeX cache.
+!legacy/Codigos_sergio/FEMESH.OUT
+!Codigos_sergio/FEMESH.OUT
