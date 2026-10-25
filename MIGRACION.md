@@ -120,3 +120,13 @@ Para las revisiones de PDF se necesita Poppler (`pdftoppm`). La carpeta de capí
 puede cambiarse mediante `TESIS_DOCUMENTS`. Los informes y manifiestos anteriores
 mantienen rutas y hashes de su fecha original, no son una comprobación nueva del
 host remoto. La documentación detallada de cada campaña conserva sus límites físicos.
+
+## Verificación local de la migración
+
+En un clon separado: validación geométrica MATLAB correcta y 13 pruebas de
+entrada/salida y núcleo FEM aprobadas; restauración de 1.206 archivos con hashes
+correctos; reconstrucción de 124 datasets Tecplot idénticos byte por byte;
+204 archivos de fuentes congeladas y entradas idénticos. Se instaló un entorno
+Python 3.12 nuevo desde requirements.txt. Detalles en migration/validation.json
+y versiones comprobadas en migration/requirements-tested-py312.txt.
+La exportación nativa con la licencia completa se comprobará en el host de destino.
