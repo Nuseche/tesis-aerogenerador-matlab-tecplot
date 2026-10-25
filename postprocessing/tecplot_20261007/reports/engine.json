@@ -1,0 +1,19 @@
+{
+  "installed_application": "/Applications/Tecplot 360 EX 2025 R2/Tecplot 360 EX 2025 R2.app/Contents/MacOS/Tecplot 360 EX 2025 R2",
+  "engine_version": "2025.2.2.88532, 17-Apr-2026",
+  "PyTecplot_version": "1.7.3",
+  "PyTecplot_status": "TecplotLicenseError: License Expired",
+  "connected_mode_status": "TecPLUS service expired",
+  "macro_batch_status": "export verified",
+  "active_GUI_trial_expiration": "2026-10-13",
+  "native_formats": [
+    "ASCII .dat",
+    "binary .plt",
+    "layout .lay",
+    "package .lpk",
+    "EPS",
+    "PNG"
+  ],
+  "PDF_conversion": "Vector EPS: Ghostscript and native bounding-box crop. Translucent 3D: lossless native Tecplot PNG in PDF container; no scientific redraw.",
+  "new_solver_evaluations": 0
+}

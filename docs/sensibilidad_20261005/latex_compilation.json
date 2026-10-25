@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-05",
+  "file": "SECCION_SENSIBILIDAD_REVISION.tex",
+  "compiler": "Codex desktop built-in compiler",
+  "status": "success",
+  "standalone": true,
+  "externalProjectFiles": false,
+  "sourceRepairs": 2,
+  "sourceSHA256": "cfd28691dc2e987b0a5ac90dac783a9e3a596df14b7000c009d39f3ed201e68f"
+}

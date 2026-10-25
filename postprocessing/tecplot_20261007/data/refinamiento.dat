@@ -1,0 +1,7 @@
+TITLE = "Refinamiento existente: primeras doce frecuencias"
+VARIABLES = "x" "y"
+DATASETAUXDATA Representation = "result"
+ZONE T="Respecto de 1064 elementos", I=3, DATAPACKING=POINT
+133 0.0093454226452009109
+266 0.0021898715554856999
+532 0.00043620348340637003

@@ -1,0 +1,3 @@
+# Preserve exact bytes, including archived MATLAB source and measured inputs.
+# Scientific provenance checks use SHA-256; checkout must not normalize EOLs.
+* -text

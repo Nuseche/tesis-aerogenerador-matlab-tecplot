@@ -1,0 +1,172 @@
+{
+  "date": "2026-10-20",
+  "frozenSourcesChecked": 175,
+  "changedSources": [],
+  "comparisonCases": 114,
+  "refinedHessianCases": 54,
+  "diagnosticSuccesses": 6,
+  "diagnosticFailures": [
+    {
+      "caseId": "nominal_scale10",
+      "derivativeScale": "10",
+      "massFactor": "1",
+      "peakQ": "NaN",
+      "rmsQ": "NaN",
+      "dynamicResidual": "NaN",
+      "equilibriumResidual": "NaN",
+      "seconds": "NaN",
+      "status": "Newton line search could not reduce the residual from 1.151e-08; last trial 1.793e-08."
+    }
+  ],
+  "stableSlopes": 22,
+  "fullyAcceptedSlopes": 1,
+  "localIndicators": 90,
+  "directlyVerifiedCombinedLoad": {
+    "historyQ": 2.1577886307565993e-12,
+    "historyA": 5.065505626272515e-10,
+    "historyR": 1.767628828968075e-12,
+    "windowSeconds": 2,
+    "dt": 0.005,
+    "meanThrustKN": 554.677210029701,
+    "relativeReducedResidual": 3.3211710763574404e-11,
+    "otherForceProjectionError": 0,
+    "scope": "direct combined run with existing API; same frozen linear operators"
+  },
+  "kernelIdentity": {
+    "states": 3,
+    "checks": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "columnNames": [
+      "relativeForceScale1",
+      "relativeHessianScale1",
+      "energyDifferenceScale1",
+      "energyDifferenceScale20"
+    ],
+    "physicalEnergyIdentical": true,
+    "productionSourcesChanged": false
+  },
+  "figures": [
+    {
+      "id": "entradas_medidas",
+      "size": [
+        3434,
+        1420
+      ],
+      "sha256": "dddb66710cc7a1a4baca69a91a7eb3515b2cbd5f4f76e3051be7e40084c19bd8",
+      "grayscale": true
+    },
+    {
+      "id": "contenido_frecuencial",
+      "size": [
+        3363,
+        1257
+      ],
+      "sha256": "2b9a6e8db3d29b92fdfcec26838cb0212a2ee312f36736da1ff702528e08c292",
+      "grayscale": true
+    },
+    {
+      "id": "respuesta_sismos_reales",
+      "size": [
+        3381,
+        1326
+      ],
+      "sha256": "be8fdcb0a077ca43715db2e915d05a989703d9016a7b04092ae3adc9d468cfb5",
+      "grayscale": true
+    },
+    {
+      "id": "sensibilidad_entradas",
+      "size": [
+        3409,
+        1449
+      ],
+      "sha256": "adb6f77308f34b7945565f8329bbdb1034a96041db3f2887c53eb1aa427b2cb7",
+      "grayscale": true
+    },
+    {
+      "id": "refinamiento_sensibilidad",
+      "size": [
+        3446,
+        1390
+      ],
+      "sha256": "5e693254f35e59869e227135b4191b7676183e7fb30e3fa5e12015027f782222",
+      "grayscale": true
+    },
+    {
+      "id": "combinacion_y_llegada",
+      "size": [
+        3394,
+        1448
+      ],
+      "sha256": "20abc869450c3c2e8f8de2267c4019ccded9c38a98d160e9e0dcf60cca7f4585",
+      "grayscale": true
+    },
+    {
+      "id": "sensibilidad_amplitudes",
+      "size": [
+        3394,
+        1389
+      ],
+      "sha256": "f7a7970941126565af75376e0965f803e45ee22cef03eec62932a7b12d25684b",
+      "grayscale": true
+    },
+    {
+      "id": "sensibilidad_combinada",
+      "size": [
+        3391,
+        1390
+      ],
+      "sha256": "3b7a58cf4113eec6f76e130df6541b1774a3bad1f0aff974d35d738487e18faa",
+      "grayscale": true
+    },
+    {
+      "id": "efecto_direccion",
+      "size": [
+        3378,
+        1413
+      ],
+      "sha256": "1cd1b00e9c2758a706db98ce4ce9b7e0f1f11b40b7b00a39e341f0e799d2bc07",
+      "grayscale": true
+    },
+    {
+      "id": "sensibilidad_refinada",
+      "size": [
+        3410,
+        1447
+      ],
+      "sha256": "a97110331587e6e9ed373323ec8eb4f7754a8686cac400249f8134ed2539d255",
+      "grayscale": true
+    }
+  ],
+  "pdf": {
+    "path": "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/SECCION_MORRIS_REVISION.pdf",
+    "pages": 25,
+    "sha256": "1d5d67ec11f2766dc208b2d082b07a2a5530b8baaf1e445efd88c6db5b33fb96",
+    "projectCompilation": "success",
+    "nativeEditorCompilation": "external figure unavailable"
+  },
+  "pptx": {
+    "path": "/Users/nuseche/Documents/ChatGPT/Tesis/output/presentacion_comparativa_20261020/entrega/Resultados_comparativos_20261020.pptx",
+    "slides": 14,
+    "sha256": "283dc923f7dde51a88a046d6bf676916f9db1817dde152de4af582fb2a2c2df1",
+    "validatedBy": "Artifact Tool; native PowerPoint not inspected"
+  },
+  "scope": "independent real records; prescribed mean thrust parameter; frozen operators; no global mechanical ranking"
+}

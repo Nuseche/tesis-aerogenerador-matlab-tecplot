@@ -1,0 +1,51 @@
+{
+  "earthquakeDisplacementM": 0.2830593887940521,
+  "earthquakeAccelerationMps2": 0.57916230264277,
+  "phaseRangeAtReference": [
+    1.54502514022529,
+    2.23098039862972
+  ],
+  "acceptedLocal": 1,
+  "acceptedRMS": 0,
+  "acceptedPeaks": 1,
+  "totalLocal": 90,
+  "maxPeakTimeSwitchSeconds": 0.0199999999999996,
+  "nominalMaxPeakRelativeDifference": 0.000307905135368197,
+  "nominalMaxHistoryRelativeDifference": 0.00314601089031361,
+  "presentationConclusions": [
+    "Arleta sin escalar: 0.283 m de desplazamiento horizontal máximo en X",
+    "Con F̄ = Fref, el cociente combinado/sismo varía de 1.55 a 2.23 entre llegadas",
+    "22 pendientes estables; 1 de 90 superan además el filtro conservador",
+    "El empuje medio sigue libre: la comparación no fija una demanda real de servicio"
+  ],
+  "tangentDiagnostic": {
+    "successful": 6,
+    "failed": 1,
+    "peakQ": [
+      -0.5149081402712583,
+      -0.5155113287786025
+    ],
+    "rmsQ": [
+      -0.47925820684528764,
+      -0.4811727680353921
+    ]
+  },
+  "refinedTangent": {
+    "successfulCases": 54,
+    "accepted": 1,
+    "stepConverged": 22,
+    "total": 90,
+    "energyHessianStepScale": 20,
+    "comparisonHessianStepScale": 40,
+    "translationStep": "4e-5 * max(elementLength,1 m)",
+    "rotationStepRad": 4e-05,
+    "h": 0.0025,
+    "twiceH": 0.005,
+    "originalEquilibriumPreserved": true,
+    "physicalEnergyPreserved": true,
+    "productionSourcesChanged": false,
+    "maximumNominalHessianRelativeChange": 0.0063348962054028835,
+    "scope": "numerical tangent refinement; does not revalidate historical Morris or periodic operation"
+  },
+  "sourceSha256": "b9e684ad98b921a6ae5a1dd5282f07092313a43206cb4b49ca6682d842b7e366"
+}

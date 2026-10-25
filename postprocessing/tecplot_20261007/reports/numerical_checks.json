@@ -1,0 +1,56 @@
+{
+  "nodes": 138,
+  "elements": 133,
+  "components": {
+    "tower": 19,
+    "blade": 105,
+    "transition": 9
+  },
+  "raw_coordinates_equal": true,
+  "connectivity_after_explicit_type3_removal_equal": true,
+  "removed_legacy_type3": [
+    134,
+    135,
+    136,
+    137
+  ],
+  "rotor_axis": [
+    0.9961845747364256,
+    0.0,
+    0.0872713759328153
+  ],
+  "source_geometry_sha256": "6fc874fe3a1fafafce08cb7e0876ba7c67b4e81b47cf1d4d72cddf3768c2e043",
+  "new_solver_evaluations": 0,
+  "modal_gate": true,
+  "seismic_gate": true,
+  "root_frame_orthogonality_error": 5.162835502930473e-16,
+  "root_frame_determinant": 0.9999999999999997,
+  "nominal_equilibrium_residual": 7.726307166803152e-09,
+  "mode_count": 16,
+  "modal_generalized_masses": [
+    1.0000000000000002,
+    0.9999999999999999,
+    0.9999999999999999,
+    1.0,
+    1.0,
+    1.0000000000000002,
+    1.0,
+    1.0000000000000002,
+    1.0,
+    1.0000000000000002,
+    1.0000000000000002,
+    1.0000000000000002,
+    0.9999999999999999,
+    0.9999999999999997,
+    0.9999999999999998,
+    0.9999999999999999
+  ],
+  "modal_max_mpc_relative_residual": 5.3102144524976126e-17,
+  "local_display_accepted": 6,
+  "local_display_unresolved": 26,
+  "morris_completed_trajectories": 40,
+  "morris_mean_accepted": 14,
+  "morris_dispersion_accepted": 2,
+  "morris_domain_slice_evaluated_points": 16,
+  "finite_all_exported": true
+}

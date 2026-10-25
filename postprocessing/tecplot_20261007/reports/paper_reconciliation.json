@@ -1,0 +1,27 @@
+{
+  "canonical_source": "/Users/nuseche/Desktop/Tesis_codigos/docs/formulacion_revista_20260919",
+  "baseline": "Expanded Spanish manuscript recovered from output/latex/FCEFyN_Overleaf; archived before revision.",
+  "previous_compact_figure_count": 1,
+  "retained_original_figure_labels": 9,
+  "current_figure_count": 11,
+  "added_explanatory_views": [
+    "Nominal hub rotation in its own readable figure",
+    "Section normal versus reference-line tangent"
+  ],
+  "display_math_blocks_preserved": 84,
+  "bilingual_translation_paragraphs": 157,
+  "figures": {
+    "modelo": "turbina_3d",
+    "cambio-componentes": "concept_cambio-componentes",
+    "sistemas-globales": "concept_sistemas-lateral",
+    "giro-nominal": "concept_cubo-nominal",
+    "marcos": "concept_marcos",
+    "viga": "concept_particula-seccion",
+    "cortante": "concept_shear",
+    "configuraciones": "concept_tresniveles",
+    "masa-seccional": "paper_masa_seccional",
+    "elemento": "concept_elemento",
+    "vinculo-raiz": "paper_vinculo_raiz"
+  },
+  "solver_changes": 0
+}

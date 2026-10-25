@@ -1,0 +1,31 @@
+{
+  "doi": "10.11583/DTU.16743739",
+  "channel": "s70u",
+  "heightM": 70,
+  "samplingHz": 25,
+  "samples": 15000,
+  "firstToLastSampleSeconds": 599.96,
+  "acquisitionDurationSeconds": 600,
+  "date": "2005-11-19",
+  "localTimeInHeader": "00:00:00",
+  "timeZone": "not specified in raw file; no simultaneity claim",
+  "turbine": "NEG-Micon NM92/2750 kW",
+  "measuredRotorSpeedRpm": 14.65,
+  "meanMps": 6.134102666666667,
+  "stdPopulationMps": 0.2604304541706971,
+  "turbulenceIntensity": 0.04245616161364603,
+  "minMps": 5.32,
+  "maxMps": 7.43,
+  "meanSquaredSpeed": 37.69503954666666,
+  "originalSha256": "ed231006d903cf20ed54fd0b6866778ef510c6f1a26b62ecef423192e5494e9e",
+  "shapeDefinition": "U(t)^2 / mean_sample(U^2); force = meanThrust * shape",
+  "measuredForce": false,
+  "jointEarthquakeObservation": false,
+  "lowerSonicsDuplicated": true,
+  "warnings": [
+    "DTU web documentation says 8 Hz in one final line; raw file header, 15000 samples and 600 s establish 25 Hz.",
+    "No spatial wind field, hub-height extrapolation, aerodynamic feedback, or turbine-to-turbine load scaling is inferred.",
+    "Measured turbine rpm is context; structural scenario retains prescribed 12 rpm.",
+    "Published blade/shaft/tower moments are measured internal responses, not applied nodal loads."
+  ]
+}

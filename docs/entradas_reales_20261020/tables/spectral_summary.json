@@ -1,0 +1,9 @@
+{
+  "windowSeconds": 20,
+  "overlapFraction": 0.5,
+  "windSegments": 59,
+  "earthquakeSegments": 3,
+  "interpretation": "variance-normalized shapes, not equal force or equal energy",
+  "windFractionBelow05Hz": 0.61751325189618722,
+  "earthquakeFractionBelow05Hz": 0.053945051802312308
+}

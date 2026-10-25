@@ -1,0 +1,58 @@
+{
+  "SO2_0.4": {
+    "orthogonality": 3.0102202242079384e-17,
+    "determinant": 1.0
+  },
+  "SO2_0.45": {
+    "orthogonality": 9.258174406751432e-18,
+    "determinant": 0.9999999999999999
+  },
+  "SO2_0.47": {
+    "orthogonality": 3.3751525404835186e-17,
+    "determinant": 1.0
+  },
+  "SO2_0.49": {
+    "orthogonality": 1.5946135718571474e-16,
+    "determinant": 0.9999999999999999
+  },
+  "SO2_0.55": {
+    "orthogonality": 3.368073035676259e-17,
+    "determinant": 1.0
+  },
+  "SO2_0.69": {
+    "orthogonality": 7.192917179755219e-18,
+    "determinant": 1.0
+  },
+  "SO2_1.1": {
+    "orthogonality": 2.1339831831808166e-17,
+    "determinant": 1.0
+  },
+  "components": {
+    "reconstruction_error": 2.220446049250313e-16,
+    "orthogonal_projection_error": 1.1102230246251565e-16
+  },
+  "director": {
+    "tangent_dot_director": -4.163336342344337e-17
+  },
+  "root_1": {
+    "right_hand_error": 0.0,
+    "orthogonality": 0.0,
+    "determinant": 1.0
+  },
+  "root_2": {
+    "right_hand_error": 0.0,
+    "orthogonality": 1.1541895682634437e-16,
+    "determinant": 1.0
+  },
+  "root_3": {
+    "right_hand_error": 0.0,
+    "orthogonality": 5.6363783351141024e-18,
+    "determinant": 1.0
+  },
+  "element": {
+    "e2_y": 1.0,
+    "e1_dot_p": 5.551115123125783e-16,
+    "orthogonality": 4.486550591397527e-16,
+    "determinant": 0.9999999999999999
+  }
+}

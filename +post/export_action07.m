@@ -1,0 +1,23 @@
+function artifacts=export_action07(run,action07)
+%EXPORT_ACTION07 Export first-order dynamic-operator acceptance tables.
+arguments
+    run (1,1) struct
+    action07 (1,1) struct
+end
+mapping={'checkTable','action07_validation.csv'; ...
+    'operatorTable','action07_operating_points.csv'; ...
+    'gyroTable','action07_gyro_components.csv'; ...
+    'dampingTable','action07_damping.csv'; ...
+    'aerodynamicTable','action07_aerodynamic_benchmark.csv'};
+for index=1:size(mapping,1)
+    field=mapping{index,1};file=mapping{index,2};
+    if ~isfield(action07,field)||~istable(action07.(field))
+        error('post:export_action07:MissingTable', ...
+            'Action 07 result is missing table %s.',field);
+    end
+    writetable(action07.(field),fullfile(run.folder,file));
+end
+artifacts=struct('validation',action07.checkTable, ...
+    'operators',action07.operatorTable,'gyroscopy',action07.gyroTable, ...
+    'damping',action07.dampingTable,'aerodynamics',action07.aerodynamicTable);
+end

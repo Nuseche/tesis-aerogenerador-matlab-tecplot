@@ -1,0 +1,12 @@
+{
+  "recordedDate": "2026-10-05",
+  "status": "failed",
+  "phase": "pilot_before_main_campaign",
+  "equilibriumTolerance": 1e-10,
+  "nominalSpeedRPM": 12,
+  "continuationRequested": [0, 12],
+  "qepTolerance": 1e-12,
+  "errorIdentifier": "equilibrium:solve_static_equilibrium:LineSearchFailure",
+  "errorMessage": "Newton line search could not reduce the residual from 1.954e-09; last trial 9.170e-09.",
+  "interpretation": "Observed convergence floor in this attempt; not a rigorous general bound on equilibrium or tangent error. No nominal sensitivity result was generated from this failed attempt."
+}

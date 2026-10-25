@@ -1,0 +1,135 @@
+[
+  {
+    "id": "influencia_firmada_grupos",
+    "engine": "MATLAB R2026a graphics; authorized alternative on 2026-10-14",
+    "sources": [
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/report_data.json"
+    ],
+    "outputs": [
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/influencia_firmada_grupos.png",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/influencia_firmada_grupos.pdf"
+    ],
+    "style": "Monochrome, white background, Arial, black/grey symbols and light grey grid, matching previous Tecplot figures",
+    "sourceSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/report_data.json": "fb9f00c1a9f9c541067a274429ea4bf238d2c1a93a645f94caff95f0b326abb3"
+    },
+    "outputSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/influencia_firmada_grupos.png": "544aff5ace104e7c713b361edd654d065796c8b7cf56a76a6ff596bfd5ae3808",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/influencia_firmada_grupos.pdf": "7b40e51794b3c65aeb0ef78a7df3ff2c540ab427496ae0e6012de64c97ad6a3a"
+    }
+  },
+  {
+    "id": "compensacion_rejilla",
+    "engine": "MATLAB R2026a graphics; authorized alternative on 2026-10-14",
+    "sources": [
+      "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/grid_completion_20261014/grid_responses.csv"
+    ],
+    "outputs": [
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/compensacion_rejilla.png",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/compensacion_rejilla.pdf"
+    ],
+    "style": "Monochrome, white background, Arial, black/grey symbols and light grey grid, matching previous Tecplot figures",
+    "sourceSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/grid_completion_20261014/grid_responses.csv": "b6cf515ba5b44cac532e42d061be46cba5c4f12d6126589958f07a8227244dfe"
+    },
+    "outputSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/compensacion_rejilla.png": "2879d86463d79071ff9f024ac82f6995ba9c5c71119ddda047fb52704725de8a",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/compensacion_rejilla.pdf": "7f552d82c93063e1d674919dc0e5729f120c2452235dd35093e65ffd1766884e"
+    }
+  },
+  {
+    "id": "contrastes_interaccion",
+    "engine": "MATLAB R2026a graphics; authorized alternative on 2026-10-14",
+    "sources": [
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/mixed_contrasts.csv"
+    ],
+    "outputs": [
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/contrastes_interaccion.png",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/contrastes_interaccion.pdf"
+    ],
+    "style": "Monochrome, white background, Arial, black/grey symbols and light grey grid, matching previous Tecplot figures",
+    "sourceSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/mixed_contrasts.csv": "30fa1b13c3c74f80503117e6867198232cec90d1bf084e02b26cd5b88ad90390"
+    },
+    "outputSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/contrastes_interaccion.png": "6afdc423a95f43dc12ae45786d8f59d513f0d5b07d00ea4f575c336893414ee4",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/contrastes_interaccion.pdf": "fb47e96810aa2a511a56007a62781ff2f02f27daa8d76ada2d9f9b5654c377d9"
+    }
+  },
+  {
+    "id": "trayectoria_legible",
+    "engine": "MATLAB R2026a graphics; authorized alternative on 2026-10-14",
+    "sources": [
+      "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_vertices.csv"
+    ],
+    "outputs": [
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/trayectoria_legible.png",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/trayectoria_legible.pdf"
+    ],
+    "style": "Monochrome, white background, Arial, black/grey symbols and light grey grid, matching previous Tecplot figures",
+    "sourceSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_vertices.csv": "5fd62bdaacdeb0176f68d1a7aff7b86d2af4668ca26a37f3734a005b136c0df5"
+    },
+    "outputSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/trayectoria_legible.png": "da9ed06d04fcdc67f1dac1493d283bfe83f2c21c3ab11281cdf2e29563825b69",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/trayectoria_legible.pdf": "eb6c0cd64241a26facd51ea61b72b8ea473be707c9dd1aa9d7617a4caaf94db4"
+    }
+  },
+  {
+    "id": "convergencia_legible",
+    "engine": "MATLAB R2026a graphics; authorized alternative on 2026-10-14",
+    "sources": [
+      "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_estimators.csv"
+    ],
+    "outputs": [
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/convergencia_legible.png",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/convergencia_legible.pdf"
+    ],
+    "style": "Monochrome, white background, Arial, black/grey symbols and light grey grid, matching previous Tecplot figures",
+    "sourceSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_estimators.csv": "6a753f897cc8151754333c995e35af41b8588c139686e63a964851d8fe6a2789"
+    },
+    "outputSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/convergencia_legible.png": "6cc775126406add0f90e983ff256a0707750d580121ffa837da9885750722099",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/convergencia_legible.pdf": "d0033db2fc9bd03235959ac078f379ae86693e971800f5fe3825357f47836442"
+    }
+  },
+  {
+    "id": "ruido_legible",
+    "engine": "MATLAB R2026a graphics; authorized alternative on 2026-10-14",
+    "sources": [
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/report_data.json"
+    ],
+    "outputs": [
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/ruido_legible.png",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/ruido_legible.pdf"
+    ],
+    "style": "Monochrome, white background, Arial, black/grey symbols and light grey grid, matching previous Tecplot figures",
+    "sourceSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/report_data.json": "fb9f00c1a9f9c541067a274429ea4bf238d2c1a93a645f94caff95f0b326abb3"
+    },
+    "outputSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/ruido_legible.png": "9fcf8445c936ddeb52cc87095283a57deff74e02af901d6799913b90563b6a8b",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/ruido_legible.pdf": "1bc9373c7819b9801f1998ce81f96e2f918dd4b239b3e0174e0525a2321f5044"
+    }
+  },
+  {
+    "id": "participaciones_legibles",
+    "engine": "MATLAB R2026a graphics; authorized alternative on 2026-10-14",
+    "sources": [
+      "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/initial_20261005/local/modal_energy_evidence.csv"
+    ],
+    "outputs": [
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/participaciones_legibles.png",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/participaciones_legibles.pdf"
+    ],
+    "style": "Monochrome, white background, Arial, black/grey symbols and light grey grid, matching previous Tecplot figures",
+    "sourceSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/initial_20261005/local/modal_energy_evidence.csv": "374718adbe0ee939453a2470e5b3f86c8aa072e0c064ac215638ca0eca6375f3"
+    },
+    "outputSHA256": {
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/participaciones_legibles.png": "9d3e167457a7ba00d7045f9556a4c18bf9649b1c6daee06005272d60c01a9e90",
+      "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_complementaria_20261014/figures/participaciones_legibles.pdf": "665d6e722483355a9f26d9429735aed603c27577f8f23fa4a728c748a5fb2dc5"
+    }
+  }
+]

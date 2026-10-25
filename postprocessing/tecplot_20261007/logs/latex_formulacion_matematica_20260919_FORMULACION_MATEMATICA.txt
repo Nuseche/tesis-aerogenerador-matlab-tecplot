@@ -1,0 +1,10 @@
+note: Running TeX ...
+note: Running xdvipdfmx ...
+note: Writing `FORMULACION_MATEMATICA.log` (16.6943359375 KiB)
+note: Writing `FORMULACION_MATEMATICA.aux` (12.755859375 KiB)
+note: Writing `FORMULACION_MATEMATICA.pdf` (425.138671875 KiB)
+note: Writing `FORMULACION_MATEMATICA.toc` (3.2470703125 KiB)
+note: Writing `FORMULACION_MATEMATICA.out` (1.9892578125 KiB)
+
+warning: FORMULACION_MATEMATICA.tex:463: Underfull \hbox (badness 1314) in paragraph at lines 461--463
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

@@ -1,0 +1,32 @@
+note: Running TeX ...
+note: Running BibTeX on FCEFyN_EN.aux ...
+note: Rerunning TeX because bibtex was run ...
+note: Running xdvipdfmx ...
+note: Writing `FCEFyN_EN.bbl` (2.9375 KiB)
+note: Writing `FCEFyN_EN.out` (7.8173828125 KiB)
+note: Writing `FCEFyN_EN.log` (27.9755859375 KiB)
+note: Writing `FCEFyN_EN.aux` (17.482421875 KiB)
+note: Writing `FCEFyN_EN.pdf` (1.3138141632080078 MiB)
+note: Writing `FCEFyN_EN.blg` (225 B)
+
+warning: FCEFyN_EN.tex:145: Underfull \hbox (badness 4940) in paragraph at lines 144--145
+warning: FCEFyN_EN.tex:145: Underfull \hbox (badness 7944) in paragraph at lines 144--145
+warning: FCEFyN_EN.tex:265: Underfull \hbox (badness 2671) in paragraph at lines 264--265
+warning: FCEFyN_EN.tex:390: Underfull \hbox (badness 2635) in paragraph at lines 389--390
+warning: FCEFyN_EN.tex:390: Underfull \hbox (badness 10000) in paragraph at lines 389--390
+warning: FCEFyN_EN.tex:390: Underfull \hbox (badness 1033) in paragraph at lines 389--390
+warning: FCEFyN_EN.tex:728: Underfull \hbox (badness 3503) in paragraph at lines 727--728
+warning: FCEFyN_EN.tex:880: Underfull \hbox (badness 2165) in paragraph at lines 879--880
+warning: FCEFyN_EN.tex:913: Underfull \hbox (badness 7832) in paragraph at lines 912--913
+warning: FCEFyN_EN.tex:992: Underfull \hbox (badness 1412) in paragraph at lines 991--992
+warning: FCEFyN_EN.tex:145: Underfull \hbox (badness 4940) in paragraph at lines 144--145
+warning: FCEFyN_EN.tex:145: Underfull \hbox (badness 7944) in paragraph at lines 144--145
+warning: FCEFyN_EN.tex:265: Underfull \hbox (badness 2671) in paragraph at lines 264--265
+warning: FCEFyN_EN.tex:390: Underfull \hbox (badness 2635) in paragraph at lines 389--390
+warning: FCEFyN_EN.tex:390: Underfull \hbox (badness 10000) in paragraph at lines 389--390
+warning: FCEFyN_EN.tex:390: Underfull \hbox (badness 1033) in paragraph at lines 389--390
+warning: FCEFyN_EN.tex:728: Underfull \hbox (badness 3503) in paragraph at lines 727--728
+warning: FCEFyN_EN.tex:880: Underfull \hbox (badness 2165) in paragraph at lines 879--880
+warning: FCEFyN_EN.tex:913: Underfull \hbox (badness 7832) in paragraph at lines 912--913
+warning: FCEFyN_EN.tex:992: Underfull \hbox (badness 1412) in paragraph at lines 991--992
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

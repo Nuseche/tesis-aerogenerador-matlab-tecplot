@@ -1,0 +1,50 @@
+\documentclass[eng]{FCEFyN-class}
+\usepackage{bm,placeins}
+\setkeys{Gin}{draft=false}
+\captionsetup[figure]{skip=8pt}
+\setlength{\belowcaptionskip}{4pt}
+\setlength{\floatsep}{18pt plus 4pt minus 2pt}
+\setlength{\textfloatsep}{18pt plus 4pt minus 2pt}
+\setlength{\dblfloatsep}{18pt plus 4pt minus 2pt}
+\setlength{\dbltextfloatsep}{18pt plus 4pt minus 2pt}
+\makeatletter
+\setlength{\@dblfpsep}{24pt plus 2fil}
+\makeatother
+\newcommand{\I}{\bm I}
+\newcommand{\Sx}[1]{[\bm{#1}]_\times}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\tr}{\mathsf T}
+\title{Mathematical formulation of wind turbine structural dynamics with prescribed rotation\\Formulación matemática de la dinámica estructural de un aerogenerador con rotación prescrita}
+\shorttitle{Wind turbine structural dynamics}
+\author[1,2,3]{Diego F. Turello}
+\author[1]{Mauro S. Maza}
+\author[4]{Nicolás Andrés Useche Castillo}
+\author[4]{\authorcr Omar Lopez}
+\author[1,2]{Sergio Preidikman}
+\author[1,2]{Federico Pinto}
+\affil[1]{Departamento de Estructuras, Facultad de Ciencias Exactas, Físicas y Naturales, Universidad Nacional de Córdoba, Córdoba, Argentina}
+\affil[2]{Instituto de Estudios Avanzados en Ingeniería y Tecnología, UNC--CONICET, Córdoba, Argentina}
+\affil[3]{Universidad Tecnológica Nacional, Facultad Regional Santa Fe, Santa Fe, Argentina}
+\affil[4]{Departamento de Ingeniería Mecánica, Universidad de los Andes, Bogotá, Colombia}
+\firstauthor{Turello}
+\contactauthor{Diego F. Turello}
+\email{diego.turello@unc.edu.ar}
+\mailingaddress{Departamento de Estructuras, FCEFyN--UNC, Córdoba, Argentina}
+\phonenumber{not provided}
+% Datos reservados al proceso editorial; no se asignan fechas ni volumen.
+\thisvolume{--}\thisnumber{--}\thismonth{}\thisyear{}
+\receptiondate{--}\acceptancedate{--}\publicationdate{--}
+\hypersetup{pdftitle={Mathematical formulation of wind turbine structural dynamics with prescribed rotation},pdfauthor={Diego F. Turello; Mauro S. Maza; Nicolás Andrés Useche Castillo; Omar Lopez; Sergio Preidikman; Federico Pinto}}
+\begin{document}
+\selectlanguage{english}
+\resumen{\foreignlanguage{spanish}{Se desarrolla un modelo matemático de la dinámica estructural de un aerogenerador de eje horizontal cuyo rotor tiene velocidad angular nominal prescrita. La torre y las tres palas se representan mediante vigas de Timoshenko, mientras que la góndola y el cubo se idealizan como cuerpos rígidos conectados elásticamente. La formulación distingue la configuración material de referencia, el movimiento nominal y las perturbaciones estructurales, y define los sistemas de referencia de cada componente. A partir de esta cinemática se obtienen las propiedades de masa y rigidez, las relaciones de compatibilidad y las ecuaciones discretas. La energía cinética permite deducir de manera consistente los efectos giroscópicos y las contribuciones del giro al equilibrio y a su linealización, considerando excentricidad y anisotropía de la distribución de masa. Se conservan las derivadas temporales de los cambios de coordenadas y de los vínculos entre el cubo y las raíces de las palas. Finalmente, se incorporan las acciones gravitatorias, aerodinámicas y sísmicas, y se establecen los problemas de vibración y respuesta transitoria alrededor de un estado de operación. El modelo diferencia el equilibrio relativo del análisis local a azimut fijo y explicita las hipótesis necesarias para cada descripción.}}
+\palabrasclave{Aerogeneradores, Dinámica estructural, Cinemática, Efectos giroscópicos, Elementos finitos.}
+\abstract{\foreignlanguage{english}{A mathematical model is developed for the structural dynamics of a horizontal-axis wind turbine with prescribed nominal rotor angular velocity. The tower and three blades are represented by Timoshenko beams, whereas the nacelle and hub are idealized as elastically connected rigid bodies. The formulation distinguishes the material reference configuration, nominal motion, and structural perturbations, and defines the reference frames attached to each component. Mass and stiffness properties, compatibility relations, and discrete equations follow from this kinematic description. Kinetic energy provides a consistent derivation of gyroscopic effects and the contributions of prescribed rotation to equilibrium and its linearization, accounting for mass eccentricity and anisotropy. Time derivatives of coordinate transformations and hub--blade-root constraints are retained. Gravitational, aerodynamic, and seismic actions are then introduced, and vibration and transient-response problems are formulated about an operating state. The model distinguishes relative equilibrium from a local frozen-azimuth analysis and states the assumptions required by each description.}}
+\keywords{Wind turbines, Structural dynamics, Kinematics, Gyroscopic effects, Finite elements.}
+\maketitle
+\thispagestyle{fancy}
+\blfootnote{\fontsize{8}{11}\selectfont Corresponding author: Diego F. Turello, \href{mailto:diego.turello@unc.edu.ar}{diego.turello@unc.edu.ar}.}
+\clearpage
+\input{cuerpo_en}
+\insertbibliography{Referencias}
+\end{document}

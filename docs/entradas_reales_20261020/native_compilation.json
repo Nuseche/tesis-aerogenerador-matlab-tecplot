@@ -1,0 +1,7 @@
+{
+  "status": "compile-failed",
+  "message": "Could not compile the document",
+  "firstMissingExternalAsset": "figures/tecplot/morris_proceso.pdf",
+  "sourcePreserved": true,
+  "projectTectonicCompilationSucceeded": true
+}

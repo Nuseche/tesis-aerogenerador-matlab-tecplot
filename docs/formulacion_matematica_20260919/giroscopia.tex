@@ -1,0 +1,615 @@
+\section[GIROSCOPÍA Y TRANSFORMACIONES CINEMÁTICAS]{CINEMÁTICA ROTATORIA, GIROSCOPÍA Y TRANSPORTE ENTRE MARCOS}
+\label{prefgyro:section}
+
+Esta sección establece una única cadena cinemática para la masa distribuida de
+las palas, el cubo, las restricciones rígidas raíz--cubo y la transformación
+multiblade. El punto de partida es una rotación nominal de velocidad angular
+constante, impuesta alrededor de un eje conocido, y pequeñas perturbaciones
+respecto del equilibrio elástico predeformado. La hipótesis de giro constante es
+esencial: no se identifica el movimiento nominal con el de un sólido libre. Si
+el eje prescrito no es principal, existe un par de mantenimiento que debe formar
+parte de las acciones del punto operativo.
+
+La separación entre movimiento nominal y perturbación sigue la construcción de
+pequeñas oscilaciones alrededor de un movimiento estacionario descrita en la
+Sección~4.4, ecuaciones (4.51)--(4.70), de \citet{meirovitch1997}. Las matrices
+seccionales que se obtienen a continuación son, sin embargo, la especialización
+particular adoptada aquí para una sección de viga con traslación, giro y centro
+de masa excéntrico; no se atribuyen como una fórmula literal de esa referencia.
+
+\subsection{Energía cinética exacta de una sección}
+\label{prefgyro:exacta}
+
+Sea $\bm R_0(t)\in SO(3)$ la orientación nominal del marco que gira con el
+rotor y sea
+
+\begin{equation}
+ \bm W=[\bm\Omega]_\times,
+ \qquad
+ \dot{\bm R}_0=\bm R_0\bm W,
+ \qquad
+ \dot{\bm\Omega}=\bm 0 .
+ \label{prefgyro:W}
+\end{equation}
+
+Las componentes de $\bm\Omega$ se expresan en el marco nominal. Para una
+sección, $\bm a$ es el vector desde el eje de giro hasta el punto de referencia
+de la línea de viga, $\bm r$ es el offset desde ese punto hasta el centro de
+masa, $m$ es la masa por unidad de longitud y $\bm J$ es el tensor de inercia
+centroidal por unidad de longitud. Se introducen la traslación perturbada
+$\bm u$ y el vector de rotación perturbada $\bm\theta$ mediante
+
+\begin{equation}
+ \bm R(t)=\bm R_0(t)\bm E(\bm\theta),
+ \qquad
+ \bm E(\bm\theta)=\exp([\bm\theta]_\times).
+ \label{prefgyro:Rexacta}
+\end{equation}
+
+La posición exacta del centro de masa, salvo una traslación común del origen,
+es
+
+\begin{equation}
+ \bm x_G=\bm R_0
+ \left(\bm a+\bm u+\bm E\bm r\right).
+ \label{prefgyro:xG}
+\end{equation}
+
+Si $\bm J_\ell(\bm\theta)$ es el Jacobiano izquierdo de $SO(3)$,
+
+\begin{equation}
+ \bm J_\ell(\bm\theta)
+ =\bm I+\frac{1-\cos\vartheta}{\vartheta^2}[\bm\theta]_\times
+ +\frac{\vartheta-\sin\vartheta}{\vartheta^3}
+ [\bm\theta]_\times^2,
+ \qquad \vartheta=\lVert\bm\theta\rVert,
+ \label{prefgyro:Jleft}
+\end{equation}
+
+entonces
+$\dot{\bm E}\bm E^{\mathsf T}
+ =[\bm J_\ell(\bm\theta)\dot{\bm\theta}]_\times$.
+Al expresar las velocidades en el marco nominal, donde la rotación
+$\bm R_0$ no altera las normas, se obtiene
+
+\begin{align}
+ \bm v_G={}&
+ \bm W\left(\bm a+\bm u+\bm E\bm r\right)
+ +\dot{\bm u}
+ +[\bm J_\ell(\bm\theta)\dot{\bm\theta}]_\times
+ \bm E\bm r,
+ \label{prefgyro:vexacta}\\
+ \bm\omega_G={}&
+ \bm\Omega+\bm J_\ell(\bm\theta)\dot{\bm\theta}.
+ \label{prefgyro:omegaexacta}
+\end{align}
+
+La energía cinética exacta por unidad de longitud es, por tanto,
+
+\begin{equation}
+ \mathcal T_{\mathrm{exact}}
+ =\frac12m\bm v_G^{\mathsf T}\bm v_G
+ +\frac12\bm\omega_G^{\mathsf T}
+ \bm E\bm J\bm E^{\mathsf T}\bm\omega_G .
+ \label{prefgyro:Texacta}
+\end{equation}
+
+Esta expresión retiene simultáneamente la velocidad orbital, la velocidad de la
+línea de referencia, la excentricidad del centro de masa y la inercia rotacional
+anisótropa. En particular, no es correcto añadir a posteriori un bloque de
+momento angular a una masa traslacional sin verificar que ambos provienen de la
+misma expansión de \eqref{prefgyro:Texacta}.
+
+\subsection{Expansión de segundo orden y matrices seccionales completas}
+\label{prefgyro:segundo-orden}
+
+Para obtener las ecuaciones linealizadas se emplean
+
+\begin{align}
+ \bm E(\bm\theta)
+ & =\bm I+[\bm\theta]_\times
+ +\frac12[\bm\theta]_\times^2
+ +\mathcal O(\lVert\bm\theta\rVert^3),
+ \label{prefgyro:exp2}\\
+ \bm J_\ell(\bm\theta)\dot{\bm\theta}
+ & =\dot{\bm\theta}
+ +\frac12\bm\theta\times\dot{\bm\theta}
+ +\mathcal O(3).
+ \label{prefgyro:Jleft2}
+\end{align}
+
+Resulta útil definir, para dos vectores cualesquiera $\bm a$ y $\bm b$, la
+matriz simétrica
+
+\begin{equation}
+ \mathcal H(\bm a,\bm b)
+ =\frac12\left(\bm a\bm b^{\mathsf T}
+ +\bm b\bm a^{\mathsf T}\right)
+ -(\bm a^{\mathsf T}\bm b)\bm I,
+ \label{prefgyro:Hab}
+\end{equation}
+
+que satisface la identidad
+
+\begin{equation}
+ \bm a^{\mathsf T}[\bm\theta]_\times^2\bm b
+ =\bm\theta^{\mathsf T}\mathcal H(\bm a,\bm b)\bm\theta.
+ \label{prefgyro:Hidentity}
+\end{equation}
+
+Se agrupan las seis perturbaciones seccionales en
+$\bm\eta=[\bm u^{\mathsf T},\bm\theta^{\mathsf T}]^{\mathsf T}$ y se definen
+
+\begin{equation}
+ \bm B_G=\begin{bmatrix}\bm I&-[\bm r]_\times\end{bmatrix},
+ \quad
+ \bm b=\bm a+\bm r,
+ \quad
+ \bm p=m\bm W\bm b,
+ \quad
+ \bm h=\bm J\bm\Omega .
+ \label{prefgyro:definiciones}
+\end{equation}
+
+Aquí $\bm p$ y $\bm h$ son, respectivamente, el momento lineal orbital del
+centro de masa y el momento angular centroidal del estado nominal. La parte
+cuadrática de la energía puede escribirse como
+
+\begin{equation}
+ \mathcal T^{(2)}
+ =\frac12\dot{\bm\eta}^{\mathsf T}\bm M_6\dot{\bm\eta}
+ +\dot{\bm\eta}^{\mathsf T}\bm A_6\bm\eta
+ +\frac12\bm\eta^{\mathsf T}\bm H_\Omega\bm\eta .
+ \label{prefgyro:T2}
+\end{equation}
+
+La masa seccional completa es
+
+\begin{equation}
+ \bm M_6
+ =m\bm B_G^{\mathsf T}\bm B_G
+ +\begin{bmatrix}\bm 0&\bm 0\\\bm 0&\bm J\end{bmatrix}
+ =\begin{bmatrix}
+ m\bm I&-m[\bm r]_\times\\
+ m[\bm r]_\times&\bm J-m[\bm r]_\times^2
+ \end{bmatrix}.
+ \label{prefgyro:M6}
+\end{equation}
+
+La matriz completa de acoplamiento velocidad--posición es
+
+\begin{equation}
+ \bm A_6
+ =\begin{bmatrix}
+ m\bm W&-m\bm W[\bm r]_\times\\
+ m[\bm r]_\times\bm W&
+ -m[\bm r]_\times\bm W[\bm r]_\times
+ +\mathcal H(\bm p,\bm r)+\bm J\bm W-\tfrac12[\bm h]_\times
+ \end{bmatrix}.
+ \label{prefgyro:A6}
+\end{equation}
+
+El término $\mathcal H(\bm p,\bm r)$ es simétrico y, por consiguiente, no
+aparece en la matriz giroscópica. Se conserva para presentar la expansión
+completa: con $\bm p,\bm r$ constantes, su contribución es la derivada total
+$\frac{\dd}{\dd t}[\tfrac12\bm\theta^{\mathsf T}\mathcal H(\bm p,\bm r)\bm\theta]$
+y puede omitirse sin modificar las ecuaciones. La contribución de
+velocidad en las ecuaciones de Lagrange es
+
+\begin{equation}
+ \boxed{\bm G_6=\bm A_6-\bm A_6^{\mathsf T}}
+ =\begin{bmatrix}
+ 2m\bm W&-2m\bm W[\bm r]_\times\\
+ 2m[\bm r]_\times\bm W&
+ -2m[\bm r]_\times\bm W[\bm r]_\times
+ +\bm J\bm W+\bm W\bm J-[\bm h]_\times
+ \end{bmatrix}.
+ \label{prefgyro:G6}
+\end{equation}
+
+Por construcción, $\bm G_6^{\mathsf T}=-\bm G_6$. El bloque rotacional
+$\bm J\bm W+\bm W\bm J-[\bm J\bm\Omega]_\times$ es necesario incluso cuando
+el centro de masa está sobre la línea de referencia. El bloque reducido
+$[\bm J\bm\Omega]_\times$ solo representa una parte asociada al momento
+angular nominal: no contiene los términos $\bm J\bm W+\bm W\bm J$ y, por
+tanto, no es la expansión completa de \eqref{prefgyro:Texacta}.
+
+La anisotropía muestra la diferencia con claridad. Si $\bm\Omega=\Omega\bm e_1$
+y $\bm J=\operatorname{diag}(J_1,J_2,J_3)$ en ejes principales, el acoplamiento
+en el plano $2$--$3$ queda multiplicado por
+
+\begin{equation}
+ (J_2+J_3-J_1)\Omega,
+ \label{prefgyro:principal}
+\end{equation}
+
+y no por $J_1\Omega$. Para una inercia no diagonal deben conservarse todos los
+productos de inercia de \eqref{prefgyro:G6}.
+
+La Hessiana puramente centrífuga que aparece en \eqref{prefgyro:T2} es
+
+\begin{equation}
+ \bm H_\Omega
+ =\begin{bmatrix}
+ m\bm W^{\mathsf T}\bm W&
+ -m\bm W^{\mathsf T}\bm W[\bm r]_\times\\
+ m[\bm r]_\times\bm W^{\mathsf T}\bm W&
+ -m[\bm r]_\times\bm W^{\mathsf T}\bm W[\bm r]_\times
+ +\mathcal H(\bm W^{\mathsf T}\bm p,\bm r)
+ +\mathcal H(\bm\Omega,\bm h)
+ -\bm W\bm J\bm W
+ \end{bmatrix}.
+ \label{prefgyro:HOmega}
+\end{equation}
+
+La fuerza generalizada constante inducida por el giro se obtiene de la parte
+lineal de la energía:
+
+\begin{equation}
+ \bm f_{\Omega,0}
+ =\bm B_G^{\mathsf T}m\bm W^{\mathsf T}\bm W\bm b
+ +\begin{bmatrix}\bm 0\\ \bm h\times\bm\Omega\end{bmatrix}.
+ \label{prefgyro:fcentrif}
+\end{equation}
+
+Con la convención de almacenar las fuerzas centrífugas en el lado derecho,
+
+\begin{equation}
+ \bm f_\Omega(\bm\eta)
+ =\bm f_{\Omega,0}+\bm H_\Omega\bm\eta,
+ \qquad
+ \bm K_{\Omega,c}=-\bm H_\Omega
+ \label{prefgyro:KOmega}
+\end{equation}
+
+es la contribución correspondiente en el lado izquierdo. Debe sumarse a la
+rigidez elástica y a la rigidez geométrica del equilibrio prestresado, no a una
+configuración descargada elegida de manera independiente.
+
+Cuando $\bm h$ no es paralelo a $\bm\Omega$, la rotación uniforme prescrita
+requiere el par
+
+\begin{equation}
+ \bm\tau_{\mathrm{hold}}=\bm\Omega\times\bm h.
+ \label{prefgyro:holding}
+\end{equation}
+
+Este par se opone al bloque $\bm h\times\bm\Omega$ de
+\eqref{prefgyro:fcentrif} y compensa el residuo nominal de Euler. Si no se
+aplica, el eje de giro no permanece constante y las hipótesis de
+\eqref{prefgyro:W} dejan de ser
+válidas. Por ello las ecuaciones anteriores describen un rotor mantenido en su
+punto operativo; no constituyen una afirmación sobre la rotación libre de un
+sólido anisótropo.
+
+La fuerza centrífuga y el par de mantenimiento participan en el equilibrio de
+la turbina completa. Después del ensamblaje, dicho equilibrio tiene la forma
+
+\begin{equation}
+ \bm T_0^{\mathsf T}\left[
+ \bm f_{\mathrm{int}}(\bm q_0)
+ -\bm f_{\mathrm{ext}}^{\mathrm{nc}}(\bm q_0)
+ -\bm f_{\Omega}(\bm q_0)\right]=\bm 0,
+ \label{prefgyro:equilibrio-nominal}
+\end{equation}
+
+donde $\bm f_{\Omega}(\bm q_0)=\bm f_{\Omega,0}+\bm H_\Omega\bm q_0$,
+$\bm f_{\mathrm{ext}}^{\mathrm{nc}}$ agrupa las acciones no centrífugas y
+$\bm f_{\mathrm{int}}$ incluye las fuerzas elásticas del tren y de la base.
+Las reacciones de restricción se eliminan por proyección. No corresponde imponer
+$\bm f_{\Omega,0}=\bm 0$ como condición de un rotor libre. Además, la tangente
+del par depende de cómo se mantenga la carga durante la perturbación. Con la
+convención de residual en el lado izquierdo y coordenadas exponenciales, dos
+casos representativos son
+
+\begin{equation}
+ \bm K_{\tau}^{\mathrm{cuerpo}}
+ =+\frac12[\bm\tau_{\mathrm{hold}}]_\times,
+ \qquad
+ \bm K_{\tau}^{\mathrm{nominal}}
+ =-\frac12[\bm\tau_{\mathrm{hold}}]_\times.
+ \label{prefgyro:holding-tangent}
+\end{equation}
+
+El primer signo corresponde a componentes constantes en el cuerpo perturbado y
+el segundo a componentes constantes en el marco nominal. Si el par proviene de
+una ley elástica o de control del tren, debe utilizarse la derivada de esa ley,
+en lugar de adoptar uno de estos dos tangentes como regla universal.
+
+Para un elemento de viga, las matrices seccionales se proyectan mediante la
+misma interpolación cinemática $\bm N(x)$ usada por la masa consistente:
+
+\begin{equation}
+ \bm M_e=\int_0^L\bm N^{\mathsf T}\bm M_6\bm N\,\dd x,
+ \quad
+ \bm G_{c,e}=\int_0^L\bm N^{\mathsf T}\bm G_6\bm N\,\dd x,
+ \quad
+ \bm K_{\Omega,c,e}=-\int_0^L
+ \bm N^{\mathsf T}\bm H_\Omega\bm N\,\dd x.
+ \label{prefgyro:elemento}
+\end{equation}
+
+La dependencia de $\bm a(x)$ debe conservarse al evaluar
+$\bm f_{\Omega,0}$ y $\bm H_\Omega$. Esta integración común evita combinar una
+masa consistente con una giroscopía o una fuerza centrífuga de interpolación
+distinta.
+
+\subsection{Transporte de las perturbaciones al marco inercial}
+\label{prefgyro:transporte}
+
+Las matrices anteriores están expresadas en componentes corrotantes. Para
+acoplar el rotor con la góndola y la torre se transportan todas las
+perturbaciones nodales del rotor a ejes inerciales antes de imponer las
+restricciones. Sea $\bm q_c=\bm P^{\mathsf T}(t)\bm q_g$ y, en un elemento de
+dos nodos,
+
+\begin{equation}
+ \bm{\mathcal W}_{12}
+ =\operatorname{blkdiag}(\bm W,\bm W,\bm W,\bm W).
+ \label{prefgyro:W12}
+\end{equation}
+
+Antes de aplicar estas relaciones, las matrices y $\bm W$ se expresan en una misma base de componentes de ensamblaje. En el azimut instantáneo puede elegirse $\bm P=\bm I$ sin perder las derivadas
+temporales. Para giro constante,
+
+\begin{equation}
+ \dot{\bm q}_c=\dot{\bm q}_g-\bm{\mathcal W}_{12}\bm q_g,
+ \qquad
+ \ddot{\bm q}_c=\ddot{\bm q}_g
+ -2\bm{\mathcal W}_{12}\dot{\bm q}_g
+ +\bm{\mathcal W}_{12}^2\bm q_g.
+ \label{prefgyro:qtransport}
+\end{equation}
+
+Al sustituir \eqref{prefgyro:qtransport} en la ecuación corrotante se obtiene
+
+\begin{align}
+ \bm D_g^{\mathrm{in}}&=\bm G_c-2\bm M_e\bm{\mathcal W}_{12},
+ \label{prefgyro:Dg-in}\\
+ \dot{\bm M}_g&=
+ \bm{\mathcal W}_{12}\bm M_e
+ -\bm M_e\bm{\mathcal W}_{12},
+ \label{prefgyro:Mdot}\\
+ \bm G_g&=\bm D_g^{\mathrm{in}}-\dot{\bm M}_g
+ =\bm G_c-\bm M_e\bm{\mathcal W}_{12}
+ -\bm{\mathcal W}_{12}\bm M_e,
+ \label{prefgyro:Gg}\\
+ \bm K_{\mathrm{trans}}&=
+ -\bm G_c\bm{\mathcal W}_{12}
+ +\bm M_e\bm{\mathcal W}_{12}^2.
+ \label{prefgyro:Ktransport}
+\end{align}
+
+La matriz $\dot{\bm M}_g$ es simétrica y $\bm G_g$ es antisimétrica. En
+cambio, el operador total de velocidad
+
+\begin{equation}
+ \bm D_g=\bm C_g+\dot{\bm M}_g+\bm G_g
+ \label{prefgyro:Dtotal}
+\end{equation}
+
+no tiene por qué ser antisimétrico. Exigir antisimetría a $\bm D_g$ eliminaría
+precisamente la derivada de la masa producida por una sección anisótropa o por
+una interpolación cuya base gira. La rigidez del punto operativo en ejes
+inerciales es
+
+\begin{equation}
+ \bm K_g^{\mathrm{op}}
+ =\bm K_e+\bm K_{\mathrm{prestress}}
+ +\bm K_{\Omega,c}+\bm K_{\mathrm{trans}}.
+ \label{prefgyro:Koperativa}
+\end{equation}
+
+$\bm K_{\mathrm{trans}}$ es un término de transporte de coordenadas y no una
+segunda copia de la rigidez centrífuga. Para aceleración angular no nula aparece
+además $-\bm M_e\dot{\bm{\mathcal W}}_{12}$ en
+\eqref{prefgyro:Ktransport}; dicha extensión queda fuera del punto operativo
+de velocidad constante considerado aquí.
+
+Para un cuerpo rígido con centro de masa en el maestro, las mismas identidades
+dan, en el bloque rotacional inercial,
+
+\begin{equation}
+ \dot{\bm J}_g=\bm W\bm J_g-\bm J_g\bm W,
+ \qquad
+ \bm D_{\theta,g}=\dot{\bm J}_g-[\bm J_g\bm\Omega]_\times,
+ \qquad
+ \bm G_{\theta,g}=-[\bm J_g\bm\Omega]_\times.
+ \label{prefgyro:rigidbody-inertial}
+\end{equation}
+
+Así, una masa cuyo centro coincide con el maestro no recibe un término de
+Coriolis traslacional en coordenadas inerciales. El efecto angular del spin
+prescrito sí permanece. Para un tensor anisótropo, $\dot{\bm J}_g$ debe
+conservarse y el coeficiente completo de velocidad no es puramente
+antisimétrico.
+
+\subsection{Restricción raíz--cubo dependiente del tiempo}
+\label{prefgyro:mpc}
+
+Las raíces de pala se vinculan al maestro del cubo después del transporte a
+componentes inerciales. Si
+
+\begin{equation}
+ \bm r_s(t)=\bm R_\Omega(\psi)\bm r_{s0},
+ \qquad
+ \dot{\bm r}_s=\bm W\bm r_s,
+ \qquad
+ \ddot{\bm r}_s=\bm W^2\bm r_s,
+ \label{prefgyro:rslave}
+\end{equation}
+
+la compatibilidad infinitesimal entre maestro $m$ y esclavo $s$ es
+
+\begin{equation}
+ \begin{bmatrix}\bm u_s\\\bm\theta_s\end{bmatrix}
+ =\bm B_s(t)
+ \begin{bmatrix}\bm u_m\\\bm\theta_m\end{bmatrix},
+ \qquad
+ \bm B_s(t)=
+ \begin{bmatrix}
+ \bm I&-[\bm r_s(t)]_\times\\
+ \bm 0&\bm I
+ \end{bmatrix}.
+ \label{prefgyro:Bslave}
+\end{equation}
+
+Por tanto,
+
+\begin{equation}
+ \dot{\bm B}_s=
+ \begin{bmatrix}\bm 0&-[\dot{\bm r}_s]_\times\\\bm 0&\bm 0\end{bmatrix},
+ \qquad
+ \ddot{\bm B}_s=
+ \begin{bmatrix}\bm 0&-[\ddot{\bm r}_s]_\times\\\bm 0&\bm 0\end{bmatrix}.
+ \label{prefgyro:Bslave-derivadas}
+\end{equation}
+
+En las ecuaciones siguientes, el subíndice $f$ denota los operadores completos, anteriores a la reducción de restricciones. Al ensamblar todos los bloques se obtiene
+$\bm q_f=\bm T_c(t)\bm q_r$. La reducción dinámica exacta es
+
+\begin{align}
+ \bm M_r&=\bm T_c^{\mathsf T}\bm M_f\bm T_c,
+ \label{prefgyro:Mred}\\
+ \bm D_r&=\bm T_c^{\mathsf T}
+ \left(\bm D_f\bm T_c+2\bm M_f\dot{\bm T}_c\right),
+ \label{prefgyro:Dred}\\
+ \bm K_r&=\bm T_c^{\mathsf T}
+ \left(\bm K_f\bm T_c+\bm D_f\dot{\bm T}_c
+ +\bm M_f\ddot{\bm T}_c\right).
+ \label{prefgyro:Kred}
+\end{align}
+
+Una congruencia estática $\bm T_c^{\mathsf T}(\cdot)\bm T_c$ solo es suficiente
+cuando $\dot{\bm T}_c=\ddot{\bm T}_c=\bm 0$. La derivada de la masa reducida,
+
+\begin{equation}
+ \dot{\bm M}_r
+ =\dot{\bm T}_c^{\mathsf T}\bm M_f\bm T_c
+ +\bm T_c^{\mathsf T}\dot{\bm M}_f\bm T_c
+ +\bm T_c^{\mathsf T}\bm M_f\dot{\bm T}_c,
+ \label{prefgyro:Mred-dot}
+\end{equation}
+
+permite separar nuevamente la parte simétrica dependiente del tiempo y la
+parte giroscópica antisimétrica. Esta construcción mantiene la compatibilidad
+en la interfaz sin asignar marcos distintos a la raíz y al cubo.
+
+\subsection{Marco de pala temporal y transformación multiblade}
+\label{prefgyro:mbc}
+
+Después de la reducción de las raíces, los grados de libertad flexibles de las
+tres palas se expresan en marcos homólogos. Si $\bm Q_{b0}$ contiene como
+columnas los ejes locales de la pala $b$ en el azimut de referencia, el cambio
+de base local--inercial es
+
+\begin{equation}
+ \bm Q_b(\psi)=\bm R_\Omega(\psi)\bm Q_{b0},
+ \qquad
+ \dot{\bm Q}_b=\bm W\bm Q_b,
+ \qquad
+ \ddot{\bm Q}_b=\bm W^2\bm Q_b.
+ \label{prefgyro:Qblade}
+\end{equation}
+
+La matriz $\bm H(\psi)$ se construye colocando
+$\operatorname{blkdiag}(\bm Q_b,\bm Q_b)$ en las traslaciones y rotaciones de
+cada estación no raíz. En consecuencia,
+
+\begin{equation}
+ \dot{\bm H}=\bm{\mathcal W}_H\bm H,
+ \qquad
+ \ddot{\bm H}=\bm{\mathcal W}_H^2\bm H,
+ \label{prefgyro:Htemporal}
+\end{equation}
+
+donde $\bm{\mathcal W}_H$ contiene $\bm W$ en los bloques rotantes y ceros en
+los grados de libertad estacionarios. Tomar $\dot{\bm H}=\bm 0$ mezclaría una
+base local corrotante con perturbaciones declaradas inerciales.
+
+Sea $\bm B_{\mathrm{MBC}}(\psi)$ la transformación armónica colectiva--coseno--
+seno para tres palas, con azimuts
+$\psi_b=\psi+2\pi(b-1)/3$ \citep{bir2008}. Para un grado de libertad homólogo
+por pala, su convención directa y su inversa son
+
+\begin{equation}
+ \bm B_{\mathrm{MBC}}=
+ \begin{bmatrix}
+ 1&\cos\psi_1&\sin\psi_1\\
+ 1&\cos\psi_2&\sin\psi_2\\
+ 1&\cos\psi_3&\sin\psi_3
+ \end{bmatrix},
+ \qquad
+ \bm B_{\mathrm{MBC}}^{-1}=\frac13
+ \begin{bmatrix}
+ 1&1&1\\
+ 2\cos\psi_1&2\cos\psi_2&2\cos\psi_3\\
+ 2\sin\psi_1&2\sin\psi_2&2\sin\psi_3
+ \end{bmatrix}.
+ \label{prefgyro:Bmbc}
+\end{equation}
+
+Con $c_b=\cos\psi_b$, $s_b=\sin\psi_b$ y
+$\omega_s=\dot\psi$ constante, las filas de sus derivadas son
+
+\begin{equation}
+ [\bm B_{\mathrm{MBC}}]_{b,:}=[1,c_b,s_b],\qquad
+ [\dot{\bm B}_{\mathrm{MBC}}]_{b,:}
+ =\omega_s[0,-s_b,c_b],\qquad
+ [\ddot{\bm B}_{\mathrm{MBC}}]_{b,:}
+ =-\omega_s^2[0,c_b,s_b].
+ \label{prefgyro:Bmbc-derivadas}
+\end{equation}
+
+Para varios grados de libertad homólogos se emplea el producto de Kronecker
+con la identidad correspondiente y se conserva la identidad en los grados de
+libertad estacionarios. La transformación completa es
+
+\begin{equation}
+ \bm P_{\mathrm{MBC}}(\psi)
+ =\bm H(\psi)\bm B_{\mathrm{MBC}}(\psi),
+ \label{prefgyro:Pmbc}
+\end{equation}
+
+y sus derivadas deben conservar ambos orígenes temporales:
+
+\begin{align}
+ \dot{\bm P}_{\mathrm{MBC}}
+ &=\dot{\bm H}\bm B_{\mathrm{MBC}}
+ +\bm H\dot{\bm B}_{\mathrm{MBC}},
+ \label{prefgyro:Pdot}\\
+ \ddot{\bm P}_{\mathrm{MBC}}
+ &=\ddot{\bm H}\bm B_{\mathrm{MBC}}
+ +2\dot{\bm H}\dot{\bm B}_{\mathrm{MBC}}
+ +\bm H\ddot{\bm B}_{\mathrm{MBC}}.
+ \label{prefgyro:Pddot}
+\end{align}
+
+Finalmente, para $\bm q_r=\bm P_{\mathrm{MBC}}\bm z$, los operadores en
+coordenadas multiblade son
+
+\begin{align}
+ \overline{\bm M}
+ &=\bm P_{\mathrm{MBC}}^{\mathsf T}
+ \bm M_r\bm P_{\mathrm{MBC}},
+ \label{prefgyro:Mmbc}\\
+ \overline{\bm D}
+ &=\bm P_{\mathrm{MBC}}^{\mathsf T}
+ \left(\bm D_r\bm P_{\mathrm{MBC}}
+ +2\bm M_r\dot{\bm P}_{\mathrm{MBC}}\right),
+ \label{prefgyro:Dmbc}\\
+ \overline{\bm K}
+ &=\bm P_{\mathrm{MBC}}^{\mathsf T}
+ \left(\bm K_r\bm P_{\mathrm{MBC}}
+ +\bm D_r\dot{\bm P}_{\mathrm{MBC}}
+ +\bm M_r\ddot{\bm P}_{\mathrm{MBC}}\right).
+ \label{prefgyro:Kmbc}
+\end{align}
+
+La coexistencia de $\bm G_g$ con las derivadas MBC no constituye por sí sola un
+doble conteo. $\bm G_g$ procede de la energía y del transporte físico de las
+perturbaciones, mientras que $\dot{\bm P}_{\mathrm{MBC}}$ y
+$\ddot{\bm P}_{\mathrm{MBC}}$ aparecen al reexpresar esas mismas ecuaciones en
+coordenadas armónicas. La consistencia exige conservar toda la cadena en el
+orden presentado: expansión energética, transporte inercial, restricción
+temporal raíz--cubo y, por último, transformación multiblade.

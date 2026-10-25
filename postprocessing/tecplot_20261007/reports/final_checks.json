@@ -1,0 +1,1052 @@
+{
+  "figures": 124,
+  "representation_counts": {
+    "conceptual_spatial_mechanics": 36,
+    "computational_beam_mesh": 8,
+    "result": 42,
+    "conceptual": 1,
+    "deformed_beam_mesh": 33,
+    "exploratory_design": 2,
+    "illustrative_3D_envelope_with_actual_1D_mesh": 2
+  },
+  "exact_grayscale_all": true,
+  "image_checks": [
+    {
+      "id": "concept_configs",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_cambio-componentes",
+      "pixel_size": [
+        4000,
+        2800
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_frames",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_rotaciones-elementales",
+      "pixel_size": [
+        4000,
+        2058
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_rotacion-bases",
+      "pixel_size": [
+        4000,
+        2572
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_derivada-director",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_rotacion-deformacion",
+      "pixel_size": [
+        4000,
+        2229
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_sistemas-lateral",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_cubo-nominal",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_marcos",
+      "pixel_size": [
+        4000,
+        3086
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_palas-paso",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_arbol",
+      "pixel_size": [
+        4000,
+        1372
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_cadena-posiciones",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_tresniveles",
+      "pixel_size": [
+        4000,
+        1943
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_particula-seccion",
+      "pixel_size": [
+        4000,
+        2686
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_shear",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_giro-perturbacion",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_suma-velocidades",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_centripeta",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_gravedad-giratoria",
+      "pixel_size": [
+        4000,
+        2115
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_operacion",
+      "pixel_size": [
+        4000,
+        1943
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_centros",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_masa-seccional",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_rigido-centro",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_continuo-malla",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_coordenadas-nodo",
+      "pixel_size": [
+        4000,
+        2572
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_interpolacion-lineal",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_elemento",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_cubo-brazos",
+      "pixel_size": [
+        4000,
+        3086
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_vinculo-raiz",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_conexion-elastica",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_guia",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_acoplamiento-giroscopico",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "concept_carga-seccion",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "malla_xz",
+      "pixel_size": [
+        2100,
+        4265
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "malla_yz",
+      "pixel_size": [
+        2100,
+        2482
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "malla_xy",
+      "pixel_size": [
+        2100,
+        4265
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "detalle_raices",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "detalle_gondola",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "detalle_base",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "prop_torre_masa",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "prop_torre_flexion",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "prop_torre_axial_cortante",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "prop_torre_torsion",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "prop_torre_inercias",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "prop_pala_masa",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "prop_pala_flexion",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "prop_pala_axial_cortante",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "prop_pala_torsion",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "prop_pala_inercias",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "campbell",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "seguimiento_ramas",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "equilibrio_velocidad",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "sismo_n129_ux",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "sismo_n129_ax",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "sismo_n56_ux",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "sismo_n56_ax",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "sismo_reaccion",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "sismo_convergencia",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "rom_historia_0",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "rom_historia_2",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "rom_historia_5",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "rom_historia_7",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "rom_speedupIntegration",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "rom_speedupOneCaseIncludingBasis",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "rom_operatorAndBasisBytes",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "rom_massParticipationXPercent",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "rom_error",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "refinamiento",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "nucleo_rigido",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "local_signos",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "morris_proceso",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "morris_sentidos",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "morris_influencia",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "morris_ruido",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "morris_participaciones",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "morris_dominio",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "morris_convergencia",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "morris_dispersion",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "teoria_diferencia",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "teoria_convergencia",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "rom_aceleracion",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "morris_trayectoria_factores",
+      "pixel_size": [
+        2100,
+        1320
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "malla_3d",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "ejes_locales_reales",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "equilibrio_deformada",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_01_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_01_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_02_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_02_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_03_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_03_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_04_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_04_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_05_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_05_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_06_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_06_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_07_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_07_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_08_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_08_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_09_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_09_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_10_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_10_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_11_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_11_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_12_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_12_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_13_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_13_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_14_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_14_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_15_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_15_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_16_fase_00",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "modo_16_fase_90",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "morris_trayectoria",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "morris_trayectorias",
+      "pixel_size": [
+        2100,
+        1680
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "turbina_3d",
+      "pixel_size": [
+        4200,
+        4560
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "turbina_conexiones_3d",
+      "pixel_size": [
+        4200,
+        3150
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "paper_masa_seccional",
+      "pixel_size": [
+        4000,
+        2743
+      ],
+      "exact_grayscale": true
+    },
+    {
+      "id": "paper_vinculo_raiz",
+      "pixel_size": [
+        4000,
+        2458
+      ],
+      "exact_grayscale": true
+    }
+  ],
+  "protected_files_checked": 428,
+  "protected_files_changed": [],
+  "new_solver_evaluations": 0,
+  "equivalent_editions": [
+    {
+      "sources": [
+        "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.pdf",
+        "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_modelo.pdf"
+      ],
+      "extracted_text_equivalent": true
+    },
+    {
+      "sources": [
+        "/Users/nuseche/Desktop/Tesis_codigos/docs/formulacion_revista_20260919/FCEFyN_ES.pdf",
+        "/Users/nuseche/Desktop/Tesis_codigos/output/latex/FCEFyN_Formulacion_Bilingue/FCEFyN_ES.pdf"
+      ],
+      "extracted_text_equivalent": true
+    },
+    {
+      "sources": [
+        "/Users/nuseche/Desktop/Tesis_codigos/docs/formulacion_revista_20260919/FCEFyN_EN.pdf",
+        "/Users/nuseche/Desktop/Tesis_codigos/output/latex/FCEFyN_Formulacion_Bilingue/FCEFyN_EN.pdf"
+      ],
+      "extracted_text_equivalent": true
+    },
+    {
+      "sources": [
+        "/Users/nuseche/Desktop/Tesis_codigos/docs/formulacion_revista_20260919/FCEFyN_ES.pdf",
+        "/Users/nuseche/Desktop/Tesis_codigos/output/latex/FCEFyN_Overleaf/FCEFyN_ES.pdf"
+      ],
+      "extracted_text_equivalent": true
+    },
+    {
+      "sources": [
+        "/Users/nuseche/Desktop/Tesis_codigos/docs/formulacion_revista_20260919/FCEFyN_EN.pdf",
+        "/Users/nuseche/Desktop/Tesis_codigos/output/latex/FCEFyN_Overleaf/FCEFyN_EN.pdf"
+      ],
+      "extracted_text_equivalent": true
+    }
+  ],
+  "documents_compiled": 12,
+  "unresolved_references": 0,
+  "installed_graphic_references": 168,
+  "vector_figures": 85,
+  "translucent_3D_lossless_PDFs": 39
+}

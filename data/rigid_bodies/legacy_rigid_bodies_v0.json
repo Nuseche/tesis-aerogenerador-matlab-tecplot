@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "datasetId": "legacy_rigid_bodies_v0",
+  "source": "legacy/Codigos_sergio/[Diego Turello Version 0]/FrecuenciasTorreCompleta.m:159-177",
+  "orientation": {
+    "angles": [90.0, -5.0, -90.0],
+    "angleUnit": "deg",
+    "sequence": "passive Z-X-Z",
+    "interpretationStatus": "Values are angular magnitudes in degrees; Version 0 accidentally left the pi/180 conversion commented and is retained only as provenance."
+  },
+  "bodies": [
+    {
+      "name": "nacelle",
+      "masterNode": 129,
+      "rotating": false,
+      "massKg": 1184500.0,
+      "cgOffsetBodyM": [0.0, 0.0, 0.0],
+      "cgOffsetStatus": "Not supplied by Version 0; collocated-at-master assumption pending measured data.",
+      "inertiaBodyKgM2": [
+        [14806000.0, 0.0, 0.0],
+        [0.0, 32672000.0, 0.0],
+        [0.0, 0.0, 32672000.0]
+      ],
+      "inertiaFrame": "body principal axes at the center of mass"
+    },
+    {
+      "name": "hub",
+      "masterNode": 130,
+      "rotating": true,
+      "massKg": 196000.0,
+      "cgOffsetBodyM": [0.0, 0.0, 0.0],
+      "cgOffsetStatus": "Not supplied by Version 0; collocated-at-master assumption pending measured data.",
+      "inertiaBodyKgM2": [
+        [2822400.0, 0.0, 0.0],
+        [0.0, 2822400.0, 0.0],
+        [0.0, 0.0, 2822400.0]
+      ],
+      "inertiaFrame": "body principal axes at the center of mass"
+    }
+  ]
+}

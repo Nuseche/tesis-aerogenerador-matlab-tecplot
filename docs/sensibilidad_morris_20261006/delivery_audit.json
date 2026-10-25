@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-14",
+  "originalCampaignDate": "2026-10-06",
+  "caseCount": 170,
+  "successfulCases": 170,
+  "failedCases": 0,
+  "pendingCases": 0,
+  "completedTrajectories": 40,
+  "previousPhysicalMatlabFilesUnchanged": 148,
+  "campaignSourceHashesVerified": 175,
+  "moduleTestsPassed": 17,
+  "moduleTestsFailed": 0,
+  "latexCompilation": "success",
+  "sourceSnapshotSHA256": "d783ee865f2e49b233b535a339155a1955b91d08eb8d82000b87e9636ffd6976",
+  "note": "The initial setup abort and its preflight source snapshot are retained separately. No failed model case is replaced or silently omitted."
+}

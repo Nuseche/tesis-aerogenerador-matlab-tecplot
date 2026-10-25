@@ -1,0 +1,51 @@
+{
+  "doi": "10.11583/DTU.16743739",
+  "member": "nm92/2005/day323/0000_250.zip",
+  "selection_rule": "first lexicographic non-directory member; preliminary inspection",
+  "sha256": "18eda6a10c30fcc6dcd8b3a617d18a190986b09a13acdcdb389d2e375b0235d9",
+  "crc32": "e08e0b4e",
+  "archive_size": 7189160371,
+  "range_requests": [
+    {
+      "start": 7189160349,
+      "end": 7189160370,
+      "bytes": 22
+    },
+    {
+      "start": 7189160329,
+      "end": 7189160348,
+      "bytes": 20
+    },
+    {
+      "start": 7189160273,
+      "end": 7189160328,
+      "bytes": 56
+    },
+    {
+      "start": 7188856882,
+      "end": 7189160272,
+      "bytes": 303391
+    },
+    {
+      "start": 122,
+      "end": 151,
+      "bytes": 30
+    },
+    {
+      "start": 152,
+      "end": 180,
+      "bytes": 29
+    },
+    {
+      "start": 181,
+      "end": 2107035,
+      "bytes": 2106855
+    }
+  ],
+  "licence": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "note": "Wind and seismic sources are independent."
+}

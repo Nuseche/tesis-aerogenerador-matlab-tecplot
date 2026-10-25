@@ -1,0 +1,74 @@
+[
+  {
+    "id": "entradas_medidas",
+    "engine": "MATLAB R2026a",
+    "sources": [
+      "wind_DTU_s70u_SI.csv",
+      "ARL360_SI.csv"
+    ]
+  },
+  {
+    "id": "contenido_frecuencial",
+    "engine": "MATLAB R2026a",
+    "sources": [
+      "wind_DTU_s70u_SI.csv",
+      "ARL360_SI.csv"
+    ]
+  },
+  {
+    "id": "respuesta_sismos_reales",
+    "engine": "MATLAB R2026a",
+    "sources": [
+      "nominal_earthquakes.csv"
+    ]
+  },
+  {
+    "id": "sensibilidad_entradas",
+    "engine": "MATLAB R2026a",
+    "sources": [
+      "local_sensitivities.csv"
+    ]
+  },
+  {
+    "id": "refinamiento_sensibilidad",
+    "engine": "MATLAB R2026a",
+    "sources": [
+      "differentiation_refinement.csv"
+    ]
+  },
+  {
+    "id": "combinacion_y_llegada",
+    "engine": "MATLAB R2026a",
+    "sources": [
+      "arrival_phase_comparison.csv"
+    ]
+  },
+  {
+    "id": "sensibilidad_amplitudes",
+    "engine": "MATLAB R2026a",
+    "sources": [
+      "input_amplitude_sensitivities.csv"
+    ]
+  },
+  {
+    "id": "sensibilidad_combinada",
+    "engine": "MATLAB R2026a",
+    "sources": [
+      "combined_sensitivities.csv"
+    ]
+  },
+  {
+    "id": "efecto_direccion",
+    "engine": "MATLAB R2026a",
+    "sources": [
+      "direction_comparison.csv"
+    ]
+  },
+  {
+    "id": "sensibilidad_refinada",
+    "engine": "MATLAB R2026a",
+    "sources": [
+      "refined_local_sensitivities.csv"
+    ]
+  }
+]

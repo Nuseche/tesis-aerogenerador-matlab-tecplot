@@ -1,0 +1,8 @@
+stage,count,description
+legacy_nodes,138,Verified Version 0 coordinate rows
+legacy_elements,137,Verified Version 0 connectivity rows
+removed_type3_connectors,4,Penalty connectors 134:137 excluded
+active_flexible_elements,133,19 tower + 105 blade + 9 transition
+full_nodal_dofs,828,138 nodes times 6 DOF
+independent_after_mpc,810,Three six-DOF blade-root MPCs remove 18 dependent DOF
+analysis_after_fixed_base,804,Six independent node-1 support DOF removed

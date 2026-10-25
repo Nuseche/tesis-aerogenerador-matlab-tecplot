@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-14",
+  "status": "success",
+  "compiler": "Project Tectonic 0.15.0 with external figure dependencies",
+  "sourceSHA256": "65db1d92323e264177395807b882b4cf458360489f66e8c43d35a4d2189e98c1",
+  "pdfSHA256": "b9feecc6d7fe6519b50123e5cc9dd006ea8a03f2dabdb51a234356eaa6fcdbe0",
+  "repairs": 0,
+  "externalFigureCount": 11,
+  "nativeCompilerStatus": "compile_failed_external_figure_access",
+  "note": "Native compiler cannot access project figure dependencies. Existing project compiler succeeds. Morris estimators preserved; complementary grid documented.",
+  "pages": 15
+}

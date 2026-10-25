@@ -1,0 +1,223 @@
+% Restored from the existing formulation article and persisted evidence.
+\section{Operadores elementales}\label{ap:elemento}
+
+El orden elemental es $\bm q_e^\ell=[(\bm q_I^\ell)^\tr,(\bm q_J^\ell)^\tr]^\tr$, donde $\bm q_i^\ell=[u_i,v_i,w_i,\theta_{xi},\theta_{yi},\theta_{zi}]^\tr$. La extensión, en índices $(1,7)$, y la torsión, en $(4,10)$, utilizan
+\begin{equation}
+\bm K_{\rm ax}=\frac{EA}{L}\begin{bmatrix}1&-1\\-1&1\end{bmatrix},\qquad
+\bm K_{\rm tor}=\frac{GJ_t}{L}\begin{bmatrix}1&-1\\-1&1\end{bmatrix}.
+\end{equation}
+Para cada plano se definen
+\begin{align}
+\phi&=\frac{12EI}{GA_sL^2},&a&=\frac{12EI}{L^3(1+\phi)},\nonumber\\
+b&=\frac{6EI}{L^2(1+\phi)},&c&=\frac{(4+\phi)EI}{L(1+\phi)},\nonumber\\
+d&=\frac{(2-\phi)EI}{L(1+\phi)}.
+\end{align}
+El bloque de flexión es
+\begin{equation}
+\bm K_{\rm fl}=\begin{bmatrix}
+a&rb&-a&rb\\rb&c&-rb&d\\-a&-rb&a&-rb\\rb&d&-rb&c
+\end{bmatrix}.
+\end{equation}
+Se emplean $(EI_z,GA_{sy},r=1)$ en índices $(2,6,8,12)$ y $(EI_y,GA_{sz},r=-1)$ en $(3,5,9,11)$. Insertar los cuatro bloques determina todas las entradas de $\bm K_e^\ell$.
+
+Para $s=x/L$ y $\bm p=[1,s,s^2,s^3]$, la interpolación de un plano es $v=\bm p\bm C_v\bm d_y$, $\theta_z=\bm p\bm C_r\bm d_y$, con $\bm d_y=[v_I,\theta_{zI},v_J,\theta_{zJ}]^\tr$ y
+\begin{equation}
+\bm C_v=\frac1{1+\phi}\begin{bmatrix}
+1+\phi&0&0&0\\
+-\phi&L(1+\phi/2)&\phi&-L\phi/2\\
+-3&-L(2+\phi/2)&3&-L(1-\phi/2)\\
+2&L&-2&L
+\end{bmatrix},
+\end{equation}
+\begin{equation}
+\bm C_r=\frac1{1+\phi}\begin{bmatrix}
+0&1+\phi&0&0\\
+-6/L&-(4+\phi)&6/L&-(2-\phi)\\
+6/L&3&-6/L&3\\0&0&0&0
+\end{bmatrix}.
+\end{equation}
+Para el otro plano se utilizan $\bm d_z=[w_I,\theta_{yI},w_J,\theta_{yJ}]^\tr$, $\bm S_z=\operatorname{diag}(1,-1,1,-1)$, $w=\bm p\bm C_v\bm S_z\bm d_z$ y $\theta_y=-\bm p\bm C_r\bm S_z\bm d_z$, con el $\phi$ correspondiente. Los campos $u,\theta_x$ se interpolan linealmente. Estas relaciones definen $\bm N$; sus derivadas y los términos de cortante definen $\bm B$.
+
+Para propiedades constantes, cuatro puntos de Gauss integran exactamente los productos de grado máximo seis de masa y giroscopía. La fuerza y la tangente centrífugas se evalúan con la misma interpolación y cuadratura. La rigidez anterior es cerrada, no obtenida mediante integración reducida. Una formulación de secciones acopladas requiere construir y discretizar su energía general; no se obtiene insertando acoplamientos arbitrarios en estos cuatro bloques.
+
+
+\section{Matrices energéticas del giro}\label{ap:gyro}
+
+\subsection{Cinemática exacta del movimiento nominal}
+Sea $\bm R_0(t)$ la rotación nominal y $\bm W=\Sx{\Omega}$, con $\dot{\bm R}_0=\bm R_0\bm W$. El vector $\bm\Omega=\Omega\bm e_\Omega$ tiene dirección fija. Se elige $\bm R_0(0)=\I$, de modo que $\bm R_0\bm W\bm R_0^\tr=\bm W$: sus componentes nominales e inerciales coinciden para este giro. Para una sección, $\bm a$ localiza la línea de referencia respecto al origen del rotor, y $\bm r$ localiza su centro de masa. En este apartado se escribe $m=\mu$, $\bm J=\bm j_C$ para cantidades por longitud; las mismas expresiones describen un cuerpo concentrado al utilizar su masa y su tensor.
+
+La perturbación rotacional se representa mediante $\bm E=\exp(\Sx{\theta})$. La posición inercial del centro de masa y su tensor en componentes nominales son, respectivamente,
+\begin{equation}
+\bm x_C=\bm R_0(\bm a+\bm u+\bm E\bm r),\qquad
+\bm J_C^{(n)}(\bm\theta)=\bm E\bm J\bm E^\tr.
+\end{equation}
+El origen nominal se considera fijo; su excitación traslacional se incorpora después mediante el movimiento de base. Con el Jacobiano izquierdo $\bm J_\ell(\bm\theta)$ del grupo de rotaciones,
+\begin{align}
+\bm v_C&=\bm W(\bm a+\bm u+\bm E\bm r)+\dot{\bm u}
++\Sx{J_\ell(\bm\theta)\dot{\bm\theta}}\bm E\bm r,\nonumber\\
+\bm\omega&=\bm\Omega+\bm J_\ell(\bm\theta)\dot{\bm\theta}.
+\label{apx:eq:exactvelocity}
+\end{align}
+Las velocidades están expresadas en componentes nominales. La energía que genera todos los términos inerciales es
+\begin{equation}
+\mathcal T=\tfrac12m\bm v_C^\tr\bm v_C
++\tfrac12\bm\omega^\tr\bm E\bm J\bm E^\tr\bm\omega.
+\label{apx:eq:exactT}
+\end{equation}
+
+\subsection{Expansión de segundo orden}
+Se retienen términos hasta grado dos en $\bm\eta=[\bm u^\tr,\bm\theta^\tr]^\tr$ y $\dot{\bm\eta}$. Las expansiones necesarias son
+\begin{align}
+\bm E&=\I+\Sx{\theta}+\tfrac12\Sx{\theta}^2+\mathcal O(3),\nonumber\\
+\bm J_\ell\dot{\bm\theta}&=\dot{\bm\theta}
++\tfrac12\bm\theta\times\dot{\bm\theta}+\mathcal O(3).
+\end{align}
+Así, la parte cuadrática adopta la forma de \citet{meirovitch1997},
+\begin{equation}
+\mathcal T^{(2)}=\tfrac12\dot{\bm\eta}^\tr\bm M_6\dot{\bm\eta}
++\dot{\bm\eta}^\tr\bm A_6\bm\eta
++\tfrac12\bm\eta^\tr\bm H_\Omega\bm\eta.
+\label{apx:eq:T2}
+\end{equation}
+Para expresar sus coeficientes se definen
+\begin{align}
+\bm B&=[\I,-\Sx{r}],&\bm E_\theta&=[\bm0,\I],\nonumber\\
+\bm b&=\bm a+\bm r,&\bm h&=\bm J\bm\Omega,\nonumber\\
+\bm v_0&=\bm W\bm b,&\bm a_0&=\bm W^2\bm b,
+\end{align}
+y la matriz simétrica
+\begin{equation}
+\mathcal H(\bm a,\bm b)=\tfrac12(\bm a\bm b^\tr+\bm b\bm a^\tr)
+-(\bm a^\tr\bm b)\I.
+\end{equation}
+Esta satisface $\bm a^\tr\Sx{\theta}^2\bm b=\bm\theta^\tr\mathcal H(\bm a,\bm b)\bm\theta$. Los coeficientes de la ec.~\eqref{eq:energia2} quedan determinados por
+\begin{align}
+\bm M_6&=m\bm B^\tr\bm B+\bm E_\theta^\tr\bm J\bm E_\theta,\label{apx:eq:M6}\\
+\bm A_6&=m\bm B^\tr\bm W\bm B+\bm E_\theta^\tr\bm A_\theta\bm E_\theta,\nonumber\\
+\bm A_\theta&=\bm J\bm W-\tfrac12\Sx{h}+m\mathcal H(\bm v_0,\bm r).
+\label{apx:eq:A6}
+\end{align}
+La masa coincide con la ec.~\eqref{eq:masa6}. El último término de $\bm A_\theta$ es simétrico y, con coeficientes nominales constantes, contribuye solamente mediante una derivada temporal total. Se mantiene para explicitar la expansión, aunque desaparece del operador giroscópico.
+
+\subsection{Matriz giroscópica completa}
+Al aplicar las ecuaciones de Lagrange a la ec.~\eqref{eq:energia2}, el término de velocidad resulta de la parte antisimétrica de $\bm A_6$:
+\begin{align}
+\bm G_{c,6}&=\bm A_6-\bm A_6^\tr\nonumber\\
+&=2m\bm B^\tr\bm W\bm B+\bm E_\theta^\tr\bm G_\theta\bm E_\theta,\label{apx:eq:G6}\\
+\bm G_\theta&=\bm J\bm W+\bm W\bm J-\Sx{J\Omega}.
+\label{apx:eq:Gtheta}
+\end{align}
+El subíndice $c$ indica componentes corrotantes. Para mostrar el acoplamiento entre traslaciones y rotaciones, se escribe
+\begin{equation}
+\bm G_{c,6}=\begin{bmatrix}
+2m\bm W&-2m\bm W\Sx{r}\\
+2m\Sx{r}\bm W&\bm G_\theta-2m\Sx{r}\bm W\Sx{r}
+\end{bmatrix}.
+\label{apx:eq:Gblocks}
+\end{equation}
+Por construcción, $\bm G_{c,6}^\tr=-\bm G_{c,6}$ y $\dot{\bm\eta}^\tr\bm G_{c,6}\dot{\bm\eta}=0$: el operador no disipa energía. Esta propiedad corresponde a la giroscopía, no necesariamente a la matriz completa que multiplica velocidades después de transformar las coordenadas.
+
+Para giro alrededor de un eje principal, $\bm\Omega=\Omega\bm e_1$ y $\bm J=\operatorname{diag}(J_1,J_2,J_3)$, el coeficiente del acoplamiento angular en el plano $2$--$3$ es $(J_2+J_3-J_1)\Omega$. El término aislado $\Sx{J\Omega}$ no reproduce la ec.~\eqref{apx:eq:Gtheta} en coordenadas corrotantes. Su aparición con otro signo en un marco inercial, deducida más adelante, no constituye una formulación alternativa: responde al transporte de la misma ecuación.
+
+\subsection{Potencial centrífugo y equilibrio mantenido}
+Dentro de la expansión de segundo orden, la parte que depende de posición define simultáneamente la carga centrífuga y su tangente. Con fuerzas centrífugas en el segundo miembro,
+\begin{align}
+\bm f_{\Omega,0}&=-m\bm B^\tr\bm a_0-\bm E_\theta^\tr(\bm\Omega\times\bm h),\nonumber\\
+\bm f_\Omega(\bm\eta)&=\bm f_{\Omega,0}-\bm K_{\Omega,c}\bm\eta,\label{apx:eq:fOmega}\\
+\bm K_{\Omega,c}&=m\bm B^\tr\bm W^2\bm B+\bm E_\theta^\tr\bm K_\theta\bm E_\theta,\nonumber\\
+\bm K_\theta&=m\mathcal H(\bm a_0,\bm r)+\bm W\bm J\bm W
+-\mathcal H(\bm h,\bm\Omega).
+\label{apx:eq:KOmega}
+\end{align}
+En consecuencia, $\bm H_\Omega=-\bm K_{\Omega,c}$. Este operador no sustituye a la rigidez geométrica inducida por las tensiones de equilibrio.
+
+Si $\bm h$ y $\bm\Omega$ no son paralelos, el movimiento uniforme requiere un par de mantenimiento $\bm\tau_0=\bm\Omega\times\bm h$. Este par equilibra el término angular nominal de la ec.~\eqref{apx:eq:fOmega}. En la turbina completa puede transmitirse a través del tren y sus restricciones; no se añade una segunda carga cuando esa transmisión ya está representada. Su tangente depende de la ley de carga: un par de componentes constantes en el cuerpo perturbado y uno constante en el marco nominal producen, respectivamente, $+\tfrac12\Sx{\tau_0}$ y $-\tfrac12\Sx{\tau_0}$ en el residual linealizado. Una ley elástica o de control requiere su propia derivada.
+
+Los operadores elementales se obtienen mediante la misma interpolación $\bm N$ utilizada por la masa:
+\begin{align}
+\bm G_{c,e}&=\int_0^L\bm N^\tr\bm G_{c,6}\bm N\,\dd x,\nonumber\\
+\bm K_{\Omega,c,e}&=\int_0^L\bm N^\tr\bm K_{\Omega,c}\bm N\,\dd x,\nonumber\\
+\bm f_{\Omega,0,e}&=\int_0^L\bm N^\tr\bm f_{\Omega,0}\,\dd x.
+\end{align}
+Se conserva la dependencia espacial de $\bm a(x)$; no se aplica una aceleración centrífuga uniforme a toda la pala. Al ensamblar, se denominan $\bm F_{\Omega,0}$ y $\bm K_{\Omega,c}^{f}$ a la fuerza y la tangente nodales completas. En ese nivel, $\bm F_\Omega(\bm q)=\bm F_{\Omega,0}-\bm K_{\Omega,c}^{f}\bm q$, sin confundirlas con las cantidades seccionales por longitud.
+
+
+\section{Mapas temporales y transformación multiblade}\label{ap:mapas}
+
+Para tres palas equiespaciadas con correspondencia biyectiva de coordenadas homólogas, se construye $\bm H(t)$ con bloques $\operatorname{blkdiag}(\bm Q_b,\bm Q_b)$, donde $\bm Q_b=\bm R_0\bm Q_{b0}$. Se excluyen las raíces ya condensadas al cubo. Los bloques estacionarios son identidades. Para cada coordenada homóloga, la transformación colectiva--coseno--seno de \citet{bir2008} es
+\begin{equation}
+\bm B_3=\begin{bmatrix}
+1&\cos\psi_1&\sin\psi_1\\
+1&\cos\psi_2&\sin\psi_2\\
+1&\cos\psi_3&\sin\psi_3
+\end{bmatrix},\qquad
+\psi_b=\psi+\frac{2\pi(b-1)}3.
+\end{equation}
+Al agrupar las coordenadas primero por pala se utiliza $\bm B_3\otimes\I$ y se conserva la identidad en las partes estacionarias. Con $\bm B_{\rm mbc}$ como matriz ampliada,
+\begin{align}
+\bm P_{\rm mbc}&=\bm H\bm B_{\rm mbc},\nonumber\\
+\dot{\bm P}_{\rm mbc}&=\dot{\bm H}\bm B_{\rm mbc}+\bm H\dot{\bm B}_{\rm mbc},\nonumber\\
+\ddot{\bm P}_{\rm mbc}&=\ddot{\bm H}\bm B_{\rm mbc}
++2\dot{\bm H}\dot{\bm B}_{\rm mbc}+\bm H\ddot{\bm B}_{\rm mbc}.
+\end{align}
+Al introducir $\bm z=\bm P_{\rm mbc}\bm y$, los operadores $\overline{\bm M},\overline{\bm D},\overline{\bm K}$ se obtienen aplicando nuevamente la ec.~\eqref{eq:mpc}, con $\bm T$ sustituida por $\bm P_{\rm mbc}$ y operadores de entrada $\bm M_r,\bm D_r,\bm K_r$. El Apéndice C presenta la inversa y las derivadas explícitas. La giroscopía física y las derivadas multiblade pertenecen a etapas diferentes de una misma transformación; conservar ambas no implica duplicar fuerzas.
+
+
+La derivada de la masa después de las restricciones es
+\begin{align}
+\dot{\bm M}_r={}&\dot{\bm T}^\tr\bm M\bm T+\bm T^\tr\dot{\bm M}\bm T
++\bm T^\tr\bm M\dot{\bm T}.
+\end{align}
+Esta identidad permite separar nuevamente la derivada de masa de la parte antisimétrica del operador inercial de velocidad.
+
+La inversa multiblade y sus derivadas son
+\begin{equation}
+\bm B_3^{-1}=\frac13\begin{bmatrix}
+1&1&1\\2\cos\psi_1&2\cos\psi_2&2\cos\psi_3\\
+2\sin\psi_1&2\sin\psi_2&2\sin\psi_3
+\end{bmatrix},
+\end{equation}
+\begin{align}
+[\dot{\bm B}_3]_{b,:}&=\Omega[0,-\sin\psi_b,\cos\psi_b],\nonumber\\
+[\ddot{\bm B}_3]_{b,:}&=-\Omega^2[0,\cos\psi_b,\sin\psi_b].
+\end{align}
+Para los bloques de pala, $\dot{\bm H}=\bm W_H\bm H$ y $\ddot{\bm H}=\bm W_H^2\bm H$, con $\bm W_H$ nula en las coordenadas estacionarias. Estas derivadas no desaparecen al seleccionar un azimut para evaluar los operadores.
+
+Para completar el paso temporal de aceleración media, se define
+\begin{align}
+\bm K_{\rm eff}&=\bm K_r+\frac4{\Delta t^2}\bm M_r+\frac2{\Delta t}\bm D_r,\nonumber\\
+\bm f_{\rm eff}&=\bm f_{n+1}
++\bm M_r\left(\frac4{\Delta t^2}\bm z_n+\frac4{\Delta t}\dot{\bm z}_n+\ddot{\bm z}_n\right)\nonumber\\
+&\quad+\bm D_r\left(\frac2{\Delta t}\bm z_n+\dot{\bm z}_n\right),\nonumber\\
+\bm K_{\rm eff}\bm z_{n+1}&=\bm f_{\rm eff}.
+\end{align}
+Las velocidades y aceleraciones se recuperan de las relaciones de Newmark. El mismo esquema puede aplicarse a operadores reducidos, manteniendo coherentes carga, coordenadas y recuperación física \citep{newmark1971}.
+
+
+\section{Integración y recuperación}\label{ap:solucion}
+
+Se presenta la integración en las coordenadas independientes $\bm z$, anteriores a multiblade. En el análisis local, $\bm M_r,\bm D_r,\bm K_r$ se congelan en el mismo estado operativo. El método de aceleración media de Newmark se define mediante
+\begin{align}
+\bm z_{n+1}&=\bm z_n+\Delta t\dot{\bm z}_n
++\tfrac{\Delta t^2}{4}(\ddot{\bm z}_n+\ddot{\bm z}_{n+1}),\nonumber\\
+\dot{\bm z}_{n+1}&=\dot{\bm z}_n+\tfrac{\Delta t}{2}
+(\ddot{\bm z}_n+\ddot{\bm z}_{n+1}).
+\end{align}
+La matriz efectiva es $\bm K_r+4\bm M_r/\Delta t^2+2\bm D_r/\Delta t$; se conserva completa, aunque sea no simétrica. El Apéndice C presenta el segundo miembro. Las propiedades del integrador no eliminan una inestabilidad física de los operadores.
+
+Para $\delta\bm q=\bm T(t)\bm z$, la recuperación requiere
+\begin{align}
+\delta\dot{\bm q}&=\bm T\dot{\bm z}+\dot{\bm T}\bm z,\nonumber\\
+\delta\ddot{\bm q}&=\bm T\ddot{\bm z}+2\dot{\bm T}\dot{\bm z}+\ddot{\bm T}\bm z.
+\end{align}
+Se añade $\bm\Gamma_f\bm a_g$ para recuperar la aceleración absoluta de perturbación; la aceleración centrípeta nominal debe añadirse por separado si se requiere la aceleración total. Cuando se congelan los operadores, también se evalúan el mapa y sus derivadas en el azimut de referencia: se obtiene una reconstrucción local, no una trayectoria periódica completa.
+
+Las reacciones se recuperan del residual completo del sistema físico, antes de eliminar apoyos y restricciones. Su proyección sobre coordenadas admisibles es nula. Las resultantes incrementales seccionales se obtienen como $\delta\bm n=\bm K_s\bm B\bm T_e\delta\bm q_e$; para la demanda total se suman las resultantes del equilibrio.
+
+
+\section{Fuentes, unidades y trazabilidad}\label{ap:datos}
+La geometría conserva 138 nodos y 133 elementos de viga. Se eliminan de esta visualización únicamente los cuatro elementos heredados de penalización tipo 3, sustituidos en el modelo vigente por restricciones exactas. Las coordenadas se expresan en metros y cada nodo conserva el orden $[u_x,u_y,u_z,\theta_x,\theta_y,\theta_z]$.
+
+Los resultados operativos proceden de las campañas corregidas de septiembre y se extraen del archivo de evidencia de este manuscrito. Las comparaciones ROM y de refinamiento son estacionarias e históricas. La biblioteca Tecplot conserva la relación por figura entre fuentes, unidades, configuración, dataset, macro, layout y paquete nativo. No se lanzaron campañas para completar las figuras.
+
+Las envolventes de la turbina tienen una finalidad ilustrativa. La formulación y la malla computacional siguen siendo de vigas; las superficies no incorporan rigideces, masas ni grados de libertad de sólidos. Para las formas complejas de la biblioteca se conservan ramas individuales, fases de $0^\circ$ y $90^\circ$, normalización por la máxima traslación nodal compleja y amplificación declarada. No se construye una forma modal a partir de la frecuencia media de un grupo.

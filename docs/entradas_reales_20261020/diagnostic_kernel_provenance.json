@@ -1,0 +1,11 @@
+{
+  "source": "/Users/nuseche/Desktop/Tesis_codigos/+equilibrium/total_lagrangian_internal_force.m",
+  "sourceSha256": "82efa685433b3e84dcc61f89be9f5bc6251c767eea4a7364cc4225f7e24a4551",
+  "changes": [
+    "rename function",
+    "pass numeric scale",
+    "multiply translation/rotation energy difference steps by scale"
+  ],
+  "physicalEnergyChanged": false,
+  "productionSourcesChanged": false
+}

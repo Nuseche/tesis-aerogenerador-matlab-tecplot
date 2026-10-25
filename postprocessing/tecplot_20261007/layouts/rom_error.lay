@@ -1,0 +1,482 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"../data/rom_error.plt"'
+$!SetStyleBase Factory
+$!BasicColor 
+  Custom1
+    {
+    R = 20
+    G = 20
+    B = 20
+    }
+  Custom2
+    {
+    R = 90
+    G = 90
+    B = 90
+    }
+  Custom3
+    {
+    R = 45
+    G = 45
+    B = 45
+    }
+  Custom4
+    {
+    R = 115
+    G = 115
+    B = 115
+    }
+  Custom5
+    {
+    R = 150
+    G = 150
+    B = 150
+    }
+  Custom6
+    {
+    R = 175
+    G = 175
+    B = 175
+    }
+  Custom7
+    {
+    R = 30
+    G = 30
+    B = 30
+    }
+  Custom8
+    {
+    R = 200
+    G = 200
+    B = 200
+    }
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    }
+$!Page 
+  Name = ''
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+$!RemoveVar |LFDSFN1|
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 7
+  Height = 4.4
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1-8]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    Show = Yes
+    TextShape
+      {
+      IsBold = No
+      SizeUnits = Point
+      Height = 10
+      }
+    XYPos
+      {
+      X = 99
+      Y = 87
+      }
+    }
+$!LineMap  [1]
+  Name = 'My base'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Always
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = 'ax punta 1'
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Always
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [3]
+  Name = 'ux punta 1'
+  Assign
+    {
+    Zone = 3
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Always
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [4]
+  Name = 'ux punta 2'
+  Assign
+    {
+    Zone = 4
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Always
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [5]
+  Name = 'ux punta 3'
+  Assign
+    {
+    Zone = 5
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Always
+    }
+  Lines
+    {
+    Color = Custom5
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Grad
+      }
+    Color = Custom5
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [6]
+  Name = 'ax gondola'
+  Assign
+    {
+    Zone = 6
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Always
+    }
+  Lines
+    {
+    Color = Custom6
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = RTri
+      }
+    Color = Custom6
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [7]
+  Name = 'ux gondola'
+  Assign
+    {
+    Zone = 7
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Always
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [8]
+  Name = 'uy gondola'
+  Assign
+    {
+    Zone = 8
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Always
+    }
+  Lines
+    {
+    Color = Custom8
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom8
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+  ViewportPosition
+    {
+    Y1 = 16
+    X2 = 70
+    Y2 = 94
+    }
+  ViewportTopSnapTarget = 94
+$!XYLineAxis 
+  XDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -2.3999999999999999112
+    RangeMax = 206.40000000000000568
+    GRSpacing = 50
+    TickLabel
+      {
+      TextShape
+        {
+        SizeUnits = Point
+        Height = 10
+        }
+      }
+    Gridlines
+      {
+      Show = Yes
+      Color = Custom8
+      LineThickness = 0.06
+      }
+    Title
+      {
+      TitleMode = UseText
+      Text = 'Orden ROM'
+      TextShape
+        {
+        IsBold = No
+        SizeUnits = Point
+        Height = 11
+        }
+      Offset = 6
+      }
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    CoordScale = Log
+    RangeMin = 4.9338462832892993997E-06
+    RangeMax = 201.01326802904520719
+    GRSpacing = 20
+    TickLabel
+      {
+      TextShape
+        {
+        SizeUnits = Point
+        Height = 10
+        }
+      }
+    Gridlines
+      {
+      Show = Yes
+      Color = Custom8
+      LineThickness = 0.06
+      }
+    Title
+      {
+      TitleMode = UseText
+      Text = 'Error relativo [%]'
+      TextShape
+        {
+        IsBold = No
+        SizeUnits = Point
+        Height = 11
+        }
+      Offset = 9
+      }
+    }
+$!LinePlotLayers 
+  ShowSymbols = Yes
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config

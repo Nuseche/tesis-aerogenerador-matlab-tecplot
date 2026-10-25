@@ -1,0 +1,7 @@
+note: Running TeX ...
+note: Running xdvipdfmx ...
+note: Writing `SECCION_SENSIBILIDAD_REVISION.log` (13.33203125 KiB)
+note: Writing `SECCION_SENSIBILIDAD_REVISION.aux` (3.564453125 KiB)
+note: Writing `SECCION_SENSIBILIDAD_REVISION.pdf` (75.62890625 KiB)
+note: Writing `SECCION_SENSIBILIDAD_REVISION.out` (1.513671875 KiB)
+

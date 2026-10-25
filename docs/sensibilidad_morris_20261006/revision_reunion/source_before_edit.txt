@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array}
+\usepackage{hyperref}
+\title{Sensibilidad global exploratoria mediante Morris}
+\author{Sección para revisión antes de incorporar al manuscrito}
+\date{6 de octubre de 2026}
+\begin{document}
+\maketitle
+\section{Dominio y alcance físico}
+El autor aprobó factores entre 0.90 y 1.10 para masa e inercias de palas, rigideces seccionales de palas y velocidad prescrita del rotor. Se denotan estos factores por $\xi_\rho$, $\xi_K$ y $\xi_\Omega$, respectivamente. El nominal es uno; la velocidad nominal $\Omega_0$ corresponde a 12 rpm, y el dominio es 10.8--13.2 rpm. Son escenarios exploratorios; no intervalos medidos ni distribuciones de fabricación. Se escalan de manera consistente masa e inercias a geometría fija, y las seis rigideces seccionales se modifican conjuntamente.
+
+Cada escenario reconstruye los operadores y su equilibrio. Se conserva la formulación de septiembre: contribuciones inerciales y giroscópicas asociadas a la rotación, restricciones móviles y sus derivadas, y transformación a coordenadas de palas homólogas. El giro es constante por evaluación, sin guiñada nominal. El azimut está congelado y el espectro es parcial; el estudio no calcula estabilidad periódica de Floquet.
+
+\section{Diseño, indicadores y verificación}
+Sea $x_i\in[0,1]$ la coordenada del factor $i$; se aplica $\xi_i=0.90+0.20x_i$. Se generan cuarenta trayectorias aleatorias de Morris en una malla de cuatro niveles, con incremento firmado $\Delta x_i$ de magnitud $2/3$ y semilla 6706 \cite{morris1991}. Cada trayectoria tiene cuatro vértices y una arista por factor. Se comparan los prefijos contenidos de diez, veinte y cuarenta trayectorias.
+
+Sea $\lambda$ una raíz del problema cuadrático con convención $\exp(\lambda t)$, donde $t$ es tiempo. Se definen frecuencia amortiguada $f_d=|\operatorname{Im}\lambda|/(2\pi)$, crecimiento $\gamma=\operatorname{Re}\lambda$ y razón de amortiguamiento $\zeta=-\operatorname{Re}\lambda/|\lambda|$. Las respuestas $y$ son centroides de grupos cerrados o ramas aisladas. La agrupación usa la unión de proximidades en todo el dominio observado y mantiene la misma respuesta entre prefijos. Se verifica correlación compleja de formas con el nominal y entre extremos de cada arista; se excluyen grupos que tocan el corte espectral.
+
+Sea $s_y$ una escala nominal fija: la frecuencia nominal para $f_d$, la media nominal de $|\lambda|$ para $\gamma$, y $\max(|\zeta_0|,0.01)$ para $\zeta$. El efecto elemental adimensional es
+\begin{equation}
+ EE_i=\frac{y_{\rm fin}-y_{\rm inicio}}{\Delta x_i s_y}.
+\end{equation}
+Para $r$ trayectorias se calculan la media firmada $\mu_i$, la media absoluta $\mu_i^*$ y la desviación estándar muestral $\sigma_i$ de estos efectos. Se conservan todos los efectos; un fallo de seguimiento impide calcular el estimador del prefijo y no se corrige eliminando selectivamente aristas.
+
+Se incluyen diez controles en el nominal y dos esquinas: repetición, tolerancia del autoproblema más estricta y comparación entre solución directa y continuación. Sea $\eta$ la máxima diferencia observada de una respuesta. Se asigna a cada efecto la envolvente empírica $b=2\eta/(|\Delta x_i|s_y)$. La envolvente de las medias es $\overline b$ y la de la desviación es $[\sum b_j^2/(r-1)]^{1/2}$. No son cotas rigurosas del error en todo el dominio.
+
+Se acepta influencia media si $\mu_i^*\geq10\overline b$ y cambia como máximo 10\text{\char37} entre los prefijos de veinte y cuarenta. La dispersión tiene un control independiente de ruido y estabilización al 10\text{\char37}. El presupuesto aprobado es treinta minutos, con conservación explícita de casos pendientes si se agota.
+
+\section{Resultados observados}
+Se completaron 40 trayectorias y 170 evaluaciones satisfactorias, con 0 fallos de modelo. El tiempo acumulado de evaluación fue 20.28 minutos. Pasaron 17 pruebas del módulo. Los máximos residuos de equilibrio y QEP en norma dual de masa fueron $9.94\times 10^{-9}$ y $4.05\times 10^{-9}$, respectivamente.
+
+Se aceptaron 14 indicadores de influencia media de frecuencia. La tabla contiene exclusivamente estos indicadores; los estimadores rechazados y sus banderas se conservan en los archivos de resultados.
+\begin{center}
+\small
+\begin{tabular}{p{3.4cm}lrrr}
+\toprule Parámetro & Grupo & $\mu$ & $\mu^*$ & $\sigma$ \\ \midrule
+densidad de palas & 3 & -0.11221 & 0.11221 & 0.01052 \\
+densidad de palas & 4+5 & -0.11335 & 0.11335 & 0.00670 \\
+densidad de palas & 6+7 & -0.06161 & 0.06161 & 0.00398 \\
+densidad de palas & 8+9 & -0.08546 & 0.08546 & 0.00495 \\
+densidad de palas & 10+11 & -0.07653 & 0.07653 & 0.00445 \\
+rigidez de palas & 3 & 0.07695 & 0.07695 & 0.00652 \\
+rigidez de palas & 4+5 & 0.07886 & 0.07886 & 0.00368 \\
+rigidez de palas & 6+7 & 0.04866 & 0.04866 & 0.00235 \\
+rigidez de palas & 8+9 & 0.07296 & 0.07296 & 0.00291 \\
+rigidez de palas & 10+11 & 0.07172 & 0.07172 & 0.00283 \\
+velocidad del rotor & 3 & -0.05952 & 0.05952 & 0.00726 \\
+velocidad del rotor & 6+7 & 0.06923 & 0.06923 & 0.00202 \\
+velocidad del rotor & 8+9 & 0.02295 & 0.02295 & 0.00155 \\
+velocidad del rotor & 10+11 & 0.03678 & 0.03678 & 0.00173 \\
+\bottomrule
+\end{tabular}
+\end{center}
+El signo de $\mu$ describe una dirección media en las aristas muestreadas; no demuestra monotonicidad del continuo. $\mu^*$ permite comparar factores de igual ancho dentro de una respuesta, pero no es un porcentaje máximo de variación ni un índice de Sobol.
+
+\section{Mecanismos y límites de interpretación}
+La escala de masa modifica inercia traslacional y rotacional, peso y contribuciones asociadas al giro; su efecto total incluye el cambio del equilibrio. La escala de rigidez modifica conjuntamente las rigideces axial, de cortante, torsional y de flexión. La velocidad modifica términos proporcionales a $\Omega$ y $\Omega^2$, equilibrio y derivadas de las restricciones y de la transformación modal. Las participaciones cuadráticas nominales de palas de la primera etapa respaldan la interpretación de los grupos asociados, pero no constituyen una partición de toda la energía en rotación.
+
+La velocidad presenta signos medios opuestos: positivos en los grupos 6+7, 8+9, 10+11 y negativos en 3. Por tanto, el incremento de velocidad no eleva todas las frecuencias seleccionadas. La ecuación cuadrática contiene simultáneamente operadores giroscópicos, transporte y cambios de la tangente en equilibrio; el signo depende del grupo. Atribuirlo exclusivamente a una rigidez adicional positiva omitiría esa competencia. Separar cuantitativamente las contribuciones exigiría un estudio diagnóstico adicional, sin alterar la formulación final.
+
+Se aceptaron 2 indicadores de dispersión de frecuencia. La dispersión puede reunir no linealidad e interacción; Morris no separa sus causas. Una dispersión no resuelta no demuestra ausencia de interacción. Tampoco se extiende la compensación local masa--rigidez a todo el dominio como identidad.
+
+Las respuestas de crecimiento y amortiguamiento se guardan con escalas fijas; los centroides no reemplazan el examen de estabilidad de cada raíz. El agrupamiento, la truncación espectral, el piso del equilibrio y el carácter empírico de la envolvente limitan las conclusiones. La verificación espacial previa con rotor detenido no demuestra convergencia espacial de las sensibilidades globales en rotación. No se ejecuta sensibilidad sísmica global ni se atribuye validación experimental al estudio.
+
+\begin{thebibliography}{9}
+\bibitem{morris1991} M. D. Morris. Factorial Sampling Plans for Preliminary Computational Experiments. \emph{Technometrics}, 33(2), 161--174, 1991. \href{https://doi.org/10.1080/00401706.1991.10484804}{doi:10.1080/00401706.1991.10484804}.
+\end{thebibliography}
+\end{document}

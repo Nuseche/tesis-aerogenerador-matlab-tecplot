@@ -1,0 +1,854 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"../data/morris_proceso.plt"'
+$!SetStyleBase Factory
+$!BasicColor 
+  Custom1
+    {
+    R = 20
+    G = 20
+    B = 20
+    }
+  Custom2
+    {
+    R = 90
+    G = 90
+    B = 90
+    }
+  Custom3
+    {
+    R = 45
+    G = 45
+    B = 45
+    }
+  Custom4
+    {
+    R = 115
+    G = 115
+    B = 115
+    }
+  Custom5
+    {
+    R = 150
+    G = 150
+    B = 150
+    }
+  Custom6
+    {
+    R = 175
+    G = 175
+    B = 175
+    }
+  Custom7
+    {
+    R = 30
+    G = 30
+    B = 30
+    }
+  Custom8
+    {
+    R = 200
+    G = 200
+    B = 200
+    }
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    }
+$!Page 
+  Name = ''
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+$!RemoveVar |LFDSFN1|
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 7
+  Height = 4.4
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1-16]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    TextShape
+      {
+      IsBold = No
+      SizeUnits = Point
+      Height = 10
+      }
+    XYPos
+      {
+      X = 99
+      Y = 87
+      }
+    }
+$!LineMap  [1]
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [3]
+  Assign
+    {
+    Zone = 3
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [4]
+  Assign
+    {
+    Zone = 4
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [5]
+  Assign
+    {
+    Zone = 5
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [6]
+  Assign
+    {
+    Zone = 6
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [7]
+  Assign
+    {
+    Zone = 7
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [8]
+  Assign
+    {
+    Zone = 8
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [9]
+  Assign
+    {
+    Zone = 9
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [10]
+  Assign
+    {
+    Zone = 10
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [11]
+  Assign
+    {
+    Zone = 11
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [12]
+  Assign
+    {
+    Zone = 12
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [13]
+  Assign
+    {
+    Zone = 13
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [14]
+  Assign
+    {
+    Zone = 14
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [15]
+  Assign
+    {
+    Zone = 15
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [16]
+  Assign
+    {
+    Zone = 16
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+  ViewportPosition
+    {
+    X1 = 6
+    Y1 = 7
+    X2 = 94
+    Y2 = 93
+    }
+  ViewportTopSnapTarget = 93
+$!XYLineAxis 
+  XDetail 1
+    {
+    ShowAxis = No
+    CoordScale = Linear
+    RangeMin = -0.3580000000000004845
+    RangeMax = 10.35800000000000054
+    GRSpacing = 2
+    TickLabel
+      {
+      TextShape
+        {
+        SizeUnits = Point
+        Height = 10
+        }
+      }
+    Gridlines
+      {
+      Color = Custom8
+      LineThickness = 0.06
+      }
+    Title
+      {
+      TitleMode = UseText
+      TextShape
+        {
+        IsBold = No
+        SizeUnits = Point
+        Height = 11
+        }
+      Offset = 6
+      }
+    AxisLine
+      {
+      Show = No
+      }
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    ShowAxis = No
+    CoordScale = Linear
+    RangeMin = -0.29134285714285690361
+    RangeMax = 6.2913428571428555713
+    GRSpacing = 1
+    TickLabel
+      {
+      TextShape
+        {
+        SizeUnits = Point
+        Height = 10
+        }
+      }
+    Gridlines
+      {
+      Color = Custom8
+      LineThickness = 0.06
+      }
+    Title
+      {
+      TitleMode = UseText
+      TextShape
+        {
+        IsBold = No
+        SizeUnits = Point
+        Height = 11
+        }
+      Offset = 9
+      }
+    AxisLine
+      {
+      Show = No
+      }
+    }
+$!LinePlotLayers 
+  ShowSymbols = Yes
+$!AttachText 
+  AnchorPos
+    {
+    X = 21.257932
+    Y = 69.59686499999999
+    }
+  TextShape
+    {
+    FontFamily = 'Times'
+    IsBold = No
+    Height = 11
+    }
+  Color = Custom7
+  Anchor = Center
+  Text = 'Dominio'
+$!AttachText 
+  AnchorPos
+    {
+    X = 50
+    Y = 69.59686499999999
+    }
+  TextShape
+    {
+    FontFamily = 'Times'
+    IsBold = No
+    Height = 11
+    }
+  Color = Custom7
+  Anchor = Center
+  Text = 'Trayectorias'
+$!AttachText 
+  AnchorPos
+    {
+    X = 78.742068
+    Y = 69.59686499999999
+    }
+  TextShape
+    {
+    FontFamily = 'Times'
+    IsBold = No
+    Height = 11
+    }
+  Color = Custom7
+  Anchor = Center
+  Text = 'Casos MAT'
+$!AttachText 
+  AnchorPos
+    {
+    X = 78.742068
+    Y = 30.403135
+    }
+  TextShape
+    {
+    FontFamily = 'Times'
+    IsBold = No
+    Height = 11
+    }
+  Color = Custom7
+  Anchor = Center
+  Text = 'Seguimiento'
+$!AttachText 
+  AnchorPos
+    {
+    X = 50
+    Y = 30.403135
+    }
+  TextShape
+    {
+    FontFamily = 'Times'
+    IsBold = No
+    Height = 11
+    }
+  Color = Custom7
+  Anchor = Center
+  Text = 'Efectos / ruido'
+$!AttachText 
+  AnchorPos
+    {
+    X = 21.257932
+    Y = 30.403135
+    }
+  TextShape
+    {
+    FontFamily = 'Times'
+    IsBold = No
+    Height = 11
+    }
+  Color = Custom7
+  Anchor = Center
+  Text = 'Aceptacion'
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config

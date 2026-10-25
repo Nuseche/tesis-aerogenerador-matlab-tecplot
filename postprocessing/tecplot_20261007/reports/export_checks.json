@@ -1,0 +1,2158 @@
+[
+  {
+    "id": "concept_configs",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.231,
+    "export_status": "verified_files",
+    "log": "logs/concept_configs.log",
+    "sha256": {
+      "figures/concept_configs.eps": "24113ace96401eea18473187c184b6d72a6c53f5639c37273ded26552d07242c",
+      "figures/concept_configs.pdf": "56945e9279262410edf6e4335f2d4f4cb09fca861d1c89a44171eadd2147aa07",
+      "figures/concept_configs.png": "77214f4c2a8ba8431dc54d554dc488ba2f185a489c6ee8227ece62215c652867"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "esquema_es",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.509,
+    "export_status": "verified_files",
+    "log": "logs/esquema_es.log",
+    "sha256": {
+      "figures/esquema_es.eps": "9d16121a458035af471223daa8aaddb8baf3208f8ae253bbea4b74b1d3ee7638",
+      "figures/esquema_es.pdf": "1019e42b86947e5e52cb83a5340f714219b241ffb58290c3d2bef7327ceb213a",
+      "figures/esquema_es.png": "9b0c7fc2a34ba143695fcbfc66d9500ad4968640bfae56a04da3da1167db27da"
+    },
+    "page_size_pt": [
+      612.0,
+      792.0
+    ]
+  },
+  {
+    "id": "morris_ruido",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.638,
+    "export_status": "verified_files",
+    "log": "logs/morris_ruido.log",
+    "sha256": {
+      "figures/morris_ruido.eps": "d9468f622a915dff92e1312853bf362d1e2762c1b6f88e27fe9b589415f32494",
+      "figures/morris_ruido.pdf": "dde1a00025ee577387ff03f3a5ccca46f6ba3835e2673d4e589653efee2c00fc",
+      "figures/morris_ruido.png": "9d1efa501973f5061421606037b7698ffe888084b063c9597ed423d583a4ff02"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "morris_dominio",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.626,
+    "export_status": "verified_files",
+    "log": "logs/morris_dominio.log",
+    "sha256": {
+      "figures/morris_dominio.eps": "6ff72e08417bb9c01f50e15284998a8fc59d38cb8950adbb34cc959e39af8938",
+      "figures/morris_dominio.pdf": "e69b529c79f9aec3045340571945bc0749376d463a8fda11ede4d5d8cf6bdbff",
+      "figures/morris_dominio.png": "f254d62a2b4c69d8379bc2e0e4efcaf1799df7ed66f089b7ac7fd3ba7d89cdc2"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "malla_3d",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.63,
+    "export_status": "verified_files",
+    "log": "logs/malla_3d.log",
+    "sha256": {
+      "figures/malla_3d.eps": "4360e385b5dd1bb97594f44c1f201e440d11a7483c700b73da6f9dfcb441db63",
+      "figures/malla_3d.pdf": "3711c8b3f00dfd762fbc87b14f39383f8ea63ce53351f46771b7fc24cd4891c3",
+      "figures/malla_3d.png": "988195ac722dd59a8e2f9f71f3fe6557d0f16f86bcadcc0c56a7aac9028a58a4"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_10_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.622,
+    "export_status": "verified_files",
+    "log": "logs/modo_10_fase_00.log",
+    "sha256": {
+      "figures/modo_10_fase_00.eps": "f5718ddf07ece38d31bc5bd926daf0337ebe511a1a5c701c4a43307ef1a492e2",
+      "figures/modo_10_fase_00.pdf": "c09bc96e1061ad8a0051a6e0a40800490d4290bcb2abab290dabf5858d6c4f95",
+      "figures/modo_10_fase_00.png": "12e3b7e895bd447cfbcdcc32aa9ca94f631e35c10c443e6954cc6e633a242a15"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "morris_trayectoria",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.624,
+    "export_status": "verified_files",
+    "log": "logs/morris_trayectoria.log",
+    "sha256": {
+      "figures/morris_trayectoria.eps": "df9e352b144c75735ce45560f44d3907726132b442539c6f88d12b4a0ef6792f",
+      "figures/morris_trayectoria.pdf": "7f93634353dd04c101ffb328b8940cff9393f5ed87933d35adaead6e6dfad32b",
+      "figures/morris_trayectoria.png": "59418545ce39933e8679e2170013e47c3d6a402e271e8f18b1a53e4f164bd0fa"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "turbina_3d",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.803,
+    "export_status": "verified_files",
+    "log": "logs/turbina_3d.log",
+    "sha256": {
+      "figures/turbina_3d.eps": "da5f8d0e005476f8cd84ae434d6282a471d8fc58ec1f51291ac5463b6962ec65",
+      "figures/turbina_3d.pdf": "0fbe61155fda38510813cc92119df1e61e9463233c56e436ae4b28652df26ea2",
+      "figures/turbina_3d.png": "9f13d32beb726ecfebf5eb0966ebf377bdc8d1c3acc35fe7d3c898a253f91578"
+    },
+    "page_size_pt": [
+      596.0,
+      648.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "turbina_conexiones_3d",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.358,
+    "export_status": "verified_files",
+    "log": "logs/turbina_conexiones_3d.log",
+    "sha256": {
+      "figures/turbina_conexiones_3d.eps": "3b72106ed72aeada1a2761a5ee8e13608c7ebd2323663f670ea13522ab3ab291",
+      "figures/turbina_conexiones_3d.pdf": "42352d5afbcbcd09887df36a45157b0ffc7e11a9d79a52ac2963d1bb2354a0db",
+      "figures/turbina_conexiones_3d.png": "4e2bd871114553bb4b0da7b559e418f82e77d600a5c5b8f0ec81152ad9548d33"
+    },
+    "page_size_pt": [
+      596.0,
+      448.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_turbina",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.507,
+    "export_status": "verified_files",
+    "log": "logs/concept_turbina.log",
+    "sha256": {
+      "figures/concept_turbina.eps": "9d16121a458035af471223daa8aaddb8baf3208f8ae253bbea4b74b1d3ee7638",
+      "figures/concept_turbina.pdf": "40290cddd7ae93c89e90bb1fee857b6a25789e5b6e29554c1a99b2995d10d5de",
+      "figures/concept_turbina.png": "57ae107f4664e28709345284c85f42b377992f799f0420a801bcf9225e197390"
+    },
+    "page_size_pt": [
+      612.0,
+      792.0
+    ]
+  },
+  {
+    "id": "concept_cambio-componentes",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.994,
+    "export_status": "verified_files",
+    "log": "logs/concept_cambio-componentes.log",
+    "sha256": {
+      "figures/concept_cambio-componentes.eps": "8d783a4e0358455dbe1b6404a3760feb885463d9078e0c9a2a25110dc210b78d",
+      "figures/concept_cambio-componentes.pdf": "ff9df496f91682bd71c247187b53c5c5e5d53f927524bd44e22b042df42f4800",
+      "figures/concept_cambio-componentes.png": "cfb1c4d3cf7db59c689865138583466ecc2f21974f30b67d11ccdf94b505b6ed"
+    },
+    "page_size_pt": [
+      596.0,
+      418.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_frames",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.988,
+    "export_status": "verified_files",
+    "log": "logs/concept_frames.log",
+    "sha256": {
+      "figures/concept_frames.eps": "8a200b43ed416798cccc3f40be81218a29fecd787d9f04bf848aaf7c28779a5f",
+      "figures/concept_frames.pdf": "8bc6d7d691527a72b6879939f1344cf51e74bb1cfbe26adb2f149c81223aab20",
+      "figures/concept_frames.png": "b8bffefb90db3ea5169853352e38ded74fbaceafdc0e0aa2907edb8161408f19"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_rotaciones-elementales",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.856,
+    "export_status": "verified_files",
+    "log": "logs/concept_rotaciones-elementales.log",
+    "sha256": {
+      "figures/concept_rotaciones-elementales.eps": "13311e692f0baecb5f290cda0b8fba99601c1207d0e2fe2f79b26f8291b1cfed",
+      "figures/concept_rotaciones-elementales.pdf": "677263a760bce378b8deb7dd1f4337faf017777293b3ab88c9d21291e45c2313",
+      "figures/concept_rotaciones-elementales.png": "9f0bd17bf4f77d8a289e11047d6d218b56b2afa38518e87afb345b441668e3ef"
+    },
+    "page_size_pt": [
+      596.0,
+      308.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_rotacion-bases",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.868,
+    "export_status": "verified_files",
+    "log": "logs/concept_rotacion-bases.log",
+    "sha256": {
+      "figures/concept_rotacion-bases.eps": "4ac3fd454e1764ff5f2cdeb6b2730a5a7e9bdc9697ab474584ceb15443bfbd8e",
+      "figures/concept_rotacion-bases.pdf": "ec2f5a96f48986fa934a9557f1cc66f42947c1a04c63349b34c606556abd13ae",
+      "figures/concept_rotacion-bases.png": "7ab2d1fc83ed5fef689e43b356be7607ca62d8dfb9c3a239e190b5748d892849"
+    },
+    "page_size_pt": [
+      596.0,
+      384.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_derivada-director",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.872,
+    "export_status": "verified_files",
+    "log": "logs/concept_derivada-director.log",
+    "sha256": {
+      "figures/concept_derivada-director.eps": "0535c1e8d9e8a8d0ecf6d1be213184f78333463d7825ef99229a35f67164fda7",
+      "figures/concept_derivada-director.pdf": "7ba3279ff68b2afa0f91ad094ba9c75b45e73ad98c497711111c77847242b980",
+      "figures/concept_derivada-director.png": "4f7451ed1e5c7e2662fab62114d2e5860f17ebcd392a2e06f5839fd3f30fabf2"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_rotacion-deformacion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.859,
+    "export_status": "verified_files",
+    "log": "logs/concept_rotacion-deformacion.log",
+    "sha256": {
+      "figures/concept_rotacion-deformacion.eps": "27565bcb7cf62b63e6b25998023ed581f189c916844e68cd65ab449dce8b26d0",
+      "figures/concept_rotacion-deformacion.pdf": "8485adf3a4aad44ec79a50fd47be6771e29cac2b34777941d078df9299acee4d",
+      "figures/concept_rotacion-deformacion.png": "162038aa4879fcf8f97d0c37662088c511fa39fdd1541e1c3e587253644df5ce"
+    },
+    "page_size_pt": [
+      596.0,
+      334.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_sistemas-lateral",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.991,
+    "export_status": "verified_files",
+    "log": "logs/concept_sistemas-lateral.log",
+    "sha256": {
+      "figures/concept_sistemas-lateral.eps": "71ddd1fa12b42be2f63e9c8ca94dd69d59b2f31a262bc561b8f0ea91f7a86466",
+      "figures/concept_sistemas-lateral.pdf": "887f5c7ac2c71ef0461c1ff46d61c998b1e396457e9893faaf01e47a82405356",
+      "figures/concept_sistemas-lateral.png": "fbdf1c27696a90da03cb49dfec0e53a672ffc95f8fa0df79d43c0f9e04972ae8"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_cubo-nominal",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.872,
+    "export_status": "verified_files",
+    "log": "logs/concept_cubo-nominal.log",
+    "sha256": {
+      "figures/concept_cubo-nominal.eps": "19807eee2461973b8e363d08f30308913d3df60f69c0bcb66f0e3a1513658ade",
+      "figures/concept_cubo-nominal.pdf": "58dba125465ea3a0e39e051bbdf2dd808214f41ca988ea463e89ecab819c385a",
+      "figures/concept_cubo-nominal.png": "606946f0c1085808dc837447718db0c22b3cf619a8789490d22d5f4586c59c7d"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_marcos",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.002,
+    "export_status": "verified_files",
+    "log": "logs/concept_marcos.log",
+    "sha256": {
+      "figures/concept_marcos.eps": "74074b2510e5db2f049efc38d54fa7b286969fa9ec9a97c7c65dbd5ad91cb740",
+      "figures/concept_marcos.pdf": "1e1ce4c9411db1791b5fb420b8da8a1407e997ff047b256af09bbf55bc9c657a",
+      "figures/concept_marcos.png": "2818d43af5361e9b3a8f1ad2d0ea1a8b52c5a24d23b499731663854966275db7"
+    },
+    "page_size_pt": [
+      596.0,
+      462.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_palas-paso",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.874,
+    "export_status": "verified_files",
+    "log": "logs/concept_palas-paso.log",
+    "sha256": {
+      "figures/concept_palas-paso.eps": "b3d4c7571a6a143fdf5e75a23c0e3571d0a18b61b6caaba420b4e09afebd3358",
+      "figures/concept_palas-paso.pdf": "3b6eedcfdb73e4cb775bb33d1726c4d61fe821131598b03e52ed176701baf64c",
+      "figures/concept_palas-paso.png": "e0d8fb295e522122db03d6eb797f573cad739fb3c5dadd4161eb126fa50ac86e"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_arbol",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.716,
+    "export_status": "verified_files",
+    "log": "logs/concept_arbol.log",
+    "sha256": {
+      "figures/concept_arbol.eps": "58b1e814a75df96fc15e70fd3901c5da63fc546bae0c61ead1fda84ffc2010b4",
+      "figures/concept_arbol.pdf": "6c249bed78ee79dfb3c8623b27e8a50c7cbcb766bbc603673a569561ff5175b9",
+      "figures/concept_arbol.png": "c11d6ca76544fc8746d6eae959aeea89efed0ab2c59da1df3f5737fb685c457d"
+    },
+    "page_size_pt": [
+      596.0,
+      206.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_cadena-posiciones",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.877,
+    "export_status": "verified_files",
+    "log": "logs/concept_cadena-posiciones.log",
+    "sha256": {
+      "figures/concept_cadena-posiciones.eps": "e0e2e893f6da973af2ce45b20a0a88c4f31d37dc74eb74bc5ed3fadb1bec3ac1",
+      "figures/concept_cadena-posiciones.pdf": "90a321adbf0058ac42b84d52a465d84dcb23201c8d5f456d0a98874015c706f9",
+      "figures/concept_cadena-posiciones.png": "9cbadafdbdcd28ada2c38f2119669e6fc0f38c84a52a572d05d28971237c01e7"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_tresniveles",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.855,
+    "export_status": "verified_files",
+    "log": "logs/concept_tresniveles.log",
+    "sha256": {
+      "figures/concept_tresniveles.eps": "ad17c72ac6e585d9894bc33cf430d97ac05169f7ca3815bcb9913d17a746011c",
+      "figures/concept_tresniveles.pdf": "6b3a7711b71a86b383a903ca9b93d05cb3a46a1a34e28505bb40503608de2a55",
+      "figures/concept_tresniveles.png": "16fbd69a286d9474a857f16a9677db104bc5dd2b97c0ce26c26a97a1df2407f1"
+    },
+    "page_size_pt": [
+      596.0,
+      292.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_particula-seccion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.996,
+    "export_status": "verified_files",
+    "log": "logs/concept_particula-seccion.log",
+    "sha256": {
+      "figures/concept_particula-seccion.eps": "fa753ba7f40173505c3690a40f319b87510414ff0e3ad685e1ce4798b82617d0",
+      "figures/concept_particula-seccion.pdf": "66db4ac847b529948f7ff4e70f3c40045fd5fc62b9c8f073e0ceba88508f64eb",
+      "figures/concept_particula-seccion.png": "56f85a84a35916174057079aff1db7b54f31cee4f24bba3e5089462e4352777f"
+    },
+    "page_size_pt": [
+      596.0,
+      402.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_shear",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.004,
+    "export_status": "verified_files",
+    "log": "logs/concept_shear.log",
+    "sha256": {
+      "figures/concept_shear.eps": "7e48bd44f390033733c64cbfdaad2b84218c5d780b5cc45e312dc10cf11e731a",
+      "figures/concept_shear.pdf": "8f479d27dd99dee06274bfad1017c294797e26ec5638436fc4014dea49c02dbb",
+      "figures/concept_shear.png": "905cd08cd95b10048acd30321d909ac868cc689f55006cb4478e23c3886d8eb6"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_giro-perturbacion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.001,
+    "export_status": "verified_files",
+    "log": "logs/concept_giro-perturbacion.log",
+    "sha256": {
+      "figures/concept_giro-perturbacion.eps": "bd7a29c37147b32f4949fb1ae949b9dad1ae7faf051deee110e6d84584b805b0",
+      "figures/concept_giro-perturbacion.pdf": "0865ddc9d49aea0e5190a0f1440ce5a5f188f066e5ca206edbfe2437d31d6837",
+      "figures/concept_giro-perturbacion.png": "c6ef5a04e11b3deef192aa664796709e70339f6c445b749ab6ea11590f8c4e34"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_suma-velocidades",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.191,
+    "export_status": "verified_files",
+    "log": "logs/concept_suma-velocidades.log",
+    "sha256": {
+      "figures/concept_suma-velocidades.eps": "a6d6c96511b513434440aec9df7052c18c2a6d5d54ead417232e08e1860fc5c2",
+      "figures/concept_suma-velocidades.pdf": "922fa1f071634a60ed3abdd261d2c22a75a9092170c29132b57da728e61da965",
+      "figures/concept_suma-velocidades.png": "cdab01c8e3dfed98bf14b183293395a1893cc731fb0130e92805d7a234247e72"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_centripeta",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.986,
+    "export_status": "verified_files",
+    "log": "logs/concept_centripeta.log",
+    "sha256": {
+      "figures/concept_centripeta.eps": "c02520a28495448989a79d4532e0886ebf417ff1294c9b86ca2c44a59b93880d",
+      "figures/concept_centripeta.pdf": "6e78020820063b537625e5808261056b477528a2a8e062cdf5eb4784403b47c8",
+      "figures/concept_centripeta.png": "af1aab43abc6fb1861dd7f954e38c5bd840ab4701a9f92c31fc8184edf0ee350"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_gravedad-giratoria",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.86,
+    "export_status": "verified_files",
+    "log": "logs/concept_gravedad-giratoria.log",
+    "sha256": {
+      "figures/concept_gravedad-giratoria.eps": "2c7e46e2db51c234b712c2f32951135fa7860abe20e75caa5dbee9b4450be173",
+      "figures/concept_gravedad-giratoria.pdf": "66ca785a9a8735f3418977f5e6ae53bf25e948887316317a93652d48b91f138e",
+      "figures/concept_gravedad-giratoria.png": "eb23247093b86949139c249ac1cdd45248042682b1813ce06c834ef79d6c4fec"
+    },
+    "page_size_pt": [
+      596.0,
+      316.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_operacion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.861,
+    "export_status": "verified_files",
+    "log": "logs/concept_operacion.log",
+    "sha256": {
+      "figures/concept_operacion.eps": "54f7398e5a825d962ce0b2b870990cbcfe84a5b840d2d783bcac2d29d806c63f",
+      "figures/concept_operacion.pdf": "d5ec9aa44d25b5887d3552b85e8c17eee1d3419fda41533d3e88900b11714c17",
+      "figures/concept_operacion.png": "98942a333fd7cc3751faeb1749116cf1b0a7a4da81c0cc8c65389e9b35e981dc"
+    },
+    "page_size_pt": [
+      596.0,
+      292.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_centros",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.887,
+    "export_status": "verified_files",
+    "log": "logs/concept_centros.log",
+    "sha256": {
+      "figures/concept_centros.eps": "ac8a841aa409e3ef3de235758b96b8b2b4fa1907f67375c1673acb39d0a41152",
+      "figures/concept_centros.pdf": "dff7bd43a3e4dba395c8df1e1f087d5e3acc053cb517d4e1e726ddd65cb12790",
+      "figures/concept_centros.png": "49e65ab693012b72fc94ced6ff053212c35e8c96e5040799876768ef4e978052"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_masa-seccional",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.99,
+    "export_status": "verified_files",
+    "log": "logs/concept_masa-seccional.log",
+    "sha256": {
+      "figures/concept_masa-seccional.eps": "e151d350a9fb3aa2d4153df612dccf286702163d692afadf89f130b5176a3c21",
+      "figures/concept_masa-seccional.pdf": "86c6d8e0fd13e8677a30e604ac7a0bbcaedfa775841e33cf75db1974ab88c185",
+      "figures/concept_masa-seccional.png": "a09e7b073aa74c9ea0261d3116afc97682578dea80afc24a6ea266131c862734"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_rigido-centro",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.122,
+    "export_status": "verified_files",
+    "log": "logs/concept_rigido-centro.log",
+    "sha256": {
+      "figures/concept_rigido-centro.eps": "7074cba37535c797683b92138f374de6279962065418a73a571566819a7bec38",
+      "figures/concept_rigido-centro.pdf": "addf76321fcd3773f6850d75bbcfaeee739c3c5b39db2e7de9849c96d3e7db92",
+      "figures/concept_rigido-centro.png": "466cf406db4a0c32189012df15a19762c2ce9f473bf87d63d49e3aac0c312c41"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_continuo-malla",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.001,
+    "export_status": "verified_files",
+    "log": "logs/concept_continuo-malla.log",
+    "sha256": {
+      "figures/concept_continuo-malla.eps": "4c02774e16108688d4edc8fde97ffeaffdbd02c6f324a562bd6aea9c3e201357",
+      "figures/concept_continuo-malla.pdf": "acb66ecb318a581c60b0fae6173db14a632cb9bdb0221c46eb1a914ec1110530",
+      "figures/concept_continuo-malla.png": "201d3e23c17910adee61db4b367fe2b825229f60d09752e36bf7bfdd33a83c5c"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_coordenadas-nodo",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.862,
+    "export_status": "verified_files",
+    "log": "logs/concept_coordenadas-nodo.log",
+    "sha256": {
+      "figures/concept_coordenadas-nodo.eps": "4851dc1b4204d99cfe9e604990f82a75b3b74475287210bb0d533fbaee897e26",
+      "figures/concept_coordenadas-nodo.pdf": "fa8f1112270ee74fdaf562c403c65ddd2b250855d94d9a2750bc69a1c5235a96",
+      "figures/concept_coordenadas-nodo.png": "461daa05e989646bcc3e910db7f2697abc8c0ab57fbc1d1c6aa356e4ad45179d"
+    },
+    "page_size_pt": [
+      596.0,
+      384.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_interpolacion-lineal",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.002,
+    "export_status": "verified_files",
+    "log": "logs/concept_interpolacion-lineal.log",
+    "sha256": {
+      "figures/concept_interpolacion-lineal.eps": "f06079b696f56c33080339b7480a3efc4990169ab378c755d827413505e5d72a",
+      "figures/concept_interpolacion-lineal.pdf": "79278ec2fcf6e4f4a66ac5e56910929ef7e27fd58b9cc5d37f59d1229718e87f",
+      "figures/concept_interpolacion-lineal.png": "0823a7e8856b75d4275ef527996c864a0a8ff737b45ef9b8be6f6f75b6710b0d"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_elemento",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.998,
+    "export_status": "verified_files",
+    "log": "logs/concept_elemento.log",
+    "sha256": {
+      "figures/concept_elemento.eps": "32b8ff282071dee276d7f3a2cb8f0a184bd06c1055087407bb9ee382182c2cfe",
+      "figures/concept_elemento.pdf": "0e7b20f92223f18a03b9905f8eac6bf72d7d3140d95968856839d4d8ff6590ea",
+      "figures/concept_elemento.png": "d2261c0d0d4f84665c56ed83f3821e6079aa9f814f9688a3f49c8e8131d55f05"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_cubo-brazos",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.014,
+    "export_status": "verified_files",
+    "log": "logs/concept_cubo-brazos.log",
+    "sha256": {
+      "figures/concept_cubo-brazos.eps": "a8095d823083115a2c1f5a6fa3807c9b8726d49a1439bd17db529dbae79977c8",
+      "figures/concept_cubo-brazos.pdf": "24a5059f164f992fb008d3c461253bffadabc84c51b1ec9b64d3c7abca6a1aa4",
+      "figures/concept_cubo-brazos.png": "019d598d67f8d96eda577a634f62e73fdd2bcf19c0766d308d9d9469e5444fe4"
+    },
+    "page_size_pt": [
+      596.0,
+      462.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_vinculo-raiz",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.002,
+    "export_status": "verified_files",
+    "log": "logs/concept_vinculo-raiz.log",
+    "sha256": {
+      "figures/concept_vinculo-raiz.eps": "432c290fb5bc691ee77827420f9ab5a232151408b5bd2b128b2ab38da54b4e9b",
+      "figures/concept_vinculo-raiz.pdf": "53f766e3ce16f692b4ddeceb9a562a7489d64fada98810054e17cc359d4a5add",
+      "figures/concept_vinculo-raiz.png": "846ca7d5f4789b1200da04f6ecbb35d72f8820ab64266b933fb0c43c704700d1"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_conexion-elastica",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.0,
+    "export_status": "verified_files",
+    "log": "logs/concept_conexion-elastica.log",
+    "sha256": {
+      "figures/concept_conexion-elastica.eps": "8d1c72b22d18514b6072e74e1aeeec352cddddb06881aeba65ae01c759b8035e",
+      "figures/concept_conexion-elastica.pdf": "3a53edca12a2a8291e2dfbbf22f90b20ff7149a87e1701843b20e56e3d8040ff",
+      "figures/concept_conexion-elastica.png": "692bea5f5f3ac11d9a88640e10bc9a319bf27bbdc0b1977265625cef694ceb0a"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_guia",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.013,
+    "export_status": "verified_files",
+    "log": "logs/concept_guia.log",
+    "sha256": {
+      "figures/concept_guia.eps": "c67723374fe767bf54423a94ab46a8eb32390f2b9fb8f907a0b128f4ecbbf5d5",
+      "figures/concept_guia.pdf": "63758b6a899ec7bea09f5157f0484e8e491955b7cf0a0b368c1c1c8c60f487a5",
+      "figures/concept_guia.png": "e2f40d2ebc105ebce5c7579e8fad10e16560cd86dbaccfd42f14750b96772b56"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_acoplamiento-giroscopico",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.885,
+    "export_status": "verified_files",
+    "log": "logs/concept_acoplamiento-giroscopico.log",
+    "sha256": {
+      "figures/concept_acoplamiento-giroscopico.eps": "52681b5637aaa939a656c8f3a791781001cb1d60419df237aa52a02b818b9e52",
+      "figures/concept_acoplamiento-giroscopico.pdf": "87dd694b302e278414f16c78c526d6cdfd2dbf85164768ad31051aefb2702ebf",
+      "figures/concept_acoplamiento-giroscopico.png": "e586885612424090dfbc321a9237729e889dd49ce548ce5fb0414a536ee48ed9"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "concept_carga-seccion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.992,
+    "export_status": "verified_files",
+    "log": "logs/concept_carga-seccion.log",
+    "sha256": {
+      "figures/concept_carga-seccion.eps": "65e3fe778a927cec1a79d3c0280390e76fc1c166e9c1753eec50590df29b9ed8",
+      "figures/concept_carga-seccion.pdf": "18d09e83dc83acb798877c40d6469ed437475f005fed35321bc83882ab72ee51",
+      "figures/concept_carga-seccion.png": "a6331d141b4f8c530a47a8ea598790bea1253844d191ba86c6ddb9472e1906de"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "esquema_en",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.508,
+    "export_status": "verified_files",
+    "log": "logs/esquema_en.log",
+    "sha256": {
+      "figures/esquema_en.eps": "778820160639f131eda2fb04a9f09717278ba2c4d21fe97845afa785d6705d48",
+      "figures/esquema_en.pdf": "77ac385ff203c26f310592e1ec27a45352c7b28a44f3b009b1c07f70dca6a67d",
+      "figures/esquema_en.png": "245246830f0d132afbda79cf5f5462642ca775f5a32cd7c47ef7fc110fb0797c"
+    },
+    "page_size_pt": [
+      612.0,
+      792.0
+    ]
+  },
+  {
+    "id": "malla_xz",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.783,
+    "export_status": "verified_files",
+    "log": "logs/malla_xz.log",
+    "sha256": {
+      "figures/malla_xz.eps": "56a94041e931cdbe63e9f77d42070198eda54d1bde81c3158d190391f9f7bbd4",
+      "figures/malla_xz.pdf": "06d93799ee37e9fdf748f7be08546c18042313420c04d6189a9e642791754358",
+      "figures/malla_xz.png": "4a9fff1d8c1400e54b97e33349eb8c2b1c8c66f3805184ab930fdf9af7da24c0"
+    },
+    "page_size_pt": [
+      384.0,
+      776.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "malla_yz",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.628,
+    "export_status": "verified_files",
+    "log": "logs/malla_yz.log",
+    "sha256": {
+      "figures/malla_yz.eps": "a3a2479952f50eea1a25ed60e5ae6f303dd2f344ea3ab1723e9295ac50c9b879",
+      "figures/malla_yz.pdf": "111ec56a9ff9cc344fabbcec62ff59d7ad6c94f61980ac6dd99a11878ed8cba3",
+      "figures/malla_yz.png": "d56920e5148a11e1c5b11c4372553235499c51b036148ddb284c2284c88125b1"
+    },
+    "page_size_pt": [
+      596.0,
+      704.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "malla_xy",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.737,
+    "export_status": "verified_files",
+    "log": "logs/malla_xy.log",
+    "sha256": {
+      "figures/malla_xy.eps": "fc5c899a177dd9760e713da463b1faa7eb07d937811751bcfc5c35f69fd2138b",
+      "figures/malla_xy.pdf": "a599299bbbe7d0f4b619dee13ee067646692e97bf5b46a123d6aae5d37f45115",
+      "figures/malla_xy.png": "d4f1d28c601a40df57b2023655a08f200dae10df1d74ade2ef90f4d378e3cd3c"
+    },
+    "page_size_pt": [
+      384.0,
+      776.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "detalle_raices",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.642,
+    "export_status": "verified_files",
+    "log": "logs/detalle_raices.log",
+    "sha256": {
+      "figures/detalle_raices.eps": "edc46cf7a2d6246fa70e590227ece63a0baaa4266153786c7a247b1fc0e571d3",
+      "figures/detalle_raices.pdf": "5ea2f957685d17b4b73a22dc99bc34afdd828e2e7a2daf46dd791b8aa97ead82",
+      "figures/detalle_raices.png": "1f06384dd504e868bd0a4d5cdff2481baeb8b2a438cfe8339838e4d4b0c576da"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "detalle_gondola",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.64,
+    "export_status": "verified_files",
+    "log": "logs/detalle_gondola.log",
+    "sha256": {
+      "figures/detalle_gondola.eps": "f184af85674e03bc746afbfa46dec1504bc9e9a3ae7c59e0f904072be0bc733e",
+      "figures/detalle_gondola.pdf": "ac0b1ba8768f2d4e568b22395a7fec7714bd4a6714f7ea70e456e73a299dd19c",
+      "figures/detalle_gondola.png": "be4d2e2aeb77f942da7cc314b5928057ebac93586138f69a321218e9b50b564b"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "detalle_base",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.623,
+    "export_status": "verified_files",
+    "log": "logs/detalle_base.log",
+    "sha256": {
+      "figures/detalle_base.eps": "4046fb11b3093982e3bbfefe4e5b84e79cac04f66d2521f55ae83bf05a78cd45",
+      "figures/detalle_base.pdf": "8996d3b5e8d9b46db835510e1c12a2593e9b8aee7238f0971776e0f8097a29b0",
+      "figures/detalle_base.png": "87d6457c318ef479d323aa9cb0ac66039af84232c768ab86740e6cda7cf0d246"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "ejes_locales_reales",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.981,
+    "export_status": "verified_files",
+    "log": "logs/ejes_locales_reales.log",
+    "sha256": {
+      "figures/ejes_locales_reales.eps": "0cca4c478ce27376bb193704f9be61e750e8ccf55a82bf54ef1c2457929a49ae",
+      "figures/ejes_locales_reales.pdf": "4ba48888039f8b811b89e69f5ddb4df61d0b120578f948bd36a28670fd1a3ae8",
+      "figures/ejes_locales_reales.png": "0ba9a02fca9ebe7fd66053f1cc846a1eee03a3efa05f6695fc5c2220a7d399fc"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "prop_torre_masa",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.634,
+    "export_status": "verified_files",
+    "log": "logs/prop_torre_masa.log",
+    "sha256": {
+      "figures/prop_torre_masa.eps": "d12a8d35cdf65f285df53bc3245312f8cd85cc04ff3722a31a316876321c528d",
+      "figures/prop_torre_masa.pdf": "aed33c9f2f58b1991f834d600daf7c1827800ce9f14093e31d0764acb90f6d5b",
+      "figures/prop_torre_masa.png": "08a9b7c27be6e48e5f48a55f758fa3c142af42bf516fbbe033b0ee898fc23adb"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "prop_torre_flexion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.524,
+    "export_status": "verified_files",
+    "log": "logs/prop_torre_flexion.log",
+    "sha256": {
+      "figures/prop_torre_flexion.eps": "220138402cfe1671f3f8b09defeb6820bc9f74eac40089a9bd1e2dc77d294859",
+      "figures/prop_torre_flexion.pdf": "8743698ce954161835edd9d41d3b83ef82b6719ccf373adc67e074f47dd50454",
+      "figures/prop_torre_flexion.png": "4c57261dabbc001cbe778caa0540f40b1746c52eed90bd1181facf28ca430614"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "prop_torre_axial_cortante",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.63,
+    "export_status": "verified_files",
+    "log": "logs/prop_torre_axial_cortante.log",
+    "sha256": {
+      "figures/prop_torre_axial_cortante.eps": "bc0b6f52ab58f22d4c329cf7cac0afab13bcb5e00c37ccbf0ff1d51e1187fe38",
+      "figures/prop_torre_axial_cortante.pdf": "a506724a466671f80ee8e3a2f5bf28b61ff329d52c18f3f930cf1b8b2f3c7c0a",
+      "figures/prop_torre_axial_cortante.png": "05a5640bb90a60c927e729cbc24fe53b2ec908f333afe2a34bb383527cc63a75"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "prop_torre_torsion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.637,
+    "export_status": "verified_files",
+    "log": "logs/prop_torre_torsion.log",
+    "sha256": {
+      "figures/prop_torre_torsion.eps": "3c514b9c1c73157a9978de8ab10b758b8701b8f0386ec25d4e22a5f8693ca236",
+      "figures/prop_torre_torsion.pdf": "013a7bbf60ae884705abdfdd1b0346406ed07e1464554830fc5deb37f36ca568",
+      "figures/prop_torre_torsion.png": "089c7d9f70ff013d71556944b7a060ba4847ec864d2f5b6190f3164410c0a65d"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "prop_torre_inercias",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.514,
+    "export_status": "verified_files",
+    "log": "logs/prop_torre_inercias.log",
+    "sha256": {
+      "figures/prop_torre_inercias.eps": "c24d94b74f4c8257290195297495f835b349527284371a953cc092f03b13948d",
+      "figures/prop_torre_inercias.pdf": "4ef84017c8f8c7e4bc561ae30dc860d6d699362b3172b826e487c030b07b72a3",
+      "figures/prop_torre_inercias.png": "f11d2e680fc7305294ac46d7930a2ab5cac4b7c2d62d39e55e12561ed533f83e"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "prop_pala_masa",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.636,
+    "export_status": "verified_files",
+    "log": "logs/prop_pala_masa.log",
+    "sha256": {
+      "figures/prop_pala_masa.eps": "5a73f719c2fe32b8cc07adb3bd94933fb351526cb6aa4acbe5ac5af19d80a9f2",
+      "figures/prop_pala_masa.pdf": "0dd0126be4fbf91f2e02d95bbe6f09933fedac0fe073404ef88a4a66e45aecde",
+      "figures/prop_pala_masa.png": "86ccd33b29f558505a40bb8e3c2c12c55beffeac90dbc86fe73e2033419c139b"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "prop_pala_flexion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.526,
+    "export_status": "verified_files",
+    "log": "logs/prop_pala_flexion.log",
+    "sha256": {
+      "figures/prop_pala_flexion.eps": "a9a039b99f4b252bce8c3e82d2fcdef025746c7d22804618cce4e67eef71d847",
+      "figures/prop_pala_flexion.pdf": "e99b4c57cd820db90c0f17db3d1e4f2a6ff2a7384b87254cbe4b404b1ddc914d",
+      "figures/prop_pala_flexion.png": "484ece06390bf27172b7eb21cd1751a19b27be7fba60d2abfd3d3c44f4dc6f56"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "prop_pala_axial_cortante",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.632,
+    "export_status": "verified_files",
+    "log": "logs/prop_pala_axial_cortante.log",
+    "sha256": {
+      "figures/prop_pala_axial_cortante.eps": "9cc1a9078f4717e17185f89ac88ffae48ac67561fe9a18a67e6e4057196a1b86",
+      "figures/prop_pala_axial_cortante.pdf": "0e60603bf5aadb65a8190f2d57fbb848b0c69562f8ba1dc8552b484404cd6c33",
+      "figures/prop_pala_axial_cortante.png": "f6fda7d563b0a2ec8d96003c0c39a998c9cf7ed249aa054d951e4fae2ddb9e50"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "prop_pala_torsion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.527,
+    "export_status": "verified_files",
+    "log": "logs/prop_pala_torsion.log",
+    "sha256": {
+      "figures/prop_pala_torsion.eps": "6b06b76bad9a04d33e8b9322086ff19ba94b938c9835074a7f4f365deaf4343d",
+      "figures/prop_pala_torsion.pdf": "a7f61b85358a23397301be52c53ab659c0cfad6f510e33bdb7f24a64b4a94edb",
+      "figures/prop_pala_torsion.png": "ba38be81e4265f14c0530591320aa98702c62a243655711f8aeb956d4f207605"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "prop_pala_inercias",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.635,
+    "export_status": "verified_files",
+    "log": "logs/prop_pala_inercias.log",
+    "sha256": {
+      "figures/prop_pala_inercias.eps": "98c5a924354db6554f12072e8457432c7211166cb655f280ba705f75851f688f",
+      "figures/prop_pala_inercias.pdf": "21f6dcb288761954ac9e2688a76e393821bec126d51014c8baa03c3ee480c63d",
+      "figures/prop_pala_inercias.png": "03c97cd248ff23a03d8c040bde7df175955f140df1ee4e4617fbc52493bd0416"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "campbell",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.628,
+    "export_status": "verified_files",
+    "log": "logs/campbell.log",
+    "sha256": {
+      "figures/campbell.eps": "2c5d6549a1dae601368ac141ed68af365f988fc8b80d67206484768f829a816a",
+      "figures/campbell.pdf": "849503b4e8c251cc703aa822fb56cba9c7a4e4930548af7a9af81e06f0fc30e7",
+      "figures/campbell.png": "bcf6ef49019c810d8941243eb6e0a48b51b9222e60f5d4b43f19ab839e58a5c6"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "seguimiento_ramas",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.64,
+    "export_status": "verified_files",
+    "log": "logs/seguimiento_ramas.log",
+    "sha256": {
+      "figures/seguimiento_ramas.eps": "ab6e67c3dc03fdf0c5b12e7e297ecee0ac01584e063bf24a713279835e3ca6e8",
+      "figures/seguimiento_ramas.pdf": "7e2096af3f2d32d71aa5d4f52f9d2312d03bda2f7845c2b0280232dec702f3fd",
+      "figures/seguimiento_ramas.png": "fcafda38a19cffd9ee55d3a5f6484f4a56b45b8fb7efb25b5245e8e3c0b4a007"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "equilibrio_velocidad",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.632,
+    "export_status": "verified_files",
+    "log": "logs/equilibrio_velocidad.log",
+    "sha256": {
+      "figures/equilibrio_velocidad.eps": "cefaccbe0ebe07db2500a1800e924ec3ce61df8984b8b94880ed5adbc9a2374d",
+      "figures/equilibrio_velocidad.pdf": "f05e9f30496e6b356808730a28b5f4f37e56483db6f7bbac0d592918f200da8a",
+      "figures/equilibrio_velocidad.png": "87647a52083dee553fdce3c52c79e8f91873f8b8aa62cb5cabccee08a43ebd5d"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "sismo_n129_ux",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.635,
+    "export_status": "verified_files",
+    "log": "logs/sismo_n129_ux.log",
+    "sha256": {
+      "figures/sismo_n129_ux.eps": "a0bb357b4cdee796b64973192f6a72d7bc8c86eeafaf22e608d6988122ab0504",
+      "figures/sismo_n129_ux.pdf": "d65c350978ec5334ba8f31813c2af72d51b195299a55b1e9137861883989b738",
+      "figures/sismo_n129_ux.png": "2818cba93992842a7b0542b4c90d08dc5485cfbfba13c52a341fc2e46cf1d19a"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "sismo_n129_ax",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.633,
+    "export_status": "verified_files",
+    "log": "logs/sismo_n129_ax.log",
+    "sha256": {
+      "figures/sismo_n129_ax.eps": "485a4d3413b002f3b5f6d1de4dbf2ca1398264f3099dbaaa6ebf59c476f3d540",
+      "figures/sismo_n129_ax.pdf": "e4be9195fc621a0d520e3179af2bf9738444c81856337df65c543db2ce8f6c4f",
+      "figures/sismo_n129_ax.png": "5f09a3df6cfcd1f991ad56711cd8cb7d14bde916f2e1f559a15b22fc33d27dd7"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "sismo_n56_ux",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.633,
+    "export_status": "verified_files",
+    "log": "logs/sismo_n56_ux.log",
+    "sha256": {
+      "figures/sismo_n56_ux.eps": "0bc2e7501f6d670058973db4513438cf2851e76080d29037abd50438a069601e",
+      "figures/sismo_n56_ux.pdf": "8d284b5fc7eb035e920cddc5037523b01a80a199b305c8f77e8a11cc582cf706",
+      "figures/sismo_n56_ux.png": "e3da2d15e5765f8bc2e6cb29b08d1d6d1d2097d55574d82cdc2816fb22f52269"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "sismo_n56_ax",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.627,
+    "export_status": "verified_files",
+    "log": "logs/sismo_n56_ax.log",
+    "sha256": {
+      "figures/sismo_n56_ax.eps": "6ca70e8bdd858b2f667b725e02ef951009b4b0c24e726aff7132905e2f9a9ea1",
+      "figures/sismo_n56_ax.pdf": "1b7ebff4c886eae54ad584e4eca1a63dc00acf540b62d22ceb49f9f1f7bbbae1",
+      "figures/sismo_n56_ax.png": "0285f74de715a2792d07f3108e811210236e9f514c3f185d116ecb1a3f11315f"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "sismo_reaccion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.63,
+    "export_status": "verified_files",
+    "log": "logs/sismo_reaccion.log",
+    "sha256": {
+      "figures/sismo_reaccion.eps": "1b9d8980a3ed5400c1e4dd8e0d4dc546d357e810117503f4945b9ffe0b48154a",
+      "figures/sismo_reaccion.pdf": "cfba835d15982b997920803fea050a0c4d1c1446dccccd1e68fa527f7b227c50",
+      "figures/sismo_reaccion.png": "4ce48ba151eb1ee121bf5fe068ec5de475433f77d2f5bfb3d18b3e28620277bd"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "sismo_convergencia",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.627,
+    "export_status": "verified_files",
+    "log": "logs/sismo_convergencia.log",
+    "sha256": {
+      "figures/sismo_convergencia.eps": "a99ca4f7241460c3b50b1bc44210fddbd87ab71b3a74525cb7d6f61547042561",
+      "figures/sismo_convergencia.pdf": "7504b3974b0727d9c9fbf263cd5b87a7165fa2a8897670938cd87412530db52a",
+      "figures/sismo_convergencia.png": "c4d1766c4af5b8149d8f16ec49a455eae6672990bc1956b1633828873fdf3c74"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "rom_historia_0",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.639,
+    "export_status": "verified_files",
+    "log": "logs/rom_historia_0.log",
+    "sha256": {
+      "figures/rom_historia_0.eps": "a67894a54a38a23e55d8d38a4b9c7fb7e1938b706a5215be6747f5ef817c4dea",
+      "figures/rom_historia_0.pdf": "02d7f89b5b146f44c9e00cdf251420c83e0b7cba74c1498e681b14a1948677bb",
+      "figures/rom_historia_0.png": "1234f4e8216c275b1edb2ccd2547be4c97a56f53e0c1986880662bd93e5ff0b9"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "rom_historia_2",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.762,
+    "export_status": "verified_files",
+    "log": "logs/rom_historia_2.log",
+    "sha256": {
+      "figures/rom_historia_2.eps": "7ddcf59fa85f43b4d4aefc12f9cb201220481dca6b194e05ccbb595507eafbc6",
+      "figures/rom_historia_2.pdf": "358204df38c949397e308fe4e41b495ebb1951601e1680dbfc179e0174c1d04f",
+      "figures/rom_historia_2.png": "6e2da8dcb00bcff3f1ae204a02daa96d69972858bd6dd0a44ee3af6de6b29b91"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "rom_historia_5",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.641,
+    "export_status": "verified_files",
+    "log": "logs/rom_historia_5.log",
+    "sha256": {
+      "figures/rom_historia_5.eps": "0ecde1c44d5106f2b2cf63d9e60a55e10a9c62ff48015babf88835c0aa1edc83",
+      "figures/rom_historia_5.pdf": "3e655fad0433b48cbc3f11690c34b08fced80aff0ce80c4c8c25e9c9502c10e3",
+      "figures/rom_historia_5.png": "517179c9fbca4a3c6a9833b3a18e86c42540047955b5c5269cc29350c98b5bf1"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "rom_historia_7",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.636,
+    "export_status": "verified_files",
+    "log": "logs/rom_historia_7.log",
+    "sha256": {
+      "figures/rom_historia_7.eps": "0ca05da0ded332a2292727c324a8a531ccdb6d9b3cf664abf1274fba76a6531e",
+      "figures/rom_historia_7.pdf": "44c3fdd94fa3800daaf689a7ee7a8209062048074521747d5b5d73950edd6a28",
+      "figures/rom_historia_7.png": "befdfd031b5a737a16efd9c494f0023040e1653beefe67a7da5eba30ca7f52e0"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "rom_speedupIntegration",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.625,
+    "export_status": "verified_files",
+    "log": "logs/rom_speedupIntegration.log",
+    "sha256": {
+      "figures/rom_speedupIntegration.eps": "5e56bb50e09f4581b6a776a722bcfc7309583005b672376e50d13e60c6f624c3",
+      "figures/rom_speedupIntegration.pdf": "d4c56474d73326afd12da84da84ad24b811761617703433b36c7458fdc781ebb",
+      "figures/rom_speedupIntegration.png": "1c58025f366de7c9c0c54cbd822fa258cf9578d7f388a0115cef815c2a9a6cf8"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "rom_speedupOneCaseIncludingBasis",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.504,
+    "export_status": "verified_files",
+    "log": "logs/rom_speedupOneCaseIncludingBasis.log",
+    "sha256": {
+      "figures/rom_speedupOneCaseIncludingBasis.eps": "95f3ff049237f21509e6f9ad66903fc493c2180c990f2e68aef5b0c7f3ab22b8",
+      "figures/rom_speedupOneCaseIncludingBasis.pdf": "726a9df998924e52114418316e471b5f404a227ad8de011ffe02af3f85180190",
+      "figures/rom_speedupOneCaseIncludingBasis.png": "4fd70db6574ac38c3ef6d30e1fa3806567da5fcfc4b77265b8f29f1fd890ea8f"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "rom_operatorAndBasisBytes",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.51,
+    "export_status": "verified_files",
+    "log": "logs/rom_operatorAndBasisBytes.log",
+    "sha256": {
+      "figures/rom_operatorAndBasisBytes.eps": "e1bcbcb403dbb3cd364005246199d43efa8772f031d270f069994bfc08481e71",
+      "figures/rom_operatorAndBasisBytes.pdf": "aef76889af136dffcc6eadbcc535f3f15e4762c9b4ff2eff37a1ee5e79165592",
+      "figures/rom_operatorAndBasisBytes.png": "8e1c05e8b828836ee0ca54aca4ed6579c0463fb2af55c31d10fb835e74e3f367"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "rom_massParticipationXPercent",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.515,
+    "export_status": "verified_files",
+    "log": "logs/rom_massParticipationXPercent.log",
+    "sha256": {
+      "figures/rom_massParticipationXPercent.eps": "fe9cc47aee2f781e0211676fd15cf6e78f4c37f216c02ec7bd51bfbc45143126",
+      "figures/rom_massParticipationXPercent.pdf": "fd923721562bce75c4bf5debb0e3e11c452181466a3ffd8029a1b7e03f8cb153",
+      "figures/rom_massParticipationXPercent.png": "813b2cbe3a01f299c447cce6b3c0dd5a486dbe145577d69846339433562d523a"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "rom_error",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.626,
+    "export_status": "verified_files",
+    "log": "logs/rom_error.log",
+    "sha256": {
+      "figures/rom_error.eps": "407cfb52c4e49f97237fe9ba381577d671dbcd814518acad4a3887b53ce46dea",
+      "figures/rom_error.pdf": "c33ab48a7eee3d938d72b7a183e904a9143253b0b538e1e352567066b0c57d39",
+      "figures/rom_error.png": "cea996078bddd3e55f0e8787d4fa6d32c13611f69fc0da6c0ee6b06d0b9f579e"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "refinamiento",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.63,
+    "export_status": "verified_files",
+    "log": "logs/refinamiento.log",
+    "sha256": {
+      "figures/refinamiento.eps": "4113eb5e4da5e5f5752b1abd74d442866bc730ac9c5db79723f7689e4e777bb6",
+      "figures/refinamiento.pdf": "1711778789f6726d9bf9fe0f75959eef417baf59674f58dd9a5e754f497d8dc5",
+      "figures/refinamiento.png": "9a3d646149c9c60b0f9cdc494e10f2126b785c02f1940de51b08226b3c4b835e"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "nucleo_rigido",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.626,
+    "export_status": "verified_files",
+    "log": "logs/nucleo_rigido.log",
+    "sha256": {
+      "figures/nucleo_rigido.eps": "617fe70a070cc5a965cc1e566da79735b9104ac2bb90c68ec6ebe38506e021ca",
+      "figures/nucleo_rigido.pdf": "d3c7460ffdcd424dbe433cc7ab6af53305d1d89697cdd1d3a81608285e3abb25",
+      "figures/nucleo_rigido.png": "cb5ea86e3f557c3f970d188e2a9b2a6de8a3541b89b20f55a0c111a4e1ce4ddb"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "local_signos",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.627,
+    "export_status": "verified_files",
+    "log": "logs/local_signos.log",
+    "sha256": {
+      "figures/local_signos.eps": "bd4ac8f167829fc2eda4da90a1808af25057e4ebf7dc74960bc51cf7f406e33f",
+      "figures/local_signos.pdf": "4015bd1648a245ed2d36dda074b74e2fd33d917a130ffd68177c72cfd38d80e3",
+      "figures/local_signos.png": "631695b99d095630cc966964eeba52ca28de302a38f9dbc0306e0a45e3448b9e"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "morris_proceso",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.522,
+    "export_status": "verified_files",
+    "log": "logs/morris_proceso.log",
+    "sha256": {
+      "figures/morris_proceso.eps": "b75e85e70934da6af8bd68df6f396bf2751de0701851fc9f514614741f01cf92",
+      "figures/morris_proceso.pdf": "4ce9aabec2112c0ff9069185aac7ced38255ea0504c79e62a9842bba1dbfab09",
+      "figures/morris_proceso.png": "8ddd041118dd83e04a70612acc33911853b69dd14d89fb44307aac4526a14f5e"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "morris_sentidos",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.631,
+    "export_status": "verified_files",
+    "log": "logs/morris_sentidos.log",
+    "sha256": {
+      "figures/morris_sentidos.eps": "a0671b835e7479c7b4beaf87979015ed650ad640cae0d4ee299ccc1e525b8607",
+      "figures/morris_sentidos.pdf": "b5a1d979a3531b9a23b53455845a45550d4f317c579212a6cb82777cfb47192f",
+      "figures/morris_sentidos.png": "869f14121dd2980b8e177e6c6e7ac5feed5df2877bbb96fdf70fb23aaf196a42"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "morris_influencia",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.637,
+    "export_status": "verified_files",
+    "log": "logs/morris_influencia.log",
+    "sha256": {
+      "figures/morris_influencia.eps": "c763ac8c17a6e0c866d537607b32d2ab144b036f1da6d93df970b3038bf79da8",
+      "figures/morris_influencia.pdf": "9f16d2c46d50f87b420217128384c5e3ec2764625c9992495f758bf5379104b3",
+      "figures/morris_influencia.png": "361866ac64e7239324b913f520315b12adbe1e5ca4414e90cab24b9967a3f168"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "morris_participaciones",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.629,
+    "export_status": "verified_files",
+    "log": "logs/morris_participaciones.log",
+    "sha256": {
+      "figures/morris_participaciones.eps": "d22a1f6d53bc0d8dd2bc0021dd5976b9d82e9a639797457590a9b14a5938b180",
+      "figures/morris_participaciones.pdf": "86eae7c15bcb53be917eeffab613d1677763de11b4c9804b6487f41dfa48154a",
+      "figures/morris_participaciones.png": "1443103e1700dc1b4a4a9e5d0397be447b60531b685fd5f423c8c1ce891cad37"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "morris_convergencia",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.641,
+    "export_status": "verified_files",
+    "log": "logs/morris_convergencia.log",
+    "sha256": {
+      "figures/morris_convergencia.eps": "026598100a60e4261ecfe031586bfa9de8aaed3528728623b37006fbadc49916",
+      "figures/morris_convergencia.pdf": "c08c16d7186f9159485fbf30e28aab98ddd46e186e594636b3635076f64ac0ac",
+      "figures/morris_convergencia.png": "9eaba53ad35300b53af03180d424d22fd841b066840c36669c48e525d68d7cd6"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "morris_dispersion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.516,
+    "export_status": "verified_files",
+    "log": "logs/morris_dispersion.log",
+    "sha256": {
+      "figures/morris_dispersion.eps": "e26ba0062e0cb81e05ccf08fcd3cc5900151ad1439c85e0b586d660db4101f0f",
+      "figures/morris_dispersion.pdf": "bdb838deb9fec0be5da6d407fb7c28358da1aad3fe315d4218dd052885e7b2fa",
+      "figures/morris_dispersion.png": "2c65eee705664fc02f60ef7f23adc10f7ef3c1814bfb2fe8e87b1d9b1942792d"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "equilibrio_deformada",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.653,
+    "export_status": "verified_files",
+    "log": "logs/equilibrio_deformada.log",
+    "sha256": {
+      "figures/equilibrio_deformada.eps": "52b4a78ad5472f84abb63d39ec6acbbba6ee6529daa5a91547f3aee5924ff7e8",
+      "figures/equilibrio_deformada.pdf": "d9d867e73d5a52987cede44f6108b5213b348f2ab2c4deaf46a75dd7adaf90c8",
+      "figures/equilibrio_deformada.png": "671f95e443388ebacdc8dc58d2ec34488f46263b51700d434694d572ab672504"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_01_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.625,
+    "export_status": "verified_files",
+    "log": "logs/modo_01_fase_00.log",
+    "sha256": {
+      "figures/modo_01_fase_00.eps": "3055d9d31af7af16d5017ba412fafb8495d89729b19dc24bb1fddb53760baf27",
+      "figures/modo_01_fase_00.pdf": "50ef7f1023b3234d883259d25c8fb322f429a30be2b8cdcbbd838d9e53e245ed",
+      "figures/modo_01_fase_00.png": "ee728ea995a7f24ff3738489faa488f73dfba09c741d4902fef44c07abd0bff0"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_01_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.623,
+    "export_status": "verified_files",
+    "log": "logs/modo_01_fase_90.log",
+    "sha256": {
+      "figures/modo_01_fase_90.eps": "d35ae9b29d6ff690bd065bb4aa43a0a32918e0b03ee85ad491f818307b6d37d0",
+      "figures/modo_01_fase_90.pdf": "0853dc64efdd06b2f254b5fef23b0d9b272278f62a95032e20b4cf9c69ad2b80",
+      "figures/modo_01_fase_90.png": "45ca81a4984cb211e8136f5c536613b3769ddd9c1d3c86e5ecbdc4b6f8c31251"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_02_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.626,
+    "export_status": "verified_files",
+    "log": "logs/modo_02_fase_00.log",
+    "sha256": {
+      "figures/modo_02_fase_00.eps": "44a2fdb4b0dfc2efc3879d1fcfd9aa77e24ec5ea3a40edb45d0ba3fdc196d2d1",
+      "figures/modo_02_fase_00.pdf": "155762a24fb677290e0c90b969720a8600d98d04cbee218e3f59fe423cead383",
+      "figures/modo_02_fase_00.png": "2db016562922580acab97f1fc2aa9809e48b98f10a93379c707aedb5e8238839"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_02_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.633,
+    "export_status": "verified_files",
+    "log": "logs/modo_02_fase_90.log",
+    "sha256": {
+      "figures/modo_02_fase_90.eps": "5962bf1651ab81d3f40e5f04328643ed076c3aa9821178377540bfd6119b0e0b",
+      "figures/modo_02_fase_90.pdf": "09bb7da10047514fb2ee45ab7f2c85385f6d32c26b9851a05556296a3f44466b",
+      "figures/modo_02_fase_90.png": "81178bfb4f004ecc3d0f1cf13c337295f2e076523271e3e6dad865089a162eeb"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_03_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.625,
+    "export_status": "verified_files",
+    "log": "logs/modo_03_fase_00.log",
+    "sha256": {
+      "figures/modo_03_fase_00.eps": "4641fda50f8b0469eba6b5cc1a85c469b4ff45ecf5a57e8b107fd2b5ae83e01b",
+      "figures/modo_03_fase_00.pdf": "2f1a54a1b9877aa17384f658a18f5173517da495f3f197886afd221e4d619720",
+      "figures/modo_03_fase_00.png": "43e79fd4e5e182a96485cc03e3f31cadad3d6516e601e617d6d61a046dc10ccf"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_03_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.627,
+    "export_status": "verified_files",
+    "log": "logs/modo_03_fase_90.log",
+    "sha256": {
+      "figures/modo_03_fase_90.eps": "94f91f7e57a12e05c96f32e990a7a8fdbac9a513d5ecf6bd6467794806886bc2",
+      "figures/modo_03_fase_90.pdf": "92de3aa03863fca73cc80c2c9e3a83b8a534e733c46d2efa30b6c28b3aacc65b",
+      "figures/modo_03_fase_90.png": "6e535d579570253cd22a148ead32a0e2364d8dca4e3bfb939391b61aaa9397e1"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_04_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.623,
+    "export_status": "verified_files",
+    "log": "logs/modo_04_fase_00.log",
+    "sha256": {
+      "figures/modo_04_fase_00.eps": "5b03d4215596d1dca022e910c4701d32e14d747760a6269f034727b165185efb",
+      "figures/modo_04_fase_00.pdf": "7563731e916d611f1733cde16b8845673bba50a2522b3d10e915e60aad022968",
+      "figures/modo_04_fase_00.png": "aa20df749b40cd7bee17ea16760993cb634800ac6652364d82f9dd994dcb915e"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_04_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.626,
+    "export_status": "verified_files",
+    "log": "logs/modo_04_fase_90.log",
+    "sha256": {
+      "figures/modo_04_fase_90.eps": "025b690dccfececd1c8bcd9fc2cec403ed261fe6081cecdcd606a6604af3d7f8",
+      "figures/modo_04_fase_90.pdf": "45186888a8f0313fc406242871f311feb57facdaed6fb35093fdfd772009e19e",
+      "figures/modo_04_fase_90.png": "e9eb6cd3dbff26d33ebbf3e358d3d12090fd56fb7d051b1d646d018037e6dc13"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_05_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.62,
+    "export_status": "verified_files",
+    "log": "logs/modo_05_fase_00.log",
+    "sha256": {
+      "figures/modo_05_fase_00.eps": "a45ff9bf57b9ccd0658744a0770035a518132b1414fbfa1f02e3cab91d0e5383",
+      "figures/modo_05_fase_00.pdf": "4896de26db5781377955b4a93fdff2700d2b9a54c239ed41d2bbb1429e28c782",
+      "figures/modo_05_fase_00.png": "ff041153a4305ca9fc4d72cb62a51da941373ccfac49ab022b847d98d1545950"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_05_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.515,
+    "export_status": "verified_files",
+    "log": "logs/modo_05_fase_90.log",
+    "sha256": {
+      "figures/modo_05_fase_90.eps": "d6383d972f39fb24225645b3a52d112d41ccb34a8abadb536152a487301f9489",
+      "figures/modo_05_fase_90.pdf": "e5627287fd174a9d7a45a87cdab720ba04855565683ab0dd0b9f0e5aca03e4e3",
+      "figures/modo_05_fase_90.png": "8244bba4a0d0153c4ebc2a2a16f80b3f9d4d9d7deb28aa34d491b4dd5ff4303b"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_06_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.626,
+    "export_status": "verified_files",
+    "log": "logs/modo_06_fase_00.log",
+    "sha256": {
+      "figures/modo_06_fase_00.eps": "aa3f26ef2e148eefbdaae9c29fa4f7910571bbee5a8ce6125e2586b3733b8bea",
+      "figures/modo_06_fase_00.pdf": "a12bba6884bba8330d0630f7f2f5187d4faa7d12df2bfe25dbfa78b6e97e3d69",
+      "figures/modo_06_fase_00.png": "d4ce172e33a9cb92ab6a7837d7aed172be22dcb29b1b0fb2eb6d3c74c87ac11d"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_06_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.628,
+    "export_status": "verified_files",
+    "log": "logs/modo_06_fase_90.log",
+    "sha256": {
+      "figures/modo_06_fase_90.eps": "9c444a684525207d0ac84639d3d875dd54540475bfcb7a996b45df27161ee79f",
+      "figures/modo_06_fase_90.pdf": "2a56a8138326195e202dea0356445dbbe663a32d94559648c79ebe3dd4bfd1e3",
+      "figures/modo_06_fase_90.png": "513c357f7ed5ae3363e98259dcbcdb0ced7eeeb7e8bf7f9e462bf695bc68b4f9"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_07_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.63,
+    "export_status": "verified_files",
+    "log": "logs/modo_07_fase_00.log",
+    "sha256": {
+      "figures/modo_07_fase_00.eps": "9d2fe8dae64fe469f6cfd398325445493180f4cbd7077117a89d3b5c8cd8bcdc",
+      "figures/modo_07_fase_00.pdf": "f7574e98e22552426c4c8a3f23bf034379e8b66252eeacff0a38e61536ace806",
+      "figures/modo_07_fase_00.png": "c062793c8ce4ae938c20ace09167bde263ab7f95618db1240428ae7ec6cd057c"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_07_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.625,
+    "export_status": "verified_files",
+    "log": "logs/modo_07_fase_90.log",
+    "sha256": {
+      "figures/modo_07_fase_90.eps": "8929aba537ab6590e1547b47fedf57029a6d67966c422136eab019d0c7e27d66",
+      "figures/modo_07_fase_90.pdf": "43ef6835e120fd27efbc773dd69c719608a7664826955816c92c5003699561c3",
+      "figures/modo_07_fase_90.png": "b549c1a31a6c084430d9c8e4b8765943ac2c206ad14adab2bdd38ae3db22320f"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_08_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.626,
+    "export_status": "verified_files",
+    "log": "logs/modo_08_fase_00.log",
+    "sha256": {
+      "figures/modo_08_fase_00.eps": "0a27b6fc2e3f44ebb70132dbbcb111e3cd4861d131053e78c6044af0d60c18b9",
+      "figures/modo_08_fase_00.pdf": "72e9973fc79109c8cefa47729ffa4212cd6a7955d7c26eb1c2ea9e01cddff90a",
+      "figures/modo_08_fase_00.png": "a978c7f27e244656c62265c0c5c2b545d9b153d28f6577dded98f1e0cb829162"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_08_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.625,
+    "export_status": "verified_files",
+    "log": "logs/modo_08_fase_90.log",
+    "sha256": {
+      "figures/modo_08_fase_90.eps": "ae7a6a6b4bfeb898b541772b4c9b6859bec44fb2b7d2fa18e9329f446a6c84d6",
+      "figures/modo_08_fase_90.pdf": "cd710dc5acc6a50ac42d1e97794821f48850720d2b6b02998a37a0560309422b",
+      "figures/modo_08_fase_90.png": "9f1f8bf5cc96b6218cbffa38d56e0bbfb12afe93e1941f8e7a3407391eb828b3"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_09_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.629,
+    "export_status": "verified_files",
+    "log": "logs/modo_09_fase_00.log",
+    "sha256": {
+      "figures/modo_09_fase_00.eps": "a4f14c6622af8e345eb382a91b1714a87edffca7f47b49304955ec050b064d25",
+      "figures/modo_09_fase_00.pdf": "9672afecd507fd849c993787c0ed3b3cedde15d87c9301dc99744700a744dddc",
+      "figures/modo_09_fase_00.png": "0abea296f9fa3e1b8aacd6e000906b404537a76fe7b1153eb45823a353287ad2"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_09_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.625,
+    "export_status": "verified_files",
+    "log": "logs/modo_09_fase_90.log",
+    "sha256": {
+      "figures/modo_09_fase_90.eps": "264c156b2a4ac193b57cda97e80f6705cee3028b7e2b663cd90ebc4dd4b6a61f",
+      "figures/modo_09_fase_90.pdf": "789ea4e698154834f726d38870641a137bba3c5656755ef96b4e9f64545eeb37",
+      "figures/modo_09_fase_90.png": "f2310d07b63e9d267cf2f2d0773bdb279e6c65cf8c225802acc4ebed9447344d"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_10_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.628,
+    "export_status": "verified_files",
+    "log": "logs/modo_10_fase_90.log",
+    "sha256": {
+      "figures/modo_10_fase_90.eps": "9c519c3a370fa54c7ce10ce1795fb8cc89710b87fe1010873624e3c733f50862",
+      "figures/modo_10_fase_90.pdf": "7b80bcd1b69a3e01ff0808f2a3f895af79b8e389b1663c6528eda1b58d945081",
+      "figures/modo_10_fase_90.png": "7a2a9b9cae2ff090dd63f8ab6831b01abc01281a81b58b2877d8660795fd44fd"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_11_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.62,
+    "export_status": "verified_files",
+    "log": "logs/modo_11_fase_00.log",
+    "sha256": {
+      "figures/modo_11_fase_00.eps": "06fdc92cec92de29318c71cbf57eda6044888e51a400dcbb91f97428c98b70f7",
+      "figures/modo_11_fase_00.pdf": "7bcd3ea497dbc7419ff618932c612f0c7f407af90f50eb88048c082692cd370e",
+      "figures/modo_11_fase_00.png": "015899d48c6867b1821dae48b42e0c340f55a246fcb545def2faca0efa043472"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_11_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.629,
+    "export_status": "verified_files",
+    "log": "logs/modo_11_fase_90.log",
+    "sha256": {
+      "figures/modo_11_fase_90.eps": "d90839a5025bc54c0f740262f72669918ae9db6ff6379250db8af9d005fe8915",
+      "figures/modo_11_fase_90.pdf": "466314a249ade28eed7a8572e61acefb881974c1505194478b9de1b2f613ee51",
+      "figures/modo_11_fase_90.png": "af3b3e56bfe8aa98cd67310fa80b00211736a116fb33c6f3dcee5c59b19c4fc8"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_12_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.621,
+    "export_status": "verified_files",
+    "log": "logs/modo_12_fase_00.log",
+    "sha256": {
+      "figures/modo_12_fase_00.eps": "0d8354ce34f08f9ffd4c6940fcd72355115d7eca2041040663054fde6e158bc1",
+      "figures/modo_12_fase_00.pdf": "fdd58dbe9d97d90082f8377dec991da55833ca74bdf81610f610ca05d13c4f26",
+      "figures/modo_12_fase_00.png": "ddd2b165461c1b4a77e6a46d4d5553d124f5d0897b4b969e3b5a8334ea06c4d8"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_12_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.627,
+    "export_status": "verified_files",
+    "log": "logs/modo_12_fase_90.log",
+    "sha256": {
+      "figures/modo_12_fase_90.eps": "2c0b714f0b01124214488b5ef5a9d9c68cc416718ad984a9f873f0f03047a283",
+      "figures/modo_12_fase_90.pdf": "aa4e8f9f8d7ec20c1e44ec25fa3ae5780593fc050defccac3a9c52dc16e75952",
+      "figures/modo_12_fase_90.png": "77f2336cdd5f59c9a3fda09de5e6a2b4bb92cf113df7902921ba4e65310325c7"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_13_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.626,
+    "export_status": "verified_files",
+    "log": "logs/modo_13_fase_00.log",
+    "sha256": {
+      "figures/modo_13_fase_00.eps": "1a4847e6df738c1a36d4a7645aa4b3289c7de50e62b31997e8d979d305b8486f",
+      "figures/modo_13_fase_00.pdf": "9fd92087b207c87a2ee5fdc11a4e2bc8fe68ddfe2a3362649f1372b448b2099c",
+      "figures/modo_13_fase_00.png": "3c57b1af0c8afb251011964b86a800a57cd919c7dc0e56056f8225f1e7d858ae"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_13_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.625,
+    "export_status": "verified_files",
+    "log": "logs/modo_13_fase_90.log",
+    "sha256": {
+      "figures/modo_13_fase_90.eps": "4608982bff93bc04a6c27e352e983ef29052896bc1fb49a1be24e2f0a246be07",
+      "figures/modo_13_fase_90.pdf": "990d66eb4310a3fc181be1068afd83942edbc7fce978a27a2e9f1d597ae6b7f1",
+      "figures/modo_13_fase_90.png": "5b314cb4c0b4c615fdb871bb1f2db78efe0825b0f55b20cd78d512c83b840c32"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_14_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.629,
+    "export_status": "verified_files",
+    "log": "logs/modo_14_fase_00.log",
+    "sha256": {
+      "figures/modo_14_fase_00.eps": "8aa09d78bc309b0b950be91ffc7231107555199d00e25edaed4553dc04c2fac0",
+      "figures/modo_14_fase_00.pdf": "d467dad8f3d3485837667e8f3ea4de334fd8ad4a96f9d5dad85cfcbcd4e2902f",
+      "figures/modo_14_fase_00.png": "9e233c9605257df72e187638429ee39b235aa3af43f1f6b79044a86ac09676a5"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_14_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.626,
+    "export_status": "verified_files",
+    "log": "logs/modo_14_fase_90.log",
+    "sha256": {
+      "figures/modo_14_fase_90.eps": "2b343d68515716d6241f1911e07d4915b8ad7be3ecc0ba48f04987e86f282e2a",
+      "figures/modo_14_fase_90.pdf": "0d9b24ad1df8c80da5a0f77ae198f778f38c6cf6f8c6506a8f85c95b861e1dde",
+      "figures/modo_14_fase_90.png": "1b00f0f578349d23ad47d730739b17b6ed61e141cf5465356f5ca3290bbd1f02"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_15_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.63,
+    "export_status": "verified_files",
+    "log": "logs/modo_15_fase_00.log",
+    "sha256": {
+      "figures/modo_15_fase_00.eps": "6273f93eeb1a70a1a7316799d76242ebff4da18105a8cff0ee5fdef862f79e23",
+      "figures/modo_15_fase_00.pdf": "f3fe30e100ac85bddb9c3913c6e03def88ee1e8537421b7ded5420d24a482611",
+      "figures/modo_15_fase_00.png": "1c1f1ae2b95d127f88c1ae56db8e7357646b61d6cd8ed389cc72cbf4372dc241"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_15_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.627,
+    "export_status": "verified_files",
+    "log": "logs/modo_15_fase_90.log",
+    "sha256": {
+      "figures/modo_15_fase_90.eps": "10a018b0bfee9fbc7aa8c68d0d4a47b64ee94744e5da96c911ead93951ee63cf",
+      "figures/modo_15_fase_90.pdf": "bfaa4fe8ac9f1fd833f5731dae491a4b6c1122a587a50ff1bf1e19aeb6544d20",
+      "figures/modo_15_fase_90.png": "818f036499609b0c40e59135e77aac8cf6de7201bf3edc0f7ae69ee1e6acc676"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_16_fase_00",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.628,
+    "export_status": "verified_files",
+    "log": "logs/modo_16_fase_00.log",
+    "sha256": {
+      "figures/modo_16_fase_00.eps": "1c26870412a90a90fde6ec0dd29b6d1cef4317ad5deabc9fa38987731435eac1",
+      "figures/modo_16_fase_00.pdf": "fd5d9263171b4d1bbd6005dcf1a0f7d053f21963f5169c02d340031aa70b08cf",
+      "figures/modo_16_fase_00.png": "fcde921cd5c91edc7487f2568e571544fc3fa6ffe79a54d5acfa883d8f35c207"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "modo_16_fase_90",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.627,
+    "export_status": "verified_files",
+    "log": "logs/modo_16_fase_90.log",
+    "sha256": {
+      "figures/modo_16_fase_90.eps": "d7ee7bd722539dffee3859ab1ba562d4226d6ae223c8a6a619898ca24cae7956",
+      "figures/modo_16_fase_90.pdf": "9d5bfef60b6d1d8c246f71c2b209b2867114abf1af47762bbb2465684907bc98",
+      "figures/modo_16_fase_90.png": "290b1a3b0e49e02643bc700da06ee1e914817a1906db18c58d5487e1cff81c05"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "morris_trayectorias",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.622,
+    "export_status": "verified_files",
+    "log": "logs/morris_trayectorias.log",
+    "sha256": {
+      "figures/morris_trayectorias.eps": "9fada30cc731a7f85680ec71a16429a2bfe3f901b15016efb2d9be423c7949ec",
+      "figures/morris_trayectorias.pdf": "3de2922bc99a93c5a23b2fa2b808a7922bf22db2b3a2f19b7b0ca33730f51695",
+      "figures/morris_trayectorias.png": "5e91f41ec9b39d3c39d0046f89a2eb5e3e4ca03b54683b7dd5cc3b46ccebf9b7"
+    },
+    "page_size_pt": [
+      596.0,
+      478.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "teoria_diferencia",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.628,
+    "export_status": "verified_files",
+    "log": "logs/teoria_diferencia.log",
+    "sha256": {
+      "figures/teoria_diferencia.eps": "1830b8320cb38774cf5ce99e19dd938733414053188b32cdd366a79b741b31e4",
+      "figures/teoria_diferencia.pdf": "06d9ca1ec34cd00571f7836af28a30149c5b3f278a7201854948b3b5900f14da",
+      "figures/teoria_diferencia.png": "ac1570a3a53d55e4bd90bc8faacd6942f2a8e84a25a50b23dc4c41a13c18e3af"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "teoria_convergencia",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.623,
+    "export_status": "verified_files",
+    "log": "logs/teoria_convergencia.log",
+    "sha256": {
+      "figures/teoria_convergencia.eps": "1332e17902ade0fc774f39180e22dd171df2bb59200fe16664c7c64794c3c9a3",
+      "figures/teoria_convergencia.pdf": "735cc8936de76c8e4893e0236a596cfe912de023509b59570d07b20c0c35abaf",
+      "figures/teoria_convergencia.png": "c54759a704af24230391ba7d50c6a579c4d80daaa9b24feef1e2f8df966a651c"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "rom_aceleracion",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.638,
+    "export_status": "verified_files",
+    "log": "logs/rom_aceleracion.log",
+    "sha256": {
+      "figures/rom_aceleracion.eps": "cb0361fde2f63dd93506463d32a2991433395e895b0b756feaa1642d95c97dc6",
+      "figures/rom_aceleracion.pdf": "452fa2c399bd62a1cdd9191ec2ba39ac14abfef49f2104cc2aad9579dbad4602",
+      "figures/rom_aceleracion.png": "ed4ea615a70adaa218eaaed04d876f51ab832d6ab45ca5e37d10423e94a09c1b"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "morris_trayectoria_factores",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.629,
+    "export_status": "verified_files",
+    "log": "logs/morris_trayectoria_factores.log",
+    "sha256": {
+      "figures/morris_trayectoria_factores.eps": "bde53c2c9c626633fa6397fdd3b2bbf10a733bf4aa67ea32edd751e8f3364182",
+      "figures/morris_trayectoria_factores.pdf": "e31db77a82434b1d5bee28bf8a67286ab85d6daa7f35be569cf2a624862124f4",
+      "figures/morris_trayectoria_factores.png": "1a7b0e6ed1506a6c407a6920dd0f0d6f3c534d4f31001ba4be8a959757c924d6"
+    },
+    "page_size_pt": [
+      596.0,
+      376.0
+    ],
+    "pdf_content": "native Tecplot vector EPS converted to PDF"
+  },
+  {
+    "id": "paper_masa_seccional",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 1.238,
+    "export_status": "verified_files",
+    "log": "logs/paper_masa_seccional.log",
+    "sha256": {
+      "figures/paper_masa_seccional.eps": "d9b3899c68dd9d857715c51c852c40a37a7ec29b3e116aa332a9f1aa65057b7e",
+      "figures/paper_masa_seccional.pdf": "82d459b7e10fe71a800fea259fa29437374ea8ff9b7e088bb6f77a03313a0b9f",
+      "figures/paper_masa_seccional.png": "59656053aeaa7be709ad7887d47aa8198f59138142ca1d6ceda55aac3b4c82dd"
+    },
+    "page_size_pt": [
+      596.0,
+      410.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  },
+  {
+    "id": "paper_vinculo_raiz",
+    "engine": "Tecplot 2025.2.2.88532",
+    "seconds": 0.882,
+    "export_status": "verified_files",
+    "log": "logs/paper_vinculo_raiz.log",
+    "sha256": {
+      "figures/paper_vinculo_raiz.eps": "bf1db0a38ee6521ba2338ab52b13595d5cb081030c743959d9d9fe07c4db7cc4",
+      "figures/paper_vinculo_raiz.pdf": "cf46fc176c54924782077e52d635780581797dd4927afecf4eaecd8bf82dea4f",
+      "figures/paper_vinculo_raiz.png": "209eaea43118c37b2742a4d0b919b4b4e7fa8b1c668b993b6c9258730117c57d"
+    },
+    "page_size_pt": [
+      596.0,
+      368.0
+    ],
+    "pdf_content": "lossless native Tecplot PNG"
+  }
+]

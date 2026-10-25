@@ -1,0 +1,4595 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"../data/malla_xy.plt"'
+$!SetStyleBase Factory
+$!BasicColor 
+  Custom1
+    {
+    R = 20
+    G = 20
+    B = 20
+    }
+  Custom2
+    {
+    R = 90
+    G = 90
+    B = 90
+    }
+  Custom3
+    {
+    R = 45
+    G = 45
+    B = 45
+    }
+  Custom4
+    {
+    R = 115
+    G = 115
+    B = 115
+    }
+  Custom5
+    {
+    R = 150
+    G = 150
+    B = 150
+    }
+  Custom6
+    {
+    R = 175
+    G = 175
+    B = 175
+    }
+  Custom7
+    {
+    R = 30
+    G = 30
+    B = 30
+    }
+  Custom8
+    {
+    R = 200
+    G = 200
+    B = 200
+    }
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    }
+$!Page 
+  Name = ''
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+$!RemoveVar |LFDSFN1|
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 3.2
+  Height = 6.5
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1-133]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    TextShape
+      {
+      IsBold = No
+      SizeUnits = Point
+      Height = 10
+      }
+    XYPos
+      {
+      X = 99
+      Y = 87
+      }
+    }
+$!LineMap  [1]
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [3]
+  Assign
+    {
+    Zone = 3
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [4]
+  Assign
+    {
+    Zone = 4
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [5]
+  Assign
+    {
+    Zone = 5
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [6]
+  Assign
+    {
+    Zone = 6
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [7]
+  Assign
+    {
+    Zone = 7
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [8]
+  Assign
+    {
+    Zone = 8
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [9]
+  Assign
+    {
+    Zone = 9
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [10]
+  Assign
+    {
+    Zone = 10
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [11]
+  Assign
+    {
+    Zone = 11
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [12]
+  Assign
+    {
+    Zone = 12
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [13]
+  Assign
+    {
+    Zone = 13
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [14]
+  Assign
+    {
+    Zone = 14
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [15]
+  Assign
+    {
+    Zone = 15
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [16]
+  Assign
+    {
+    Zone = 16
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [17]
+  Assign
+    {
+    Zone = 17
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [18]
+  Assign
+    {
+    Zone = 18
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [19]
+  Assign
+    {
+    Zone = 19
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = LTri
+      }
+    Color = Custom7
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [20]
+  Assign
+    {
+    Zone = 20
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [21]
+  Assign
+    {
+    Zone = 21
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [22]
+  Assign
+    {
+    Zone = 22
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [23]
+  Assign
+    {
+    Zone = 23
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [24]
+  Assign
+    {
+    Zone = 24
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [25]
+  Assign
+    {
+    Zone = 25
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [26]
+  Assign
+    {
+    Zone = 26
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [27]
+  Assign
+    {
+    Zone = 27
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [28]
+  Assign
+    {
+    Zone = 28
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [29]
+  Assign
+    {
+    Zone = 29
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [30]
+  Assign
+    {
+    Zone = 30
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [31]
+  Assign
+    {
+    Zone = 31
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [32]
+  Assign
+    {
+    Zone = 32
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [33]
+  Assign
+    {
+    Zone = 33
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [34]
+  Assign
+    {
+    Zone = 34
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [35]
+  Assign
+    {
+    Zone = 35
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [36]
+  Assign
+    {
+    Zone = 36
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [37]
+  Assign
+    {
+    Zone = 37
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [38]
+  Assign
+    {
+    Zone = 38
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [39]
+  Assign
+    {
+    Zone = 39
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [40]
+  Assign
+    {
+    Zone = 40
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [41]
+  Assign
+    {
+    Zone = 41
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [42]
+  Assign
+    {
+    Zone = 42
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [43]
+  Assign
+    {
+    Zone = 43
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [44]
+  Assign
+    {
+    Zone = 44
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [45]
+  Assign
+    {
+    Zone = 45
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [46]
+  Assign
+    {
+    Zone = 46
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [47]
+  Assign
+    {
+    Zone = 47
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [48]
+  Assign
+    {
+    Zone = 48
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [49]
+  Assign
+    {
+    Zone = 49
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [50]
+  Assign
+    {
+    Zone = 50
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [51]
+  Assign
+    {
+    Zone = 51
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [52]
+  Assign
+    {
+    Zone = 52
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [53]
+  Assign
+    {
+    Zone = 53
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [54]
+  Assign
+    {
+    Zone = 54
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom2
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom2
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [55]
+  Assign
+    {
+    Zone = 55
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [56]
+  Assign
+    {
+    Zone = 56
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [57]
+  Assign
+    {
+    Zone = 57
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [58]
+  Assign
+    {
+    Zone = 58
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [59]
+  Assign
+    {
+    Zone = 59
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [60]
+  Assign
+    {
+    Zone = 60
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [61]
+  Assign
+    {
+    Zone = 61
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [62]
+  Assign
+    {
+    Zone = 62
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [63]
+  Assign
+    {
+    Zone = 63
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [64]
+  Assign
+    {
+    Zone = 64
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [65]
+  Assign
+    {
+    Zone = 65
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [66]
+  Assign
+    {
+    Zone = 66
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [67]
+  Assign
+    {
+    Zone = 67
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [68]
+  Assign
+    {
+    Zone = 68
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [69]
+  Assign
+    {
+    Zone = 69
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [70]
+  Assign
+    {
+    Zone = 70
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [71]
+  Assign
+    {
+    Zone = 71
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [72]
+  Assign
+    {
+    Zone = 72
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [73]
+  Assign
+    {
+    Zone = 73
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [74]
+  Assign
+    {
+    Zone = 74
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [75]
+  Assign
+    {
+    Zone = 75
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [76]
+  Assign
+    {
+    Zone = 76
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [77]
+  Assign
+    {
+    Zone = 77
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [78]
+  Assign
+    {
+    Zone = 78
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [79]
+  Assign
+    {
+    Zone = 79
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [80]
+  Assign
+    {
+    Zone = 80
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [81]
+  Assign
+    {
+    Zone = 81
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [82]
+  Assign
+    {
+    Zone = 82
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [83]
+  Assign
+    {
+    Zone = 83
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [84]
+  Assign
+    {
+    Zone = 84
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [85]
+  Assign
+    {
+    Zone = 85
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [86]
+  Assign
+    {
+    Zone = 86
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [87]
+  Assign
+    {
+    Zone = 87
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [88]
+  Assign
+    {
+    Zone = 88
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [89]
+  Assign
+    {
+    Zone = 89
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom3
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom3
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [90]
+  Assign
+    {
+    Zone = 90
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [91]
+  Assign
+    {
+    Zone = 91
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [92]
+  Assign
+    {
+    Zone = 92
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [93]
+  Assign
+    {
+    Zone = 93
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [94]
+  Assign
+    {
+    Zone = 94
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [95]
+  Assign
+    {
+    Zone = 95
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [96]
+  Assign
+    {
+    Zone = 96
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [97]
+  Assign
+    {
+    Zone = 97
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [98]
+  Assign
+    {
+    Zone = 98
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [99]
+  Assign
+    {
+    Zone = 99
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [100]
+  Assign
+    {
+    Zone = 100
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [101]
+  Assign
+    {
+    Zone = 101
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [102]
+  Assign
+    {
+    Zone = 102
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [103]
+  Assign
+    {
+    Zone = 103
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [104]
+  Assign
+    {
+    Zone = 104
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [105]
+  Assign
+    {
+    Zone = 105
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [106]
+  Assign
+    {
+    Zone = 106
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [107]
+  Assign
+    {
+    Zone = 107
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [108]
+  Assign
+    {
+    Zone = 108
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [109]
+  Assign
+    {
+    Zone = 109
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [110]
+  Assign
+    {
+    Zone = 110
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [111]
+  Assign
+    {
+    Zone = 111
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [112]
+  Assign
+    {
+    Zone = 112
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [113]
+  Assign
+    {
+    Zone = 113
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [114]
+  Assign
+    {
+    Zone = 114
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [115]
+  Assign
+    {
+    Zone = 115
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [116]
+  Assign
+    {
+    Zone = 116
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [117]
+  Assign
+    {
+    Zone = 117
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [118]
+  Assign
+    {
+    Zone = 118
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [119]
+  Assign
+    {
+    Zone = 119
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [120]
+  Assign
+    {
+    Zone = 120
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [121]
+  Assign
+    {
+    Zone = 121
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [122]
+  Assign
+    {
+    Zone = 122
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [123]
+  Assign
+    {
+    Zone = 123
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [124]
+  Assign
+    {
+    Zone = 124
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom4
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Del
+      }
+    Color = Custom4
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [125]
+  Assign
+    {
+    Zone = 125
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom8
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom8
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [126]
+  Assign
+    {
+    Zone = 126
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom8
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom8
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [127]
+  Assign
+    {
+    Zone = 127
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom8
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom8
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [128]
+  Assign
+    {
+    Zone = 128
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom8
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom8
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [129]
+  Assign
+    {
+    Zone = 129
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom8
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom8
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [130]
+  Assign
+    {
+    Zone = 130
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom8
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom8
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [131]
+  Assign
+    {
+    Zone = 131
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom8
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom8
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [132]
+  Assign
+    {
+    Zone = 132
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom8
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom8
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [133]
+  Assign
+    {
+    Zone = 133
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Color = Custom8
+    LineThickness = 0.3
+    }
+  Symbols
+    {
+    Show = No
+    SymbolShape
+      {
+      GeomShape = Circle
+      }
+    Color = Custom8
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 0.85
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+  ViewportPosition
+    {
+    Y1 = 16
+    X2 = 94
+    Y2 = 94
+    }
+  ViewportTopSnapTarget = 94
+$!XYLineAxis 
+  XDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -47.290518201183438407
+    RangeMax = 61.486918201183442534
+    GRSpacing = 50
+    TickLabel
+      {
+      TextShape
+        {
+        SizeUnits = Point
+        Height = 10
+        }
+      }
+    Gridlines
+      {
+      Show = Yes
+      Color = Custom8
+      LineThickness = 0.06
+      }
+    Title
+      {
+      TitleMode = UseText
+      Text = 'X [m]'
+      TextShape
+        {
+        IsBold = No
+        SizeUnits = Point
+        Height = 11
+        }
+      Offset = 6
+      }
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -106.37984000000000151
+    RangeMax = 106.39083999999999719
+    GRSpacing = 20
+    TickLabel
+      {
+      TextShape
+        {
+        SizeUnits = Point
+        Height = 10
+        }
+      }
+    Gridlines
+      {
+      Show = Yes
+      Color = Custom8
+      LineThickness = 0.06
+      }
+    Title
+      {
+      TitleMode = UseText
+      Text = 'Y [m]'
+      TextShape
+        {
+        IsBold = No
+        SizeUnits = Point
+        Height = 11
+        }
+      Offset = 9
+      }
+    }
+$!LinePlotLayers 
+  ShowSymbols = Yes
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config

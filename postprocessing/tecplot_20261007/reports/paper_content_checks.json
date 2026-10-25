@@ -1,0 +1,26 @@
+{
+  "es": {
+    "figures": 11,
+    "all_nine_original_topics_retained": true,
+    "all_figures_referenced_in_prose": true,
+    "original_display_math_blocks_preserved": 84
+  },
+  "en": {
+    "figures": 11,
+    "all_nine_original_topics_retained": true,
+    "all_figures_referenced_in_prose": true,
+    "original_display_math_blocks_preserved": 84
+  },
+  "source_archive": "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/archive/paper_before_figure_reconciliation_20261008.zip",
+  "inline_math_translation_review": {
+    "reviewed_paragraphs": 157,
+    "differences_reviewed": [
+      17,
+      46,
+      82,
+      97,
+      181
+    ],
+    "notes": "Figure discussion adapted (17), regrouped comma-separated symbols (46,82), constant translated (97), Spanish velocity subscripts explicitly explained (181)."
+  }
+}

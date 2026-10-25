@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-14",
+  "gridPoints": 64,
+  "newSuccessfulEvaluations": 9,
+  "failedEvaluations": 0,
+  "pendingEvaluations": 0,
+  "historicalPhysicalMatlabFilesUnchanged": 148,
+  "campaignSourceHashesUnchanged": 175,
+  "analyticalMethodBenchmarks": {
+    "additiveQuadraticsGiveZeroMixedContrast": true,
+    "productXYGivesCorrectMixedContrast": true,
+    "quadraticCurvatureGivesTwoStepSquared": true
+  },
+  "figures": 7,
+  "figureEngines": "MATLAB authorized alternative; historical Tecplot assets retained",
+  "latexProjectCompilation": "success",
+  "nativeLatexPreview": "external_figure_access_unavailable",
+  "latexPages": 15,
+  "presentationSlides": 26,
+  "presentationSHA256": "f2c6b75ae861b8c42499f3ae24bc94a050b9a284f1fe16ffb64bd0a5ee6be3c0",
+  "scope": "Finite deterministic grid and contrasts. Spatial convergence in rotation and physical probability measure remain unverified."
+}

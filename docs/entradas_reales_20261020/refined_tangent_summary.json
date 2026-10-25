@@ -1,0 +1,17 @@
+{
+  "successfulCases": 54,
+  "accepted": 1,
+  "stepConverged": 22,
+  "total": 90,
+  "energyHessianStepScale": 20,
+  "comparisonHessianStepScale": 40,
+  "translationStep": "4e-5 * max(elementLength,1 m)",
+  "rotationStepRad": 4E-5,
+  "h": 0.0025,
+  "twiceH": 0.005,
+  "originalEquilibriumPreserved": true,
+  "physicalEnergyPreserved": true,
+  "productionSourcesChanged": false,
+  "maximumNominalHessianRelativeChange": 0.0063348962054028835,
+  "scope": "numerical tangent refinement; does not revalidate historical Morris or periodic operation"
+}

@@ -1,0 +1,11 @@
+{
+  "formulation_article": "modular FCEFyN_ES/EN + cuerpo_es/en; distributed expanded copies",
+  "thesis": "tesis_autocontenida.tex is the current 35-figure source; older modular source had 14 figures",
+  "scope": "Base de capitulos de formulacion, no tesis institucional terminada",
+  "integrated_missing_inputs_before": [
+    "resultados_operativos.tex",
+    "apendices.tex"
+  ],
+  "historical_reports": "Inventoried, retained and not silently promoted to corrected rotating results",
+  "new_solver_evaluations": 0
+}

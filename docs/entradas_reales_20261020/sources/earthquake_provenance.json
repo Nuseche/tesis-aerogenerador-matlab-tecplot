@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/OpenSees/OpenSees/d0ac447eb93cbb9f8c8f63e75261dcc10e5c0b61/EXAMPLES/ExampleScripts/ARL360.at2",
+    "commit": "d0ac447eb93cbb9f8c8f63e75261dcc10e5c0b61",
+    "file": "ARL360.at2",
+    "sha256": "79ca86a7bb2a1f30151f1f222a38d08842e81ca52c401a55dc5915b83dbbc847",
+    "bytes": 31450
+  },
+  {
+    "url": "https://raw.githubusercontent.com/OpenSees/OpenSees/d0ac447eb93cbb9f8c8f63e75261dcc10e5c0b61/EXAMPLES/ExampleScripts/elCentro.AT2",
+    "commit": "d0ac447eb93cbb9f8c8f63e75261dcc10e5c0b61",
+    "file": "elCentro.AT2",
+    "sha256": "e096f0458ae7565ac8e9fac80eda018e4715a357ea4c14504ce1cfa6556c53a6",
+    "bytes": 16031
+  },
+  {
+    "url": "https://raw.githubusercontent.com/OpenSees/OpenSees/d0ac447eb93cbb9f8c8f63e75261dcc10e5c0b61/Workshops/SimWorkshop/SmallMP/GM/CHY023-W.AT2",
+    "commit": "d0ac447eb93cbb9f8c8f63e75261dcc10e5c0b61",
+    "file": "CHY023-W.AT2",
+    "sha256": "abc8e88407f81cc3082c4cdeec36868cc12b9e837779bc70d9c9589b2049a015",
+    "bytes": 562611
+  },
+  {
+    "url": "https://raw.githubusercontent.com/OpenSees/OpenSees/d0ac447eb93cbb9f8c8f63e75261dcc10e5c0b61/Workshops/SimWorkshop/SmallMP/GM/TCU052-N.AT2",
+    "commit": "d0ac447eb93cbb9f8c8f63e75261dcc10e5c0b61",
+    "file": "TCU052-N.AT2",
+    "sha256": "e1cea3e81ee2120805b12d208e7c055473c971d337ff67833d74d894655a3246",
+    "bytes": 273811
+  }
+]

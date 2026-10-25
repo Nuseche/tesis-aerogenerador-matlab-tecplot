@@ -1,0 +1,34 @@
+[
+  {
+    "name": "figuras_tecplot_y_automatizacion.zip",
+    "path": "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/packages/figuras_tecplot_y_automatizacion.zip",
+    "files": 1183,
+    "MiB": 19.56,
+    "sha256": "7796c6039c1954873e6ebaa249d1834ae1828e9dacc567c7b320bf9e831c354f",
+    "integrity": "passed"
+  },
+  {
+    "name": "documentos_actualizados.zip",
+    "path": "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/packages/documentos_actualizados.zip",
+    "files": 174,
+    "MiB": 17.58,
+    "sha256": "fd7ae14ceba89391956d0aefa71abc65a24e3e201110476c62ffd41aec54042f",
+    "integrity": "passed"
+  },
+  {
+    "name": "FCEFyN_OVERLEAF_FIGURAS_3D.zip",
+    "path": "/Users/nuseche/Desktop/Tesis_codigos/output/FCEFyN_OVERLEAF_FIGURAS_3D.zip",
+    "files": 22,
+    "MiB": 2.69,
+    "sha256": "427ae5e0b6efaa41be776a2694c941568bc5a431f2bda766d41666af197bdb55",
+    "integrity": "passed"
+  },
+  {
+    "name": "FCEFyN_OVERLEAF_FIGURA_INTEGRADA.zip",
+    "path": "/Users/nuseche/Desktop/Tesis_codigos/output/FCEFyN_OVERLEAF_FIGURA_INTEGRADA.zip",
+    "files": 22,
+    "MiB": 2.69,
+    "sha256": "427ae5e0b6efaa41be776a2694c941568bc5a431f2bda766d41666af197bdb55",
+    "integrity": "passed"
+  }
+]

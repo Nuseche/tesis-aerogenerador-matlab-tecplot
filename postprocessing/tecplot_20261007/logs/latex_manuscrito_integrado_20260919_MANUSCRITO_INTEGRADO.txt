@@ -1,0 +1,9 @@
+note: Running TeX ...
+note: Running xdvipdfmx ...
+note: Writing `MANUSCRITO_INTEGRADO.log` (18.4853515625 KiB)
+note: Writing `MANUSCRITO_INTEGRADO.aux` (19.5556640625 KiB)
+note: Writing `MANUSCRITO_INTEGRADO.pdf` (949.1875 KiB)
+note: Writing `MANUSCRITO_INTEGRADO.out` (7.2099609375 KiB)
+
+warning: MANUSCRITO_INTEGRADO.tex:290: Underfull \hbox (badness 1221) in paragraph at lines 290--290
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

@@ -1,0 +1,9 @@
+TITLE = "Participacion de palas en ramas individuales 10 y 11"
+VARIABLES = "x" "y"
+DATASETAUXDATA Representation = "result"
+ZONE T="Masa", I=2, DATAPACKING=POINT
+10 96.246420670817102
+11 93.372638719597703
+ZONE T="Rigidez elastica", I=2, DATAPACKING=POINT
+10 97.795387758611696
+11 86.525213771890591

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-06",
+  "sourceFile": "SECCION_MORRIS_REVISION.tex",
+  "figures": 8,
+  "newModelEvaluations": 0,
+  "dataFiles": [
+    "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/report_data.json",
+    "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/initial_20261005/local/modal_energy_evidence.csv",
+    "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_estimators.csv",
+    "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_sweeps.csv",
+    "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_vertices.csv",
+    "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_elementary_effects.csv"
+  ],
+  "dataSHA256": {
+    "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/report_data.json": "fb9f00c1a9f9c541067a274429ea4bf238d2c1a93a645f94caff95f0b326abb3",
+    "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/initial_20261005/local/modal_energy_evidence.csv": "374718adbe0ee939453a2470e5b3f86c8aa072e0c064ac215638ca0eca6375f3",
+    "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_estimators.csv": "6a753f897cc8151754333c995e35af41b8588c139686e63a964851d8fe6a2789",
+    "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_sweeps.csv": "8bae06b0f24eb428f3ddd8860011a39dd5997f42b08c947cf83025e8b5418b6a",
+    "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_vertices.csv": "5fd62bdaacdeb0176f68d1a7aff7b86d2af4668ca26a37f3734a005b136c0df5",
+    "/Users/nuseche/Desktop/Tesis_codigos/runs/sensitivity/morris_20261006/morris_elementary_effects.csv": "9e19a96334f64a5a87a879a95ba31045f5dee882dc7e5b31b4cf9a4966429215"
+  },
+  "sourceSHA256": "3ff62142fe90aad4cbf3f1918af4a063c1f93fae36dc0b444b88c6f2a42afa15"
+}

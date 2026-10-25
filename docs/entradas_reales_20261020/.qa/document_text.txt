@@ -1,0 +1,1387 @@
+                        Sensibilidad del aerogenerador:
+                    resultados, mecanismos e interpretación
+
+                 Documento de apoyo para la discusión con el asesor de tesis
+
+     Morris y rejilla de octubre; comparación sísmica y eólica del 20 de octubre de 2026
+
+
+
+1.    Qué se puede concluir del estudio
+    La pregunta estudiada es cómo cambian las frecuencias del modelo existente al modiﬁcar pro-
+piedades de las palas y velocidad del rotor. La respuesta depende del grupo modal. Entre los tres
+factores comparados, la masa e inercia de palas tienen la mayor inﬂuencia media en las respuestas 3,
+4+5, 8+9 y 10+11; la velocidad del rotor tiene la mayor inﬂuencia media en 6+7. Esta clasiﬁcación
+se reﬁere a un dominio exploratorio de factores entre 0.90 y 1.10.
+   Se completaron cuarenta trayectorias Morris: 160 evaluaciones del diseño y diez controles nu-
+méricos, todas convergidas. El diseño visitó 58 combinaciones diferentes; sus repeticiones se conser-
+varon. Se aceptaron catorce indicadores de inﬂuencia media de frecuencia. Su cambio entre veinte
+y cuarenta trayectorias fue menor de 1%. Se aceptaron dos indicadores de dispersión, asociados
+a masa y rigidez en 10+11. Estas observaciones constituyen evidencia de sensibilidad del modelo
+numérico; no son una validación experimental ni una probabilidad de respuesta.
+    Una forma útil de presentar la contribución es: se obtuvo un cribado de inﬂuencia por grupo
+modal, con seguimiento de formas, actualización del equilibrio y ﬁltros explícitos de ruido y estabi-
+lización. El aporte cientíﬁco incluye los signos opuestos del efecto del giro, la compensación parcial
+masa–rigidez y la identiﬁcación de respuestas cuya sensibilidad aún no puede resolverse.
+    El 14 de octubre se completó la rejilla de 64 combinaciones reutilizando 58 puntos y resol-
+viendo seis faltantes. Se añadieron tres controles numéricos. Los nueve casos nuevos convergieron,
+sin cambios de rangos ni formulación. El contraste masa–rigidez de 10+11 supera la envolvente
+empírica en las cuatro velocidades examinadas.
+
+
+2.    Qué se varió y qué representa el modelo
+    Se denotan los factores por ξρ (masa e inercias de palas), ξK (rigideces seccionales de palas) y
+ξΩ (velocidad del rotor). Su nominal es uno. El subíndice ρ expresa un escalamiento compatible con
+cambio de densidad a geometría ﬁja; no identiﬁca una densidad experimental única de las palas.
+
+        Factor         Cambio consistente                                 Intervalo aprobado
+        ξρ             Masa por longitud e inercias seccionales de las    0.90–1.10
+                       tres palas, con geometría y centroides ﬁjos.
+        ξK             Rigideces axial, de cortante, torsional y de ﬂe-   0.90–1.10
+                       xión de las palas, escaladas conjuntamente.
+        ξΩ             Velocidad prescrita alrededor del eje del rotor,   10.8–13.2 rpm
+                       constante en cada caso.
+
+
+
+
+                                                    1
+Los rangos son escenarios aprobados, no límites de fabricación medidos. Los restantes parámetros
+conservan sus valores en esta campaña. Por ello, la clasiﬁcación global no compara exhaustivamente
+palas, torre, cimentación y conexiones.
+
+
+
+
+                  Dominio                    Trayectorias                Casos MAT
+
+
+
+
+                 Aceptacion                 Efectos / ruido             Seguimiento
+
+
+
+
+Figura 1: Flujo del posprocesamiento de sensibilidad: dominio exploratorio, trayectorias, casos
+almacenados, seguimiento, efectos frente al ruido y aceptación. Cada caso es un equilibrio in-
+dependiente a azimut congelado; la sensibilidad total incluye el cambio del equilibrio y de los
+operadores. El giro se prescribe alrededor del eje 129–130, sin guiñada nominal.
+
+
+
+3.    Cómo leer las frecuencias y los grupos
+    Sea q el vector de coordenadas perturbadas alrededor del equilibrio y t el tiempo. Los operadores
+efectivos de masa, velocidad y tangente se denotan por M, D y K. La parte homogénea de la
+linealización congelada se escribe
+                                        Mq̈ + Dq̇ + Kq = 0.                                       (1)
+La matriz D reúne amortiguamiento, efectos giroscópicos y transporte; sus términos no representan
+todos disipación material. La tangente K incluye las contribuciones implementadas del equilibrio
+y del giro, con las transformaciones cinemáticas correspondientes.
+   Sean λ una raíz compleja y ϕ su forma modal. Con q ∝ ϕ exp(λt) se obtiene el problema
+cuadrático
+                                  [λ2 M + λD + K]ϕ = 0.                               (2)
+Se deﬁnen frecuencia amortiguada fd = | Im λ|/(2π) [Hz], crecimiento γ = Re λ [s−1 ] y razón de
+amortiguamiento ζ = − Re λ/|λ|. La frecuencia mide oscilaciones por segundo; el crecimiento mide
+evolución de la envolvente. Una frecuencia que aumenta no implica, por sí sola, mayor estabilidad.
+     Las etiquetas 6+7 o 10+11 identiﬁcan conjuntos de ramas de la referencia, no posiciones que
+se vuelvan a ordenar por frecuencia en cada caso. Se correlacionan formas complejas en el espacio
+físico con la masa nominal y se comprueban subespacios cuando hay raíces próximas. La respuesta
+de un grupo es la media de las frecuencias de sus ramas; no constituye una nueva forma modal
+
+                                                  2
+individual. Las ramas 4 y 5 se agruparon por su proximidad en parte del dominio ampliado. La
+rama 12 toca la frontera del conjunto seguido y se excluye de los estimadores; sus vecinos del
+espectro calculado impiden tratarla como grupo cerrado.
+
+                   Respuesta                   fd,0 [Hz]          Mayor inﬂuencia media        Signo aceptado del
+                                                                                               giro
+                   3                              0.231           Masa/inercia                 −
+                   4+5                            0.409           Masa/inercia                 No resuelto
+                   6+7                            0.587           Velocidad                    +
+                   8+9                            0.844           Masa/inercia                 +
+                   10+11                          1.225           Masa/inercia                 +
+
+Aquí fd,0 es la frecuencia nominal individual o media del grupo. El giro tiene efecto positivo en
+tres grupos y negativo en la rama 3. Su efecto en 4+5 permanece no resuelto frente al ruido. Una
+ausencia de aceptación no signiﬁca ausencia de inﬂuencia física.
+
+
+4.    Cómo funciona Morris en este estudio
+    Sea xi ∈ [0, 1] la coordenada normalizada del factor i. Se aplica ξi = ℓi + (ui − ℓi )xi , donde
+los límites son ℓi = 0,90 y ui = 1,10. Se generan trayectorias aleatorias sobre cuatro niveles, con
+semilla 6706 y paso ﬁrmado ∆xi de magnitud 2/3 [1]. Cada segmento cambia un factor y conserva
+los otros dos. A lo largo de cuarenta trayectorias, ese cambio se observa en diferentes combinaciones
+del dominio.
+
+
+
+
+                            1.04
+
+
+
+                                    1
+
+
+
+
+                               Velocidad [-]
+                            0.96
+
+
+
+                            0.92
+
+
+                                                                                                          0.96
+                                               0.92
+                                                                                                   1 -]
+                    Z                                 Rig
+                                                        0.96
+                                                          i dez                                ia [
+                                                                                              rc
+                                                                                          ine
+                                                                                        1.04
+                                                                  [-] 1
+                                                                                 1.08Ma
+                                                                                       sa/
+               X        Y                                                 1.04
+
+
+
+
+Figura 2: Primera trayectoria ejecutada en los tres factores del diseño. Cada arista modiﬁca un solo
+factor. Los segmentos unen casos almacenados y no describen una evolución temporal del rotor.
+
+   El tamaño del paso del factor es |∆ξi | = 0,20(2/3) = 0,13333. Aunque los puntos están dentro
+de ±10% respecto del nominal, cada secante atraviesa 13.333% del factor nominal. Esta es una
+razón para distinguir un efecto elemental de una derivada inﬁnitesimal.
+
+                                                                             3
+                          1.12
+
+                           1.1
+
+                          1.08                                                                              Masa/inercia
+                                                                                                            Rigidez
+                          1.06                                                                              Velocidad
+
+                          1.04
+
+
+
+
+    Factor relativo [-]
+                          1.02
+
+                            1
+
+                          0.98
+
+                          0.96
+
+                          0.94
+
+                          0.92
+
+                           0.9
+
+                          0.88
+                                 0      0.5         1      1.5      2      2.5     3
+                                                         Vertice
+
+
+
+Figura 3: Factores por vértice de la primera trayectoria, en su orden de evaluación. Los símbolos
+identiﬁcan masa/inercia de palas, rigidez y velocidad. El eje horizontal indica vértices del diseño,
+no tiempo físico.
+
+
+    Sea y una respuesta escalar y sy su escala nominal ﬁja. Para frecuencia se usa sy = fd,0 ; para
+crecimiento, la media nominal de |λ|; para amortiguamiento, máx(|ζ0 |, 0,01). El efecto elemental
+de la trayectoria j es
+                                                 (j)     (j)
+                                          (j)   yﬁn − yinicio
+                                      EEi =          (j)
+                                                              .                                 (3)
+                                                  ∆xi sy
+El signo del paso se conserva. Por ejemplo, en la primera arista del grupo 10+11 se reduce ξρ de
+1.10 a 0.9667 y la frecuencia aumenta de 1.203767 a 1.263304 Hz:
+                                                         1,263304 − 1,203767
+                                              EEρ(1) =                       ≃ −0,07288.                                   (4)
+                                                          (−2/3)(1,225430)
+
+Su signo negativo describe la disminución de frecuencia al aumentar masa/inercia. Este ejemplo
+proviene de casos almacenados; no es una simulación adicional.
+   Para r trayectorias se calculan
+
+                                      1∑                                                    ∑
+                                        r                                                   r
+                                                                                        1
+                                                                                  µ∗i =
+                                               (j)                                                   (j)
+                                 µi =       EEi ,                                                 |EEi |,                  (5)
+                                      r                                                r
+                                        j=1                                                 j=1
+                                                             1/2
+                                          1  ∑r
+                                 σi =           (EEi − µi )2  .
+                                                    (j)
+                                                                                                                           (6)
+                                        r−1
+                                              j=1
+
+µi da dirección media, µ∗i magnitud media y σi dispersión de los efectos entre posiciones del
+dominio. No son índices de Sobol ni porcentajes máximos de respuesta. No se interpreta el muestreo
+como una distribución física de incertidumbre. Un efecto inválido impide calcular el estimador
+correspondiente; no se eliminan aristas selectivamente para obtener una clasiﬁcación favorable.
+
+
+                                                                   4
+    El artículo original de Morris utiliza media y dispersión de efectos elementales; la media absoluta
+µ∗i corresponde a la extensión de Campolongo, Cariboni y Saltelli [2]. Los ﬁltros de seguimiento,
+ruido y estabilización son decisiones de esta implementación.
+
+
+5.             Resultados: dirección, magnitud y ejemplo con unidades
+   Para relacionar Morris con un cambio del factor, se deﬁne la pendiente media de secante
+normalizada
+                                          µi        µi
+                                   ci =          =      .                              (7)
+                                        ui − ℓ i   0,20
+En frecuencias, ci es la media de ∆fd /(fd,0 ∆ξi ). No equivale automáticamente a la sensibilidad
+local Si = (ξi /fd )(∂fd /∂ξi ), porque utiliza secantes ﬁnitas y distintos puntos del dominio.
+
+
+               0.4
+
+               0.2                                                         Masa/inercia aceptada
+
+
+
+7 / 0.20 [−]
+                                                                           Masa/inercia no resuelta
+                 0                                                         Rigidez aceptada
+                                                                           Rigidez no resuelta
+       i       -0.2                                                        Velocidad aceptada
+                                                                           Velocidad no resuelta
+               -0.4
+
+               -0.6
+                        2       3       5      7        9   1
+                      1+              4+     6+       8+ 0+1
+                                                          1
+                                    Grupo modal
+Figura 4: Estimadores originales de Morris, con las etiquetas reales de los grupos. Se representa
+µi /0,20; círculos para masa/inercia, diamantes para rigidez y cuadrados para velocidad. Los sím-
+bolos llenos indican inﬂuencia aceptada y los vacíos, no resuelta. El grupo 12 permanece excluido.
+La ﬁgura nueva conserva los datos del Morris y utiliza el estilo monocromático autorizado.
+
+    La masa/inercia tiene signo negativo en todos los grupos aceptados y la rigidez, positivo. La
+velocidad tiene mayor magnitud relativa en 6+7, mientras que reduce la frecuencia de 3. El giro, por
+tanto, no produce un aumento universal de todas las frecuencias. La comparación de magnitudes
+es entre factores con el mismo ancho relativo y dentro de cada respuesta.
+          Para 10+11, la frecuencia nominal es fd,0 = 1,22543 Hz y
+
+                                cρ = −0,38266,      cK = 0,35860,         cΩ = 0,18389.               (8)
+
+Como orientación de magnitud, al aplicar ∆fd ≃ fd,0 ci ∆ξi a un aumento de 1% del factor se
+obtiene:
+
+                       Factor que aumenta   Cambio relativo orientativo   Cambio orientativo [Hz]
+                       Masa/inercia                            -0.383 %                    -0.00469
+                       Rigidez                                +0.359 %                    +0.00439
+                       Velocidad                              +0.184 %                    +0.00225
+
+
+                                                          5
+Estos valores son ejemplos calculados a partir de secantes medias; no son nuevos casos a 1% ni
+predicciones locales certiﬁcadas. Los signos y magnitudes son coherentes con las derivadas aceptadas
+de la primera etapa en el mismo grupo.
+
+
+5.1.    Intervalos observados de frecuencia
+
+              Respuesta   Nominal [Hz]   Mínimo observado [Hz]    Máximo observado [Hz]
+              1+2                0.158                    0.152                    0.162
+              3                  0.231                    0.205                    0.263
+              4+5                0.409                    0.365                    0.457
+              6+7                0.587                    0.536                    0.641
+              8+9                0.844                    0.771                    0.923
+              10+11              1.225                    1.116                    1.342
+
+
+Los extremos reúnen cambios simultáneos de los tres factores en los vértices calculados. No son
+intervalos de conﬁanza ni extremos demostrados de todo el dominio continuo. En 10+11 se obser-
+varon 1.116–1.342 Hz. El rango observado en 1+2 existe, aunque sus inﬂuencias individuales no
+pasaron el ﬁltro de ruido: observar variación y atribuirla con resolución suﬁciente son aﬁrmaciones
+distintas.
+
+
+6.     Qué mecanismos físicos respaldan las tendencias
+6.1.    Masa y rigidez: intuición y comprobación
+                                                                                   √
+     Como analogía, un oscilador escalar de masa m y rigidez k tiene f = (2π)−1        k/m, de donde
+
+                                         ∆f   1 ∆k 1 ∆m
+                                            ≃     −     .                                         (9)
+                                         f    2 k   2 m
+La relación explica por qué aumentar masa suele reducir frecuencia y aumentar rigidez suele
+elevarla. Es una analogía para interpretar signos; no sustituye el aerogenerador multicuerpo en
+rotación ni establece coeﬁcientes exactos de ±0,5 para sus factores.
+    En el modelo, ξρ cambia inercia traslacional y rotacional de palas, peso y contribuciones aso-
+ciadas al giro; también cambia el equilibrio. ξK modiﬁca conjuntamente las rigideces axial, de
+cortante, torsional y de ﬂexión. Los coeﬁcientes observados incluyen acoplamiento con torre, gón-
+dola, cubo y conexiones, cuya masa y rigidez no se escalan en esta campaña. Por eso el efecto no
+se reduce a reemplazar toda la masa o toda la rigidez del sistema.
+    Para interpretar las participaciones de la ﬁgura 5, sea ϕ una forma nominal y Mc la contribución
+de masa del componente c. Su participación de referencia se obtiene de ϕH Mc ϕ dividida por la
+suma de las contribuciones; H indica transposición conjugada. Se procede de forma análoga con la
+rigidez elástica de referencia. La presencia predominante de palas en 10 y 11 respalda la sensibilidad
+a sus propiedades. Estas participaciones no separan cuantitativamente todos los mecanismos de la
+tangente rotacional.
+
+
+6.2.    Giro: competencia de contribuciones
+
+    El incremento de velocidad modiﬁca efectos giroscópicos proporcionales a Ω, contribuciones
+inerciales y de transporte, términos proporcionales a Ω2 , el equilibrio y las derivadas de las res-
+tricciones y de la transformación de coordenadas. La matriz de velocidad y la tangente intervienen
+simultáneamente en el problema cuadrático; no basta imaginar una rigidez adicional positiva.
+
+
+                                                  6
+                          100
+
+                                                                                        Masa
+                                                                                        Rigidez elastica
+                           80
+
+
+
+
+    Participacion [%]
+                           60
+
+
+
+                           40
+
+
+
+                           20
+
+
+
+                            0
+                                9.6   9.8   10   10.2 10.4 10.6 10.8   11   11.2 11.4
+                                                       Rama
+
+
+
+Figura 5: Comprobación mecánica independiente en la referencia de la primera etapa. Las palas
+aportan aproximadamente 96.2 y 93.4% de la forma cuadrática de masa, y 97.8 y 86.5% de la
+forma cuadrática elástica de las ramas 10 y 11. Se utilizan masa y rigidez elástica de referencia;
+no se representa toda la energía del sistema en rotación.
+
+
+    El signo negativo observado en 3 y positivo en 6+7, 8+9 y 10+11 es evidencia de que la
+respuesta al giro depende del grupo. La hipótesis mecánica compatible con la formulación es una
+competencia de contribuciones cuya proyección modal cambia de una rama a otra. El cribado no
+identiﬁca cuánto aporta individualmente cada término; esa separación requeriría un diagnóstico
+adicional del modelo existente.
+
+
+6.3.                    Compensación parcial entre masa y rigidez
+
+   A velocidad ﬁja, la orientación media del grupo 10+11 sugiere
+                                                 ∆fd
+                                                      ≃ −0,38266∆ξρ + 0,35860∆ξK .                         (10)
+                                                 fd,0
+
+Una cancelación aproximada de estas secantes daría ∆ξK ≃ 1,067∆ξρ . Esta proporción es una
+hipótesis de compensación para comprobar, no una ley válida para todos los puntos. Diferentes
+propiedades podrían producir frecuencias similares: ajustar solo una frecuencia puede dejar ambi-
+güedad entre masa y rigidez.
+    La diagonal de la ﬁgura 6 muestra frecuencias próximas al aumentar conjuntamente masa y
+rigidez. Por ejemplo, las esquinas de factores iguales (0,90, 0,90) y (1,10, 1,10) dan aproximadamente
+1.236 y 1.231 Hz a 12.4 rpm. Los valores son cercanos, pero distintos; la compensación no es exacta.
+Sería útil contrastar más de una frecuencia, formas modales u otros indicadores al identiﬁcar
+propiedades.
+
+
+
+
+                                                                 7
+                                   1.32779 Hz              1.29201 Hz                1.25982 Hz     1.23055 Hz
+                            1.1
+
+
+
+                           1.05    1.29803 Hz              1.26330 Hz                1.23203 Hz     1.20377 Hz
+
+
+
+
+     Factor rigidez [-]
+                             1
+                                   1.26731 Hz              1.23373 Hz                1.20349 Hz     1.17615 Hz
+
+
+                           0.95
+
+
+                                   1.23556 Hz              1.20326 Hz                1.17407 Hz     1.14773 Hz
+                            0.9
+
+
+                                      0.9              0.95                   1              1.05      1.1
+                                                               Factor masa/inercia [-]
+
+
+
+Figura 6: Dieciséis combinaciones evaluadas a velocidad ﬁja de 12.4 rpm. Cada punto y su etiqueta
+corresponden a una frecuencia media del grupo 10+11 almacenada. No se interpolan frecuencias
+entre puntos. Aumentar masa/inercia y aumentar rigidez producen efectos opuestos; la compensa-
+ción diagonal es parcial.
+
+
+7.                  Por qué se aceptan unos resultados y otros no
+    Se evalúan tres preguntas numéricas: £se sigue la misma respuesta modal?, £el efecto supera
+el ruido?, £el estimador se estabiliza al aumentar trayectorias? El éxito del solver no garantiza
+por sí solo las tres condiciones. En esta campaña, las formas y grupos cerrados se conservaron; el
+grupo abierto asociado a 12 se rechazó.
+
+
+7.1.                      Ruido y señal
+
+    Sea η la máxima diferencia de una respuesta observada entre controles: repetición nominal,
+tolerancia QEP más estricta y solución directa frente a continuación, en el nominal y dos esquinas.
+Se asigna la envolvente empírica por efecto
+
+                                                 (j)          2η                     1 ∑ (j)
+                                                bi     =      (j)
+                                                                      ,       bi =      bi .                     (11)
+                                                           |∆xi |sy                  r
+                                                                                        j
+
+
+La media absoluta debe satisfacer µ∗i ≥ 10bi . La envolvente no es una cota rigurosa de error en
+todo el dominio. La comparación con continuación es relevante porque diferencias pequeñas del
+equilibrio y la tangente pueden afectar indicadores aunque el residuo de equilibrio sea reducido.
+    Por ejemplo, para masa/inercia en 1+2 el cociente señal/ruido es 7.09 y, para velocidad en
+4+5, 5.88: ambos quedan bajo el umbral 10. No se publican como inﬂuencias aceptadas, aunque
+sus estimadores cambian menos de 1% entre veinte y cuarenta trayectorias. Esto evita confundir
+una estimación repetible con una estimación suﬁcientemente resuelta.
+
+
+
+
+                                                                          8
+                                                                                             Masa/inercia aceptada
+                                                                                             Masa/inercia no resuelta
+
+
+
+
+     µ* / envolvente de ruido [-]
+                                           2                                                 Rigidez aceptada
+                                      10                                                     Rigidez no resuelta
+                                                                                             Velocidad aceptada
+                                                                                             Velocidad no resuelta
+                                                                                             Umbral 10
+
+
+
+
+                                           1
+                                      10
+
+
+
+
+                                           0
+                                      10
+                                               0   1   2    3    4     5     6       7   8
+                                                           Indice de grupo
+
+
+
+Figura 7: Inﬂuencia frente a la envolvente empírica de ruido, en escala logarítmica. Se conserva
+el orden de grupos de la ﬁgura de secantes; la línea horizontal indica el umbral de aceptación 10.
+Los marcadores vacíos permanecen no resueltos. La estabilización de una media no basta para
+aceptarla.
+
+
+7.2.                                Estabilización con el número de trayectorias
+
+   El máximo cambio relativo de µ∗i entre veinte y cuarenta, entre los catorce indicadores acep-
+tados, fue 0.80 %. El umbral ﬁjado era 10%. El orden de inﬂuencia se conserva en los grupos
+mostrados. Este resultado apoya la suﬁciencia del cribado para estas respuestas; no demuestra
+convergencia espacial de las sensibilidades en rotación ni elimina la dependencia de la malla nu-
+mérica de Morris.
+    Los máximos residuos de equilibrio y del QEP en norma dual de masa fueron 9,94 × 10−9 y
+4,05 × 10−9 , respectivamente. Esta norma reúne fuerzas y momentos con una escala dimensional
+compatible. Las 170 evaluaciones convergieron y pasaron 17 pruebas del módulo. La regresión
+histórica de 155 pruebas se conserva como evidencia anterior; no se presenta como una nueva
+ejecución. Las 148 fuentes físicas MATLAB anteriores permanecieron intactas.
+
+
+8.                          Qué signiﬁca la dispersión aceptada
+    La dispersión indica que el efecto elemental cambia según el punto donde se evalúa. Puede reunir
+curvatura respecto del propio factor, dependencia de los otros factores e inﬂuencia numérica. Morris
+                                                                      ∑ (j)
+no separa estas causas. Para σi , la envolvente propagada es bσ,i = [ j (bi )2 /(r − 1)]1/2 ; se exige
+σi ≥ 10bσ,i y estabilización al 10%.
+
+
+
+
+                                                                                 9
+                 0.075
+                                                                                        6+7 Masa/inercia
+                  0.07                                                                  6+7 Rigidez
+                                                                                        6+7 Velocidad
+                                                                                        10+11 Masa/inercia
+                 0.065                                                                  10+11 Rigidez
+                                                                                        10+11 Velocidad
+                  0.06
+
+    µ* [-]
+                 0.055
+
+                  0.05
+
+                 0.045
+
+                  0.04
+
+                 0.035
+                         10      15       20     25     30   35      40
+                                             Trayectorias
+
+
+
+Figura 8: Estabilización de estimadores de los grupos 6+7 y 10+11 con preﬁjos de 10, 20 y 40
+trayectorias del mismo diseño. Los símbolos distinguen factores y la leyenda identiﬁca cada grupo.
+Las líneas unen preﬁjos calculados y no prueban convergencia asintótica.
+
+
+                   5.5
+
+                    5
+                                                                                 Masa/inercia
+                   4.5
+
+                    4
+
+
+
+
+    1000 σ [-]
+                   3.5
+                                                                             Rigidez
+                    3
+
+                   2.5
+
+                    2         Velocidad
+
+                   1.5
+
+                    1
+                                      0.04                            0.06                0.08
+                                                                  µ* [-]
+
+
+
+Figura 9: Inﬂuencia y dispersión de efectos elementales en el grupo 10+11. Los puntos llenos supe-
+ran los controles de ruido y estabilización de σi ; el punto vacío no. El eje vertical está multiplicado
+por 103 . Esta dispersión describe los efectos elementales, no una distribución física de frecuencias
+ni una probabilidad de fallo.
+
+
+                                                              10
+                 Factor; grupo 10+11        σi   σi /bσ,i   Cambio 20–40   Aceptado
+                 Masa/inercia          0.00445    20.52           6.31 %         Sí
+                 Rigidez               0.00283    13.07           8.22 %         Sí
+                 Velocidad             0.00173     7.97          14.94 %        No
+
+
+La dispersión de masa/inercia y rigidez supera el ruido y cambia aproximadamente 6.31% y 8.22%,
+respectivamente. La de velocidad tiene cociente 7.97 y no supera el ﬁltro de ruido. No puede aﬁr-
+marse que el giro sea exactamente lineal o independiente de los otros factores por ese rechazo.
+Tampoco puede aﬁrmarse que las dos dispersiones aceptadas demuestren, por sí solas, una inter-
+acción especíﬁca.
+
+
+
+
+                                                 11
+9.                     Comprobación complementaria de la rejilla y de los efectos
+                       combinados
+9.1.                   Cobertura, controles y conservación del modelo
+
+    La rejilla de cuatro niveles y tres factores contiene 43 = 64 combinaciones. Morris había visitado
+58 combinaciones distintas. Se resolvieron las seis faltantes y tres controles: QEP más estricto y
+continuación en uno de esos puntos, y repetición nominal. Se conservaron los casos de Morris y sus
+estimadores. Las nueve evaluaciones nuevas tomaron 77.49 s de solve, bajo un límite operacional
+de 300 s. La campaña modal global reúne así 170 evaluaciones originales y nueve complementarias,
+con 64 puntos de rejilla distintos.
+    Se veriﬁcaron las 175 huellas de fuentes de la campaña original. Los grupos históricos se conser-
+van y sus formas pasan las comprobaciones correspondientes. La rama 12 continúa abierta frente
+a ramas fuera del conjunto seguido y queda excluida. Los rangos físicos, propiedades vinculadas y
+formulación permanecen iguales. La continuación y el QEP estricto en un nuevo punto no aumen-
+taron la envolvente de frecuencia de 10+11: η = 8,7456 × 10−5 Hz. La diferencia máxima de sus
+controles nuevos fue 1,0613 × 10−5 Hz.
+    Las medias de secantes de extremos conservan el orden de inﬂuencia de los cinco grupos princi-
+pales. Sus pasos y ponderaciones diﬁeren de Morris, de modo que no son estimadores idénticos ni
+derivadas inﬁnitesimales. En 1+2, la media absoluta de secantes de masa de extremo tiene cociente
+señal/ruido 10.41, cercano al umbral 10; solo once de sus dieciséis comparaciones individuales su-
+peran ese umbral. Este resultado marginal no cambia retrospectivamente la ausencia de aceptación
+de su estimador Morris.
+
+
+9.2.                   Compensación parcial a las cuatro velocidades
+
+    Se examina la diagonal ξρ = ξK a 10.8, 11.6, 12.4 y 13.2 rpm. El cambio entre factores iguales
+0.90 y 1.10 es de aproximadamente 0.00495–0.00519 Hz, equivalente a 0.404–0.423% de fd,0 de
+10+11. Cada curva de la ﬁgura usa como origen su propio punto diagonal 0.90. La cercanía de
+frecuencias apoya una compensación parcial, pero no una identidad válida para toda la respuesta.
+La identiﬁcación de propiedades necesita otras frecuencias, formas u observaciones.
+
+                         0                                                                    10.8 rpm
+                                                                                              11.6 rpm
+                       -0.1                                                                   12.4 rpm
+
+
+
+     100 " f / f [%]
+                                                                                              13.2 rpm
+              0
+                       -0.2
+
+                       -0.3
+
+                       -0.4
+
+                         0.90           0.9667                 1.0333                  1.10
+                                          Factor común de masa/inercia y rigidez [−]
+
+Figura 10: Cambios de frecuencia de 10+11 a lo largo de la diagonal masa–rigidez, medidos respecto
+del punto 0.90 de cada velocidad y normalizados por la frecuencia nominal ﬁja. Se muestran
+únicamente valores calculados de la rejilla; las líneas conectan esos valores.
+
+
+
+
+                                                          12
+9.3.               Contraste rectangular para distinguir no aditividad
+
+                Para dos factores i, j, con el tercero ﬁjo, se calcula el contraste de sus extremos:
+                                               Iij = f++ − f+− − f−+ + f−− .                                  (12)
+Los signos indican factores 1.10 y 0.90. Si la respuesta fuera una suma de funciones separadas de
+los dos factores, el contraste sería cero, incluso si dichas funciones tuvieran curvatura individual.
+Un contraste resuelto evidencia no aditividad de esta respuesta en esos puntos. No atribuye un
+mecanismo concreto a un término del operador ni cuantiﬁca un porcentaje de varianza.
+   La envolvente propagada es bI = 4η, por los cuatro términos del contraste. Se exige |Iij | ≥ 10bI ,
+además de seguimiento válido. La cota continúa siendo empírica. Para 10+11 se obtiene:
+
+                         Par                        |Iij | [Hz]        |Iij |/bI   Interpretación
+                         Masa–rigidez        0.00926–0.00940       26.47–26.87     Resuelto
+                         Masa–velocidad      0.00356–0.00362       10.17–10.34     Marginal sobre el umbral
+                         Rigidez–velocidad   0.00331–0.00342         9.47–9.77     No resuelto
+
+Masa–rigidez presenta contraste negativo en las cuatro velocidades. El incremento de rigidez tiene
+menor efecto de frecuencia al aumentar masa, de forma compatible con la dependencia conjunta de
+rigidez e inercia. La aﬁrmación se limita al contraste observado, no a una separación causal de todos
+los operadores. Masa–velocidad supera por poco el umbral y requiere cautela. Rigidez–velocidad
+permanece sin resolución suﬁciente; no se inﬁere ausencia de interacción.
+                 0.4
+
+
+
+
+100 I / f [%]
+                 0.2
+       0           0
+                -0.2
+                -0.4
+       ij
+                -0.6
+                -0.8
+                  0.90                    0.9667                       1.0333                       1.10
+                                                   Factor que permanece fijo [−]
+                                         Masa–rigidez (+ fijo)          Rigidez–velocidad (masa fija)
+                                         Masa–velocidad (K fijo)        Umbral empírico '10b / f
+                                                                                                    0
+
+
+Figura 11: Contrastes de extremos en 10+11, normalizados por fd,0 . Cada curva deja ﬁjo un factor
+diferente, identiﬁcado en la leyenda. Los símbolos llenos superan el umbral empírico y los vacíos
+no. Las líneas discontinuas muestran ±10bI /fd,0 en porcentaje.
+
+
+
+9.4.               Curvatura individual y límites de esta comprobación
+
+    En pasos igualmente espaciados se calcula Ci = fi+1 − 2fi + fi−1 . En 10+11, seis de los 32
+contrastes de masa/inercia superan diez veces la envolvente 4η. Ninguno de los 32 contrastes de
+rigidez o de velocidad supera ese ﬁltro. Por tanto, la evidencia adicional resuelve curvatura de masa
+en ciertos puntos y no aditividad masa–rigidez; las restantes ausencias de resolución no prueban
+linealidad.
+    El contraste masa–velocidad es un indicador diferente de σΩ de Morris, cuya aceptación original
+sigue siendo negativa. La rejilla completa veriﬁca todos sus 64 puntos discretos, sin certiﬁcar ex-
+trema o monotonicidad del dominio continuo, convergencia espacial en operación ni incertidumbre
+probabilística. Sus tablas guardan también todos los indicadores que no superan el ﬁltro.
+    La licencia de Tecplot vencida impidió exportaciones nuevas. El autor autorizó el 14 de octubre
+utilizar las ﬁguras ya generadas y producir las restantes con el mismo formato y estilo. Se expor-
+taron tres ﬁguras nuevas y cuatro adaptaciones de legibilidad para la presentación con MATLAB
+
+                                                                  13
+R2026a, en escala de grises, fondo blanco y PDF vectorial. Su catálogo registra motor, datos y
+procedencia. Las ﬁguras anteriores conservan su procedencia Tecplot.
+
+
+10.     Comparación con entradas medidas: sismo y viento
+    Esta etapa extiende el estudio a historias temporales medidas. El autor autorizó utilizar re-
+gistros de fuentes independientes y representar el viento mediante un empuje axial prescrito cuyo
+valor medio permanece como parámetro. Se cierra así una comparación estructural determinista
+y reproducible; el empuje medio real de la turbina y su respuesta aeroelástica acoplada siguen sin
+identiﬁcarse. Se conservan los resultados Morris anteriores y sus condiciones de aceptación.
+
+
+10.1.   Literatura, datos disponibles y nivel de comparación
+
+    Wang y colaboradores [3] publican ambas entradas de su análisis: registros sísmicos PEER y
+viento sintético de Davenport. Se descargaron y veriﬁcaron los archivos de su repositorio [4], cuya
+versión comprobada contiene proyectos Origin OPJU. No se extrajeron de esos proyectos series
+numéricas ni se reprodujo su turbina híbrida de 160 m. Esta referencia sustenta la organización de
+casos, pero no acredita dos entradas de campo medidas.
+    Meng y colaboradores [5] estudian experimentalmente viento y excitación de mesa sísmica,
+y muestran la importancia del amortiguamiento aerodinámico para combinar acciones. Turello y
+colaboradores [6] estudian un sismo derivado de Loma Prieta, ajustado a un espectro de diseño, y
+cargas calculadas con un modelo aeroelástico. Ninguno de esos tratamientos se sustituye aquí por
+un amortiguamiento aerodinámico supuesto.
+   Para las entradas medidas se seleccionaron el conjunto NM92 de DTU [7] y acelerogramas
+procesados distribuidos en el repositorio oﬁcial de OpenSees [8]. El registro eólico y los sismos
+no ocurrieron juntos. Tampoco se comparan mediciones de respuesta de una misma turbina con
+predicciones: el nivel de comparación es el de entradas transferidas al modelo existente, con sus
+hipótesis declaradas.
+
+
+10.2.   Qué se midió y cómo se preparó
+
+    El viento corresponde al primer archivo disponible en orden lexicográﬁco, fechado el 19 de
+noviembre de 2005 a las 00:00 según su cabecera; la zona horaria no está indicada. Se emplea el
+canal sónico longitudinal s70u, a 70 m de altura, con 15 000 muestras a 25 Hz. La duración de
+adquisición es 600 s y la separación entre primera y última muestra es 599.96 s. Se veriﬁcaron las
+estadísticas contra la cabecera: media 6.1341 m/s, desviación poblacional 0.2604 m/s e intensidad
+longitudinal Iu = σu /U = 4,246%. Es un registro seleccionado de viento relativamente uniforme;
+no representa por sí solo condiciones extremas.
+    La turbina medida es una NEG-Micon NM92 de 2.75 MW, cuyo registro indica 14.65 rpm. El
+escenario estructural conserva sus 12 rpm prescritas. La historia a 70 m se utiliza como sustituto
+temporal de un viento uniforme autorizado, sin extrapolación de altura ni aﬁrmación de que se
+haya medido en el buje de este modelo. Los canales sónicos de 47 y 24 m aparecen duplicados en el
+archivo y no se usan para inferir un perﬁl espacial. Los momentos de palas, eje y torre publicados
+por DTU son respuestas internas medidas, no fuerzas nodales externas directamente transferibles.
+    Los acelerogramas conservan sus muestras, amplitudes y procesamiento de origen. El impor-
+tador comprueba número de puntos, paso y unidades; convierte g a m/s2 mediante g0 = 9,80665
+m/s2 . No aplica escalamiento adicional ni corrección de línea base. Se interpolan linealmente las
+aceleraciones para integrar. Se emplea una componente horizontal por vez en X o Y; no se inventan
+componentes verticales ni se atribuye esa orientación a un emplazamiento real. No se interpretan
+desplazamientos absolutos del terreno obtenidos por doble integración como magnitudes validadas.
+
+                                                14
+              U a 70 m [m/s]
+                               7
+
+                               6
+
+                               5
+                                   0             100               200                 300                   400              500              600
+                                                                              Tiempo del viento [s]
+
+                    0.2
+ ag / g [-]
+                               0
+
+                -0.2
+                                   0         5          10               15                20           25           30             35         40
+                                                                              Tiempo del sismo [s]
+
+Figura 12: Historias medidas usadas como fuentes independientes. Los ejes temporales pertenecen a
+cada adquisición; sus amplitudes tienen unidades diferentes y no comparan directamente severidad
+de las acciones.
+
+10.3.                              De velocidad de viento a empuje parametrizado
+
+       Sea F el empuje medio muestral, Un las muestras originales del viento y N = 15000. Se prescribe
+
+                                                                     Un2
+                                                 gw (tn ) =
+                                                                  −1
+                                                                     ∑ N      2
+                                                                                  ,         f w,full (t) = F bfull gw (t),                      (13)
+                                                              N          j=1 Uj
+
+donde bfull aplica una fuerza axial unitaria en el maestro del buje 130 según el eje 129–130. Se
+interpola gw a partir de sus muestras originales; no se vuelve a elevar al cuadrado una velocidad
+ya interpolada. No se ﬁja CT , densidad del aire ni área efectiva para deducir un empuje real. La
+respuesta se calcula por 1 kN de F .
+   Esta aproximación corresponde a un empuje impuesto proporcional a U 2 , con forma espacial
+concentrada en el buje. No incorpora inducción, cargas distribuidas en las palas, arrastre de la torre,
+control de paso o realimentación del movimiento sobre el ﬂujo. Tampoco es una implementación
+de BEM. Esas capacidades requieren información aerodinámica especíﬁca adicional.
+       Con los operadores congelados de cada caso mecánico, la ecuación integrada es
+
+                                   Mq̈ + Dq̇ + Kq = −Pg ag (t − τ ) + F b gw (t),                  Pg = TTc Mfull Rg ,       b = TTc bfull .    (14)
+
+Aquí Rg contiene la traslación absoluta de base y τ es el instante de llegada del sismo en el reloj
+del viento. La fuerza sísmica se reconstruye al cambiar la masa; no se mantiene artiﬁcialmente
+constante.
+    Para viento se adopta como condición inicial el equilibrio lineal Kq w,0 = F b, con velocidad
+perturbada nula; la aceleración inicial satisface la ecuación con el primer valor real de gw . El
+equilibrio por gravedad y giro se recalcula para cada factor mecánico, pero los operadores no
+se actualizan por un empuje ﬁnito ni durante la historia. Por eso la proporcionalidad respecto
+de F describe este problema lineal congelado, no una familia completa de estados operativos
+aeroelásticos.
+   Las recuperaciones nodales conservan Tc , Ṫc y T̈c de una misma instantánea. Se calculan
+desplazamientos relativos y aceleraciones absolutas, añadiendo a estas últimas la aceleración de
+base correspondiente. Mantener esos términos de transporte no hace evolucionar el azimut.
+
+
+
+
+                                                                                      15
+10.4.                               Contenido frecuencial y comparación sísmica
+
+   La ﬁgura 13 compara formas espectrales normalizadas a integral unitaria: aceleración del suelo
+y ﬂuctuación de gw . Se usa Welch con ventanas de 20 s, ventana de Hann y solape del 50%. La nor-
+malización permite comparar distribución de frecuencia, no iguala fuerzas, energía o peligrosidad.
+La estimación de viento dispone de más segmentos que la del registro de Arleta.
+
+
+
+
+ PSD / integral de PSD [1/Hz]
+                                100
+
+
+
+
+                                10-2
+
+
+                                           Forma fluctuante del empuje
+                                           Aceleración del terreno
+                                10-4
+                                               10-1                                       100                                    101
+                                                                              Frecuencia [Hz]
+
+Figura 13: Distribución espectral normalizada de las entradas. Las líneas verticales indican fre-
+cuencias nominales de 3, 6+7 y 10+11; la proximidad espectral no sustituye las participaciones
+modales ni la proyección de cargas.
+
+    La tabla compara los tres registros con amplitud original, aplicados en X. Corresponden a
+dos terremotos, con dos estaciones distintas de Chi-Chi. Las duraciones completas son distintas:
+39.98, 147.996 y 89.995 s. El cociente desplazamiento/PGA es una normalización diagnóstica del
+problema lineal, no una respuesta normalizada a un espectro de diseño común.
+
+                                Registro                                 PGA [g]   qH,máx [m]   aabs        2
+                                                                                                  H,máx [m/s ]   qH,máx /PGA [m/g]
+                                Northridge, Arleta (1994)                 0.3081        0.2831          0.5792                 0.919
+                                Chi-Chi, CHY023-W (1999)                  0.0467        0.1869          0.2283                 4.004
+                                Chi-Chi, TCU052-N (1999)                  0.4190        1.9113          2.2327                 4.561
+
+No se puede atribuir la diferencia de respuesta únicamente a la PGA: cambian espectro, duración
+y estación. Estos casos tampoco cuantiﬁcan la amenaza de un sitio particular.
+
+
+
+
+                                                                                   16
+                                   2                                                                                  2.5
+
+
+
+
+                                                                                        de góndola [m/s2]
+                                                                                                                        2
+
+
+
+ de góndola [m]
+                                 1.5
+
+                                                                                                                      1.5
+                                   1
+                                                                                                                        1
+                H,max            0.5                                                                     H,max
+ q                                                                                      aabs                          0.5
+
+                                   0                                                                                    0
+                                                 994    999    999                                                                   994    999    999
+                                             ta 1 Y023 1 U052 1                                                                  ta 1 Y023 1 U052 1
+                                         Arle    CH     TC                                                                   Arle    CH     TC
+
+Figura 14: Máximos horizontales de góndola con cada registro completo aplicado en X, sin escalar.
+Se distinguen desplazamiento relativo y aceleración absoluta.
+
+
+
+
+ Desplazamiento horizontal [m]
+                                  2                                                                                   2.5
+
+
+
+
+                                                                                        Aceleración absoluta [m/s2]
+                                                                                                                       2
+                                 1.5
+                                                                                                                      1.5
+                                  1
+                                                                                                                       1
+                                 0.5
+                                                                                                                      0.5
+
+                                  0                                                                                    0
+                                         a 19
+                                             94               999             999                                              199
+                                                                                                                                  4            999           999
+                                 Arle
+                                     t                  Y023 1         U 052 1                                        Arle
+                                                                                                                          ta             Y023 1       U 052 1
+                                                  C   H             TC                                                                CH           TC
+                                                                              Sismo global X                                Sismo global Y
+
+
+Figura 15: Efecto de aplicar la misma componente sísmica en X o Y. X corresponde al plano
+vertical que contiene el eje del rotor; Y es transversal. Esta es una comparación de orientación del
+escenario, no una simulación bidireccional observada.
+
+
+
+
+                                                                                       17
+10.5.   Qué resultados temporales son comparables
+                   √
+  Se deﬁne qH (t) = qx2 + qy2 en la góndola 129, y análogamente aabs
+                                                                 H . Los máximos describen la
+mayor demanda durante la ventana. Como indicador complementario se usa
+                                           [   ∫ T                     ]1/2
+                                          1
+                                 qH,RMS =            (qx2 + qy2 ) dt          ,                 (15)
+                                          T     0
+
+y expresiones equivalentes para aceleración horizontal y momento ﬂector de base. El RMS mide
+magnitud cuadrática media; en viento incluye la componente media del empuje y no es la desviación
+de la ﬂuctuación alrededor de la media.
+   Las sensibilidades mecánicas comparan los primeros 39.98 s de Arleta y del viento, manteniendo
+para este último la normalización con las 15000 muestras del registro completo. Se estudiaron
+masa/inercia de palas, sus seis rigideces y velocidad prescrita. Se recalculó el estado heredado y el
+conjunto de operadores en cada caso.
+    El análisis inicial con h = 1% y 0,5% mostró dependencia importante del paso en numerosos
+máximos. Se añadieron h = 0,25% y 0,125%; la tabla siguiente usa 0,25% y contrasta con 0,5%,
+después de reﬁnar la Hessiana interna. También se comparan pasos temporales de 0.005 y 0.0025
+s. No se confunde un máximo bien convergido en tiempo con una derivada respecto del parámetro
+bien resuelta.
+
+Veriﬁcación adicional de la Hessiana interna
+
+    La rutina heredada aproxima primeras y segundas derivadas de una energía escalar con pasos
+internos de 2 × 10−6 máx(L, 1 m) en traslación y 2 × 10−6 rad en rotación. Se conservó el equilibrio
+convergido original y se sustituyó solamente la Hessiana interna almacenada en la tangente diná-
+mica, usando pasos internos multiplicados por 20; se contrastó con un factor 40. La energía, las
+cargas y sus proyecciones no se modiﬁcaron. No se cambió ninguna de las 175 fuentes congeladas:
+esta opción numérica vive en el adaptador nuevo. Se ejecutaron 54 casos adicionales para aislar
+este efecto. Además de los controles de perturbación y Newmark, se exige variación de la pendiente
+inferior al 2% entre factores internos 20 y 40 y variación nominal inferior al 1%. La envolvente
+empírica de la pendiente se construye con las diferencias de cada extremo perturbado entre ambas
+Hessianas, no solo con repetición del nominal. En 22 de 90 indicadores las pendientes son estables
+con los pasos examinados. Se aceptan 1 de 90 indicadores al añadir la envolvente conservadora.
+Esta envolvente suma diferencias absolutas en los extremos sin cancelar el sesgo común entre dis-
+cretizaciones; no es una estimación probabilística ni una cota demostrada. Por eso una pendiente
+estable respecto de los pasos puede permanecer sin aceptación completa. No se utiliza este conjunto
+para proclamar un orden global de parámetros. La tabla de máximos entre terremotos y la fran-
+ja de llegadas conservan la conﬁguración heredada, identiﬁcada en sus archivos; esta veriﬁcación
+adicional distingue la resolución de las derivadas sin sustituir retrospectivamente esas corridas ni
+el estudio Morris.
+    Se acepta cada sensibilidad local únicamente si el cambio relativo al duplicar h y al duplicar
+∆t es como máximo del 2%, los controles nominales a 0.0025 y 0.00125 s diﬁeren como máximo
+del 1% en máximo y norma temporal, y la señal supera diez veces la envolvente empírica entre
+ambas Hessianas. Esa envolvente es empírica en el nominal, no una cota rigurosa del dominio. Se
+aceptan 1 de 90 indicadores locales: 1 de máximos y 0 de RMS. Los restantes valores se conservan
+como diferencias ﬁnitas exploratorias.
+
+
+
+
+                                                 18
+                                Entrada   Factor           SqH ,RMS                       Aceptado          SaH ,RMS    Aceptado
+                                Sismo X   Masa/inercia      -0.4772                                  no       -0.6231        no
+                                Sismo X   Rigidez          +0.0208                                   no      +0.2570         no
+                                Sismo X   Velocidad        +0.1961                                   no      +0.1668         no
+                                Viento    Masa/inercia      -0.0128                                  no       -0.4743        no
+                                Viento    Rigidez           -0.0034                                  no      +0.0195         no
+                                Viento    Velocidad         -0.0557                                  no      +0.1082         no
+
+
+Indicadores con aceptación completa: viento, Velocidad, respuesta punta92_qZ, S = −0,5004. No
+se deduce de ello un orden de parámetros para las demás respuestas.
+   Un cambio en el instante que controla el máximo puede impedir que una secante amplia repre-
+sente la derivada local. Se exportaron los instantes de máximos a ambos lados de cada perturbación,
+junto con todos los pasos. Sin embargo, la falta de estabilización aparece también en RMS: no pue-
+de explicarse solamente por cambios de pico. Con la tangente numérica heredada no se acepta
+una clasiﬁcación mecánica temporal. La tabla y los símbolos de aceptación posteriores correspon-
+den a la veriﬁcación adicional descrita a continuación. Esto no invalida los máximos nominales
+convergidos en tiempo ni modiﬁca retrospectivamente la aceptación de frecuencias Morris.
+                                  Sismo alineado                                                           Viento por unidad de empuje
+                       2                                                                    1
+
+
+
+
+ Secante del RMS [-]                                                Secante del RMS [-]
+                       1
+                                                                                          0.5
+                       0
+
+                       -1                                                                   0
+
+                       -2
+                                                                                          -0.5
+                       -3
+                            1    0.5         0.25           0.125                                1               0.5         0.25        0.125
+                                Perturbación h [%]                                                             Perturbación h [%]
+                                                     Masa/inercia                   Rigidez               Velocidad
+
+
+Figura 16: Dependencia de las secantes del RMS de desplazamiento de góndola respecto de la
+perturbación mecánica. La ausencia de estabilización impide interpretar esas pendientes como
+derivadas locales resueltas.
+
+
+
+
+                                                                    19
+                                Desplazamiento RMS horizontal                                         Aceleración RMS horizontal
+                         0.2                                                                   0.4
+
+                                                                                               0.2
+                           0
+
+
+
+
+    Sensibilidad S [-]                                                    Sensibilidad S [-]
+              i                                                                     i            0
+
+                         -0.2                                                                  -0.2
+
+                                                                                               -0.4
+                         -0.4
+                                                                                               -0.6
+
+       -0.6                                                               -0.8
+           cia                               ez              cidad            cia                                 ez            cidad
+      /iner                             Rigid            Velo            /iner                               Rigid          Velo
+  Masa                                                               Masa
+                                                          Sismo X        Viento por unidad de empuje
+
+
+Figura 17: Sensibilidades RMS de la góndola según la entrada. Con la Hessiana reﬁnada, los símbo-
+los llenos superan todos los ﬁltros locales; los vacíos no se utilizan para establecer una clasiﬁcación
+deﬁnitiva. La respuesta de viento es por unidad de empuje medio.
+
+
+10.6.                    Empuje libre, superposición y momento de llegada
+
+   Para los mismos operadores lineales se obtiene exactamente
+
+                                                                                            F
+                                             q(t; F , τ ) = q g (t − τ ) +                     q      (t).                         (16)
+                                                                                           1 kN w,1kN
+La superposición se aplica a las historias, no a sus máximos separados. Se veriﬁcó además mediante
+una integración directa con la interfaz existente de sismo y fuerza externa completa durante 2 s.
+Esta identidad del problema implementado no aﬁrma que la superposición sea exacta en un modelo
+aeroelástico no lineal.
+   Se deﬁne una escala de comparación
+                                                                   g
+                                                                  qH,máx
+                                                  Fref = (1 kN)    w,1kN
+                                                                                        = 554,68 kN,                               (17)
+                                                                  qH,máx
+
+usando los primeros 39.98 s y llegada del sismo en cero. Esta escala iguala los máximos separados de
+desplazamiento de góndola en esa ventana. No estima el empuje real, ni es un umbral de seguridad
+o de capacidad.
+    Se explora F /Fref entre 0 y 2 y 29 llegadas del sismo: τ = 0, 20, . . . , 540, 559,98 s. El último
+instante se ajusta al ﬁnal de las muestras de viento, evitando extrapolación. El viento conserva
+su historia previa y cada máximo combinado usa la ventana [τ, τ + 39,98] s. No se inventa la cola
+sísmica después del registro ni se aﬁrma que ese máximo sea el de los 600 s completos del escenario
+combinado. La franja de la ﬁgura es el mínimo y máximo de la rejilla temporal, no un intervalo de
+conﬁanza.
+    Para F = Fref , el cociente entre máximo combinado de desplazamiento y máximo sísmico varía
+entre 1.545 y 2.231 en las llegadas examinadas. Esa dependencia impide concluir que una de las
+entradas domina sin especiﬁcar empuje, dirección y ventana. También se exportan sensibilidades
+respecto de la amplitud sísmica y del empuje medio. Para viento solo, toda respuesta homogénea
+no nula escala linealmente con F , por lo que su sensibilidad normalizada es uno. En la combinación
+cambia la contribución relativa de cada entrada; en F = 0 la sensibilidad normalizada de ese pará-
+metro se deja indeﬁnida. Esto caracteriza dependencia respecto de amplitudes, no incertidumbre
+probabilística de los datos.
+
+
+                                                                    20
+                                           Desplazamiento de góndola                                                                        Aceleración de góndola
+                                4                                                                                             1.4
+
+
+
+
+ Máximo / máximo sísmico [-]                                                                    Máximo / máximo sísmico [-]
+                               3.5                                                                                            1.3
+
+                                3                                                                                             1.2
+
+                               2.5                                                                                            1.1
+
+                                2                                                                                              1
+
+                               1.5                                                                                            0.9
+
+                                1                                                                                             0.8
+                                     0       0.5       1                1.5                 2                                       0       0.5            1            1.5   2
+                                              Empuje medio / F         [-]                                                                    Empuje medio / F         [-]
+                                                                 ref                                                                                             ref
+                                                                  Mínimo-máximo de 29 llegadas                                          Llegada en t = 0
+
+
+Figura 18: Respuesta combinada parametrizada y efecto de la llegada sísmica. La línea usa τ = 0;
+la franja cubre las 29 llegadas. El empuje continúa como parámetro libre.
+
+
+
+
+                                         Desplazamiento RMS de góndola                                                                      Momento RMS en base
+                                2                                                                                              2
+
+                                1
+                                                                                                                               1
+
+
+
+
+ Sensibilidad S [-]                                                                             Sensibilidad S [-]
+               i                                                                                             i
+                                0
+                                                                                                                               0
+                               -1
+                                                                                                                              -1
+                               -2
+
+                               -3                                                                                             -2
+                                    0       0.5        1                1.5                 2                                      0       0.5             1            1.5   2
+                                              Empuje medio / F         [-]                                                                    Empuje medio / F         [-]
+                                                             ref                                                                                               ref
+                                                                             Masa/inercia                                 Rigidez       Velocidad
+
+
+Figura 19: Sensibilidades RMS de la respuesta combinada con llegada en cero. Los símbolos llenos
+indican compatibilidad de los pasos de diferenciación y de tiempo; ese control parcial no equivale
+a la aceptación completa de una sensibilidad Morris o local.
+
+
+
+
+                                                                                            21
+                                           Máximo de desplazamiento                                                                   Máximo de aceleración
+                                 1                                                                                   1
+
+
+
+
+ Sensibilidad de amplitud [-]                                                        Sensibilidad de amplitud [-]
+                                0.8                                                                                 0.8
+
+                                0.6                                                                                 0.6
+
+                                0.4                                                                                 0.4
+
+                                0.2                                                                                 0.2
+
+                                 0                                                                                   0
+                                      0     0.5       1            1.5           2                                        0          0.5        1            1.5   2
+                                             Empuje medio / F     [-]                                                                  Empuje medio / F     [-]
+                                                            ref                                                                                       ref
+                                                                        Amplitud sísmica                                      Empuje medio
+
+
+Figura 20: Sensibilidad de los máximos de góndola respecto de un multiplicador de amplitud sísmica
+y del empuje medio. Se mantienen los mismos operadores, por lo que estos indicadores de amplitud
+no requieren diferenciar una rigidez reconstruida. No representan porcentajes probabilísticos de
+contribución.
+
+10.7.                                 Veriﬁcación y conclusiones que se pueden sostener
+
+    Se completaron 114 evaluaciones estructurales almacenadas; el residuo dinámico relativo má-
+ximo fue 8,3e − 10. Las 175 fuentes congeladas de la campaña Morris conservan sus huellas. La
+recuperación por canales se contrastó con la rutina existente, con diferencias relativas menores
+que 5 × 10−11 . Para Arleta, los controles nominales de góndola entre 0.0025 y 0.00125 s muestran
+diferencias de máximo menores que 0.031% y diferencias temporales relativas menores que 0.315%.
+Estos controles no certiﬁcan todas las aceleraciones de puntas.
+    En una comprobación numérica independiente se varió únicamente el paso de la Hessiana de
+energía en una copia de diagnóstico, mediante las interfaces existentes de fuerza y tangente. La
+energía física y las 175 fuentes originales se conservaron. Se completaron 6 pruebas de diagnóstico
+y 1 no convergieron; los fallos se conservan en la tabla correspondiente. No se sustituyeron con este
+diagnóstico los operadores de los 114 casos comparativos. Para masa/inercia y máximo de góndola,
+las secantes con paso interno multiplicado por 20 fueron -0.5149 y -0.5155, al usar perturbaciones de
+0.5 y 0.25%. Para masa/inercia y RMS de góndola, las secantes con paso interno multiplicado por
+20 fueron -0.4793 y -0.4812, al usar perturbaciones de 0.5 y 0.25%. La dependencia del resultado
+con esta decisión numérica exige veriﬁcar la tangente antes de aceptar una clasiﬁcación mecánica
+temporal; el residuo de equilibrio pequeño no basta por sí solo.
+   El cierre alcanzado es una comparación con datos medidos, amplitudes trazables, orientación
+explícita y un empuje medio libre. Se distingue el efecto de los registros del efecto de los parámetros
+mecánicos; se conservan los indicadores que no superan los ﬁltros. La clasiﬁcación modal de Morris
+no se traslada automáticamente a los máximos o RMS de una excitación particular.
+   Para convertir esta comparación en una predicción física de servicio hacen falta el empuje medio
+o una aerodinámica especíﬁca de la turbina, la validación de la transferencia espacial del viento y,
+para historias de operación, evolución de los operadores con el azimut. Permanecen pendientes la
+convergencia espacial en giro y la calibración experimental. La duración de los registros reales no
+convierte la instantánea congelada en una simulación de operación periódica.
+
+
+
+
+                                                                                  22
+11.    Estabilidad, alcance y decisiones para continuar
+    Las partes reales de los dieciséis representantes modales retornados por evaluación fueron ne-
+gativas; la mayor observada fue −0,01238 s−1 . Bajo los operadores congelados, esto es compatible
+con decaimiento de esas perturbaciones modales seleccionadas. El espectro es parcial y no se cal-
+cula estabilidad periódica de Floquet: el dato no demuestra estabilidad de toda la turbina ni de
+todas las velocidades posibles. La sensibilidad de un centroide de crecimiento tampoco sustituye
+el examen de cada raíz.
+    La veriﬁcación espacial previa se realizó con rotor detenido, y la convergencia temporal co-
+rresponde al benchmark sísmico local anterior. No veriﬁcan automáticamente las sensibilidades
+globales en rotación. Esta etapa utiliza propiedades heredadas sin calibración experimental y tres
+factores elegidos; no estudia incertidumbre probabilística ni sensibilidad sísmica global.
+   Las siguientes decisiones cientíﬁcas se pueden discutir con el asesor:
+
+  1. Obtener fuentes para rangos físicos y propiedades de palas, conexiones y apoyo. Esto permi-
+     tiría pasar de escenarios a incertidumbre justiﬁcada.
+
+  2. Priorizar la convergencia espacial de las respuestas y sensibilidades con rotor en operación,
+     conservando restricciones y seguimiento modal.
+
+  3. Ampliar la identiﬁcación masa–rigidez con otras respuestas y formas, partiendo de los con-
+     trastes ya comprobados en 10+11.
+
+  4. Deﬁnir si el alcance del artículo será sensibilidad a azimut ﬁjo o si se requiere un estudio
+     periódico adicional para aﬁrmaciones de estabilidad.
+
+La comprobación de la rejilla y los contrastes ﬁnitos anteriores ya se ejecutaron. Los restantes
+puntos son propuestas cientíﬁcas para acordar; no se han ejecutado campañas de reﬁnamiento en
+operación ni estabilidad periódica.
+
+
+12.    Guía breve para la reunión
+Apertura. Se auditó y conservó el modelo existente, se implementó sensibilidad total con nue-
+vo equilibrio y se pasó de derivadas locales a un cribado Morris sobre escenarios aprobados. La
+implementación conserva trazabilidad y rechaza resultados sin resolución suﬁciente.
+
+Resultado principal. La inﬂuencia depende del grupo: masa/inercia domina cuatro respuestas
+y velocidad domina 6+7 entre los tres factores. La frecuencia de 3 disminuye al aumentar giro; las
+de tres grupos superiores aumentan. Se usa la ﬁgura 4 para mostrar simultáneamente dirección y
+magnitud.
+
+Mecanismo respaldado. La participación nominal predominante de palas en 10 y 11 apoya
+la sensibilidad a sus propiedades. Las ﬁguras 6 y 10 muestran la compensación parcial; los con-
+trastes de la ﬁgura 11 resuelven no aditividad masa–rigidez en 10+11. La separación exacta de
+contribuciones del giro sigue abierta.
+
+Conﬁanza y límite. Catorce inﬂuencias y dos dispersiones superan los ﬁltros. Los estimadores
+de inﬂuencia cambian menos de 1% al duplicar veinte a cuarenta trayectorias. Las ﬁguras 7 y 9
+muestran por qué otros indicadores permanecen no resueltos. Esta evidencia es numérica y de
+azimut ﬁjo.
+
+
+
+                                                23
+Decisión a pedir. Acordar cuál será la siguiente contribución: rangos físicos, convergencia es-
+pacial en operación, identiﬁcación con múltiples respuestas o extensión periódica. La elección debe
+estar ligada a la aﬁrmación cientíﬁca que se quiera sostener en el artículo y la tesis.
+
+
+A.    Valores de los catorce indicadores aceptados
+
+                        Factor         Grupo         µi        µ∗i        σi
+                        Masa/inercia   3        -0.11221   0.11221   0.01052
+                        Masa/inercia   4+5      -0.11335   0.11335   0.00670
+                        Masa/inercia   6+7      -0.06161   0.06161   0.00398
+                        Masa/inercia   8+9      -0.08546   0.08546   0.00495
+                        Masa/inercia   10+11    -0.07653   0.07653   0.00445
+                        Rigidez        3       +0.07695    0.07695   0.00652
+                        Rigidez        4+5     +0.07886    0.07886   0.00368
+                        Rigidez        6+7     +0.04866    0.04866   0.00235
+                        Rigidez        8+9     +0.07296    0.07296   0.00291
+                        Rigidez        10+11   +0.07172    0.07172   0.00283
+                        Velocidad      3        -0.05952   0.05952   0.00726
+                        Velocidad      6+7     +0.06923    0.06923   0.00202
+                        Velocidad      8+9     +0.02295    0.02295   0.00155
+                        Velocidad      10+11   +0.03678    0.03678   0.00173
+
+
+La aceptación de µ∗i en esta tabla no implica aceptación de σi en todas sus ﬁlas. Los controles
+de dispersión se evalúan por separado. Los números se redondean para lectura; las tablas CSV y
+MAT conservan mayor precisión.
+    Las ﬁguras históricas se exportaron desde Tecplot y se incluyen como PDF externos. Los da-
+tos, macros y paquetes nativos permanecen en su biblioteca. Las ﬁguras nuevas y las adaptaciones
+para proyección se exportaron desde MATLAB con autorización del autor ante la licencia Tecplot
+vencida. Las fuentes originales se conservan en morris_estimators.csv, morris_sweeps.csv, mo-
+rris_vertices.csv, report_data.json y modal_energy_evidence.csv. La comprobación adicional usa
+grid_responses.csv y sus tablas de contrastes. No se reemplazaron casos fallidos; los nueve casos
+nuevos se registran en una campaña separada.
+
+
+Referencias
+[1] M. D. Morris. Factorial Sampling Plans for Preliminary Computational Experiments. Techno-
+    metrics, 33(2), 161–174, 1991. doi:10.1080/00401706.1991.10484804.
+
+[2] F. Campolongo, J. Cariboni y A. Saltelli. An eﬀective screening design for sensitivity
+    analysis of large models. Environmental Modelling & Software, 22(10), 1509–1518, 2007.
+    doi:10.1016/j.envsoft.2006.10.004.
+
+[3] W. Wang, H. Diao, H. Ma, X. Gao, B. Ji y Z. Zhang. Research on the Dynamic Response of
+    Hybrid Tower Wind Turbines Under Combined Earthquake–Wind Multi-Hazard Conditions.
+    Journal of Earthquake Engineering, 2026. doi:10.1080/13632469.2026.2671807.
+
+[4] H. Diao. Data of Research on the Dynamic Response of Hybrid Tower Wind Turbines under
+    Combined Earthquake–Wind Multi-Hazard Conditions. Zenodo, versión consultada 19347779,
+    2026. doi:10.5281/zenodo.19347779.
+
+
+
+                                                24
+[5] J. Meng, K. Dai, Z. Zhao, Z. Mao, A. Camara, S. Zhang y Z. Mei. Study on the aerodynamic
+    damping for the seismic analysis of wind turbines in operation. Renewable Energy, 159, 1224–
+    1242, 2020. doi:10.1016/j.renene.2020.05.181.
+
+[6] D. F. Turello, M. S. Maza, S. Preidikman, F. G. Flores y F. Pinto. Interacción suelo-estructura
+    no-lineal en el modelado de torres eólicas de eje horizontal ante carga sísmica. Mecáni-
+    ca Computacional, XL, 639–650, 2023. https://cimec.org.ar/ojs/index.php/mc/article/
+    view/6595.
+
+[7] K. S. Hansen, N. Vasiljevic y S. A. Sørensen. Turbulence and turbine measurements from the
+    NM92 turbine. DTU Data, 2021. doi:10.11583/DTU.16743739. Datos CC BY 4.0.
+
+[8] OpenSees. Repositorio oﬁcial: registros PEER procesados en EXAMPLES/ExampleScripts y
+    Workshops/SimWorkshop/SmallMP/GM. https://github.com/OpenSees/OpenSees. La revi-
+    sión exacta, rutas y SHA-256 se conservan en el catálogo de entradas del proyecto.
+
+
+
+
+                                                25
+

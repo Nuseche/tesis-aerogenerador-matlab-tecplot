@@ -1,0 +1,14 @@
+[
+  {
+    "language": "ES",
+    "exit_code": 0,
+    "extracted_package_recompilation_equivalent": true,
+    "canonical_pdf_sha256": "6db6c72c2a2ee69dfcaf2ceeca96559cf425bd5095939548f749477a6ae7fe66"
+  },
+  {
+    "language": "EN",
+    "exit_code": 0,
+    "extracted_package_recompilation_equivalent": true,
+    "canonical_pdf_sha256": "fb448cbae47b4538bb8101667677721e27a37f23dfb41a69ed41771a06c4470d"
+  }
+]

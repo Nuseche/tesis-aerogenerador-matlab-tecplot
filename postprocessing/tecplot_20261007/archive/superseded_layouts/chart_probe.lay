@@ -1,0 +1,259 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"../data/chart_probe.plt"'
+$!SetStyleBase Factory
+$!BasicColor 
+  Custom1
+    {
+    R = 0
+    G = 114
+    B = 178
+    }
+  Custom2
+    {
+    R = 213
+    G = 94
+    B = 0
+    }
+  Custom3
+    {
+    R = 0
+    G = 158
+    B = 115
+    }
+  Custom4
+    {
+    R = 204
+    G = 121
+    B = 167
+    }
+  Custom5
+    {
+    R = 86
+    G = 180
+    B = 233
+    }
+  Custom6
+    {
+    R = 160
+    G = 110
+    B = 0
+    }
+  Custom7
+    {
+    R = 75
+    G = 75
+    B = 75
+    }
+  Custom8
+    {
+    R = 145
+    G = 145
+    B = 145
+    }
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    }
+$!Page 
+  Name = ''
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+$!RemoveVar |LFDSFN1|
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 7
+  Height = 4.4
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    Show = Yes
+    TextShape
+      {
+      IsBold = No
+      SizeUnits = Point
+      Height = 9
+      }
+    XYPos
+      {
+      X = 94
+      Y = 87
+      }
+    }
+$!LineMap  [1]
+  Name = 'Data'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 2
+    ShowInLegend = Always
+    }
+  Lines
+    {
+    Color = Custom1
+    LineThickness = 0.35
+    }
+  Symbols
+    {
+    Color = Custom1
+    FillMode = UseSpecificColor
+    FillColor = White
+    Size = 1.1
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+  ViewportPosition
+    {
+    Y1 = 17
+    X2 = 94
+    }
+$!XYLineAxis 
+  XDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = 0
+    RangeMax = 3
+    GRSpacing = 0.5
+    TickLabel
+      {
+      TextShape
+        {
+        SizeUnits = Point
+        Height = 10
+        }
+      }
+    Gridlines
+      {
+      Show = Yes
+      Color = Custom8
+      LineThickness = 0.08
+      }
+    Title
+      {
+      Text = 'x [m]'
+      TextShape
+        {
+        IsBold = No
+        SizeUnits = Point
+        Height = 11
+        }
+      }
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = 0
+    RangeMax = 5
+    GRSpacing = 0.5
+    TickLabel
+      {
+      TextShape
+        {
+        SizeUnits = Point
+        Height = 10
+        }
+      }
+    Gridlines
+      {
+      Show = Yes
+      Color = Custom8
+      LineThickness = 0.08
+      }
+    Title
+      {
+      Text = 'y [m]'
+      TextShape
+        {
+        IsBold = No
+        SizeUnits = Point
+        Height = 11
+        }
+      }
+    }
+$!LinePlotLayers 
+  ShowSymbols = Yes
+$!AttachText 
+  AnchorPos
+    {
+    X = 50
+    Y = 96
+    }
+  TextShape
+    {
+    Height = 12
+    }
+  Anchor = Center
+  Text = 'Stored data export test'
+$!AttachText 
+  AnchorPos
+    {
+    X = 40
+    Y = 59.59999999999999
+    }
+  Color = Custom7
+  Anchor = Center
+  Text = 'Tecplot'
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config

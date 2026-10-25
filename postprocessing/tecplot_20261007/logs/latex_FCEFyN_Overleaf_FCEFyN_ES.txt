@@ -1,0 +1,20 @@
+note: Running TeX ...
+note: Running BibTeX on FCEFyN_ES.aux ...
+note: Rerunning TeX because bibtex was run ...
+note: Running xdvipdfmx ...
+note: Writing `FCEFyN_ES.out` (8.439453125 KiB)
+note: Writing `FCEFyN_ES.pdf` (1.3173789978027344 MiB)
+note: Writing `FCEFyN_ES.blg` (225 B)
+note: Writing `FCEFyN_ES.bbl` (2.9248046875 KiB)
+note: Writing `FCEFyN_ES.log` (26.6318359375 KiB)
+note: Writing `FCEFyN_ES.aux` (18.38671875 KiB)
+
+warning: FCEFyN_ES.tex:148: Underfull \hbox (badness 4084) in paragraph at lines 145--148
+warning: FCEFyN_ES.tex:148: Underfull \hbox (badness 2980) in paragraph at lines 145--148
+warning: FCEFyN_ES.tex:206: Underfull \hbox (badness 2837) in paragraph at lines 203--206
+warning: FCEFyN_ES.tex:400: Underfull \hbox (badness 3758) in paragraph at lines 399--400
+warning: FCEFyN_ES.tex:148: Underfull \hbox (badness 4084) in paragraph at lines 145--148
+warning: FCEFyN_ES.tex:148: Underfull \hbox (badness 2980) in paragraph at lines 145--148
+warning: FCEFyN_ES.tex:206: Underfull \hbox (badness 2837) in paragraph at lines 203--206
+warning: FCEFyN_ES.tex:400: Underfull \hbox (badness 3758) in paragraph at lines 399--400
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

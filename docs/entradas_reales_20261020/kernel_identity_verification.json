@@ -1,0 +1,31 @@
+{
+  "states": 3,
+  "checks": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "columnNames": [
+    "relativeForceScale1",
+    "relativeHessianScale1",
+    "energyDifferenceScale1",
+    "energyDifferenceScale20"
+  ],
+  "physicalEnergyIdentical": true,
+  "productionSourcesChanged": false
+}

@@ -1,0 +1,889 @@
+[
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/SECCION_MORRIS_REVISION.tex",
+    "labels": [
+      "fig:proceso"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/SECCION_MORRIS_REVISION.tex",
+    "labels": [
+      "fig:trayectoria"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/SECCION_MORRIS_REVISION.tex",
+    "labels": [
+      "fig:sentidos"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/SECCION_MORRIS_REVISION.tex",
+    "labels": [
+      "fig:participaciones"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/SECCION_MORRIS_REVISION.tex",
+    "labels": [
+      "fig:dominio"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/SECCION_MORRIS_REVISION.tex",
+    "labels": [
+      "fig:ruido"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/SECCION_MORRIS_REVISION.tex",
+    "labels": [
+      "fig:convergencia"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/sensibilidad_morris_20261006/SECCION_MORRIS_REVISION.tex",
+    "labels": [
+      "fig:dispersion"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/formulacion_matematica_20260919/FORMULACION_MATEMATICA.tex",
+    "labels": [
+      "fig:modelo"
+    ],
+    "graphics": [
+      "modelo.pdf"
+    ],
+    "original_engine": "external",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/manuscrito_integrado_20260919/MANUSCRITO_INTEGRADO.tex",
+    "labels": [
+      "#4"
+    ],
+    "graphics": [
+      "figures/#1.pdf"
+    ],
+    "original_engine": "external",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/formulacion_revista_20260919/template/FCEFyN-paper.tex",
+    "labels": [
+      "<etiqueta>"
+    ],
+    "graphics": [
+      "<file>"
+    ],
+    "original_engine": "external",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/formulacion_revista_20260919/template/FCEFyN-paper.tex",
+    "labels": [
+      "fig-1"
+    ],
+    "graphics": [
+      "figura1"
+    ],
+    "original_engine": "external",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-01"
+    ],
+    "graphics": [
+      "01_geometria_modelo.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-02"
+    ],
+    "graphics": [
+      "02_ejes_locales.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-03"
+    ],
+    "graphics": [
+      "03_topologia_malla.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-04"
+    ],
+    "graphics": [
+      "04_espectro_elemento_primitivo.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-05"
+    ],
+    "graphics": [
+      "05_espectro_global_modos_rigidos.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-10"
+    ],
+    "graphics": [
+      "10_geometria_restricciones_mpc.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-11"
+    ],
+    "graphics": [
+      "11_reduccion_grados_libertad.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-12"
+    ],
+    "graphics": [
+      "12_descomposicion_masa.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-13"
+    ],
+    "graphics": [
+      "13_comparacion_masa_consistente_hrz.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-07"
+    ],
+    "graphics": [
+      "07_convergencia_malla_detallada.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-08"
+    ],
+    "graphics": [
+      "08_frecuencias_subsistemas_aislados.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-09"
+    ],
+    "graphics": [
+      "09_equivalencia_modal_palas.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-14"
+    ],
+    "graphics": [
+      "14_equilibrio_por_velocidad.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-15"
+    ],
+    "graphics": [
+      "15_fuerzas_axiales_equilibrio.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-16"
+    ],
+    "graphics": [
+      "16_operador_giroscopico.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-17"
+    ],
+    "graphics": [
+      "17_amortiguamiento_rayleigh.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-21"
+    ],
+    "graphics": [
+      "21_calidad_qep.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-19"
+    ],
+    "graphics": [
+      "19_diagrama_campbell.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-34"
+    ],
+    "graphics": [
+      "34_forma_modal_01.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-35"
+    ],
+    "graphics": [
+      "35_forma_modal_02.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-36"
+    ],
+    "graphics": [
+      "36_forma_modal_03.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-37"
+    ],
+    "graphics": [
+      "37_forma_modal_04.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-38"
+    ],
+    "graphics": [
+      "38_forma_modal_05.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-39"
+    ],
+    "graphics": [
+      "39_forma_modal_06.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-23"
+    ],
+    "graphics": [
+      "23_movimiento_sismico_entrada.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-26"
+    ],
+    "graphics": [
+      "26_convergencia_temporal_newmark.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-24"
+    ],
+    "graphics": [
+      "24_respuesta_sismica.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-25"
+    ],
+    "graphics": [
+      "25_extremos_respuesta_sismica.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-27"
+    ],
+    "graphics": [
+      "27_reacciones_base.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Desktop/Tesis_codigos/docs/resultados_integrales/latex/INFORME_RESULTADOS_COMPLETOS_MECOM.tex",
+    "labels": [
+      "fig:resultado-origen-28"
+    ],
+    "graphics": [
+      "28_envolventes_fuerzas_elementales.png"
+    ],
+    "original_engine": "external",
+    "status": "historical_not_replaced"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:turbina"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:configs"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:cambio-componentes"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:frames"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:rotaciones-elementales"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:rotacion-bases"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:derivada-director"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:rotacion-deformacion"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:sistemas-lateral"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:cubo-nominal"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:marcos"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:palas-paso"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:arbol"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:cadena-posiciones"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:tresniveles"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:particula-seccion"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:shear"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:giro-perturbacion"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:suma-velocidades"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:centripeta"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:gravedad-giratoria"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:operacion"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:centros"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:masa-seccional"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:rigido-centro"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:continuo-malla"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:coordenadas-nodo"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:interpolacion-lineal"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:elemento"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:cubo-brazos"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:vinculo-raiz"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:conexion-elastica"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:guia"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:acoplamiento-giroscopico"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/tesis_autocontenida.tex",
+    "labels": [
+      "fig:carga-seccion"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/04_elementos.tex",
+    "labels": [
+      "fig:continuo-malla"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/04_elementos.tex",
+    "labels": [
+      "fig:cubo-brazos"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/02_cinematica.tex",
+    "labels": [
+      "fig:configs"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/02_cinematica.tex",
+    "labels": [
+      "fig:frames"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/02_cinematica.tex",
+    "labels": [
+      "fig:rotacion-deformacion"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/02_cinematica.tex",
+    "labels": [
+      "fig:arbol"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/02_cinematica.tex",
+    "labels": [
+      "fig:cadena-posiciones"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/02_cinematica.tex",
+    "labels": [
+      "fig:tresniveles"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/02_cinematica.tex",
+    "labels": [
+      "fig:shear"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/02_cinematica.tex",
+    "labels": [
+      "fig:centripeta"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/02_cinematica.tex",
+    "labels": [
+      "fig:operacion"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/03_propiedades.tex",
+    "labels": [
+      "fig:centros"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/05_operacion.tex",
+    "labels": [
+      "fig:guia"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  },
+  {
+    "document": "/Users/nuseche/Documents/ChatGPT/Tesis/output/tesis_cinematica_20260929/capitulos/01_problema.tex",
+    "labels": [
+      "fig:turbina"
+    ],
+    "graphics": [],
+    "original_engine": "TikZ/PGFPlots",
+    "status": "current_target"
+  }
+]

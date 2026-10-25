@@ -1,0 +1,59 @@
+{
+  "page_renders": [
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_001.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_002.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_003.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_004.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_005.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_006.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_007.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_008.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_009.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_010.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_011.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_012.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_013.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_014.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_015.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_016.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_ES/page_017.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_001.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_002.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_003.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_004.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_005.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_006.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_007.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_008.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_009.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_010.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_011.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_012.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_013.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_014.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_015.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_016.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/formulacion_revista_20260919_FCEFyN_EN/page_017.png"
+  ],
+  "sheets": [
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/paper_review_01.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/paper_review_02.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/paper_review_03.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/paper_review_04.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/paper_review_05.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/paper_review_06.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/paper_review_07.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/paper_review_08.png",
+    "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/documents/paper_review_09.png"
+  ],
+  "pdf_hashes": {
+    "/Users/nuseche/Desktop/Tesis_codigos/docs/formulacion_revista_20260919/FCEFyN_ES.pdf": "6db6c72c2a2ee69dfcaf2ceeca96559cf425bd5095939548f749477a6ae7fe66",
+    "/Users/nuseche/Desktop/Tesis_codigos/docs/formulacion_revista_20260919/FCEFyN_EN.pdf": "fb448cbae47b4538bb8101667677721e27a37f23dfb41a69ed41771a06c4470d"
+  },
+  "status": "visually_inspected",
+  "inspection_notes": [
+    "Inspected all 34 pages of the two final 17-page article PDFs in nine contact sheets, plus an enlarged view of the mass-inertia and beam-orientation page.",
+    "All eleven diagrams retain visible labels and padding, captions outside artwork, and readable section and equation references. No clipped artwork, unresolved references, or overfull boxes.",
+    "Native paper mass and root-compatibility variants inspected separately; labels follow the article notation and exact vector closure."
+  ]
+}

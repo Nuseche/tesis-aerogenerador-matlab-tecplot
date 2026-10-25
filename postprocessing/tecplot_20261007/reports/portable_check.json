@@ -1,0 +1,16 @@
+{
+  "figure": "concept_particula-seccion",
+  "input_bundle": "/Users/nuseche/Desktop/Tesis_codigos/postprocessing/tecplot_20261007/qa/portable_bundle",
+  "official_macro_export_success": true,
+  "no_MAT_or_solver_sources_in_bundle": true,
+  "retargeted_paths": true,
+  "macro_identical_except_paths": true,
+  "native_DAT_bytes_equal": true,
+  "native_PNG_shape_equal": true,
+  "raster_changed_pixels": 12,
+  "raster_changed_fraction": 1.1169024571854057e-06,
+  "raster_mean_absolute_delta_8bit": 4.086001489203276e-05,
+  "raster_equivalence_tolerance": "Less than 0.001% differing antialias pixels; mean absolute 8-bit delta below 0.001. Numerical data and macro settings must be exactly identical except for file paths.",
+  "native_PDF_and_LPK_created": true,
+  "new_solver_evaluations": 0
+}

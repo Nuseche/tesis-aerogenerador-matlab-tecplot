@@ -1,0 +1,9 @@
+TITLE = "Aceleracion con base y proyeccion"
+VARIABLES = "x" "y"
+DATASETAUXDATA Representation = "result"
+ZONE T="Aceleracion con base y proyeccion", I=5, DATAPACKING=POINT
+12 28.651073962130901
+24 28.084377950912099
+48 13.0040483014812
+96 6.7210452291425904
+192 2.48716675442614

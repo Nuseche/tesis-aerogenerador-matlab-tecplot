@@ -1,0 +1,36 @@
+# Machine-specific environments, credentials, caches and temporary files
+.DS_Store
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.lic
+*.key
+*.pem
+*.asv
+*.m~
+*.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+/tmp/
+# Complete persisted runs are distributed with the migration release.
+/runs/
+/migration_assets/
+/.migration-cache/
+/tests/latest_results.mat
+# Derived package duplicates and visual-review caches
+/output/
+**/qa/
+**/qa_*/
+postprocessing/tecplot_20261007/packages/
