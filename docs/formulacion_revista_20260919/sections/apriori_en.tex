@@ -1,0 +1,80 @@
+\section{A priori estimates and scope of the approximation}
+\label{sec:apriori}
+The formulation must specify both the equations to be solved and the assumptions under which their solutions depend continuously on the data. A response estimate for the semidiscrete system is distinguished here from a spatial approximation estimate for its elastic subproblem. Neither presupposes a numerical result or identifies a growth bound with asymptotic stability.
+
+\subsection{Energy bound for the constrained system}
+Consider the independent-coordinate equation obtained through Eq.~\eqref{eq:dynamicprojection},
+\begin{equation}
+\bm M_r(t)\ddot{\bm z}+\bm D_r(t)\dot{\bm z}+\bm K_r(t)\bm z=\bm f_r(t).
+\label{eq:ap-system}
+\end{equation}
+On a finite interval $[0,t_f]$, assume that $\bm M_r$ is symmetric, continuously differentiable and uniformly positive definite, that $\bm D_r,\bm K_r$ are continuous, and that $\bm f_r\in L^2(0,t_f)$. Constraint elimination must retain full column rank. Positive definiteness of the reduced mass then follows from $\bm z^\tr\bm M_r\bm z=(\bm T\bm z)^\tr\bm M(\bm T\bm z)>0$ for $\bm z\ne\bm0$. A fixed length scale is used to compare translational and angular coordinates; all matrix norms below refer to these same scaled coordinates.
+
+Let $\bm H(t)$ be a symmetric, uniformly positive definite, continuously differentiable matrix with stiffness units. The reduced elastic stiffness is an admissible choice when coercive; if rigid modes remain, one choice is $\bm H=\bm K_{{\rm el},r}+\omega_*^2\bm M_r$, with fixed $\omega_*>0$ and positive semidefinite $\bm K_{{\rm el},r}$. Define
+\begin{equation}
+\mathcal E=\tfrac12\dot{\bm z}^\tr\bm M_r\dot{\bm z}
++\tfrac12\bm z^\tr\bm H\bm z.
+\label{eq:ap-energy}
+\end{equation}
+This control energy is a quadratic form controlling the state; it coincides with mechanical energy only in the appropriate conservative case. The matrix $\bm H$ is not identified with the symmetric part of a possibly indefinite tangent.
+
+With $\bm D_{r,s}=(\bm D_r+\bm D_r^\tr)/2$, $\bm A=\dot{\bm M}_r/2-\bm D_{r,s}$ and $\bm B=\bm K_r-\bm H$, differentiation of Eq.~\eqref{eq:ap-energy} and substitution of Eq.~\eqref{eq:ap-system} give the exact identity
+\begin{align}
+\dot{\mathcal E}&=\dot{\bm z}^\tr\bm f_r+\dot{\bm z}^\tr\bm A\dot{\bm z}
+-\dot{\bm z}^\tr\bm B\bm z\nonumber\\
+&\quad+\tfrac12\bm z^\tr\dot{\bm H}\bm z.
+\label{eq:ap-identity}
+\end{align}
+The skew-symmetric part of $\bm D_r$ performs no instantaneous work. Mass variation, moving constraints and the nonconservative part of the stiffness, however, do not disappear from this identity.
+
+Let $a=\|\bm M_r^{-1/2}\bm A\bm M_r^{-1/2}\|_2$, $b=\|\bm M_r^{-1/2}\bm B\bm H^{-1/2}\|_2$ and $h_H=\|\bm H^{-1/2}\dot{\bm H}\bm H^{-1/2}\|_2$. For any $\eta>0$ with frequency units, Cauchy--Schwarz and Young's inequalities yield
+\begin{align}
+\dot{\mathcal E}&\le c(t)\mathcal E+
+\frac{\|\bm M_r^{-1/2}\bm f_r\|_2^2}{2\eta},\nonumber\\
+c(t)&=2a(t)+b(t)+h_H(t)+\eta.
+\label{eq:ap-differential}
+\end{align}
+The cross term is bounded using the product of velocity and position norms weighted by $\bm M_r$ and $\bm H$; Young bounds this product by $\mathcal E$. Integration with an integrating factor, equivalently the Gronwall argument, gives
+\begin{align}
+\mathcal E(t)&\le e^{C(t)}\left[\mathcal E(0)+\frac1{2\eta}
+\int_0^t e^{-C(s)}\|\bm M_r(s)^{-1/2}\bm f_r(s)\|_2^2\dd s\right],\nonumber\\
+C(t)&=\int_0^t c(s)\dd s.
+\label{eq:ap-bound}
+\end{align}
+The bound depends on coefficients, forcing and initial data, rather than the computed solution. Together with uniform mass invertibility, it guarantees finite-time existence and uniqueness of the linear problem and continuous dependence on the data. Applied to the difference of two solutions, it has the same form with differences in forcing and initial conditions. In the special case of constant mass and conservative stiffness, $\bm H=\bm K_r>0$ and $\bm D_{r,s}\ge0$, the exact identity implies $\dot{\mathcal E}\le0$ without forcing; the general bound is not intended to recover this case optimally. It proves neither Floquet stability nor a mesh-uniform estimate: the latter requires control of the constants independently of discretization.
+
+\subsection{Spatial approximation and regularity}
+To isolate discretization error, consider the linear reference elastic problem without temporal transport or follower-load tangents. Let $V$ contain beam translation and rotation fields continuous on each component, with square-integrable derivatives and homogeneous constraints and supports. Rigid-body coordinates are included as compatible finite-dimensional variables. The bilinear form is
+\begin{equation}
+a(\bm w,\bm v)=\sum_e\int_{L_e}
+\bm\varepsilon(\bm v)^\tr\bm K_s\bm\varepsilon(\bm w)\dd S
++a_{\rm con}(\bm w,\bm v),
+\label{eq:ap-bilinear}
+\end{equation}
+where $a_{\rm con}$ is the bilinear energy of elastic connections. Section properties are assumed bounded and uniformly positive, connections nonnegative, and supports sufficient to remove rigid motions and mechanisms. Under these hypotheses, continuity and coercivity are required: $|a(\bm w,\bm v)|\le M_a\|\bm w\|_V\|\bm v\|_V$ and $a(\bm v,\bm v)\ge\alpha_a\|\bm v\|_V^2$, with $\alpha_a>0$.
+
+If $V_h\subset V$ is the conforming space actually used and forms and loads are integrated exactly, solutions $\bm w$ and $\bm w_h$ satisfy Galerkin orthogonality. For any $\bm v_h\in V_h$,
+\begin{align}
+\alpha_a\|\bm w-\bm w_h\|_V^2
+&\le a(\bm w-\bm w_h,\bm w-\bm v_h)\nonumber\\
+&\le M_a\|\bm w-\bm w_h\|_V\|\bm w-\bm v_h\|_V.
+\end{align}
+This yields C\'ea's estimate \citep{cea1964},
+\begin{equation}
+\|\bm w-\bm w_h\|_V\le\frac{M_a}{\alpha_a}
+\inf_{\bm v_h\in V_h}\|\bm w-\bm v_h\|_V.
+\label{eq:ap-cea}
+\end{equation}
+In the energy norm $\|\bm v\|_a^2=a(\bm v,\bm v)$, symmetry directly yields best approximation with constant one. A rate $C_{\rm app}h^p$ additionally requires an interpolation bound of that order for the chosen space and piecewise regularity of the solution. Property jumps must coincide with mesh interfaces; quadrature and property-approximation errors require additional consistency terms.
+
+The dependence of $M_a/\alpha_a$ and interpolation on slenderness is essential. The analysis of \citet{arnold1981} demonstrates that fixed-thickness convergence and freedom from shear locking are distinct properties. Accordingly, the closed interpolation of Appendix A and Eq.~\eqref{eq:ap-cea} are not presented as a proof of uniform convergence for the complete rotating turbine. An extension to that problem must also control transport, constraints and nonsymmetric terms.
+
+\subsection{Consistency of the linearization}
+The dynamic estimate also delimits the expansion about the operating state. Assume a nonlinear residual that is twice continuously differentiable in a bounded neighborhood of the nominal state, with bounded second derivatives after length and time scales are fixed. If normalized position, velocity and acceleration perturbations are of order $\epsilon$, the Taylor remainder satisfies $\|\bm M_r^{-1/2}\bm r_{\rm nl}\|_2\le C_{\rm nl}\epsilon^2$. The difference between nonlinear and linearized solutions with identical initial data satisfies the linear operator with forcing $-\bm r_{\rm nl}$. Equation~\eqref{eq:ap-bound} gives
+\begin{equation}
+\mathcal E_{\rm err}(t)\le
+\frac{C_{\rm nl}^2\epsilon^4}{2\eta}
+ e^{C(t)}\int_0^t e^{-C(s)}\dd s.
+\label{eq:ap-linearization}
+\end{equation}
+Hence the state-norm error $\sqrt{\mathcal E_{\rm err}}$ is of order $\epsilon^2$ on a finite interval where these hypotheses hold. This is a local, conditional statement: nominal rotation may be large, but the perturbations used in the expansion may not. Loss of coercivity, prolonged perturbation growth or a nonsmooth load law prevents extrapolation of this conclusion. The three estimates delimit what is postulated before solving and what would require additional verification of the model, mesh or time integrator.

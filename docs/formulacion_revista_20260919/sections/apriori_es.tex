@@ -1,0 +1,80 @@
+\section{Estimaciones a priori y alcance de la aproximación}
+\label{sec:apriori}
+La formulación debe precisar no solo las ecuaciones que se resuelven, sino también bajo qué hipótesis sus soluciones dependen de manera continua de los datos. Se distinguen aquí una estimación de la respuesta del sistema semidiscreto y una estimación de aproximación espacial para su subproblema elástico. Ninguna de ellas presupone un resultado numérico ni identifica una cota de crecimiento con estabilidad asintótica.
+
+\subsection{Cota energética del sistema con restricciones}
+Se considera la ecuación en coordenadas independientes obtenida mediante~\eqref{eq:dynamicprojection},
+\begin{equation}
+\bm M_r(t)\ddot{\bm z}+\bm D_r(t)\dot{\bm z}+\bm K_r(t)\bm z=\bm f_r(t).
+\label{eq:ap-system}
+\end{equation}
+En un intervalo finito $[0,t_f]$, se supone que $\bm M_r$ es simétrica, continuamente diferenciable y uniformemente definida positiva, que $\bm D_r,\bm K_r$ son continuas y que $\bm f_r\in L^2(0,t_f)$. La eliminación de restricciones debe conservar rango columna completo. La positividad de la masa reducida se sigue entonces de $\bm z^\tr\bm M_r\bm z=(\bm T\bm z)^\tr\bm M(\bm T\bm z)>0$ para $\bm z\ne\bm0$. Se emplea una escala fija de longitud para comparar coordenadas traslacionales y angulares; todas las normas matriciales siguientes se refieren a esas mismas coordenadas escaladas.
+
+Sea $\bm H(t)$ una matriz simétrica, uniformemente definida positiva y continuamente diferenciable, con unidades de rigidez. Puede elegirse la rigidez elástica reducida cuando es coerciva; si conserva modos rígidos, una elección es $\bm H=\bm K_{{\rm el},r}+\omega_*^2\bm M_r$, con $\omega_*>0$ fijo y $\bm K_{{\rm el},r}$ semidefinida positiva. Se define
+\begin{equation}
+\mathcal E=\tfrac12\dot{\bm z}^\tr\bm M_r\dot{\bm z}
++\tfrac12\bm z^\tr\bm H\bm z.
+\label{eq:ap-energy}
+\end{equation}
+Esta energía de control es una forma cuadrática que controla el estado; solo coincide con la energía mecánica en el caso conservativo apropiado. No se identifica $\bm H$ con la parte simétrica de una tangente que podría ser indefinida.
+
+Con $\bm D_{r,s}=(\bm D_r+\bm D_r^\tr)/2$, $\bm A=\dot{\bm M}_r/2-\bm D_{r,s}$ y $\bm B=\bm K_r-\bm H$, la derivación de~\eqref{eq:ap-energy} y el uso de~\eqref{eq:ap-system} dan exactamente
+\begin{align}
+\dot{\mathcal E}&=\dot{\bm z}^\tr\bm f_r+\dot{\bm z}^\tr\bm A\dot{\bm z}
+-\dot{\bm z}^\tr\bm B\bm z\nonumber\\
+&\quad+\tfrac12\bm z^\tr\dot{\bm H}\bm z.
+\label{eq:ap-identity}
+\end{align}
+La parte antisimétrica de $\bm D_r$ no realiza trabajo instantáneo. En cambio, la variación de masa, los vínculos móviles y la parte no conservativa de la rigidez no desaparecen de esta identidad.
+
+Sean $a=\|\bm M_r^{-1/2}\bm A\bm M_r^{-1/2}\|_2$, $b=\|\bm M_r^{-1/2}\bm B\bm H^{-1/2}\|_2$ y $h_H=\|\bm H^{-1/2}\dot{\bm H}\bm H^{-1/2}\|_2$. Para cualquier $\eta>0$ con unidades de frecuencia, Cauchy--Schwarz y Young proporcionan
+\begin{align}
+\dot{\mathcal E}&\le c(t)\mathcal E+
+\frac{\|\bm M_r^{-1/2}\bm f_r\|_2^2}{2\eta},\nonumber\\
+c(t)&=2a(t)+b(t)+h_H(t)+\eta.
+\label{eq:ap-differential}
+\end{align}
+El término cruzado se acota mediante el producto de las normas de velocidad y posición ponderadas por $\bm M_r$ y $\bm H$; Young limita ese producto por $\mathcal E$. Integrando la desigualdad con el factor integrante, o equivalentemente aplicando el argumento de Gronwall, se obtiene
+\begin{align}
+\mathcal E(t)&\le e^{C(t)}\left[\mathcal E(0)+\frac1{2\eta}
+\int_0^t e^{-C(s)}\|\bm M_r(s)^{-1/2}\bm f_r(s)\|_2^2\dd s\right],\nonumber\\
+C(t)&=\int_0^t c(s)\dd s.
+\label{eq:ap-bound}
+\end{align}
+La cota depende de coeficientes, carga y datos iniciales, y no de la solución calculada. Junto con la invertibilidad uniforme de la masa, garantiza existencia y unicidad del problema lineal en tiempo finito y dependencia continua de los datos. Aplicada a la diferencia de dos soluciones, conserva la misma forma con diferencias de carga y condiciones iniciales. En el caso particular de masa y rigidez conservativa constantes, $\bm H=\bm K_r>0$ y $\bm D_{r,s}\ge0$, la identidad exacta implica $\dot{\mathcal E}\le0$ sin carga; la cota general no pretende recuperar de manera óptima ese caso. Tampoco prueba estabilidad de Floquet ni una estimación uniforme al refinar la malla: para ello habría que controlar las constantes de manera independiente de la discretización.
+
+\subsection{Aproximación espacial y regularidad}
+Para aislar el error de discretización se considera el problema elástico lineal de referencia, sin transporte temporal ni tangentes de cargas seguidoras. Sea $V$ el espacio de campos de traslación y rotación de las vigas, continuos en cada componente, con derivadas cuadrado integrables y con los vínculos y apoyos homogéneos impuestos. Las coordenadas de los cuerpos rígidos se incluyen como variables finitas compatibles. La forma bilineal es
+\begin{equation}
+a(\bm w,\bm v)=\sum_e\int_{L_e}
+\bm\varepsilon(\bm v)^\tr\bm K_s\bm\varepsilon(\bm w)\dd S
++a_{\rm con}(\bm w,\bm v),
+\label{eq:ap-bilinear}
+\end{equation}
+con $a_{\rm con}$ la energía bilineal de las conexiones elásticas. Se suponen propiedades seccionales acotadas y uniformemente positivas, conexiones no negativas y apoyos que eliminan movimientos rígidos y mecanismos. Bajo estas hipótesis, se requiere continuidad y coercividad: $|a(\bm w,\bm v)|\le M_a\|\bm w\|_V\|\bm v\|_V$ y $a(\bm v,\bm v)\ge\alpha_a\|\bm v\|_V^2$, con $\alpha_a>0$.
+
+Si $V_h\subset V$ es el espacio conforme efectivamente empleado, y las formas y cargas se integran exactamente, las soluciones $\bm w$ y $\bm w_h$ satisfacen ortogonalidad de Galerkin. Para cualquier $\bm v_h\in V_h$,
+\begin{align}
+\alpha_a\|\bm w-\bm w_h\|_V^2
+&\le a(\bm w-\bm w_h,\bm w-\bm v_h)\nonumber\\
+&\le M_a\|\bm w-\bm w_h\|_V\|\bm w-\bm v_h\|_V.
+\end{align}
+Se obtiene así la estimación de Céa \citep{cea1964},
+\begin{equation}
+\|\bm w-\bm w_h\|_V\le\frac{M_a}{\alpha_a}
+\inf_{\bm v_h\in V_h}\|\bm w-\bm v_h\|_V.
+\label{eq:ap-cea}
+\end{equation}
+En la norma energética $\|\bm v\|_a^2=a(\bm v,\bm v)$, la simetría da directamente la propiedad de mejor aproximación con constante uno. Una tasa $C_{\rm app}h^p$ requiere además demostrar una cota de interpolación de ese orden para el espacio elegido y la regularidad por tramos de la solución. Las discontinuidades de propiedades deben coincidir con interfaces de la malla; errores de cuadratura y de aproximación de propiedades requieren términos de consistencia adicionales.
+
+La dependencia de $M_a/\alpha_a$ y de la interpolación respecto de la esbeltez es esencial. El análisis de \citet{arnold1981} muestra que convergencia para espesor fijo y ausencia de bloqueo por cortante son propiedades diferentes. Por ello, la interpolación cerrada del apéndice A y la cota~\eqref{eq:ap-cea} no se presentan como una demostración de convergencia uniforme para el aerogenerador giratorio completo. Una extensión a ese problema debe controlar además transporte, restricciones y términos no simétricos.
+
+\subsection{Consistencia de la linealización}
+La estimación dinámica permite también delimitar la expansión alrededor del estado de operación. Supóngase un residual no lineal dos veces continuamente diferenciable en un entorno acotado del estado nominal, con segundas derivadas acotadas tras fijar las escalas de longitud y tiempo. Si las perturbaciones de posición, velocidad y aceleración normalizadas son de orden $\epsilon$, el resto de Taylor cumple $\|\bm M_r^{-1/2}\bm r_{\rm nl}\|_2\le C_{\rm nl}\epsilon^2$. La diferencia entre la solución no lineal y la linealizada, con los mismos datos iniciales, satisface el operador lineal con carga $-\bm r_{\rm nl}$. Por~\eqref{eq:ap-bound},
+\begin{equation}
+\mathcal E_{\rm err}(t)\le
+\frac{C_{\rm nl}^2\epsilon^4}{2\eta}
+ e^{C(t)}\int_0^t e^{-C(s)}\dd s.
+\label{eq:ap-linearization}
+\end{equation}
+En consecuencia, el error en la norma de estado $\sqrt{\mathcal E_{\rm err}}$ es de orden $\epsilon^2$ en un intervalo finito donde se mantienen esas hipótesis. Esta es una afirmación local y condicional: el giro nominal puede ser grande, pero no las perturbaciones utilizadas en la expansión. La pérdida de coercividad, un crecimiento prolongado de perturbaciones o una ley de carga no suave impiden extrapolar esta conclusión. Las tres estimaciones delimitan qué se postula antes de resolver y qué requeriría una verificación adicional del modelo, de la malla o del integrador temporal.

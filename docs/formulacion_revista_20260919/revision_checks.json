@@ -1,0 +1,21 @@
+{
+  "editions": {
+    "es": {
+      "original_display_blocks": 84,
+      "original_equations_preserved": true,
+      "new_display_blocks": 9,
+      "figures": 11,
+      "pages": 19,
+      "pdf_sha256": "71f55776cc1f9f9dd4ca310f7e4775666548b30d2cc48c7213d676f9505923f1"
+    },
+    "en": {
+      "original_display_blocks": 84,
+      "original_equations_preserved": true,
+      "new_display_blocks": 9,
+      "figures": 11,
+      "pages": 19,
+      "pdf_sha256": "77eea70b172b3154f82ba3ee0cf30fc2154e5fbc566e94077f911de48b6737d4"
+    }
+  },
+  "new_equations_identical": true
+}

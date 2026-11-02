@@ -1,0 +1,10 @@
+{
+  "component_transform": 0.0,
+  "blade_1_handedness": 1.0,
+  "blade_2_handedness": 0.9999999999999998,
+  "blade_3_handedness": 1.0,
+  "mass_vector_closure": 0.0,
+  "element_basis_orthogonality": 2.954898650787535e-16,
+  "element_aux_projection": 1.1102230246251565e-16,
+  "root_incremental_closure": 1.1102230246251565e-16
+}

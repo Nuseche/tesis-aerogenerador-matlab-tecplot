@@ -3,17 +3,17 @@ La respuesta estructural de un aerogenerador de eje horizontal depende de la fle
 
 Los trabajos de \citet{maza2014} y \citet{turello2023} proporcionan antecedentes del análisis aeroelástico y de la interacción suelo--estructura en aerogeneradores. La mecánica del continuo establece la distinción entre movimiento y deformación \citep{holzapfel2000}, mientras que la dinámica de sistemas multicuerpo organiza las relaciones entre componentes rígidos y flexibles \citep{shabana2013}. Las formulaciones de vigas con rotaciones finitas \citep{simo1985} constituyen una referencia cinemática; el modelo aquí considerado se especializa a pequeñas deformaciones y pequeñas rotaciones estructurales respecto de una rotación nominal que puede ser arbitrariamente grande.
 
-El objetivo es establecer una formulación estructural en la que la cinemática, las propiedades físicas y las ecuaciones de movimiento compartan una misma convención. La exposición comienza por los cuerpos y sus sistemas de referencia, continúa con las propiedades seccionales y la discretización y deduce después las contribuciones del giro prescrito. Para ello se distingue la descomposición de la energía cinética según el grado en las velocidades generalizadas de su posterior expansión alrededor del estado de operación \citep{meirovitch1997}. El desarrollo se completa con los vínculos cinemáticos, las cargas externas y los problemas de vibración y respuesta transitoria.
+El objetivo es establecer una formulación estructural en la que la cinemática, las propiedades físicas y las ecuaciones de movimiento compartan una misma convención. La exposición comienza por los cuerpos y sus sistemas de referencia, continúa con las propiedades seccionales y la discretización y deduce después las contribuciones del giro prescrito. Para ello se distingue la descomposición de la energía cinética según el grado en las velocidades generalizadas de su posterior expansión alrededor del estado de operación \citep{meirovitch1997}. El desarrollo se completa con los vínculos cinemáticos y las cargas externas. Antes de plantear los problemas de vibración y respuesta transitoria se deducen estimaciones a priori que delimitan la dependencia de la respuesta respecto de los datos y el alcance de las aproximaciones espacial y de linealización.
 
 \section{Descripción del sistema y cinemática}
 \label{sec:cinematica}
 Se considera un aerogenerador de tres palas, orientado en la dirección del viento medio, con eje nominal horizontal. La torre y las palas son deformables; la góndola y el conjunto cubo--nariz se consideran rígidos. La conexión entre góndola y cubo permite pequeños desplazamientos y giros relativos mediante rigideces y amortiguamientos equivalentes. Las uniones entre el cubo y las raíces de las palas son rígidas. La figura~\ref{fig:modelo} identifica los componentes; el movimiento de base se transmite a través de la torre.
 
-\begin{figure}[tp]
+\begin{figure*}[tp]
 \centering
-\includegraphics[trim={36.855bp 32.226bp 94.327bp 32.084bp},clip,width=.92\columnwidth,height=.31\textheight,keepaspectratio]{figures/tecplot/turbina_3d.pdf}
-\caption{Idealización estructural del aerogenerador: torre y palas flexibles, góndola y cubo rígidos. Las líneas y los nodos interiores identifican el modelo de vigas. Las envolventes exteriores son ilustrativas y no constituyen una malla de sólidos ni geometría CAD.}\label{fig:modelo}
-\end{figure}
+\includegraphics[width=.98\textwidth]{figures/publication/01_model.pdf}
+\caption{Idealización estructural: (a) envolvente ilustrativa del aerogenerador con líneas y nodos del modelo unidimensional en su interior; (b) detalle esquemático de las raíces rígidamente unidas al cubo $H$ y de la conexión elástica con la góndola $G$. $\mathcal B_T$ y $\mathcal B_{P_b}$ identifican torre y palas. La envolvente no introduce grados de libertad de sólido; la discretización dibujada es esquemática.}\label{fig:modelo}
+\end{figure*}
 
 \subsection{Configuraciones y convención de componentes}
 Un cuerpo material es el conjunto de partículas que constituye un componente. Su configuración de referencia $\mathcal B_0$ asigna a cada partícula una posición $\bm X$; su configuración actual $\mathcal B_t$ contiene las posiciones ocupadas en el instante $t$. El movimiento se expresa mediante
@@ -49,8 +49,8 @@ La figura~\ref{fig:cambio-componentes} muestra esta distinción: el vector físi
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={42.574bp 112.234bp 41.680bp 104.770bp},clip,width=.90\textwidth,height=.30\textheight,keepaspectratio]{figures/tecplot/concept_cambio-componentes.pdf}
-\caption{Un mismo vector $\bm a$ expresado en las bases (a) $A$ y (b) $B$. Las líneas auxiliares muestran sus proyecciones. La transformación $\bm a^A=\bm Q_{AB}\bm a^B$ cambia las componentes y conserva el vector geométrico.}\label{fig:cambio-componentes}
+\includegraphics[width=.98\textwidth]{figures/publication/02_components.pdf}
+\caption{El mismo vector $\bm a$, con igual orientación, escala y observador, se descompone en las bases (a) $A$ y (b) $B$. Los segmentos auxiliares representan las contribuciones sucesivas $a_i^A\bm e_i^A$ o $a_i^B\bm e_i^B$. La ecuación~\eqref{eq:cambio-base} cambia las componentes, no el vector.}\label{fig:cambio-componentes}
 \end{figure*}
 
 \subsection{Sistemas de referencia y giro nominal}
@@ -72,14 +72,14 @@ La figura~\ref{fig:sistemas-globales} sitúa los orígenes y las tres direccione
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={169.820bp 26.585bp 172.651bp 18.065bp},clip,width=.83\textwidth,height=.35\textheight,keepaspectratio]{figures/tecplot/concept_sistemas-lateral.pdf}
-\caption{Orígenes y triedros de referencia en una vista espacial, con azimut nominal nulo. Los ejes de $B$ y $G$ son paralelos a los inerciales; $\bm c_B(t)$ localiza la base. El superíndice $H,n$ identifica el triedro nominal del cubo. Las separaciones y los volúmenes son esquemáticos.}\label{fig:sistemas-globales}
+\includegraphics[width=.98\textwidth]{figures/publication/03_frames.pdf}
+\caption{Sistemas de referencia: (a) localización del observador inercial y de la base en la máquina; (b) detalle separado de los triedros de base, góndola y cubo para $\psi=0$. Los ejes correspondientes son paralelos en este instante. Las separaciones del detalle se amplían para leer los orígenes; no representan la geometría de una conexión deformada.}\label{fig:sistemas-globales}
 \end{figure*}
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={103.068bp 26.585bp 104.707bp 21.353bp},clip,width=.70\textwidth,height=.29\textheight,keepaspectratio]{figures/tecplot/concept_cubo-nominal.pdf}
-\caption{Rotación nominal del cubo alrededor del eje 1 común. Los ejes inerciales 2 y 3 son discontinuos; los nominales $H,n$ son continuos. El arco $\psi$ sigue la regla de la mano derecha. La orientación nominal puede ser grande, independientemente de las pequeñas rotaciones estructurales.}\label{fig:giro-nominal}
+\includegraphics[width=.98\textwidth]{figures/publication/04_rotation.pdf}
+\caption{Giro nominal alrededor del eje 1: (a) vista espacial; (b) vista del plano del rotor, con $\bm E_1$ saliendo del papel. Los ejes inerciales son discontinuos y los nominales continuos. El arco positivo $\psi$ sigue la regla de la mano derecha; las longitudes de las flechas son auxiliares.}\label{fig:giro-nominal}
 \end{figure*}
 
 Cada pala $b=1,2,3$ tiene un sistema $\mathcal F_{P_b}$ en su raíz. Su eje 1 es longitudinal, el eje 2 es tangencial al rotor y el eje 3 es normal al plano del rotor. Para palas equiespaciadas, sin cono ni paso inicial, se define
@@ -110,8 +110,8 @@ La figura~\ref{fig:marcos} particulariza las bases de las tres raíces al azimut
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={90.701bp 31.277bp 90.701bp 25.738bp},clip,width=.83\textwidth,height=.37\textheight,keepaspectratio]{figures/tecplot/concept_marcos.pdf}
-\caption{Triedros de las tres raíces para $\psi=0$. El director $\bm d_{1b}$ es longitudinal, $\bm d_{2b}$ es tangencial y $\bm d_{3b}=\bm E_1$ completa la base dextrógira. Las raíces $P_b$ están separadas $120^\circ$ alrededor de $O_H$.}\label{fig:marcos}
+\includegraphics[width=.98\textwidth]{figures/publication/05_blade_frames.pdf}
+\caption{Orientación de montaje a azimut nulo: (a) localización de las tres raíces; (b)--(d) detalles de sus bases, conservando el mismo observador. En cada raíz, $\bm d_{1b}$ es longitudinal, $\bm d_{2b}$ tangencial y $\bm d_{3b}=\bm E_1$. Las bases satisfacen $\bm d_{1b}\times\bm d_{2b}=\bm d_{3b}$. Los detalles se trasladan y amplían sin girar sus ejes.}\label{fig:marcos}
 \end{figure*}
 
 El giro de la ecuación~\eqref{eq:rotacion-nominal} es una operación prescrita: se proporciona al modelo, en lugar de calcularse a partir de un balance del accionamiento. Se prescribe la rotación nominal y se conserva como incógnita la pequeña torsión relativa de la conexión. Si se impusiera exactamente la velocidad instantánea del cubo, habría que restringir también esa coordenada. La torre y la góndola no giran nominalmente con el rotor; sus desplazamientos se deben a la excitación de base y a las deformaciones estructurales.
@@ -140,14 +140,14 @@ La figura~\ref{fig:viga} localiza una partícula mediante la línea de referenci
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={40.488bp 29.471bp 42.276bp 24.831bp},clip,width=.96\textwidth,height=.34\textheight,keepaspectratio]{figures/tecplot/concept_particula-seccion.pdf}
-\caption{Posición de una partícula de viga: (a) línea $\bm r(S,t)$ y orientación de la sección; (b) detalle de la sección, donde $\bm x_P=\bm r+\xi_2\bm d_2+\xi_3\bm d_3$. La envolvente transparente permite ver la línea de referencia; sus superficies no añaden grados de libertad.}\label{fig:viga}
+\includegraphics[width=.98\textwidth]{figures/publication/06_particle.pdf}
+\caption{Cinemática de una partícula de viga: (a) línea de origen seccional $\bm r(S,t)$ y una sección seleccionada; (b) detalle de la misma construcción local. Las coordenadas materiales $\xi_2,\xi_3$ fijan la posición de $P$ respecto de $O_S$, según $\bm x_P=\bm r+\xi_2\bm d_2+\xi_3\bm d_3$. La envolvente ilustra secciones rígidas con traslación y orientación independientes.}\label{fig:viga}
 \end{figure*}
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={47.342bp 78.302bp 47.342bp 72.622bp},clip,width=.82\textwidth,height=.32\textheight,keepaspectratio]{figures/tecplot/concept_shear.pdf}
-\caption{Independencia entre la normal seccional $\bm d_1$ y la tangente $\bm t$ a la línea de referencia. El ángulo $\gamma$ ilustra el cortante en el plano del dibujo; es una componente angular ilustrativa, no el vector completo de deformaciones $\bm\gamma$ de la ecuación~\eqref{eq:medidas-viga}.}\label{fig:cortante}
+\includegraphics[width=.98\textwidth]{figures/publication/07_shear.pdf}
+\caption{Cortante de Timoshenko: (a) normal seccional $\bm d_1$ y tangente $\bm t$ distintas en una vista espacial; (b) construcción en un plano de flexión. Los ángulos $\varphi$ y $\theta$ se miden desde la dirección horizontal de referencia hacia $\bm t$ y $\bm d_1$, respectivamente. Su diferencia angular ilustra el cortante plano; no sustituye la medida vectorial de~\eqref{eq:medidas-viga}. La deformación se amplía para su lectura.}\label{fig:cortante}
 \end{figure*}
 
 En una pala recta, la posición nominal de la línea se obtiene sumando a la ecuación~\eqref{eq:raices} el vector $\overline{\bm Q}_{NP_b}[S,0,0]^\tr$. En la torre se toma $S$ desde la base hacia la góndola y la terna nominal $(\bm E_3,\bm E_1,\bm E_2)$. Así queda definida la relación entre las coordenadas materiales de cada viga y la geometría de la máquina.
@@ -160,8 +160,8 @@ La figura~\ref{fig:configuraciones} compara la referencia material con el movimi
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={47.491bp 0.000bp 0.000bp 0.000bp},clip,width=.98\textwidth,height=.24\textheight,keepaspectratio]{figures/tecplot/concept_tresniveles.pdf}
-\caption{Una misma porción material en (a) referencia, (b) movimiento nominal y (c) configuración perturbada. En (c), el contorno discontinuo reproduce la configuración nominal y la flecha $\bm u$ señala la diferencia en el extremo. $\bm x_{\rm nom}$ representa $\overline{\bm x}$; los desplazamientos están ampliados para distinguir los estados.}\label{fig:configuraciones}
+\includegraphics[width=.98\textwidth]{figures/publication/08_configurations.pdf}
+\caption{Una misma porción material de pala, con observador y escala comunes: (a) referencia $\mathcal B_0$; (b) giro nominal alrededor de $\bm E_1$; (c) perturbación estructural respecto del estado nominal discontinuo. La flecha $\bm u$ une las posiciones nominal y perturbada del mismo origen seccional extremo. Las amplitudes de deformación están ampliadas.}\label{fig:configuraciones}
 \end{figure*}
 
 La deformación se mide respecto de la geometría material, no del observador. Por ejemplo, si $\bm Q_s=[\bm d_1,\bm d_2,\bm d_3]$ y $\bm Q_{s0}=[\bm D_1,\bm D_2,\bm D_3]$, las medidas de extensión--cortante y de curvatura--torsión son
@@ -243,8 +243,8 @@ La figura~\ref{fig:masa-seccional} distingue el origen de la línea de referenci
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={145.086bp 30.620bp 145.682bp 21.054bp},clip,width=.76\textwidth,height=.30\textheight,keepaspectratio]{figures/tecplot/paper_masa_seccional.pdf}
-\caption{Geometría de la integración de masa: origen seccional $O$, centro de masa $C$ y contribución $\dd\mu=\rho_0\dd A$. La posición de la partícula satisface $\bm r_P=\bm r_C+\bm\rho_C$. La inercia centroidal usa $\bm\rho_C$; su traslado al origen utiliza $\bm r_C$. El espesor de la sección es ilustrativo.}\label{fig:masa-seccional}
+\includegraphics[width=.98\textwidth]{figures/publication/09_mass.pdf}
+\caption{Integración de masa: (a) sección con origen $O$, centro de masa $C$ y partícula $P$ de masa $\mathrm d\mu$; (b) construcción vectorial $\bm r_P=\bm r_C+\bm\rho_C$. La inercia centroidal se calcula con $\bm\rho_C$ y su traslado con $\bm r_C$. El panel (b) muestra únicamente la relación vectorial, sin conservar el contorno ni la orientación del panel (a).}\label{fig:masa-seccional}
 \end{figure*}
 
 Para expresar esta energía con respecto al origen seccional se introducen
@@ -325,8 +325,8 @@ La figura~\ref{fig:elemento} identifica los extremos del elemento y la direcció
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={77.738bp 30.620bp 72.970bp 24.343bp},clip,width=.82\textwidth,height=.32\textheight,keepaspectratio]{figures/tecplot/concept_elemento.pdf}
-\caption{Orientación de un elemento entre $I$ y $J$. El eje $\bm e_1$ sigue la cuerda; la proyección $\bm p$ del punto auxiliar $\bm X_a$ sobre el plano normal determina $\bm e_3$. Se completa el triedro con $\bm e_2=\bm e_3\times\bm e_1$. El punto auxiliar no es un nodo estructural.}\label{fig:elemento}
+\includegraphics[width=.98\textwidth]{figures/publication/10_element.pdf}
+\caption{Elemento de dos nodos: (a) el punto auxiliar $\bm X_a$ se proyecta sobre el plano normal a la cuerda para obtener $\bm p$ y $\bm e_3$; se completa $\bm e_2=\bm e_3\times\bm e_1$; (b) traslaciones y rotaciones de los nodos estructurales $I,J$. El círculo vacío distingue el punto auxiliar, que no aporta grados de libertad.}\label{fig:elemento}
 \end{figure*}
 
 Si $\bm L_e$ extrae de $\bm q$ las coordenadas del elemento, el ensamblaje de una matriz genérica $\bm A$, que puede ser de masa o rigidez, sigue
@@ -672,8 +672,8 @@ La figura~\ref{fig:vinculo-raiz} descompone el desplazamiento de una raíz en la
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={52.110bp 22.895bp 54.941bp 27.087bp},clip,width=.86\textwidth,height=.31\textheight,keepaspectratio]{figures/tecplot/paper_vinculo_raiz.pdf}
-\caption{Compatibilidad incremental entre el maestro $m=H$ y la raíz $s$. Las flechas sucesivas representan $\delta\bm u_m$ y $\delta\bm u_{\rm rot}=\delta\bm\theta_m\times\bm r_s$; la flecha directa representa su suma $\delta\bm u_s$. El punto intermedio incorpora solamente la traslación común del cubo.}\label{fig:vinculo-raiz}
+\includegraphics[width=.98\textwidth]{figures/publication/11_root.pdf}
+\caption{Vínculo cubo--raíz: (a) el brazo $\bm r_s$ conecta el maestro $m=H$ con la raíz $s=P_b$; (b) suma de los incrementos de traslación y rotación. $s^{\prime}$ incorpora solo $\delta\bm u_m$ y $s^{\prime\prime}$ incorpora además $\delta\bm\theta_m\times\bm r_s$. La flecha directa es $\delta\bm u_s$. Los incrementos se amplían y no representan el azimut nominal.}\label{fig:vinculo-raiz}
 \end{figure*}
 
 Las derivadas se obtienen sustituyendo $\bm r_s$ por $\dot{\bm r}_s=\bm W\bm r_s$ y $\ddot{\bm r}_s=\bm W^2\bm r_s$ en el bloque superior derecho; los restantes bloques derivados son nulos. Al reunir todos los vínculos y condiciones de apoyo se obtiene $\delta\bm q=\bm T(t)\bm z$, donde $\bm z$ contiene únicamente las coordenadas independientes. La matriz $\bm T$ conserva las columnas libres e introduce los bloques $\bm B_s$ en las filas de las raíces. La ecuación~\eqref{eq:fullsystem} se transforma en
@@ -771,6 +771,8 @@ La matriz equivalente $\bm\Gamma_{\rm eff}$, definida por $\bm M_r\bm\Gamma_{\rm
 
 Si la cimentación es flexible, sus coordenadas y matrices deben permanecer en el sistema y la excitación se impone en la interfaz con el suelo. Una rigidez y un amortiguamiento constantes representan una idealización de impedancia; no incorporan por sí solos la no linealidad del suelo ni toda su dependencia frecuencial.
 
+\input{sections/apriori_es.tex}
+
 \section{Problemas modal y transitorio}
 \subsection{Autovalores y movimientos rígidos}
 Para el sistema conservativo detenido, el problema modal es
@@ -852,6 +854,8 @@ La formulación relaciona la descripción material de los componentes con el mov
 La matriz giroscópica se obtiene de la parte antisimétrica del acoplamiento entre velocidades y desplazamientos en la energía cinética. El transporte a ejes fijos y la imposición de vínculos dependientes del tiempo introducen contribuciones adicionales que deben conservarse en conjunto. El equilibrio y la linealización se escriben con los términos inerciales en el primer miembro y las acciones externas en el segundo.
 
 El modelo considera pequeñas deformaciones estructurales, propiedades de masa de referencia y velocidad angular nominal constante. Estas hipótesis permiten formular un análisis local de vibraciones y respuesta transitoria alrededor de un estado de operación. Cuando la excitación o los coeficientes son periódicos, deben conservarse en el problema temporal; una evaluación a azimut fijo no equivale a resolver ese régimen. La formulación establece las relaciones necesarias para incorporar leyes aerodinámicas y de cimentación compatibles con estas hipótesis.
+
+Las \hyperref[sec:apriori]{estimaciones a priori} completan la postulación con hipótesis de positividad, regularidad y coercividad. La cota dinámica retiene las contribuciones no conservativas y temporales; la cota espacial se restringe al subproblema elástico y la del error de linealización al entorno de perturbaciones pequeñas. No se deducen de ellas tasas uniformes de convergencia ni estabilidad del rotor periódico.
 
 \section{Apéndice A. Matrices e interpolación del elemento}
 El orden elemental es $\bm q_e^\ell=[(\bm q_I^\ell)^\tr,(\bm q_J^\ell)^\tr]^\tr$, donde $\bm q_i^\ell=[u_i,v_i,w_i,\theta_{xi},\theta_{yi},\theta_{zi}]^\tr$. La extensión, en índices $(1,7)$, y la torsión, en $(4,10)$, utilizan

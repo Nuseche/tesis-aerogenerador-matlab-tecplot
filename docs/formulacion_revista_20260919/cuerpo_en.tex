@@ -3,17 +3,17 @@ The structural response of a horizontal-axis wind turbine depends on the flexibi
 
 The work of \citet{maza2014} and \citet{turello2023} provides background on wind turbine aeroelasticity and soil--structure interaction. Continuum mechanics distinguishes motion from deformation \citep{holzapfel2000}, while multibody dynamics organizes the relationships between rigid and flexible components \citep{shabana2013}. Finite-rotation beam formulations \citep{simo1985} provide a kinematic reference; the present model specializes to small strains and small structural rotations relative to a nominal rotation that may be arbitrarily large.
 
-The objective is to establish a structural formulation in which kinematics, physical properties, and equations of motion share a common convention. The exposition begins with the bodies and their reference frames, continues with sectional properties and discretization, and then derives the contributions of prescribed rotation. To this end, the decomposition of kinetic energy by degree in generalized velocities is distinguished from its subsequent expansion about the operating state \citep{meirovitch1997}. Kinematic constraints, external loads, and vibration and transient-response problems complete the development.
+The objective is to establish a structural formulation in which kinematics, physical properties, and equations of motion share a common convention. The exposition begins with the bodies and their reference frames, continues with sectional properties and discretization, and then derives the contributions of prescribed rotation. To this end, the decomposition of kinetic energy by degree in generalized velocities is distinguished from its subsequent expansion about the operating state \citep{meirovitch1997}. Kinematic constraints, external loads, and vibration and transient-response problems complete the development. Before the modal analysis, a priori estimates delimit the dependence of the response on the data and the scope of spatial and linearization approximations.
 
 \section{System description and kinematics}
 \label{sec:cinematica}
 A three-bladed wind turbine aligned with the mean wind and having a nominally horizontal axis is considered. The tower and blades are deformable; the nacelle and hub--nose assembly are treated as rigid bodies. The nacelle--hub connection allows small relative translations and rotations through equivalent stiffness and damping. The connections between the hub and blade roots are rigid. Figure~\ref{fig:modelo} identifies the components; base motion is transmitted through the tower.
 
-\begin{figure}[tp]
+\begin{figure*}[tp]
 \centering
-\includegraphics[trim={36.855bp 32.226bp 94.327bp 32.084bp},clip,width=.92\columnwidth,height=.31\textheight,keepaspectratio]{figures/tecplot/turbina_3d.pdf}
-\caption{Wind turbine structural idealization: flexible tower and blades, rigid nacelle and hub. Interior lines and nodes identify the beam model. Exterior envelopes are illustrative and represent neither a solid mesh nor CAD geometry.}\label{fig:modelo}
-\end{figure}
+\includegraphics[width=.98\textwidth]{figures/publication/01_model.pdf}
+\caption{Structural idealization: (a) illustrative wind turbine envelope with the lines and nodes of the one-dimensional model inside; (b) schematic detail of the roots rigidly connected to hub $H$ and the elastic connection to nacelle $G$. $\mathcal B_T$ and $\mathcal B_{P_b}$ identify tower and blades. The envelope introduces no solid degrees of freedom; the depicted discretization is schematic.}\label{fig:modelo}
+\end{figure*}
 
 \subsection{Configurations and component convention}
 A material body is the set of particles that constitutes a component. Its reference configuration $\mathcal B_0$ assigns a position $\bm X$ to each particle; its current configuration $\mathcal B_t$ contains the positions occupied at time $t$. Motion is expressed as
@@ -49,8 +49,8 @@ Figure~\ref{fig:cambio-componentes} illustrates the distinction: the physical ve
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={42.574bp 112.234bp 41.680bp 104.770bp},clip,width=.90\textwidth,height=.30\textheight,keepaspectratio]{figures/tecplot/concept_cambio-componentes.pdf}
-\caption{The same vector $\bm a$ expressed in bases (a) $A$ and (b) $B$. Auxiliary lines show its projections. Transformation $\bm a^A=\bm Q_{AB}\bm a^B$ changes components while preserving the geometric vector.}\label{fig:cambio-componentes}
+\includegraphics[width=.98\textwidth]{figures/publication/02_components.pdf}
+\caption{The same vector $\bm a$, with identical orientation, scale and observer, is decomposed in bases (a) $A$ and (b) $B$. Auxiliary segments represent successive contributions $a_i^A\bm e_i^A$ or $a_i^B\bm e_i^B$. Equation~\eqref{eq:cambio-base} changes components, not the vector.}\label{fig:cambio-componentes}
 \end{figure*}
 
 \subsection{Reference frames and nominal rotation}
@@ -72,14 +72,14 @@ Figure~\ref{fig:sistemas-globales} locates the origins and the three directions 
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={169.820bp 26.585bp 172.651bp 18.065bp},clip,width=.83\textwidth,height=.35\textheight,keepaspectratio]{figures/tecplot/concept_sistemas-lateral.pdf}
-\caption{Reference origins and triads in a spatial view at zero nominal azimuth. The axes of $B$ and $G$ are parallel to the inertial axes; $\bm c_B(t)$ locates the base. Superscript $H,n$ identifies the nominal hub triad. Separations and volumes are schematic.}\label{fig:sistemas-globales}
+\includegraphics[width=.98\textwidth]{figures/publication/03_frames.pdf}
+\caption{Reference frames: (a) location of the inertial observer and base on the machine; (b) separate detail of the base, nacelle and hub triads at $\psi=0$. Corresponding axes are parallel at this instant. Separations in the detail are enlarged to distinguish origins; they do not represent a deformed connection.}\label{fig:sistemas-globales}
 \end{figure*}
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={103.068bp 26.585bp 104.707bp 21.353bp},clip,width=.70\textwidth,height=.29\textheight,keepaspectratio]{figures/tecplot/concept_cubo-nominal.pdf}
-\caption{Nominal hub rotation about the common axis 1. Inertial axes 2 and 3 are dashed; nominal axes $H,n$ are solid. Arc $\psi$ follows the right-hand rule. Nominal orientation may be large independently of small structural rotations.}\label{fig:giro-nominal}
+\includegraphics[width=.98\textwidth]{figures/publication/04_rotation.pdf}
+\caption{Nominal rotation about axis 1: (a) spatial view; (b) rotor-plane view with $\bm E_1$ pointing out of the page. Inertial axes are dashed and nominal axes solid. Positive arc $\psi$ follows the right-hand rule; arrow lengths are auxiliary.}\label{fig:giro-nominal}
 \end{figure*}
 
 Each blade $b=1,2,3$ has a root frame $\mathcal F_{P_b}$. Axis 1 is longitudinal, axis 2 is tangential to the rotor, and axis 3 is normal to the rotor plane. For equally spaced blades without initial cone or pitch, define
@@ -108,8 +108,8 @@ Figure~\ref{fig:marcos} specializes the three root bases to zero azimuth. The fi
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={90.701bp 31.277bp 90.701bp 25.738bp},clip,width=.83\textwidth,height=.37\textheight,keepaspectratio]{figures/tecplot/concept_marcos.pdf}
-\caption{The three root triads at $\psi=0$. Director $\bm d_{1b}$ is longitudinal, $\bm d_{2b}$ is tangential, and $\bm d_{3b}=\bm E_1$ completes the right-handed basis. Roots $P_b$ are separated by $120^\circ$ about $O_H$.}\label{fig:marcos}
+\includegraphics[width=.98\textwidth]{figures/publication/05_blade_frames.pdf}
+\caption{Mounting orientation at zero azimuth: (a) location of the three roots; (b)--(d) details of their bases with the same observer. At each root, $\bm d_{1b}$ is longitudinal, $\bm d_{2b}$ tangential and $\bm d_{3b}=\bm E_1$. The bases satisfy $\bm d_{1b}\times\bm d_{2b}=\bm d_{3b}$. Details are translated and enlarged without rotating their axes.}\label{fig:marcos}
 \end{figure*}
 
 The rotation in Eq.~\eqref{eq:rotacion-nominal} is prescribed: it is supplied to the model rather than calculated from a drive balance. Nominal rotation is prescribed while small relative connection twist remains an unknown. Prescribing the exact instantaneous hub speed would also require constraining that coordinate. The tower and nacelle do not rotate nominally with the rotor; their displacements arise from base excitation and structural deformation.
@@ -138,14 +138,14 @@ Figure~\ref{fig:viga} locates a beam particle using the reference line and the s
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={40.488bp 29.471bp 42.276bp 24.831bp},clip,width=.96\textwidth,height=.34\textheight,keepaspectratio]{figures/tecplot/concept_particula-seccion.pdf}
-\caption{Beam-particle position: (a) line $\bm r(S,t)$ and section orientation; (b) sectional detail, where $\bm x_P=\bm r+\xi_2\bm d_2+\xi_3\bm d_3$. The transparent envelope reveals the reference line; its surfaces add no degrees of freedom.}\label{fig:viga}
+\includegraphics[width=.98\textwidth]{figures/publication/06_particle.pdf}
+\caption{Beam-particle kinematics: (a) section-origin line $\bm r(S,t)$ and a selected section; (b) detail of the same local construction. Material coordinates $\xi_2,\xi_3$ locate $P$ relative to $O_S$, with $\bm x_P=\bm r+\xi_2\bm d_2+\xi_3\bm d_3$. The envelope illustrates rigid sections with independent translation and orientation.}\label{fig:viga}
 \end{figure*}
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={47.342bp 78.302bp 47.342bp 72.622bp},clip,width=.82\textwidth,height=.32\textheight,keepaspectratio]{figures/tecplot/concept_shear.pdf}
-\caption{Independence of section normal $\bm d_1$ and reference-line tangent $\bm t$. Angle $\gamma$ illustrates shear in the drawing plane; it is an illustrative angular component, rather than the complete strain vector $\bm\gamma$ in Eq.~\eqref{eq:medidas-viga}.}\label{fig:cortante}
+\includegraphics[width=.98\textwidth]{figures/publication/07_shear.pdf}
+\caption{Timoshenko shear: (a) distinct section normal $\bm d_1$ and tangent $\bm t$ in a spatial view; (b) construction in a bending plane. Angles $\varphi$ and $\theta$ are measured from the horizontal reference direction to $\bm t$ and $\bm d_1$, respectively. Their angular difference illustrates planar shear; it does not replace the vector measure in Eq.~\eqref{eq:medidas-viga}. Deformation is magnified for clarity.}\label{fig:cortante}
 \end{figure*}
 
 For a straight blade, the nominal line position is obtained by adding $\overline{\bm Q}_{NP_b}[S,0,0]^\tr$ to Eq.~\eqref{eq:raices}. In the tower, $S$ runs from the base to the nacelle, with nominal triad $(\bm E_3,\bm E_1,\bm E_2)$. This defines the relationship between each beam's material coordinates and the machine geometry.
@@ -156,8 +156,8 @@ Figure~\ref{fig:configuraciones} compares the material reference, nominal motion
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={47.491bp 0.000bp 0.000bp 0.000bp},clip,width=.98\textwidth,height=.24\textheight,keepaspectratio]{figures/tecplot/concept_tresniveles.pdf}
-\caption{The same material portion in (a) reference, (b) nominal motion, and (c) perturbed configuration. In (c), the dashed contour repeats the nominal configuration, and arrow $\bm u$ indicates the endpoint difference. Here, $\bm x_{\rm nom}$ denotes $\overline{\bm x}$; displacements are enlarged to distinguish the states.}\label{fig:configuraciones}
+\includegraphics[width=.98\textwidth]{figures/publication/08_configurations.pdf}
+\caption{The same material blade portion with a common observer and scale: (a) reference $\mathcal B_0$; (b) nominal rotation about $\bm E_1$; (c) structural perturbation relative to the dashed nominal state. Arrow $\bm u$ joins the nominal and perturbed positions of the same end-section origin. Deformation amplitudes are magnified.}\label{fig:configuraciones}
 \end{figure*}
 
 Deformation is measured relative to the material geometry, independently of the observer. For example, if $\bm Q_s=[\bm d_1,\bm d_2,\bm d_3]$ and $\bm Q_{s0}=[\bm D_1,\bm D_2,\bm D_3]$, the extension--shear and curvature--twist measures are
@@ -239,8 +239,8 @@ Figure~\ref{fig:masa-seccional} distinguishes the reference-line origin, center 
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={145.086bp 30.620bp 145.682bp 21.054bp},clip,width=.76\textwidth,height=.30\textheight,keepaspectratio]{figures/tecplot/paper_masa_seccional.pdf}
-\caption{Mass-integration geometry: section origin $O$, center of mass $C$, and contribution $\dd\mu=\rho_0\dd A$. Particle position satisfies $\bm r_P=\bm r_C+\bm\rho_C$. Centroidal inertia uses $\bm\rho_C$; transfer to the origin uses $\bm r_C$. Section thickness is illustrative.}\label{fig:masa-seccional}
+\includegraphics[width=.98\textwidth]{figures/publication/09_mass.pdf}
+\caption{Mass integration: (a) section with origin $O$, center of mass $C$ and particle $P$ of mass $\mathrm d\mu$; (b) vector construction $\bm r_P=\bm r_C+\bm\rho_C$. Centroidal inertia uses $\bm\rho_C$ and its transfer uses $\bm r_C$. Panel (b) shows only the vector relation, without preserving the contour or orientation of panel (a).}\label{fig:masa-seccional}
 \end{figure*}
 
 To express this energy relative to the section origin, introduce
@@ -316,8 +316,8 @@ Figure~\ref{fig:elemento} identifies the element ends and the projected auxiliar
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={77.738bp 30.620bp 72.970bp 24.343bp},clip,width=.82\textwidth,height=.32\textheight,keepaspectratio]{figures/tecplot/concept_elemento.pdf}
-\caption{Orientation of an element between $I$ and $J$. Axis $\bm e_1$ follows the chord; projection $\bm p$ of auxiliary point $\bm X_a$ onto the normal plane determines $\bm e_3$. The triad is completed by $\bm e_2=\bm e_3\times\bm e_1$. The auxiliary point is not a structural node.}\label{fig:elemento}
+\includegraphics[width=.98\textwidth]{figures/publication/10_element.pdf}
+\caption{Two-node element: (a) auxiliary point $\bm X_a$ is projected onto the plane normal to the chord to obtain $\bm p$ and $\bm e_3$, completed by $\bm e_2=\bm e_3\times\bm e_1$; (b) translations and rotations of structural nodes $I,J$. The open circle distinguishes the auxiliary point, which contributes no degrees of freedom.}\label{fig:elemento}
 \end{figure*}
 
 If $\bm L_e$ extracts the element coordinates from $\bm q$, a generic matrix $\bm A$, such as mass or stiffness, is assembled as
@@ -659,8 +659,8 @@ Figure~\ref{fig:vinculo-raiz} decomposes root displacement into common hub trans
 
 \begin{figure*}[tp]
 \centering
-\includegraphics[trim={52.110bp 22.895bp 54.941bp 27.087bp},clip,width=.86\textwidth,height=.31\textheight,keepaspectratio]{figures/tecplot/paper_vinculo_raiz.pdf}
-\caption{Incremental compatibility between master $m=H$ and root $s$. Successive arrows represent $\delta\bm u_m$ and $\delta\bm u_{\rm rot}=\delta\bm\theta_m\times\bm r_s$; the direct arrow represents their sum $\delta\bm u_s$. The intermediate point includes only common hub translation.}\label{fig:vinculo-raiz}
+\includegraphics[width=.98\textwidth]{figures/publication/11_root.pdf}
+\caption{Hub--root constraint: (a) arm $\bm r_s$ connects master $m=H$ to root $s=P_b$; (b) addition of translation and rotation increments. Point $s^{\prime}$ includes only $\delta\bm u_m$, and $s^{\prime\prime}$ additionally includes $\delta\bm\theta_m\times\bm r_s$. The direct arrow is $\delta\bm u_s$. Increments are magnified and do not represent nominal azimuth.}\label{fig:vinculo-raiz}
 \end{figure*}
 
 Derivatives follow by replacing $\bm r_s$ with $\dot{\bm r}_s=\bm W\bm r_s$ and $\ddot{\bm r}_s=\bm W^2\bm r_s$ in the upper-right block; derivatives of the other blocks vanish. Collecting all constraints and support conditions gives $\delta\bm q=\bm T(t)\bm z$, where $\bm z$ contains only independent coordinates. Matrix $\bm T$ retains free columns and inserts blocks $\bm B_s$ in root rows. Equation~\eqref{eq:fullsystem} becomes
@@ -758,6 +758,8 @@ The equivalent matrix $\bm\Gamma_{\rm eff}$, defined by $\bm M_r\bm\Gamma_{\rm e
 
 For a flexible foundation, its coordinates and matrices must remain in the system, and excitation is imposed at the ground interface. Constant stiffness and damping idealize impedance; by themselves, they capture neither soil nonlinearity nor its complete frequency dependence.
 
+\input{sections/apriori_en.tex}
+
 \section{Modal and transient problems}
 \subsection{Eigenvalues and rigid-body motions}
 For the stationary conservative system, the modal problem is
@@ -837,6 +839,8 @@ The formulation relates the material description of components to nominal motion
 The gyroscopic matrix follows from the skew-symmetric part of velocity--displacement coupling in kinetic energy. Transport to fixed axes and time-dependent constraints introduce additional contributions that must be retained together. Equilibrium and linearization place inertial terms on the left-hand side and external actions on the right.
 
 The model assumes small structural deformations, reference mass properties, and constant nominal angular velocity. These assumptions support local vibration and transient-response analysis about an operating state. Periodic excitations or coefficients must remain in the time-dependent problem; a fixed-azimuth evaluation does not solve that regime. The formulation establishes the relations needed to incorporate aerodynamic and foundation laws consistent with these assumptions.
+
+The \hyperref[sec:apriori]{a priori estimates} complete the formulation with positivity, regularity and coercivity assumptions. The dynamic bound retains nonconservative and temporal contributions; the spatial bound is restricted to the elastic subproblem and the linearization error bound to a neighborhood of small perturbations. They do not establish uniform convergence rates or stability of the periodic rotor.
 
 \section{Appendix A. Element matrices and interpolation}
 Element ordering is $\bm q_e^\ell=[(\bm q_I^\ell)^\tr,(\bm q_J^\ell)^\tr]^\tr$, where $\bm q_i^\ell=[u_i,v_i,w_i,\theta_{xi},\theta_{yi},\theta_{zi}]^\tr$. Extension, at indices $(1,7)$, and torsion, at $(4,10)$, use
