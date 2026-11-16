@@ -11,8 +11,8 @@ if nargin < 2 || isempty(outputFile)
     outputFile = fullfile(tempdir, 'legacy_benchmark.mat');
 end
 setenv('TESIS_LEGACY_BENCHMARK_OUTPUT', char(string(outputFile)));
-source = fullfile(char(string(projectRoot)), 'legacy', 'Codigos_sergio', ...
-    '[Diego Turello Version 0]', 'FrecuenciasTorreCompleta.m');
+source = fullfile(char(string(projectRoot)), 'reference', 'original', ...
+    'turello_v0', 'FrecuenciasTorreCompleta.m');
 set(groot, 'defaultFigureVisible', 'off');
 run(source);
 frequencyHz = f(:); %#ok<NODEF>

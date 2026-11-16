@@ -20,32 +20,32 @@ if isfield(results,'validation') && isfield(results.validation,'checks')
     writetable(validationTable,fullfile(run.folder,'validation_summary.csv'));
 end
 if isfield(results,'action02') && ~isempty(results.action02)
-    artifacts.action02 = post.export_action02( ...
+    artifacts.action02 = post.export_beam_verification( ...
         run,cfg,modelData,results.action02);
     if isfield(artifacts.action02,'figures')
         artifacts.figures = [artifacts.figures artifacts.action02.figures];
     end
 end
 if isfield(results,'action03') && ~isempty(results.action03)
-    artifacts.action03 = post.export_action03(run,results.action03);
+    artifacts.action03 = post.export_constraint_verification(run,results.action03);
 end
 if isfield(results,'action04') && ~isempty(results.action04)
-    artifacts.action04 = post.export_action04(run,results.action04);
+    artifacts.action04 = post.export_rigid_body_verification(run,results.action04);
 end
 if isfield(results,'action05') && ~isempty(results.action05)
-    artifacts.action05 = post.export_action05(run,results.action05);
+    artifacts.action05 = post.export_mass_verification(run,results.action05);
 end
 if isfield(results,'action06') && ~isempty(results.action06)
-    artifacts.action06 = post.export_action06(run,results.action06);
+    artifacts.action06 = post.export_equilibrium_verification(run,results.action06);
 end
 if isfield(results,'action07') && ~isempty(results.action07)
-    artifacts.action07 = post.export_action07(run,results.action07);
+    artifacts.action07 = post.export_dynamic_operator_verification(run,results.action07);
 end
 if isfield(results,'action08') && ~isempty(results.action08)
-    artifacts.action08 = post.export_action08(run,results.action08);
+    artifacts.action08 = post.export_campbell_verification(run,results.action08);
 end
 if isfield(results,'action09') && ~isempty(results.action09)
-    artifacts.action09 = post.export_action09( ...
+    artifacts.action09 = post.export_seismic_verification( ...
         run,cfg,modelData,results.action09);
     artifacts.timeSummary=artifacts.action09.responseExtrema;
     if isfield(artifacts.action09,'figures')
@@ -53,7 +53,7 @@ if isfield(results,'action09') && ~isempty(results.action09)
     end
 end
 if isfield(results,'action10') && ~isempty(results.action10)
-    artifacts.action10=post.export_action10(run,results.action10);
+    artifacts.action10=post.export_integral_verification(run,results.action10);
 end
 
 makeFigures=true;

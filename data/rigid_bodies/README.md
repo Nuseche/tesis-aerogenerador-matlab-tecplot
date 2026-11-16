@@ -1,16 +1,10 @@
-# Cuerpos rígidos Version 0
+# Rigid-body data
 
-`legacy_rigid_bodies_v0.json` transcribe las masas e inercias de góndola y
-cubo de `FrecuenciasTorreCompleta.m`, líneas 159–177 de Version 0. El archivo
-es declarativo: cargarlo no ejecuta código heredado.
+`legacy_rigid_bodies_v0.json` transcribes nacelle and hub masses and principal
+inertias from Version 0 `FrecuenciasTorreCompleta.m` (original lines 159-177).
+The declarative input stores `[90,-5,-90]` explicitly in degrees. The loader
+converts these angles once; it does not repeat the original program's accidental
+interpretation of those degree values as radians.
 
-Los valores angulares `[90,-5,-90]` se almacenan explícitamente en grados y se
-convierten una sola vez a radianes. El `rotmat` heredado tenía comentado
-`*pi/180`, por lo que la ejecución histórica usó accidentalmente los números
-como radianes. Ese comportamiento no satisface las convenciones SI del modelo
-nuevo y no se reproduce como interpretación física.
-
-La fuente no incluye posiciones de los centros de masa. Los offsets cero son
-una hipótesis de colocalización en los nodos maestros 129 y 130, identificada
-como tal en cada registro. Deben sustituirse cuando se disponga de datos del
-aerogenerador real.
+Zero center-of-mass offsets declare colocation at master nodes 129 and 130.
+They are assumptions because the source does not supply measured offsets.

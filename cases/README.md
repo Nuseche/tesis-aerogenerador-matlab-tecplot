@@ -1,20 +1,32 @@
-# Casos reproducibles
+# Analysis configurations
 
-- `config_stationary_modal.m`: modal conservativo a rotor detenido.
-- `config_rotating_campbell.m`: continuación 0/6/12 RPM, QEP y MBC.
-- `config_seismic_demo.m`: aceleración de base sintética y Newmark.
-- `config_flexible_foundation.m`: matrices `Mf/Kf/Cf` del caso blando legado.
+Call configurations through `main('cases/<name>.m')`. The loader resolves paths
+from the repository and temporarily adds the case directory for dependencies.
+For direct calls, use `addpath('cases')` first.
 
-Los tres casos usan una rigidez de tren de potencia **ilustrativa**, declarada
-en la configuración, porque los archivos heredados solo aportan una
-penalización rígida y no una tangente física verificable. Los valores deben
-reemplazarse por rigideces identificadas antes de interpretar los resultados
-como predicción de la turbina. El solver nunca activa esos valores en
-`config_default.m`; por eso la ejecución predeterminada es de geometría y
-validación.
+| Configuration | Purpose |
+| --- | --- |
+| `config_stationary_modal.m` | Fixed-base conservative modes with an explicit illustrative drivetrain |
+| `config_flexible_foundation.m` | Stationary model with the original soft-foundation matrices |
+| `config_rotating_campbell.m` | Prescribed rotation, equilibrium, and modal sweep |
+| `config_seismic_demo.m` | Short synthetic base-acceleration example |
+| `config_beam_verification.m` | Two-node Timoshenko element and beam benchmarks |
+| `config_constraint_verification.m` | Exact hub/root kinematic constraints |
+| `config_rigid_body_verification.m` | Spatial masses and rigid-body inertia |
+| `config_mass_verification.m` | Consistent mass and explicitly selected HRZ alternative |
+| `config_equilibrium_verification.m` | Gravity/rotation equilibrium and geometric stiffness |
+| `config_dynamic_operator_verification.m` | Gyroscopic, transport, and rotational operators |
+| `config_campbell_verification.m` | MBC, quadratic eigenproblem and branch tracking |
+| `config_seismic_verification.m` | Newmark integration, physical recovery, reactions and time refinement |
+| `config_integral_verification.m` | Integrated checks, including named historical acceptance runs |
+| `config_sensitivity_local.m` | Study settings for local derivatives; use the sensitivity study driver |
+| `config_sensitivity_morris.m` | Study settings for the three-factor Morris design; use the Morris driver |
 
-Ejemplo:
+The two sensitivity configurations return study structures, not a `main` analysis
+configuration. The integral verification case requires the archived runs listed
+in its `canonicalRuns` field; ordinary analyses and the unit tests do not require
+that archive.
 
-```matlab
-results = main("cases/config_stationary_modal.m");
-```
+Persisted `action02` through `action10` structure fields and artifact names remain
+compatible with existing run files. Public configuration and exporter filenames
+now describe the physical check; see [the migration map](../docs/repository_changes.md).

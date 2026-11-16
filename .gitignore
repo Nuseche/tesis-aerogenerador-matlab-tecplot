@@ -33,7 +33,19 @@ __pycache__/
 /output/
 **/qa/
 **/qa_*/
-postprocessing/tecplot_20261007/packages/
-# Frozen legacy evidence is part of its source manifest, not a LaTeX cache.
-!legacy/Codigos_sergio/FEMESH.OUT
-!Codigos_sergio/FEMESH.OUT
+# Original reference bytes are covered by the manifest.
+!reference/original/FEMESH.OUT
+# Study outputs (inputs and fixed reference metadata are tracked explicitly).
+/studies/**/figures/
+/studies/**/*.mat
+/studies/**/*.log
+/studies/**/*.json
+/studies/**/*.csv
+!/studies/morris/report_data.json
+!/studies/measured_inputs/sources/*.json
+!/studies/measured_inputs/tables/*_SI.csv
+!/studies/measured_inputs/tables/earthquake_catalog.json
+!/studies/measured_inputs/tables/wind_catalog.json
+!/studies/measured_inputs/tables/wind_channel_audit.json
+/studies/measured_inputs/sources/nm92_20051119_0000_250.dat
+/studies/measured_inputs/sources/nm92_archive_members.json

@@ -106,8 +106,8 @@ end
 evidenceTable = struct2table(evidenceRows);
 artifactTable = struct2table(artifactRows);
 
-% Modal/QEP/Campbell gates are read from Action 08 and the corresponding
-% solution. They need not have been recomputed inside the Action-10 process.
+% Modal/QEP/Campbell gates are read from Campbell verification and the corresponding
+% solution. They need not have been recomputed inside the Integral verification process.
 modalResults = localGetField(results,'modal',struct());
 if isempty(fieldnames(modalResults)) && isstruct(loadedResults{8})
     modalResults = localGetField(loadedResults{8},'modal',struct());
@@ -117,7 +117,7 @@ requireModal = localLogicalCfg(cfg,{'action10','requireModalEvidence'}, ...
 checks = [checks; localModalRequirements( ...
     actionData{8},modalResults,requireModal)]; %#ok<AGROW>
 
-% Action 09 owns detailed temporal physics. Direct state finiteness and its
+% Seismic verification owns detailed temporal physics. Direct state finiteness and its
 % stable specialized checks are both required in the full acceptance case.
 timeResults = localGetField(results,'time',struct());
 if isempty(fieldnames(timeResults)) && isstruct(loadedResults{9})

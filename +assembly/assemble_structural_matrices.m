@@ -1,8 +1,8 @@
 function [M,Ke,cache,diagnostics] = assemble_structural_matrices(model,cfg)
 %ASSEMBLE_STRUCTURAL_MATRICES Sparse global consistent mass and stiffness.
 %   The triplet pass visits only active flexible elements.  Foundation and
-%   drivetrain operators belong to later actions and are excluded whenever
-%   cfg.assembly.flexibleOnly is true or analysis.type is Action 02.
+%   drivetrain operators are excluded from isolated beam checks whenever
+%   cfg.assembly.flexibleOnly is true or the analysis selects beam verification.
 if nargin<2,cfg=struct();end
 [ndof,ne]=model_size(model);
 maxTerms=144*ne;I=zeros(maxTerms,1);J=I;VM=I;VK=I;p=0;

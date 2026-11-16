@@ -1,7 +1,7 @@
 function study=config_local()
 %CONFIG_LOCAL Bounded exploratory derivatives of the September solver.
 root=fileparts(fileparts(mfilename('fullpath')));addpath(fullfile(root,'cases'));
-cfg=config_action08_mbc_qep_campbell();
+cfg=config_campbell_verification();
 cfg.rotor.speedRPMGrid=cfg.rotor.speedRPM;
 cfg.modal.number=16;cfg.modes.number=16; % buffer for matching 12 branches
 cfg.output.makeFigures=false;cfg.output.plotGeometry=false;

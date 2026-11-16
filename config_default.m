@@ -34,10 +34,9 @@ cfg.base = struct('type', "fixed", 'fixedNodeIds', 1);
 cfg.rotor = struct('speedRPM', 0, 'azimuthRad', 0, ...
     'axisConvention', "nacelle_master_to_rotor_master");
 cfg.mass = struct('formulation', "consistent");
-% Action 02 keeps the production-quality closed two-node Timoshenko
-% interpolation as the default.  The literal linear/SRI formulation from
-% the implementation plan is also available as "selective_integration"
-% for locking and convergence benchmarks.
+% Closed two-node Timoshenko interpolation is the default. Linear shape
+% functions with selective shear integration are available as
+% "selective_integration" for locking and convergence benchmarks.
 cfg.elements = struct('formulation', "closed_exact", ...
     'regularIntegrationPoints', 2, 'shearIntegrationPoints', 1, ...
     'massIntegrationPoints', 2);

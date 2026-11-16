@@ -1,16 +1,10 @@
-# Secciones Version 0
+# Section properties
 
-`legacy_sections_v0.mat` contiene 55 secciones canónicas en SI:
+`legacy_sections_v0.mat` stores the extracted tower and blade section data.
+The production loader interprets stiffness and mass fields explicitly; it does
+not execute `Secciones.m` or derive a fictitious blade modulus from mass data.
 
-- IDs 1--20: torre/transición, derivados exactamente de `secc_torre` y de
-  `YOUNG=2.1e11`, `POISS=0.3`, `DENS=7850` de Version 0.
-- IDs 21--55: las 35 estaciones de pala; las seis rigideces generalizadas
-  se conservan directamente de `secc_pala`, sin reconstruir E/A ficticios.
-  `AXIALD`, `TORDEN`, `INERT2` e `INERT3` se preservan además en
-  `rawMassColumns`. Como `TORDEN=0`, el artefacto deja `Jx=NaN` y exige una
-  regla explícita de configuración. `model.resolve_section_mass` admite
-  únicamente `perpendicular_axis`, que calcula `Jx=Jy+Jz`; nunca usa
-  `EA/AXIALD` ni `GJ`.
-
-Version 0 no entrega offsets de centroide; se conserva su formulación
-centrada declarando `ycg=zcg=0` y registrando esa limitación en cada sección.
+The sectional stiffness order is `EA, GAy, GAz, GJ, EIy, EIz`. Distributed mass
+uses mass per length and rotary inertias. The original zero longitudinal blade
+inertia is resolved only by the declared `perpendicular_axis` rule, `Jx=Jy+Jz`.
+See [mechanical conventions](../../docs/conventions.md) for frames and signs.

@@ -1,75 +1,61 @@
-# Convenciones matemáticas y físicas
+# Mechanical and numerical conventions
 
-El solver usa exclusivamente unidades SI coherentes: metro, kilogramo, segundo,
-newton, pascal y radián. Los seis grados de libertad de cada nodo se almacenan
-en el orden
+Use coherent SI units: m, kg, s, N, Pa and rad. Each node stores
+`[ux, uy, uz, theta_x, theta_y, theta_z]`. Global axes are right-handed;
+positive rotations follow the right-hand rule.
 
-`[u_x, u_y, u_z, theta_x, theta_y, theta_z]`.
+For an offset `r`, `S(r)*a = cross(r,a)`. Exact rigid compatibility is
+`u_slave = u_master - S(r)*theta_master`, with equal infinitesimal rotations.
+The nominal rotor axis points from nacelle master 129 to hub master 130.
+The root slaves are 21, 57 and 93; blade tips are 56, 92 and 128.
 
-Las traslaciones positivas siguen los ejes globales derechos. Las rotaciones
-positivas obedecen la regla de la mano derecha. Para un vector `r`,
+## Beam frames and section laws
+
+Local axis 1 points from node I to J. Project the I-to-auxiliary-point vector
+onto the plane normal to axis 1 to obtain axis 3; axis 2 is `cross(e3,e1)`.
+The three blade auxiliary arrays are independent. Do not interchange `EIy/EIz`,
+`GAy/GAz` or `Jy/Jz` when constructing a frame.
+
+The rows of `R` contain local axes in global coordinates.
+`Te = blkdiag(R,R,R,R)`, `q_local = Te*q_global`, and
+`K_global = Te'*K_local*Te`, with the analogous relation for mass.
+The local coordinate order is `[u1 v1 w1 rx1 ry1 rz1 u2 v2 w2 rx2 ry2 rz2]`.
+The strain conventions are
 
 ```text
-       [  0   -rz    ry ]
-S(r) = [ rz     0   -rx ]
-       [-ry    rx     0 ]
+epsilon_x = du/dx        gamma_y = dv/dx - rz   gamma_z = dw/dx + ry
+kappa_x   = drx/dx       kappa_y = dry/dx       kappa_z = drz/dx
 ```
 
-y por tanto `S(r)*a = r x a`. La restricción rígida usa
-`u_s = u_m - S(r_sm)*theta_m`, que equivale a
-`u_s = u_m + theta_m x r_sm`, y `theta_s = theta_m`.
+A positive rigid rotation about local 2 requires `w2-w1 = -ry*L`;
+a positive rotation about local 3 requires `v2-v1 = rz*L`.
 
-En cada viga el eje local 1 va de I a J. El **eje local 3** se obtiene
-proyectando el vector nodo-I/punto-auxiliar sobre el plano normal al eje 1 y
-el eje local 2 se define como `e3 x e1`. Esta es la convención de los datos
-heredados y evita intercambiar `EIy/EIz`, `GAy/GAz` o `Jy/Jz`. La matriz de
-rotación contiene los ejes locales por filas y transforma un vector global a
-local. Para las palas se usan, sin intercambio, `coorP1aux`, `coorP2aux` y
-`coorP3aux`.
+Blade `AXIALD` is mass per length, not an area or a way to infer Young's modulus.
+The original `TORDEN` column is zero. The explicit `perpendicular_axis` rule
+sets `Jx = Jy + Jz` from the transverse mass moments; it does not infer inertia
+from stiffness. Use the consistent mass as the default; HRZ is a separately
+selected comparison. The old absolute row-sum diagonal mass is historical only.
 
-El vector elemental local se ordena como
-`[u1 v1 w1 rx1 ry1 rz1 u2 v2 w2 rx2 ry2 rz2]`. Las deformaciones son
-`epsilon_x=du/dx`, `gamma_y=dv/dx-rz`, `gamma_z=dw/dx+ry`,
-`kappa_x=drx/dx`, `kappa_y=dry/dx` y `kappa_z=drz/dx`. Por ello una rotación
-rígida positiva alrededor de local 2 exige `w2-w1=-ry*L`, mientras una
-rotación rígida positiva alrededor de local 3 exige `v2-v1=rz*L`.
+## Rotation, equilibrium and recovery
 
-Ejemplos semánticos de orientación:
+Positive rotor speed follows the right-hand rule about the nominal axis.
+Blade 1 defines zero azimuth; blades 2 and 3 are separated by `2*pi/3`.
+Positive pitch is a right-handed rotation about each blade's longitudinal axis.
+Original angles recorded in degrees are explicitly converted once.
 
-- Viga global X con auxiliar global Y: `e1=X`, `e3=Y`, `e2=-Z`.
-- Viga global Y con auxiliar global Z: `e1=Y`, `e3=Z`, `e2=X`.
-- Viga global Z con auxiliar global X: `e1=Z`, `e3=X`, `e2=Y`.
+A moving transformation requires
+`qdot = T*zdot + Tdot*z` and
+`qddot = T*zddot + 2*Tdot*zdot + Tddot*z`.
+MBC and constraint transport terms must remain consistent in assembly and recovery.
+Frozen-azimuth eigenvalues and trajectories do not constitute a Floquet analysis.
 
-La transformación elemental es `Te=blkdiag(R,R,R,R)` y cumple
-`q_local=Te*q_global`, `K_global=Te'*K_local*Te` y la relación análoga para
-la masa.
+`Kg` contains equilibrium axial-force effects. `KOmega` contains rotational
+contributions not represented by those forces; do not double-count them.
+Gyroscopic power and energy-Hessian consistency are covered by the regression
+suite. Aerodynamic tangents are explicit inputs, kept separate from structural
+operators; absent coefficients remain zero and are reported as such.
 
-## Masa seccional de las palas
-
-`AXIALD` se usa exclusivamente como dato de masa lineal y nunca como área ni
-para obtener un módulo `EA/AXIALD`. El valor heredado `TORDEN` es cero. La
-inercia longitudinal distribuida se completa únicamente cuando la
-configuración declara `cfg.sections.blade.torsionalInertiaRule =
-"perpendicular_axis"`; entonces `Jx=Jy+Jz` a partir de los campos documentados
-`INERT2/INERT3`. No se deriva de `EA`, `GJ` ni de un módulo efectivo.
-
-El eje nominal del rotor se toma de góndola (nodo 129) a cubo (nodo 130). La
-velocidad positiva obedece la regla de la mano derecha alrededor de ese eje.
-El azimut cero es el definido por la pala 1 en la geometría de referencia y el
-azimut positivo crece con la velocidad positiva. Los azimuts de las palas 2 y
-3 están separados `2*pi/3`. Pitch positivo es una rotación de mano derecha
-alrededor del eje longitudinal de cada pala. Todos los ángulos internos están
-en radianes; cualquier dato heredado en grados se convierte explícitamente.
-
-MBC usa los armónicos colectivo, coseno y seno normalizados. Como `T` depende
-del azimut, las transformaciones de amortiguamiento y rigidez incluyen `Tdot`
-y `Tddot`. La respuesta sísmica se integra en coordenadas relativas; la
-aceleración absoluta se recupera agregando `Gamma*a_g`.
-
-## Separación de términos centrífugos
-
-`Kg` se ensambla exclusivamente con las fuerzas axiales recuperadas del estado
-de equilibrio. `KOmega` contiene solamente contribuciones rotacionales que no
-están representadas por dichas fuerzas. La configuración predeterminada no
-activa ambas representaciones para el mismo efecto. `Kaero` y `Caero` se
-mantienen separados y no se simetrizan.
+Seismic coordinates are relative to the base. Recover absolute acceleration
+by including ground acceleration and the transformation derivatives. Recover
+base reactions from equilibrium including inertia, damping, elasticity and
+base-motion terms, rather than stiffness alone.

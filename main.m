@@ -1,6 +1,7 @@
 function results = main(configFile)
 %MAIN Coordinate one reproducible wind-turbine analysis.
 
+%% Configuration and run directory
 projectRoot = fileparts(mfilename('fullpath'));
 addpath(projectRoot);
 if nargin < 1
@@ -16,6 +17,7 @@ fprintf('MATLAB %s, analysis=%s, base=%s, mass=%s\n', ...
     version,string(cfg.analysis.type),string(cfg.base.type),string(cfg.mass.formulation));
 
 try
+    %% Geometry, sections, rigid bodies, and input validation
     data = io.load_model_data(cfg);
     modelData = model.build_model(data,cfg);
     inputValidation = model.validate_model(modelData,cfg);
@@ -31,6 +33,7 @@ try
     state = struct();
     ops = struct();
 
+    %% Assembly and analysis-specific verification
     analysisType = lower(string(cfg.analysis.type));
     geometryOnly = any(analysisType == ...
         ["geometry","geometry_only","validate","validation"]);
@@ -57,9 +60,9 @@ try
         ["action10","action10_full_acceptance", ...
          "integral_acceptance_validation"]);
     if action02Only
-        % Action 02 deliberately stops at the unconstrained flexible mesh.
+        % Beam verification deliberately stops at the unconstrained flexible mesh.
         % Rigid bodies, Tc, equilibrium and all operating-point operators
-        % belong to later actions and must not contaminate these benchmarks.
+        % are excluded from these isolated beam benchmarks.
         [M,Ke,elementCache,assemblyDiagnostics] = ...
             assembly.assemble_structural_matrices(modelData,cfg);
         ops = struct();
@@ -74,8 +77,8 @@ try
         end
         results.meta.analysisScope = "unconstrained_flexible_mesh";
     elseif action03Only
-        % Action 03 isolates exact master/slave kinematics. Concentrated
-        % bodies and all operating-point physics begin in later actions.
+        % Constraint verification isolates exact master/slave kinematics. Concentrated
+        % bodies and operating-point operators are excluded from this check.
         [M,Ke,elementCache,assemblyDiagnostics] = ...
             assembly.assemble_structural_matrices(modelData,cfg);
         bodies = modelData.rigidBodies;
@@ -94,7 +97,7 @@ try
         results.meta.analysisScope = ...
             "exact_rigid_constraints_without_concentrated_body_masses";
     elseif action04Only
-        % Action 04 adds only the traced spatial masses of nacelle and hub
+        % Rigid-body verification adds only the traced spatial masses of nacelle and hub
         % before applying the already accepted exact constraint transform.
         [Mdistributed,Ke,elementCache,assemblyDiagnostics] = ...
             assembly.assemble_structural_matrices(modelData,cfg);
@@ -121,7 +124,7 @@ try
         results.meta.analysisScope= ...
             "distributed_mass_plus_spatial_nacelle_and_hub_before_Tc";
     elseif action05Only
-        % Action 05 keeps consistent mass as production and builds HRZ only
+        % Mass verification keeps consistent mass as production and builds HRZ only
         % as an explicitly labelled sensitivity alternative.
         [Massembled,Ke,elementCache,assemblyDiagnostics]= ...
             assembly.assemble_structural_matrices(modelData,cfg);
@@ -299,9 +302,9 @@ try
         results.meta.analysisScope= ...
             "linearized_multicomponent_seismic_response_at_frozen_operating_point";
     elseif action10Only
-        % Action 10 recomputes the downstream modal and temporal blocks in
+        % Integral verification recomputes the downstream modal and temporal blocks in
         % memory while independently reloading and hashing the accepted
-        % Action-02--09 artifacts named by the configuration.
+        % specialized verification artifacts named by the configuration.
         [Mdistributed,Ke,elementCache,assemblyDiagnostics]= ...
             assembly.assemble_structural_matrices(modelData,cfg);
         [Mdistributed,massDiagnostics]= ...
@@ -450,7 +453,7 @@ response.snapshotMetadata=struct('speedRPM',pointOps.speedRPM, ...
 end
 
 function diagnostics = localAction02ElementDiagnostics(elementCache)
-% Keep CSV-oriented scalar diagnostics with the persisted Action-02 result.
+% Keep CSV-oriented scalar diagnostics with the persisted beam-verification result.
 numberOfElements = numel(elementCache);
 assembled = false(numberOfElements,1);
 elementId = nan(numberOfElements,1);

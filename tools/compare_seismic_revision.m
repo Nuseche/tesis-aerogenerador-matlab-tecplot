@@ -1,5 +1,5 @@
 function report=compare_seismic_revision(oldRun,newRun,outCsv)
-%COMPARE_SEISMIC_REVISION Compare stored Action-09 physical response channels.
+%COMPARE_SEISMIC_REVISION Compare stored Seismic verification physical response channels.
 % report=compare_seismic_revision(oldRun,newRun,outCsv) writes sixty rows:
 % 0/12 RPM x nodes 129,130,56,92,128 x x/y/z x relative displacement and
 % absolute acceleration. No model assembly, integration, interpolation, or

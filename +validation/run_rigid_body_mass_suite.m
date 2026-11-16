@@ -1,6 +1,6 @@
 function suite = run_rigid_body_mass_suite(modelData,Mdistributed,M,Ke,Tc, ...
     reduced,constraintInfo,bodyReport,massProperties,cfg)
-%RUN_RIGID_BODY_MASS_SUITE Specialized acceptance checks for Action 04.
+%RUN_RIGID_BODY_MASS_SUITE Specialized acceptance checks for Rigid-body verification.
 
 arguments
     modelData (1,1) struct

@@ -257,7 +257,7 @@ manifest.hasAction10 = isfield(results,'action10') && ~isempty(results.action10)
 if manifest.hasAction10 && isfield(results.action10,'passed')
     manifest.action10Passed = logical(results.action10.passed);
 end
-manifest.legacyManifest = "legacy/MANIFEST.sha256";
+manifest.legacyManifest = "reference/MANIFEST.sha256";
 end
 
 function saved=localAction09Operators(point)

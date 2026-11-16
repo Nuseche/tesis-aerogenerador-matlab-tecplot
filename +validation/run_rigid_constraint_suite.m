@@ -1,5 +1,5 @@
 function suite = run_rigid_constraint_suite(modelData,M,Ke,Tc,reduced,info,assemblyDiagnostics,cfg)
-%RUN_RIGID_CONSTRAINT_SUITE Specialized acceptance checks for Action 03.
+%RUN_RIGID_CONSTRAINT_SUITE Specialized acceptance checks for Constraint verification.
 %   This suite validates only exact rigid kinematics and congruence. It does
 %   not add or assess concentrated rigid-body mass, gravity, rotation or a
 %   drivetrain constitutive law.

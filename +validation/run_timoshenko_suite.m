@@ -1,6 +1,6 @@
 function results = run_timoshenko_suite( ...
     modelData, M, Ke, elementCache, diagnostics, cfg)
-%RUN_TIMOSHENKO_SUITE Action-02 Timoshenko analytical and subsystem suite.
+%RUN_TIMOSHENKO_SUITE Beam verification Timoshenko analytical and subsystem suite.
 %   This suite deliberately reassembles isolated tower/blade chains. A
 %   principal submatrix of the connected turbine would retain artificial
 %   stiffness from elements lying outside the selected subsystem.

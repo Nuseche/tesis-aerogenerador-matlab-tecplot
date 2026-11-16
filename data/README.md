@@ -1,13 +1,18 @@
-# Datos autocontenidos del modelo
+# Versioned model inputs
 
-Los archivos MAT de `geometry/`, `sections/` y `reference/`, junto con el JSON
-declarativo de `rigid_bodies/`, son los únicos datos heredados consumidos por
-el solver nuevo. Se verifican con `MANIFEST.sha256`:
+The solver reads self-contained MAT files in `geometry`, `sections` and
+`reference`, plus the declarative JSON in `rigid_bodies`. It never executes the
+original MATLAB scripts during an analysis. `config_default` resolves these
+paths from the repository location.
 
-```sh
-cd /Users/nuseche/Desktop/Tesis_codigos
-shasum -a 256 -c data/MANIFEST.sha256
-```
+`MANIFEST.sha256` records the original model-input bytes. Verify with
+`python tools/check_repository.py` or `shasum -a 256 -c data/MANIFEST.sha256`.
 
-El cargador `io.load_model_data` usa rutas resueltas desde `config_default.m`;
-no ejecuta scripts, no añade `legacy/` al path y no depende de `pwd`.
+- [Geometry](geometry/README.md): node coordinates, connectivity, auxiliary points.
+- [Sections](sections/README.md): stiffnesses and distributed mass properties.
+- [Rigid bodies](rigid_bodies/README.md): masses, principal inertias and orientations.
+- [References](reference/README.md): historical frequencies and operating evidence.
+
+Measured seismic/wind inputs and preparation scripts live together in
+[studies/measured_inputs](../studies/README.md). Their provenance and checksums
+are independent of the model-input manifest.

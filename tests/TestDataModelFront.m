@@ -19,24 +19,23 @@ classdef TestDataModelFront < matlab.unittest.TestCase
     end
 
     methods (Test)
-        function legacyMirrorMatchesAndIsReadOnly(testCase)
-            command = sprintf("cd '%s' && shasum -a 256 -c legacy/MANIFEST.sha256", ...
-                testCase.ProjectRoot);
-            [status, output] = system(command);
-            testCase.verifyEqual(status, 0, output);
-            [status, output] = system(sprintf( ...
-                "diff -rq '%s' '%s'", ...
-                fullfile(testCase.ProjectRoot, 'Codigos_sergio'), ...
-                fullfile(testCase.ProjectRoot, 'legacy', 'Codigos_sergio')));
-            testCase.verifyEqual(status, 0, output);
-
-            files = dir(fullfile(testCase.ProjectRoot, 'legacy', ...
-                'Codigos_sergio', '**', '*'));
-            files = files(~[files.isdir]);
-            for k = 1:numel(files)
-                [ok, attributes] = fileattrib(fullfile(files(k).folder, files(k).name));
-                testCase.assertTrue(ok);
-                testCase.verifyFalse(attributes.UserWrite, files(k).name);
+        function originalSourcesMatchManifest(testCase)
+            manifest = readlines(fullfile(testCase.ProjectRoot, ...
+                'reference', 'MANIFEST.sha256'));
+            manifest = manifest(strlength(strtrim(manifest)) > 0);
+            testCase.verifyNumElements(manifest, 22);
+            for k = 1:numel(manifest)
+                entry = regexp(char(manifest(k)), ...
+                    '^([0-9a-f]{64})  (.+)$', 'tokens', 'once');
+                testCase.assertNotEmpty(entry);
+                filename = fullfile(testCase.ProjectRoot, entry{2});
+                fid = fopen(filename, 'rb');
+                testCase.assertGreaterThanOrEqual(fid, 0, filename);
+                closeFile = onCleanup(@() fclose(fid));
+                bytes = fread(fid, Inf, '*uint8');
+                clear closeFile
+                testCase.verifyEqual(sensitivity.sha256(bytes), ...
+                    string(entry{1}), filename);
             end
         end
 

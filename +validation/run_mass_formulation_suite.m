@@ -2,7 +2,7 @@ function suite=run_mass_formulation_suite(modelData,Massembled,McDistributed, ..
     MhDistributed,Mc,Mh,Ke,Tc,reducedConsistent,reducedHrz, ...
     bodyReportConsistent,bodyReportHrz,propertiesConsistent,propertiesHrz, ...
     diagnosticsConsistent,diagnosticsHrz,cfg)
-%RUN_MASS_FORMULATION_SUITE Acceptance checks for Action 05.
+%RUN_MASS_FORMULATION_SUITE Acceptance checks for Mass verification.
 
 tol=localCfg(cfg,{'validation','massConservationTolerance'},1e-10);
 symTol=localCfg(cfg,{'validation','matrixSymmetry'},1e-12);

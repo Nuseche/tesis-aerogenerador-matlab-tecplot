@@ -3,7 +3,7 @@ function result=evaluate_case(study,factors,options)
 if nargin<3,options=struct();end
 started=tic;cfg=study.nominal;
 if isfield(options,'seismic')&&options.seismic
-    timeCfg=config_action09_seismic_newmark();
+    timeCfg=config_seismic_verification();
     cfg.seismic=timeCfg.seismic;cfg.newmark=timeCfg.newmark;
     if isfield(options,'dt'),cfg.newmark.dt=options.dt;end
 end

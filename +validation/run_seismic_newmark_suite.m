@@ -1,6 +1,6 @@
 function suite=run_seismic_newmark_suite(modelData,reduced,sweep, ...
         responses,convergenceResponses,elementForces,cfg)
-%RUN_SEISMIC_NEWMARK_SUITE Specialized Action-09 acceptance verification.
+%RUN_SEISMIC_NEWMARK_SUITE Specialized Seismic verification acceptance verification.
 
 seriesTol=value(cfg,{'action09','seriesTolerance'},1e-12);
 kinTol=value(cfg,{'action09','kinematicTolerance'},1e-12);

@@ -1,5 +1,5 @@
 function suite=run_dynamic_operator_suite(modelData,reduced,sweep,cfg)
-%RUN_DYNAMIC_OPERATOR_SUITE Specialized Action-07 acceptance verification.
+%RUN_DYNAMIC_OPERATOR_SUITE Specialized Dynamic-operator verification acceptance verification.
 
 skewTol=value(cfg,{'action07','skewTolerance'},1e-12);
 scaleTol=value(cfg,{'action07','scalingTolerance'},1e-12);

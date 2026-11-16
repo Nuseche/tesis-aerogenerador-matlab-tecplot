@@ -1,6 +1,6 @@
 function suite=run_mbc_qep_campbell_suite( ...
         modelData,reduced,sweep,analysisModel,modalResults,cfg)
-%RUN_MBC_QEP_CAMPBELL_SUITE Specialized Action-08 acceptance checks.
+%RUN_MBC_QEP_CAMPBELL_SUITE Specialized Campbell verification acceptance checks.
 
 inverseTol=value(cfg,{'action08','inverseTolerance'},1e-12);
 dotTol=value(cfg,{'action08','firstDerivativeTolerance'},1e-8);

@@ -12,8 +12,8 @@ if nargin < 2 || isempty(benchmarkFile)
     benchmarkFile = fullfile(tempdir, 'legacy_benchmark.mat');
 end
 projectRoot = char(string(projectRoot));
-legacyDir = fullfile(projectRoot, 'legacy', 'Codigos_sergio', ...
-    '[Diego Turello Version 0]');
+legacyDir = fullfile(projectRoot, 'reference', 'original', ...
+    'turello_v0');
 geoSource = fullfile(legacyDir, 'GeoTorre.m');
 sectionSource = fullfile(legacyDir, 'Secciones.m');
 solverSource = fullfile(legacyDir, 'FrecuenciasTorreCompleta.m');
@@ -30,7 +30,7 @@ geometry.connectivity = conect;
 geometry.coorP1aux = coorP1aux;
 geometry.coorP2aux = coorP2aux;
 geometry.coorP3aux = coorP3aux;
-geometry.source = "legacy/Codigos_sergio/[Diego Turello Version 0]/GeoTorre.m";
+geometry.source = "reference/original/turello_v0/GeoTorre.m";
 geometry.sourceSHA256 = "23237070dc2489046f60e3ced16deb233fa0dc6c3edcf2b6b39648f69ef077b1";
 geometry.legacyColumns = struct('connectivity', ...
     ["element_id", "legacy_type", "node_i", "node_j"]);
@@ -41,7 +41,7 @@ materialData.youngPa = 2.100e11;
 materialData.poisson = 0.3000;
 materialData.shearPa = materialData.youngPa/(2*(1+materialData.poisson));
 materialData.densityKgM3 = 7.850e3;
-materialData.source = "legacy/.../Secciones.m + FrecuenciasTorreCompleta.m " + ...
+materialData.source = "reference/original/turello_v0/Secciones.m + FrecuenciasTorreCompleta.m " + ...
     "lines defining YOUNG/POISS/DENS";
 materialData.note = "Constants copied exactly from Version 0; no material fitted.";
 
@@ -79,7 +79,7 @@ for row = 1:20
     sectionData(row).torsionalInertiaRule = "perpendicular_axis_tubular";
     sectionData(row).torsionalInertiaStatus = "verified";
     sectionData(row).source = ...
-        "legacy/.../Secciones.m:secc_torre + Version 0 material constants";
+        "reference/original/turello_v0/Secciones.m:secc_torre + Version 0 material constants";
     sectionData(row).sourceRow = row;
     sectionData(row).assumptions = ...
         "centroid on reference line, as in Version 0 centered beam mass";
@@ -113,7 +113,7 @@ for station = 1:35
     sectionData(id).torsionalInertiaRule = "unresolved_in_source_artifact";
     sectionData(id).torsionalInertiaStatus = "requires_configuration";
     sectionData(id).source = ...
-        "legacy/.../Secciones.m:secc_pala,inercia_pala,rho_pala";
+        "reference/original/turello_v0/Secciones.m:secc_pala,inercia_pala,rho_pala";
     sectionData(id).sourceRow = station;
     sectionData(id).assumptions = ...
         "direct generalized stiffness; AXIALD used only as mass data; " + ...
@@ -144,7 +144,7 @@ reference.massFormulation = "legacy_abs_row_sum_diagonal";
 reference.solver = "unmodified Version 0 FrecuenciasTorreCompleta.m";
 reference.matlabRelease = "R2026a";
 reference.generatedOn = datetime(2026,8,25,'TimeZone','America/Bogota');
-reference.source = "legacy/Codigos_sergio/[Diego Turello Version 0]/FrecuenciasTorreCompleta.m";
+reference.source = "reference/original/turello_v0/FrecuenciasTorreCompleta.m";
 reference.sourceSHA256 = "94a616a7a18f44a649fc722469911514f7066887a4e60f5ca6bc8c4d39e24bb0";
 reference.notes = [ ...
     "Regression target for the inherited model only; it includes penalty ", ...

@@ -16,7 +16,7 @@ for panel=1:2
     yline(0,'Color',[.4 .4 .4]);grid on;xlim([0.5 numel(names)+0.5]);
     xticks(1:numel(names));xticklabels(strrep(names,'_',' '));xtickangle(25);ylabel(ylabelText);
 end
-title(t,'Sensibilidad local aceptada: ramas individuales y centroides de grupos');
+title(t,'Accepted local sensitivity: individual branches and group centroids');
 paperStyle(f);exportgraphics(f,fullfile(folder,'figures','local_sensitivity.png'),'Resolution',180);
 paperStyle(f);exportgraphics(f,fullfile(folder,'figures','local_sensitivity.pdf'),'ContentType','vector');
 clear cleanup
@@ -28,8 +28,8 @@ for name=["rotor_speed" "blade_density" "tower_stiffness"]
         rows=sel&S.mode==b;[x,order]=sort(S.factor(rows));y=S.frequencyHz(rows);
         plot(x,y(order),'-o','DisplayName',"Rama "+b,'LineWidth',1.2);
     end
-    xlabel('Factor relativo al nominal (1)');ylabel('Frecuencia amortiguada (Hz)');grid on;
-    title(strrep(name,'_',' ')+": barrido local exploratorio");legend('Location','best');
+    xlabel('Factor relative to nominal (1)');ylabel('Damped frequency (Hz)');grid on;
+    title(strrep(name,'_',' ')+": exploratory local sweep");legend('Location','best');
     paperStyle(f);exportgraphics(f,fullfile(folder,'figures',name+'.png'),'Resolution',180);clear cleanup
 end
 end
