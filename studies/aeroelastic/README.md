@@ -1,5 +1,10 @@
 # Maza operating-condition comparison
 
+The later [convergence and rotor-order study](../../docs/rotor_orders.md)
+extends this historical campaign with four finer 60 s integrations, spatial and
+stability checks, Campbell diagrams and hub/support harmonic responses. Its
+resolution claims apply to the explicitly stated channels and time window.
+
 The comparison uses Maza et al. (2023) as another model's prediction, not as
 absolute truth or an experimental calibration target. No parameter was fitted
 to the published displacement. The complete numerical settings and limitations

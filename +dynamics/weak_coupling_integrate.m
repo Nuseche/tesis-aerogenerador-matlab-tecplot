@@ -26,10 +26,13 @@ for k=1:numel(t)-1
     op=operatorFcn(t(k+1));
     qPredict=q+h*v+.5*h*h*a;vPredict=v+h*a;
     [fa,report]=forceFcn(t(k+1),qPredict,vPredict,op);evaluations=evaluations+1;
-    f=op.baseForce+fa;Keff=op.K+4/h^2*op.M+2/h*op.D;
-    rhs=f+op.M*(4/h^2*q+4/h*v+a)+op.D*(2/h*q+v);
+    % Solve for acceleration to avoid recovering it from nearly equal q values.
+    % This is algebraically the same average-acceleration Newmark step.
+    f=op.baseForce+fa;qBar=q+h*v+h*h/4*a;vBar=v+h/2*a;
+    Keff=op.M+h/2*op.D+h*h/4*op.K;
+    rhs=f-op.D*vBar-op.K*qBar;
     if isempty(cached)||~isequal(Keff,previous),cached=decomposition(Keff,'lu');previous=Keff;end
-    qNew=cached\rhs;aNew=4/h^2*(qNew-q)-4/h*v-a;vNew=v+h/2*(a+aNew);
+    aNew=cached\rhs;qNew=qBar+h*h/4*aNew;vNew=vBar+h/2*aNew;
     residual=op.M*aNew+op.D*vNew+op.K*qNew-f;
     relative=norm(residual)/max(norm(f)+norm(op.M*aNew)+norm(op.D*vNew)+norm(op.K*qNew),eps);
     maxResidual=max(maxResidual,relative);

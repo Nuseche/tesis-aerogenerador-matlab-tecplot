@@ -20,4 +20,5 @@ md.dofs.element=[md.dofs.node(1:end-1,:) md.dofs.node(2:end,:)];
 md.rigidBodies=struct('bodies',struct([]));md.rotorAxis=struct('direction',[1;0;0],'point',zeros(3,1));
 md.boundaryConditions=struct('fixedNodeIds',1,'fixedDofs',(1:6).');
 md.aeroelasticScope="isolated_blade_corotating";
+if isfield(cfg.aeroelastic,'meshSubdivision'),md=aero.refine_isolated_mesh(md,cfg.aeroelastic.meshSubdivision);end
 end

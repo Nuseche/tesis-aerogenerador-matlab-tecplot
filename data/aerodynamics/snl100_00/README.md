@@ -1,5 +1,9 @@
 # SNL100 external geometry and reference section polars
 
+The subsequently supplied `snlBLD.m` and `snlGNR.m` are preserved and audited in
+[supplied_linear_model](supplied_linear_model/README.md). They describe a different
+linear coefficient approximation and are not substituted for the polars below.
+
 These files are sufficient for the section-force model; no FAST installation,
 AeroDyn input file or runtime download is required. They do not reconstruct the
 UVLM aerodynamic discretization used by Maza and colleagues.

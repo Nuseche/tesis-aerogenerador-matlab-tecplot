@@ -65,6 +65,8 @@ The existing seismic transients use local operators at frozen azimuth. The
 [new aeroelastic driver](docs/aeroelasticity.md) updates velocity triangles, loads,
 rotor motion and constraints at each step. Its Maza operating-condition comparison
 separates numerical consistency from differences between physical models.
+The [convergence and rotor-order study](docs/rotor_orders.md) checks growing
+torsion, 1P/3P/6P excitation, and hub/support receptances with periodic verification.
 Prescribed hub thrust in the older studies is not coupled aerodynamics. See [verification and scope](docs/verification.md)
 for the references used in each comparison.
 
