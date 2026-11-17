@@ -14,6 +14,7 @@ addpath('studies/aeroelastic');
 convergence = run_convergence_study();
 orders = run_rotor_orders();
 periodicity = verify_rotor_periodicity();
+timeScale = assess_aerodynamic_time_scale();
 ```
 
 Then render the monochrome vector figures:
@@ -204,6 +205,97 @@ Angular sampling is refined from 96 to 192 to 384 points. Between the last two,
 the largest relative change among inherited blade-1 thrust, hub thrust and hub
 pitch moment at orders 1,3,6 is about 0.0229%. Roundoff-level cancelled orders
 are interpreted in absolute units, not by unstable relative percentages.
+
+## Physical interpretation and the strength of the evidence
+
+The computed results support specific physical properties, not a single blanket
+claim of turbine fidelity. Numerical convergence establishes resolution of the
+adopted equations. Analytical identities and controlled changes establish
+mechanism consistency. Matched model comparisons and measurements establish
+quantitative accuracy in a stated domain. A nonlinear comparator is another
+model, not experimental truth by virtue of being nonlinear.
+
+**Rotor symmetry and load transmission.** The observed cancellation of the
+scalar axial 1P contribution and survival of multiples of 3P reproduce the
+three-blade symmetry identity. This demonstrates the phase and summation
+structure of the implemented blade-to-hub map. It does not demonstrate that a
+pure blade 1P signal is converted to axial 3P. A nonlinear shear/load relation
+can generate several blade harmonics; their axial sum selects multiples of
+three. Tilt and yaw moments additionally involve azimuth-dependent moment arms
+and therefore have different harmonic mappings. This distinction follows the
+collective and cyclic MBC components in
+[Bir (2008), NREL/CP-500-42553](https://digital.library.unt.edu/ark:/67531/metadc898093/m2/1/high_res_d/922553.pdf)
+and the harmonic discussion in
+[Hummel et al. (2025), section 2.1](https://wes.copernicus.org/articles/10/2005/2025/).
+Only the prescribed shear and geometry effects were exercised here; tower
+shadow and turbulent inflow should not be claimed from these cases.
+
+**Symmetry breaking.** Removing the inherited geometric differences removes
+the residual hub 1P without tuning aerodynamic coefficients. This causal control
+is stronger evidence than merely finding a peak in a spectrum. It is physically
+consistent with fixed-frame 1P signatures of rotor imbalance discussed by
+[Bertelè, Bottasso and Cacciola (2018)](https://wes.copernicus.org/articles/3/791/2018/).
+Their perturbation is pitch misalignment, while ours is a coordinate asymmetry;
+the common mechanism is broken cyclic symmetry, not identical fault severity
+or an equivalent pitch error. The origin of the inherited coordinate differences
+is unknown. No real manufacturing defect or fatigue-life reduction is inferred.
+
+**Forced resonance and structural coupling.** The 3P crossing, forced-response
+peak, near-quadrature phase and damping sensitivity jointly support a
+resonant response of the assembled model. A forcing frequency can cross a
+natural frequency with little response if the corresponding modal forcing or
+observation participation is small. The hub, nacelle and tower-top outputs
+test load transmission through the assembled system. NREL's
+[design-load guidance, section 3.4.5](https://www.nrel.gov/docs/fy25osti/91458.pdf)
+likewise evaluates assembly modes and rotor orders together. The calculated
+3.444465 rpm is conditional on the present stiffness, mass, connections and
+operating state; it is not a literature-validated critical speed for SNL100-00.
+The illustrative Rayleigh damping supports a sensitivity study, not a measured
+energy-loss model. Periodic verification is relevant because MBC averaging
+changes the complex response by about 10.8% at the examined peak.
+
+**Feedback and energy exchange.** The force depends on section motion, and its
+work-dual transfer preserves instantaneous virtual power between the stated
+section interpolation and structural coordinates. This is an implementation
+property checked independently; it does not imply that partitioned time
+integration exactly conserves aeroelastic energy. The growing mode has a
+positive aerodynamic cycle work and a positive real eigenvalue. Agreement of
+the eigenvalue, energy estimate and refined transient supports self-excitation
+within the selected coefficient model. It does not identify classical
+flap-torsion flutter solely from the existence of a growing twist component.
+
+**Additional aerodynamic time-scale diagnostic, 17 November 2026.** Running
+`assess_aerodynamic_time_scale` on the 140-element equilibrium computes
+k = omega*c/(2*Vrel), using the 3.345960 Hz growing-mode frequency and the local
+equilibrium relative speed. Over the 20--90 m span interval, k ranges from
+**1.3932 to 3.1855** and the calculated incidence ranges from **71.12 to
+74.96 degrees**. These are local diagnostics, not modal-work-weighted averages.
+The results are saved in `aerodynamic_time_scale.csv` and the companion MAT file.
+
+Thus this particular instability is not in a small-reduced-frequency regime
+that would justify neglecting aerodynamic memory. Its very high incidence
+also precludes identifying it with attached-flow classical flutter on that
+basis. [Chetan, Yao and Griffith (2022)](https://wes.copernicus.org/articles/7/1731/2022/)
+include unsteady aerodynamic amplitude/phase and reduced-frequency dependence
+when studying flexible blades, including the SNL100 family. Their attached-flow
+assumptions are not automatically applicable to this operating point.
+[AeroDyn's unsteady-aerodynamics theory](https://openfast.readthedocs.io/en/v4.0.5/source/user/aerodyn/theory_ua.html)
+also distinguishes steady coefficients from time-dependent separation dynamics.
+Neither a static polar nor an unqualified linear Cl slope supplies those dynamics.
+Accordingly, the 3.346 Hz mode remains evidence of mathematical aeroelastic
+feedback in the current model, not a validated physical flutter prediction.
+This qualification does not invalidate the separate structural unit-force
+resonance or symmetry tests, which do not rely on this unstable operating point.
+
+The evidence supports preservation of rotor symmetry, load-transfer kinematics,
+structural resonance and motion-dependent aerodynamic feedback in the examined
+configurations. These mechanisms are not exclusive to MHT. A comparison intended
+to establish the benefit of its beam assumptions or reduced basis must additionally
+isolate shear/rotary-inertia effects and quantify errors in frequencies, mode
+shapes, channel amplitudes and phases versus computational cost. Matching
+geometry, damping, load definitions and aerodynamic laws in the nonlinear
+comparison separates structural approximation error from aerodynamic-model
+differences. Experimental data would supply a further, independent validation.
 
 ## Figures and references
 
