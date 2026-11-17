@@ -11,6 +11,7 @@ paths from the repository location.
 - [Geometry](geometry/README.md): node coordinates, connectivity, auxiliary points.
 - [Sections](sections/README.md): stiffnesses and distributed mass properties.
 - [Rigid bodies](rigid_bodies/README.md): masses, principal inertias and orientations.
+- [Aerodynamics](aerodynamics/snl100_00/README.md): published external geometry and separately attributed reference polars.
 - [References](reference/README.md): historical frequencies and operating evidence.
 
 Measured seismic/wind inputs and preparation scripts live together in

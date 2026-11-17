@@ -36,6 +36,7 @@ regenerate_outputs('runs/<run-directory>');  % Re-export saved results.
 | `+model`, `+io` | Model construction, data loading, configurations, persistence |
 | `+elements`, `+assembly`, `+rigid` | Beam operators, global assembly, constraints and rigid bodies |
 | `+equilibrium`, `+rotor`, `+modal`, `+dynamics` | Equilibrium, rotating transformations, modal and transient solutions |
+| `+aero`, `run_aeroelastic.m` | Weak section-force coupling and isolated-blade comparisons |
 | `+sensitivity`, `+validation`, `+post` | Sensitivity studies, verification, and result export |
 | [cases](cases/README.md) | Executable configurations named by physical purpose |
 | [data](data/README.md) | Small, versioned model inputs and reference evidence |
@@ -60,8 +61,11 @@ assumptions, and numerical choices. See [code style](docs/code_style.md) and
 [mechanical conventions](docs/conventions.md).
 
 The numerical model uses linear perturbations about the selected state.
-Rotating transients use local operators at frozen azimuth. Prescribed hub thrust
-is not a coupled aerodynamic model. See [verification and scope](docs/verification.md)
+The existing seismic transients use local operators at frozen azimuth. The
+[new aeroelastic driver](docs/aeroelasticity.md) updates velocity triangles, loads,
+rotor motion and constraints at each step. Its Maza operating-condition comparison
+separates numerical consistency from differences between physical models.
+Prescribed hub thrust in the older studies is not coupled aerodynamics. See [verification and scope](docs/verification.md)
 for the references used in each comparison.
 
 For a new computer, install dependencies and follow [setup and migration](docs/setup.md).

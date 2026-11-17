@@ -8,6 +8,9 @@ if nargin < 1
     configFile = [];
 end
 cfg = io.load_configuration(configFile);
+if string(cfg.analysis.type)=="aeroelastic_weak"
+    results=run_aeroelastic(cfg);return
+end
 run = io.create_run_folder(cfg);
 diary(run.logFile);
 cleanupObject = onCleanup(@() diary('off')); %#ok<NASGU>

@@ -23,6 +23,17 @@ def main():
             if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != digest:
                 errors.append(f'Checksum mismatch or missing input: {name}')
             verified += 1
+    aero_root = ROOT / 'data/aerodynamics/snl100_00'
+    provenance = json.loads((aero_root / 'provenance.json').read_text())
+    aero_files = [('geometry.csv', provenance['geometry']['csv_sha256']),
+                  ('maza_2023_reference.csv', provenance['comparison_reference']['csv_sha256'])]
+    aero_files += [(f"polars/{p['id']}.csv", p['csv_sha256']) for p in provenance['polars']]
+    aero_files += [(p['local_file'], p['sha256']) for p in provenance['geometry'].get('cross_checks', [])]
+    for name, digest in aero_files:
+        path = aero_root / name
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+            errors.append(f'Checksum mismatch or missing aerodynamic input: {name}')
+        verified += 1
     files = sorted(set([*ROOT.glob('*.m'), *[p for d in SOURCE_DIRS
         for p in d.rglob('*') if p.suffix in ('.m', '.py')]]))
     hashes = {}

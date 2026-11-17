@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "blade": "SNL100-00",
+  "geometry": {
+    "url": "https://www.osti.gov/servlets/purl/1147201",
+    "report": "SAND2013-10162: The SNL100-02 Blade, Table 1, printed page 16",
+    "sha256": "276be6306b5d55d0b98091e22e2a19fcfc8553600785eaf8dd97ada3b40ba2ff",
+    "csv_sha256": "03c46ebb938d733f129770424d2ea82856605c8c477525725c83df7db8e740b4",
+    "scope": "Source explicitly states common external geometry of SNL100-00, SNL100-01 and SNL100-02; user identifies inherited structural model as SNL100-00 v2.",
+    "cross_checks": [
+      {
+        "report": "SAND2011-3779, Table 18, printed page 34",
+        "url": "https://energy.sandia.gov/wp-content/gallery/uploads/113779.pdf",
+        "local_file": "sand2011_3779.pdf",
+        "sha256": "531b0edd98cb83a8a9199ee664be5abfc1704b21dc20e98cdf5e645b1fb9fda3",
+        "provided_by": "user",
+        "checked_station_count": 34,
+        "maximum_absolute_difference": {
+          "span_m": 0,
+          "chord_m": 0,
+          "twist_deg": 0,
+          "pitch_axis_fraction": 0
+        }
+      }
+    ]
+  },
+  "polars": [
+    {
+      "id": "Cylinder1",
+      "url": "https://raw.githubusercontent.com/OpenFAST/r-test/dd5feaaaa500ba7283140107806300d551cff0a7/glue-codes/openfast/5MW_Baseline/Airfoils/Cylinder1.dat",
+      "source_sha256": "8cd740babf3de2449b28504335625382be076d40e3feedb3c04753820751873a",
+      "csv_sha256": "9a8f540820333b0143d8f366653de0ae30f1960126bf06f4907e87d8892b411e",
+      "reynolds_header_million": "0.75",
+      "source_comments": [
+        "------------ AirfoilInfo v1.01.x Input File ----------------------------------",
+        "Round root section with a Cd of 0.50",
+        "Made by Jason Jonkman",
+        "note that this file uses Marshall Buhl's new input file processing; start all comment lines with"
+      ]
+    },
+    {
+      "id": "DU40_A17",
+      "url": "https://raw.githubusercontent.com/OpenFAST/r-test/dd5feaaaa500ba7283140107806300d551cff0a7/glue-codes/openfast/5MW_Baseline/Airfoils/DU40_A17.dat",
+      "source_sha256": "002e2176cf03eda520b160d5a46ce0f5f42125f892c9d0e1fd3c40424d249324",
+      "csv_sha256": "cf2440ee85998c824756ca2ec260d28457c445b3eb6170ad649cfb2c7e78d3b1",
+      "reynolds_header_million": "0.75",
+      "source_comments": [
+        "------------ AirfoilInfo v1.01.x Input File ----------------------------------",
+        "DU40 airfoil with an aspect ratio of 17.  Original -180 to 180deg Cl, Cd, and Cm versus AOA data taken from Appendix A of DOWEC document 10046_009.pdf (numerical values obtained from Koert Lindenburg of ECN).",
+        "Cl and Cd values corrected for rotational stall delay and Cd values corrected using the Viterna method for 0 to 90deg AOA by Jason Jonkman using AirfoilPrep_v2p0.xls.",
+        "note that this file uses Marshall Buhl's new input file processing; start all comment lines with"
+      ]
+    },
+    {
+      "id": "DU35_A17",
+      "url": "https://raw.githubusercontent.com/OpenFAST/r-test/dd5feaaaa500ba7283140107806300d551cff0a7/glue-codes/openfast/5MW_Baseline/Airfoils/DU35_A17.dat",
+      "source_sha256": "701cff83e01a187209ff788a3fc4bfb9b8592546462a5aec2f0df54701d05763",
+      "csv_sha256": "be56f53c7880f6ff14571511dc3464f94c6cef57ff53757842d4040568c7d16b",
+      "reynolds_header_million": "0.75",
+      "source_comments": [
+        "------------ AirfoilInfo v1.01.x Input File ----------------------------------",
+        "DU35 airfoil with an aspect ratio of 17.  Original -180 to 180deg Cl, Cd, and Cm versus AOA data taken from Appendix A of DOWEC document 10046_009.pdf (numerical values obtained from Koert Lindenburg of ECN).",
+        "Cl and Cd values corrected for rotational stall delay and Cd values corrected using the Viterna method for 0 to 90deg AOA by Jason Jonkman using AirfoilPrep_v2p0.xls.",
+        "note that this file uses Marshall Buhl's new input file processing; start all comment lines with"
+      ]
+    },
+    {
+      "id": "DU30_A17",
+      "url": "https://raw.githubusercontent.com/OpenFAST/r-test/dd5feaaaa500ba7283140107806300d551cff0a7/glue-codes/openfast/5MW_Baseline/Airfoils/DU30_A17.dat",
+      "source_sha256": "113387e58db28716aa9d2e1b023200fc32354095651c53042e3615ec6093ff82",
+      "csv_sha256": "13d8e1209a4fddd24c8bdc2f62ead6aada41fd5edd01b92e27cc2688ba528bfd",
+      "reynolds_header_million": "0.75",
+      "source_comments": [
+        "------------ AirfoilInfo v1.01.x Input File ----------------------------------",
+        "DU30 airfoil with an aspect ratio of 17.  Original -180 to 180deg Cl, Cd, and Cm versus AOA data taken from Appendix A of DOWEC document 10046_009.pdf (numerical values obtained from Koert Lindenburg of ECN).",
+        "Cl and Cd values corrected for rotational stall delay and Cd values corrected using the Viterna method for 0 to 90deg AOA by Jason Jonkman using AirfoilPrep_v2p0.xls.",
+        "note that this file uses Marshall Buhl's new input file processing; start all comment lines with"
+      ]
+    },
+    {
+      "id": "DU25_A17",
+      "url": "https://raw.githubusercontent.com/OpenFAST/r-test/dd5feaaaa500ba7283140107806300d551cff0a7/glue-codes/openfast/5MW_Baseline/Airfoils/DU25_A17.dat",
+      "source_sha256": "52fcce2a8fd1159f38cdd1a8bfd365f79e3060e66ea91d5ab8fbce1f16ec20a7",
+      "csv_sha256": "502de26bd48dedfab0a989e6ee79be21fe88e4ffe3dd89669b23640bc9b2ce3f",
+      "reynolds_header_million": "0.75",
+      "source_comments": [
+        "------------ AirfoilInfo v1.01.x Input File ----------------------------------",
+        "DU25 airfoil with an aspect ratio of 17.  Original -180 to 180deg Cl, Cd, and Cm versus AOA data taken from Appendix A of DOWEC document 10046_009.pdf (numerical values obtained from Koert Lindenburg of ECN).",
+        "Cl and Cd values corrected for rotational stall delay and Cd values corrected using the Viterna method for 0 to 90deg AOA by Jason Jonkman using AirfoilPrep_v2p0.xls.",
+        "note that this file uses Marshall Buhl's new input file processing; start all comment lines with"
+      ]
+    },
+    {
+      "id": "DU21_A17",
+      "url": "https://raw.githubusercontent.com/OpenFAST/r-test/dd5feaaaa500ba7283140107806300d551cff0a7/glue-codes/openfast/5MW_Baseline/Airfoils/DU21_A17.dat",
+      "source_sha256": "2ad661a5f04e87285b8c7f79e9e0b67765ce0f876a9597f604935eb6c47fa2f6",
+      "csv_sha256": "b6d1cb24de97f6ecde716a1b808c2e56982a7c5f7053a3a082be15731055a1da",
+      "reynolds_header_million": "0.75",
+      "source_comments": [
+        "------------ AirfoilInfo v1.01.x Input File ----------------------------------",
+        "DU21 airfoil with an aspect ratio of 17.  Original -180 to 180deg Cl, Cd, and Cm versus AOA data taken from Appendix A of DOWEC document 10046_009.pdf (numerical values obtained from Koert Lindenburg of ECN).",
+        "Cl and Cd values corrected for rotational stall delay and Cd values corrected using the Viterna method for 0 to 90deg AOA by Jason Jonkman using AirfoilPrep_v2p0.xls.",
+        "note that this file uses Marshall Buhl's new input file processing; start all comment lines with"
+      ]
+    },
+    {
+      "id": "NACA64_A17",
+      "url": "https://raw.githubusercontent.com/OpenFAST/r-test/dd5feaaaa500ba7283140107806300d551cff0a7/glue-codes/openfast/5MW_Baseline/Airfoils/NACA64_A17.dat",
+      "source_sha256": "acfbf90a0aa479f560911d89b31ec20d02284496a74ecfc9b8ad0534c5d472b9",
+      "csv_sha256": "4f324ae4bb241cded61a879d8e9c6ab1be1932a994e4f9e7c7224f89a84e9624",
+      "reynolds_header_million": "0.75",
+      "source_comments": [
+        "------------ AirfoilInfo v1.01.x Input File ----------------------------------",
+        "NACA64 airfoil with an aspect ratio of 17.  Original -180 to 180deg Cl, Cd, and Cm versus AOA data taken from Appendix A of DOWEC document 10046_009.pdf (numerical values obtained from Koert Lindenburg of ECN).",
+        "Cl and Cd values corrected for rotational stall delay and Cd values corrected using the Viterna method for 0 to 90deg AOA by Jason Jonkman using AirfoilPrep_v2p0.xls.",
+        "note that this file uses Marshall Buhl's new input file processing; start all comment lines with"
+      ]
+    }
+  ],
+  "polar_scope": "Adopted OpenFAST reference section polars, NOT polars from Maza et al. (2023), who used UVLM. No claim of an exact SNL100-00 v2 AeroDyn dataset.",
+  "mapping": "Linear interpolation by section thickness between NACA64 18%, DU21 21%, DU25 25%, DU30 30%, DU35 35%, DU40 40.5%, and Cylinder1 100%; geometric transition sections are approximate.",
+  "retrieved": "2026-11-17",
+  "comparison_reference": {
+    "url": "https://amcaonline.org.ar/ojs/index.php/mc/article/download/6643/6706",
+    "publication": "Maza, Turello, Preidikman and Flores (2023), Mecanica Computacional XL, 957-965",
+    "pdf_sha256": "ade1cf27298510bf124e5342b78840dd9e5ff8d47c07fbf569499d84e130fa59",
+    "csv_sha256": "90e0073f291f5f242107cc5c59d93dd7d0e9b3784d802c600b3d1570607efd2b",
+    "role": "Published model results for comparison, not experimental ground truth or fitting targets."
+  },
+  "baseline_2011_context": {
+    "source": "SAND2011-3779, Table 24 and pages 45-46",
+    "hub_radius_m": 2.5,
+    "rotor_radius_m": 102.5,
+    "maximum_rotor_speed_rpm": 7.44,
+    "rated_wind_speed_mps": 11.3,
+    "cut_in_wind_speed_mps": 3,
+    "cut_out_wind_speed_mps": 25,
+    "blade_mass_FAST_kg": 114172,
+    "blade_mass_midpoint_PreComp_kg": 115684,
+    "blade_mass_ANSYS_kg": 118634,
+    "shaft_tilt_deg": 5,
+    "precone_deg": 2.5,
+    "scope": "Original 2011 baseline. Do not replace the deliberately different Maza isolated-blade conditions or identify this as v2 without revision evidence."
+  }
+}

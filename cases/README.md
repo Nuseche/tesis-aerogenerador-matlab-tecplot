@@ -6,6 +6,8 @@ For direct calls, use `addpath('cases')` first.
 
 | Configuration | Purpose |
 | --- | --- |
+| `config_aeroelastic_snl100.m` | Weak section-force coupling for the full turbine |
+| `config_maza_isolated_blade.m` | Isolated-blade operating conditions from Maza et al.; default U = 1 m/s, Ω = 0.7547 rad/s |
 | `config_stationary_modal.m` | Fixed-base conservative modes with an explicit illustrative drivetrain |
 | `config_flexible_foundation.m` | Stationary model with the original soft-foundation matrices |
 | `config_rotating_campbell.m` | Prescribed rotation, equilibrium, and modal sweep |
@@ -30,3 +32,6 @@ that archive.
 Persisted `action02` through `action10` structure fields and artifact names remain
 compatible with existing run files. Public configuration and exporter filenames
 now describe the physical check; see [the migration map](../docs/repository_changes.md).
+
+See [aeroelastic coupling](../docs/aeroelasticity.md) for configurable wind,
+constant pitch, rotor motion, force-transfer assumptions and study commands.

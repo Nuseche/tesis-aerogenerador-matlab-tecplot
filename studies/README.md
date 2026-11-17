@@ -105,3 +105,17 @@ examines finite-difference tangent sensitivity. The diagnostic kernel is retaine
 because it permits controlled derivative-step changes without changing the
 production element. Measured wind is a prescribed thrust proxy; it is not a
 coupled aerodynamic simulation. See [scientific scope](../docs/verification.md).
+
+## Aeroelastic operating-condition comparison
+
+```matlab
+addpath('studies/aeroelastic');
+report = run_maza_comparison();
+```
+
+This study compares three isolated-blade operating conditions with Maza et al.
+(2023). It contrasts weak coupling with prescribed loads and halves the time step.
+Published values are another model's results, not fitting targets or absolute
+truth. Partial trajectories that reach the declared rotation limit are saved and
+labelled explicitly; they do not receive steady-state summary values. See
+[coupling and interpretation](../docs/aeroelasticity.md).
