@@ -105,13 +105,13 @@ The optional `--output` selects the destination for all nine figure snippets.
 The source uses TikZ/PGFPlots; embed each generated snippet literally in main.tex.
 No external graphics, data files or shell escape are needed to compile the manuscript.
 
-Figure order follows the evidence chain: (1) actual-coordinate oblique assembly
-and upper constraints, (2) nominal/elastic kinematics and moving offsets,
+Figure order follows the evidence chain: (1) actual-coordinate front elevation
+and orthogonal connectivity, (2) nominal/elastic kinematics and moving offsets,
 (3) mesh versus beam assumptions, (4) audited nonlinear pulse/spectra,
 (5) current Campbell/orders, (6) hub/support receptance, (7) accepted historical
 sensitivity, (8) stationary component histories, (9) channel-wise ROM error/cost.
-The geometry view is an orthographic projection of the versioned coordinates,
-with schematic body labels and connection symbols; it is not recovered CAD.
+The geometry view is a front projection of the versioned coordinates. The separate
+orthogonal connectivity diagram uses schematic body and connection symbols; it is not recovered CAD.
 The kinematics drawing is explanatory and does not represent a solved displacement.
 
 The MATLAB regression suite was rerun on 18 November 2026 at simulation baseline

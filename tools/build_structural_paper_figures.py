@@ -46,82 +46,58 @@ def numeric_figures():
     return d
 
 def geometry_figure():
-    """Actual-coordinate orthographic diagrams, with schematic rigid-body symbols."""
+    """Actual front elevation plus orthogonal connectivity, with no crossing leaders."""
     import numpy as np
-    g=loadmat(ROOT/'data/geometry/legacy_geometry_v0.mat',simplify_cells=True)['geometry']; xyz=g['coordinates'];conn=g['connectivity']
-    # Orthogonal, unit image-plane vectors: undistorted orthographic projection.
-    theta=np.deg2rad(14); e=np.array([2**-.5,2**-.5,0]); v=np.array([-np.sin(theta)/2**.5,np.sin(theta)/2**.5,np.cos(theta)])
-    def pr(p):return np.array([p@e,p@v])
-    def pt(p):return '(%0.5f,%0.5f)'%tuple(p)
-    lines=[r'\begin{figure}[tbp]\centering',r'\begin{tikzpicture}[font=\footnotesize,>=stealth]',r'\path[use as bounding box] (0,-.6) rectangle (16.1,8.2);']
-    # global model, axes x in cm, reference SI coordinates remain in generator.
-    origin=np.array([3.2,.25]);scale=.03
-    for i,p in enumerate(xyz):lines.append(r'\coordinate (g%d) at %s;'%(i+1,pt(origin+scale*pr(p))))
+    g=loadmat(ROOT/'data/geometry/legacy_geometry_v0.mat',simplify_cells=True)['geometry'];xyz=g['coordinates'];conn=g['connectivity']
+    out=[r'\begin{figure}[tbp]\centering',r'\begin{tikzpicture}[font=\footnotesize,>=stealth]',r'\path[use as bounding box] (0,-.25) rectangle (16,8.4);',r'\node[anchor=north west,font=\small\bfseries] at (0,8.35) {(a)};']
+    for i,p in enumerate(xyz):out.append(r'\coordinate (g%d) at (%0.5f,%0.5f);'%(i+1,3.25+.0275*p[1],.65+.0275*p[2]))
     for row in conn:
-        a,b=int(row[2]),int(row[3])
-        if row[1]!=3:lines.append(r'\draw[line width=%s] (g%d)--(g%d);'%('1pt' if row[1]==1 else '.7pt',a,b))
-    for node in [21,57,93]:lines.append(r'\draw[densely dashed] (g130)--(g%d);'%node)
-    lines += [r'\draw[double,double distance=1.4pt,line width=.4pt] (g129)--(g130);',r'\draw[thick] (2.85,.25)--(3.55,.25);']
-    for h in np.linspace(2.88,3.5,6):lines.append(r'\draw[thin] (%g,.25)--(%g,.07);'%(h,h-.13))
-    lines += [r'\draw[<->,thin] (.55,.25)--(.55,4.18) node[midway,left,rotate=90,anchor=south] {135 m};',r'\node[anchor=west] at (3.45,1.8) {Tower};',r'\node[anchor=north west] at ([xshift=3pt]g56) {Blade 1};',r'\node[anchor=north west] at (g92) {Blade 2};',r'\node[anchor=south] at (g128) {Blade 3};',r'\node[anchor=east] at (2.7,5.5) {Upper assembly};\draw[thin,->] (2.5,5.15)--(g129);',r'\node[anchor=north west,font=\small\bfseries] at (0,8.1) {(a)};']
-    tri=np.array([4.7,.75]);length=1.15
-    for vec,label in [(np.array([1,0,0]),'X'),(np.array([0,1,0]),'Y'),(np.array([0,0,1]),'Z')]:
-        anchor={'X':'north west','Y':'south west','Z':'south'}[label]
-        lines.append(r'\draw[->,thin] %s--%s node[anchor=%s] {$%s$};'%(pt(tri),pt(tri+length*pr(vec)),anchor,label))
-    lines.append(r'\node[anchor=north,font=\scriptsize] at (4.75,.45) {Global frame};')
-    # Zoom of real upper connection geometry. Body boxes are explicitly symbols.
-    centre=xyz[129];origin=np.array([11.3,4.05]);scale=.27
-    for i,p in enumerate(xyz):lines.append(r'\coordinate (d%d) at %s;'%(i+1,pt(origin+scale*pr(p-centre))))
-    selected=list(range(124,133))+[18,19,20,54,55,89,90]
-    # first two elements per blade are rows19/20,54/55,89/90.
-    for idx in selected:
-        row=conn[idx];a,b=int(row[2]),int(row[3]);lines.append(r'\draw[thick] (d%d)--(d%d);'%(a,b))
-    for n in [20,129,130,21,22,23,57,58,59,93,94,95,131,132,133,134,135,136,137,138]:lines.append(r'\fill (d%d) circle (.6pt);'%n)
-    lines += [r'\draw[double,double distance=2pt,line width=.5pt] (d129)--(d130);']
-    for node in [21,57,93]:lines.append(r'\draw[densely dashed,thick] (d130)--(d%d);\draw[fill=white,line width=.7pt] (d%d) circle (2.5pt);'%(node,node))
-    for node in [129,130]:lines.append(r'\fill (d%d) circle (2.5pt);'%node)
-    lines += [r'\node[draw,rounded corners=1pt,fill=white,inner sep=3pt,anchor=south east] at ([xshift=-3pt,yshift=3pt]d129) {Nacelle $M_N$};',r'\node[draw,fill=white,inner sep=3pt,anchor=south west] at ([xshift=4pt,yshift=1pt]d130) {Hub $M_R$};',r'\node[anchor=north west] at ([xshift=4pt,yshift=-3pt]d21) {$B_1$};',r'\node[anchor=north west] at ([xshift=4pt,yshift=-3pt]d57) {$B_2$};',r'\node[anchor=south east] at ([xshift=-4pt,yshift=2pt]d93) {$B_3$};',r'\draw[thin,->] (7.4,3.2) node[above,align=center] {Flexible\\transition} -- (d134);',r'\node[anchor=north east] at ([xshift=-3pt]d20) {Tower top};',r'\draw[thin,->] (9.5,6.2) node[above,align=center] {Elastic drivetrain\\$\mathbf K_d,\mathbf C_d$} -- ($ (d129)!.55!(d130) $);',r'\draw[thin,->] (13.5,3.8) node[right,align=left] {Rigid root\\compatibility} -- ($ (d130)!.6!(d57) $);',r'\node[anchor=north west,font=\small\bfseries] at (7.05,8.1) {(b)};']
-    # Axis direction from actual master positions, extended just beyond hub.
-    a=(xyz[129]-xyz[128]);a/=np.linalg.norm(a);end=origin+scale*pr(8*a)
-    lines.append(r'\draw[->,dashdotted,thin] (13.5,2.1)--(15,1.92) node[anchor=north west] {$\mathbf a,\ \Omega$};')
-    lines += [r'\draw[thick] (7.2,-.25)--(7.9,-.25) node[right,font=\scriptsize] {Flexible member};',r'\draw[densely dashed,thick] (10.5,-.25)--(11.2,-.25) node[right,font=\scriptsize] {Rigid tie};',r'\fill (13.1,-.25) circle (2pt);\node[right,font=\scriptsize] at (13.25,-.25) {Master};',r'\draw[fill=white] (14.8,-.25) circle (2pt);\node[right,font=\scriptsize] at (14.95,-.25) {Slave};',r'\end{tikzpicture}',r'\caption{Structural assembly and compatibility. (a) Orthographic view of the actual beam centre lines, fixed base and global frame. (b) Enlarged upper assembly using the same projection: the nine transition beams remain flexible; the nacelle and hub masters remain independent, coupled by a six-component elastic connection; the three blade-root slaves follow the hub through rigid ties. $\mathbf a$ is the nominal rotor-axis direction. Solid/open circles distinguish masters/slaves; body boxes are symbols, not measured outer surfaces. Panels have different scales; coordinates are in metres.}\label{fig:geometry}',r'\end{figure}']
-    return '\n'.join(lines)+'\n'
+        if row[1]==3:continue
+        out.append(r'\draw[line width=%s] (g%d)--(g%d);'%('1pt' if row[1]==1 else '.8pt',int(row[2]),int(row[3])))
+    out += [r'\fill (g130) circle (2pt);',r'\draw[thick] (2.9,.65)--(3.6,.65);']
+    for x in np.linspace(2.94,3.55,6):out.append(r'\draw[thin] (%g,.65)--(%g,.48);'%(x,x-.12))
+    out += [r'\node[anchor=south] at ([yshift=4pt]g128) {Blade 3};',r'\node[anchor=north west] at ([yshift=-4pt]g56) {Blade 1};',r'\node[anchor=north east] at ([yshift=-4pt]g92) {Blade 2};',r'\node[anchor=east] at (2.85,2) {Tower};',r'\draw[thin] (3.25,4.58)--(4.1,5.2)--(5.7,5.2);',r'\node[anchor=south] at (4.9,5.2) {Rotor centre};',r'\draw[thin,<->] (6.15,.65)--(6.15,4.3625) node[midway,right,rotate=90,anchor=south] {135 m};',r'\draw[thin] (5.95,.65)--(6.35,.65);\draw[thin] (5.95,4.3625)--(6.35,4.3625);',r'\draw[->] (.7,.9)--(1.5,.9) node[right] {$Y$};',r'\draw[->] (.7,.9)--(.7,1.8) node[above] {$Z$};',r'\draw (.7,.9) circle (2pt);\fill (.7,.9) circle (.7pt);\node[below left] at (.7,.9) {$X$};',r'\node[anchor=north west,font=\small\bfseries] at (7.1,8.35) {(b)};']
+    for x,num in [(8.4,1),(11,2),(13.6,3)]:
+        out += [r'\draw[fill=black!3] (%g,7.1) rectangle (%g,7.8);'%(x-.95,x+.95),r'\node at (%g,7.45) {Blade %d};'%(x,num),r'\draw[thick] (%g,7.1)--(%g,6.55);'%(x,x),r'\draw[densely dashed] (%g,6.55)--(%g,5.9);'%(x,x),r'\draw[fill=white,thick] (%g,6.55) circle (2.5pt);'%x,r'\node[anchor=east] at (%g,6.55) {$B_%d$};'%(x-.17,num)]
+    out += [r'\draw[densely dashed] (8.4,5.9)--(13.6,5.9);\draw[densely dashed] (11,5.9)--(11,5.45);',r'\node[anchor=west,align=left] at (14,6.15) {Rigid\\ties};',r'\draw[fill=black!3] (9.85,4.75) rectangle (12.15,5.45);\node at (11,5.1) {Hub $M_R$};\fill (11,5.45) circle (2.5pt);',r'\draw (11,4.75)--(11,4.55)--(10.82,4.48)--(11.18,4.34)--(10.82,4.20)--(11.18,4.06)--(10.82,3.92)--(11,3.85)--(11,3.65);',r'\node[anchor=west,align=left] at (12.4,4.2) {Elastic connection\\$\mathbf K_d,\mathbf C_d$};',r'\draw[fill=black!3] (9.85,2.95) rectangle (12.15,3.65);\node at (11,3.3) {Nacelle $M_N$};\fill (11,3.65) circle (2.5pt);',r'\draw (11,2.95)--(11,2.55);',r'\draw[fill=white] (9.4,1.85) rectangle (12.6,2.55);\node[align=center] at (11,2.2) {Flexible transition\\9 beam elements};',r'\draw (11,1.85)--(11,1.45);',r'\draw[fill=white] (9.85,.75) rectangle (12.15,1.45);\node at (11,1.1) {Tower};',r'\draw (11,.75)--(11,.45);\draw[thick] (10.55,.45)--(11.45,.45);']
+    for x in np.linspace(10.6,11.4,7):out.append(r'\draw[thin] (%g,.45)--(%g,.28);'%(x,x-.12))
+    out += [r'\fill (7.9,-.05) circle (2pt);\node[anchor=west,font=\scriptsize] at (8.1,-.05) {Rigid-body master};',r'\draw[fill=white] (11.6,-.05) circle (2pt);\node[anchor=west,font=\scriptsize] at (11.8,-.05) {Blade-root slave};',r'\end{tikzpicture}',r'\caption{Geometry and mechanical connectivity. (a) Actual beam centre lines projected onto the global $YZ$ plane; $X$ points out of the page. The fixed-base tower is 135 m high. (b) Orthogonal connectivity schematic, not a geometric projection or a scale drawing: the tower and transition are flexible, the nacelle and hub have independent rigid-body inertia, the drivetrain is elastic, and three rigid ties impose root compatibility. The diagram deliberately separates component symbols from their spatial offsets, which enter the assembly through the kinematic relations.}\label{fig:geometry}',r'\end{figure}']
+    return '\n'.join(out)+'\n'
 
 def kinematics_figure():
     return r'''\begin{figure}[tbp]\centering
 \begin{tikzpicture}[font=\footnotesize,>=stealth]
-\path[use as bounding box] (0,-.2) rectangle (16,5.3);
-\node[font=\small\bfseries,anchor=north west] at (0,5.2) {(a)};
-\coordinate (O) at (1.6,.65);
-\draw[->] (O)--(5.8,.65) node[right] {$\mathbf E_2$};
-\draw[->] (O)--(1.6,4.8) node[above] {$\mathbf E_3$};
-\draw[densely dotted] (O)--(5.4,.65);
-\draw[thick] (O)--(4.2,4.05) coordinate (P);
-\draw[black,dashed,thick] (O) .. controls (2.65,1.75) and (3.85,2.5) .. (5.0,3.55) coordinate (D);
+\path[use as bounding box] (0,-.25) rectangle (16,5.8);
+\node[font=\small\bfseries,anchor=north west] at (0,5.7) {(a)};
+\coordinate (O) at (1.3,.75);\coordinate (P) at (4.05,4.45);\coordinate (D) at (4.8,4.05);
+\draw[->] (O)--(5.7,.75) node[right] {$\mathbf E_2$};
+\draw[->] (O)--(1.3,5.2) node[above] {$\mathbf E_3$};
+\draw[thick] (O)--(P);
+\draw[dashed,thick] (O) .. controls (2.4,2.15) and (3.6,3.2) .. (D);
 \fill (O) circle(2pt);\node[below left] at (O) {Rotor origin};
-\draw[->] (2.7,.65) arc[start angle=0,end angle=52.6,radius=1.1];
-\node at (3.0,1.25) {$\psi(t)$};
+\draw[->] (2.35,.75) arc[start angle=0,end angle=53.4,radius=1.05];\node at (2.65,1.3) {$\psi(t)$};
 \draw[->,thick] (P)--(D) node[midway,above] {$\mathbf u$};
-\draw[->] (P)--(4.65,4.65) node[above] {$\mathbf e_1$};
-\draw[->] (P)--(3.55,4.55) node[left] {$\mathbf e_2$};
-\draw[->] (D)--(5.62,4.08);
-\draw[dotted] (D)--(5.48,4.18);
-\node[anchor=west] at (5.55,3.75) {$\boldsymbol\theta$};
-\node[align=left,anchor=west] at (3.8,2.0) {Nominal line (solid)\\Perturbed line (dashed)};
-
-\node[align=left,anchor=west] at (8.0,4.45) {$\mathbf r_{sm}(t)=\mathbf Q_\psi(t)\mathbf r_{sm}(0)$};
-\node[font=\small\bfseries,anchor=north west] at (7.3,5.2) {(b)};
-\coordinate (M) at (9.1,1.5);\coordinate (S) at (13.1,3.4);
+\draw[->] (P)--(4.5,5.05) node[above] {$\mathbf e_1$};
+\draw[->] (P)--(3.45,4.9) node[left] {$\mathbf e_2$};
+\draw[thin,dotted] (D)--(5.4,4.85);\draw[->,thin] (D)--(5.65,4.65);
+\node[anchor=west] at (5.55,4.9) {$\boldsymbol\theta$};
+\draw[thick] (3.6,2.0)--(4.15,2.0);\node[anchor=west] at (4.3,2.0) {Nominal line};
+\draw[dashed,thick] (3.6,1.55)--(4.15,1.55);\node[anchor=west] at (4.3,1.55) {Perturbed line};
+\node[font=\small\bfseries,anchor=north west] at (7.4,5.7) {(b)};
+\node at (11.6,4.9) {$\mathbf r_{sm}(t)=\mathbf Q_\psi(t)\mathbf r_{sm}(0)$};
+\coordinate (M) at (9,2);\coordinate (S) at (13.5,2);
+\draw[densely dashed,->] (M)--(S) node[midway,below] {$\mathbf r_{sm}(t)$};
 \fill (M) circle(2.5pt);\draw[fill=white,thick] (S) circle(2.5pt);
-\draw[densely dashed,thick,->] (M)--(S) node[midway,above] {$\mathbf r_{sm}(t)$};
-\node[below] at (M) {Master};\node[above] at (S) {Slave};
-\draw[->,thick] (M)--(9.9,1.55) node[below right] {$\mathbf u_m$};
-\draw[->,thick] (S)--(14.05,3.8) node[right] {$\mathbf u_s$};
-\draw[->] (9.85,1.5) arc[start angle=0,end angle=80,radius=.75];
-\node[above] at (9.85,2.15) {$\boldsymbol\theta_m$};
-\node[align=center] at (11.4,.45) {$\mathbf u_s=\mathbf u_m-\mathbf S(\mathbf r_{sm})\boldsymbol\theta_m$\\$\boldsymbol\theta_s=\boldsymbol\theta_m$};
+\node[below left] at (M) {Master};\node[below right] at (S) {Slave};
+\draw[->,thick] (M)--(9,2.9);\node[anchor=east] at (8.85,2.4) {$\mathbf u_m$};
+\draw[->,thick] (S)--(13.5,3.5) node[above right] {$\mathbf u_s$};
+\draw[thin,dotted] (9,2.9)--(13.5,3.5);
+\draw[->] (8.45,2.9) arc[start angle=180,end angle=85,radius=.55];
+\node[anchor=east] at (8.3,3.55) {$\boldsymbol\theta_m$};
+\node at (11.3,.9) {$\mathbf u_s=\mathbf u_m-\mathbf S(\mathbf r_{sm})\boldsymbol\theta_m$};
+\node at (11.3,.4) {$\boldsymbol\theta_s=\boldsymbol\theta_m$};
 \end{tikzpicture}
-\caption{Kinematic distinction underlying the linear model. (a) Schematic in the nominal plane normal to the rotor axis, with fixed transverse basis $\mathbf E_2,\mathbf E_3$: the solid nominal line undergoes finite prescribed azimuth; the dashed line shows an exaggerated elastic perturbation. The nominal section frame is transported by the prescribed motion, while $\mathbf u$ and $\boldsymbol\theta$ remain small. (b) Moving offset compatibility relates master and slave elastic variables. These are kinematic schematics, not numerical deformation results; only the components needed to explain the relationships are drawn.}\label{fig:kinematics}
+\caption{Nominal motion and elastic compatibility. (a) Prescribed finite azimuth in the plane normal to the rotor axis, with fixed transverse basis $\mathbf E_2,\mathbf E_3$. The solid nominal line carries the section frame; the dashed line illustrates exaggerated small elastic displacement and rotation. (b) An instantaneous master--slave offset, drawn horizontally for clarity. Elastic translations and equal infinitesimal rotations obey the displayed compatibility; the dotted line joins the perturbed points. These are explanatory kinematic schematics, not solved deformation fields.}\label{fig:kinematics}
 \end{figure}
 '''
 
