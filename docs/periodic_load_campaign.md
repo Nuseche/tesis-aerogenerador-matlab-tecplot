@@ -30,7 +30,7 @@ From MATLAB run `run_periodic_load_campaign('mesh_closure')` with the tools dire
 
 Run `python3 tools/summarize_rotating_mesh.py` to generate the band table. Peak locations are sampled speeds. Each half-power crossing is linearly interpolated in amplitude at the maximum divided by the square root of two. The width is a rotor-speed interval. The reaction phase is relative to the axial cosine hub force. In rotating_mesh_sweep.csv, channel 4 is the base reaction about global Y and historyErrorPercent is relative to the complete periodic solution on the same mesh.
 
-The additional MATLAB mode `run_periodic_load_campaign('mesh_532')` applies a second bisection, sweeps the averaged equations at 0.002 rpm intervals from 3.30 to 3.80 rpm and solves the periodic equations at 3.394 and 3.4445 rpm with H=6 and 12. The 532-element periodic data are individual checks; only the two coarser meshes provide a periodic peak location and bandwidth.
+The additional MATLAB mode `run_periodic_load_campaign('mesh_532')` applies a second bisection, sweeps the averaged equations at 0.002 rpm intervals from 3.30 to 3.80 rpm and solves the periodic equations at 3.394 and 3.4445 rpm with H=6 and 12. The 532-element periodic data are individual checks; this initial campaign determines a periodic peak location and bandwidth on the two coarser meshes. The subsequent local sweep on 532 elements is documented below.
 
 ### Correction of the 3P base moment near resonance
 
@@ -65,3 +65,29 @@ python3 tools/build_benchmark_basis_figures.py benchmark
 python3 tools/build_base_moment_phase_figure.py
 python3 tools/build_benchmark_basis_figures.py basis
 ```
+
+### Mesh refinement and choice of blade axes
+
+The [refinement archive](../data/reference/rotating-refinement.zip) contains the periodic sweep with 532 elements, two periodic checks with 1064 elements, and the coarse and local sweeps of the 1064-element averaged equations. Its map audit compares node positions, station frames and displacement-map derivatives after bisection. The frame angles compare the original local triads to rotated copies of the blade-1 triads.
+
+The [frame comparison](../data/reference/multiblade-frame-comparison.zip) holds the physical turbine fixed and changes the blade axes used for the multiblade transformation. Each average separately uses the zero Fourier coefficients of the second-order mass, velocity and stiffness matrices. The output retains its periodic physical map. Files named `review_frame_average_*` give the complex 3P transfer as amplitude and phase. Files named `review_frame_compare_*` give the full one-revolution errors at selected speeds. The 1064-element spot file uses the harmonic order indicated in its H column. Moments are in N m per N of axial hub force and angles are in degrees.
+
+The [cyclic-rotor archive](../data/reference/cyclic-base-reaction.zip) is a different control. It replaces the geometries and section orientation points of blades 2 and 3 with equally spaced copies of blade 1, then reassembles the physical system, prestress and multiblade equations. It contains raw stiffness harmonic norms before Fourier screening and the complete and averaged base moments for both rotors.
+
+The [spatial-basis output and timing tables](../data/reference/periodic-snapshot-outputs.zip) give RMS values per unit hub force over one rotor revolution. They include all seven channels at the two training speeds and nine held-out speeds. The timing trials use the Fourier operators already in memory.
+
+From the project root in MATLAB, the following sequence creates the operator caches and runs these comparisons. Timings in the paper used a single computational thread. Fine-mesh periodic checks require more memory than the averaged speed sweep.
+
+```matlab
+addpath('tools')
+run_periodic_load_campaign("correct_266")
+run_periodic_load_campaign("correct_532")
+check_rotating_refinement
+for elements = [133 266 532 1064]
+    check_mbc_frame_choice(elements)
+end
+check_cyclic_base_reaction
+check_periodic_snapshot_basis(133,1e-10,true)
+```
+
+To regenerate the manuscript's mesh-refinement amplitude and phase panels directly from the distributed archives, run `python3 tools/build_refined_moment_figure.py`. The signed-cycle and spatial-basis figures use the commands above.

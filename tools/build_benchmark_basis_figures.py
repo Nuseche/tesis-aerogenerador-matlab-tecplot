@@ -53,25 +53,22 @@ legend columns=3,legend style={at={(-.08,-.30)},anchor=north,draw=none,inner sep
 def basis():
     snapshots = read_table("periodic-correction.zip", "correction_snapshot_basis.csv")
     rows = sorted((r for r in snapshots if r["training"] == "0"), key=lambda r: float(r["rpm"]))
-    indices = ",".join(str(i) for i in range(1, len(rows) + 1))
-    speeds = ",".join(r["rpm"] for r in rows)
     print(r"""\begin{figure}[tbp]\centering
 \begin{tikzpicture}
 \begin{semilogyaxis}[width=.89\textwidth,height=5.8cm,
 xlabel={Test speed (rpm)},ylabel={Relative history error (\%)},
-xmin=.6,xmax=9.4,ymin=.01,ymax=100,ytick={.01,.1,1,10,100},yticklabels={0.01,0.1,1,10,100},
+xmin=2.75,xmax=4.05,xtick={2.8,3.0,3.2,3.4,3.6,3.8,4.0},ymin=.01,ymax=100,ytick={.01,.1,1,10,100},yticklabels={0.01,0.1,1,10,100},
 ymajorgrids=true,xmajorgrids=false,minor y tick num=0,legend columns=2,
-legend style={at={(.5,1.03)},anchor=south,font=\footnotesize,draw=none,column sep=.65em},""")
-    print(f"xtick={{{indices}}},xticklabels={{{speeds}}}]")
+legend style={at={(.5,1.03)},anchor=south,font=\footnotesize,draw=none,column sep=.65em}]""")
     for key, style, label in [
-        ("baseMyErrorPct", "only marks,mark=*,mark size=2.3pt,black", r"Tower-base $M_y$"),
-        ("maxSevenErrorPct", "only marks,mark=square,mark size=2.4pt,black,thick", "Largest of seven output errors"),
+        ("baseMyErrorPct", "only marks,mark=*,mark size=1.9pt,black", r"Tower-base $M_y$"),
+        ("maxSevenErrorPct", "only marks,mark=square,mark size=2.1pt,black,thick", "Largest of seven output errors"),
     ]:
-        points(style, [(i, float(r[key])) for i, r in enumerate(rows, 1)])
+        points(style, [(float(r["rpm"]), float(r[key])) for r in rows])
         print(r"\addlegendentry{" + label + "}")
     print(r"""\end{semilogyaxis}
 \end{tikzpicture}
-\caption{Error of the 20-coordinate displacement basis at the nine test speeds on the 133-element mesh. Each output history under unit axial 3P hub force is compared with its own complete periodic history over one revolution. The basis was constructed at 3.35 and 3.49 rpm; the horizontal axis lists the other speeds individually.}
+\caption{Error of the 20-coordinate displacement basis at the nine test speeds on the 133-element mesh. Each output history under unit axial 3P hub force is compared with its own complete periodic history over one revolution. The two training speeds, 3.35 and 3.49 rpm, are excluded.}
 \label{fig:periodic-basis-errors}\end{figure}""")
 
 
