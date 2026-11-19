@@ -3,6 +3,10 @@ function results=run_periodic_load_campaign(mode)
 if nargin<1,mode="pilot";end
 root=fileparts(fileparts(mfilename('fullpath')));addpath(root,fullfile(root,'cases'));
 out=fullfile(root,'runs','periodic_loads_20261118');if ~isfolder(out),mkdir(out);end
+if mode=="solver_handles"
+ results=struct('solve',@solveCase,'project',@project);
+ return
+end
 rng(20261118);maxNumCompThreads(1);
 cache=fullfile(out,'operators64.mat');
 if ~isfile(cache)
@@ -17,6 +21,10 @@ if ~isfile(cache)
  save(cache,'F','checks','V','lam','cfg','-v7.3');
  fprintf('Sampled operators; n=%d, Fourier tail=%g\n',size(V,1),checks.tailRelative);
 else,load(cache,'F','checks','V','lam','cfg');end
+if startsWith(mode,"correct_")
+ results=checkCorrection(cfg,out,mode);
+ return
+end
 if mode=="mesh_532"
  results=runThirdMesh(cfg,out);
  return
@@ -151,17 +159,19 @@ end
 for j=1:numel(F.B),G.B{j}=Q'*F.B{j};end
 end
 
-function [Y,meta]=solveCase(F,Q,w,H,averaged)
+function [Y,meta,X]=solveCase(F,Q,w,H,averaged,orders,dynamicLimit)
 clock=tic;if ~isempty(Q),F=project(F,Q);end
 n=size(F.M{F.L+1},1);L=F.L;
 if averaged,hs=[-3 3];else,hs=-H:H;end
+if nargin>=6 && ~isempty(orders),hs=orders;end
+if nargin<7,dynamicLimit=L;end
 nh=numel(hs);blocks=cell(nh);rhs=zeros(n*nh,2);
 for ih=1:nh
  h=hs(ih);rr=(ih-1)*n+(1:n);
  for l=[h-3 h+3],if abs(l)<=L&&(~averaged||l==0),rhs(rr,:)=rhs(rr,:)+.5*F.B{l+L+1};end,end
  for ik=1:nh
   k=hs(ik);l=h-k;
-  if abs(l)>L||(averaged&&l~=0),blocks{ih,ik}=sparse(n,n);continue,end
+  if abs(l)>dynamicLimit||(averaged&&l~=0),blocks{ih,ik}=sparse(n,n);continue,end
   ix=l+L+1;blocks{ih,ik}=sparse(F.K0{ix}+w*F.K1{ix}+w*w*F.K2{ix}+1i*k*w*(F.D0{ix}+w*F.D1{ix})-(k*w)^2*F.M{ix});
  end
 end
@@ -292,4 +302,121 @@ end
 result=cell2table(rows,'VariableNames',{'elements','rpm','channel','averageAbs','averagePhase'});
 writetable(result,fullfile(out,'rotating_mesh_532_average.csv'));
 writetable(cell2table(paired,'VariableNames',{'elements','rpm','channel','H','periodicAbs','periodicPhase','historyErrorPercent','residual'}),fullfile(out,'rotating_mesh_532_periodic.csv'));
+end
+
+function result=checkCorrection(cfg,out,mode)
+% Recover all physical harmonics; independently vary the retained dynamic
+% operator orders and the response subspace at fixed spatial resolution.
+base=model.build_model(io.load_model_data(cfg),cfg);
+fine=bisectRotatingMesh(base);
+meshSize=266;
+if endsWith(mode,"532")
+    fine=bisectRotatingMesh(fine);
+    meshSize=532;
+end
+cache=fullfile(out,sprintf('correctionOperators%d.mat',meshSize));
+if isfile(cache)
+    load(cache,'F');
+else
+    system=aero.prepare_structure(fine,cfg);
+    [~,~,ec]=assembly.assemble_structural_matrices(fine,cfg);
+    [F,checks]=sampleFourier(system,ec,64,12);
+    assert(checks.reconstruction<1e-10);
+    save(cache,'F','-v7.3');
+end
+if mode=="correct_sweep266"
+    result=checkCorrectedSweep(F,out);
+    return
+end
+speeds=[3.4445 3.35 3.394 3.42 3.49 3.52 3.55];
+if contains(mode,"source")
+    if meshSize==532,speeds=[speeds 3.57];end
+    result=checkCorrectionSource(F,out,meshSize,speeds);
+    return
+end
+fileTag=string(meshSize);
+if contains(mode,"peak")
+    speeds=3.57;
+    fileTag=fileTag+"_peak";
+end
+rows={};
+for rpm=speeds
+    w=rpm*pi/30;
+    [ref,mref]=solveCase(F,[],w,12,false);
+    candidates={};
+    for cap=[0 1 2 3 4 6 12]
+        candidates(end+1,:)={"operator"+string(cap),-9:9,cap};
+    end
+    candidates(end+1,:)={"forcedOnly",[-3 3],12};
+    candidates(end+1,:)={"oneSideband",[-4:-2 2:4],12};
+    candidates(end+1,:)={"twoSidebands",[-5:-1 1:5],12};
+    for H=3:6
+        candidates(end+1,:)={"response"+string(H),-H:H,12};
+    end
+    for j=1:size(candidates,1)
+        orders=candidates{j,2}; cap=candidates{j,3};
+        [y,m]=solveCase(F,[],w,max(abs(orders)),false,orders,cap);
+        for c=[1 4]
+            reference=ref(c,:,1); predicted=y(c,:,1);
+            err=100*norm(predicted-reference)/norm(reference);
+            rows(end+1,:)={rpm,c,candidates{j,1},cap,numel(orders),err, ...
+                abs(2*predicted(28)),angle(predicted(28))*180/pi,abs(2*reference(28)), ...
+                angle(reference(28))*180/pi,m.totalSeconds,mref.totalSeconds,m.residual};
+        end
+    end
+    result=cell2table(rows,'VariableNames',{'rpm','channel','method','dynamicLimit','responseOrders','historyErrorPercent','amplitude','phaseDeg','referenceAmplitude','referencePhaseDeg','wallSeconds','referenceSeconds','residual'});
+    writetable(result,fullfile(out,sprintf('correction%s.csv',fileTag)));
+    fprintf('Correction check complete at %.5f rpm\n',rpm);
+end
+end
+
+function result=checkCorrectionSource(F,out,meshSize,speeds)
+% Deliberate coefficient ablations identify the terms driving the error.
+keys=["M","D0","D1","K0","K1","K2"];
+tests=["meanMass","meanVelocity","meanStiffness","meanElastic","meanSpinStiffness","onlySecond","onlyElastic","onlyElasticAndDamping"];
+remove={keys(1),keys(2:3),keys(4:6),"K0",keys(5:6),keys,keys([1:3 5:6]),keys([1 3 5 6])};
+rows={};
+for rpm=speeds
+    w=rpm*pi/30;
+    ref=solveCase(F,[],w,12,false);
+    for j=1:numel(tests)
+        trial=F;
+        for key=remove{j}
+            for l=-F.L:F.L
+                if l==0 || (tests(j)=="onlySecond" && abs(l)==2)
+                    continue
+                end
+                k=l+F.L+1;
+                trial.(key){k}=sparse(size(F.(key){k},1),size(F.(key){k},2));
+            end
+        end
+        y=solveCase(trial,[],w,6,false);
+        for c=[1 4]
+            err=100*norm(y(c,:,1)-ref(c,:,1))/norm(ref(c,:,1));
+            rows(end+1,:)={rpm,c,tests(j),err};
+        end
+    end
+    result=cell2table(rows,'VariableNames',{'rpm','channel','variant','historyErrorPercent'});
+    writetable(result,fullfile(out,sprintf('correction_source%d.csv',meshSize)));
+end
+end
+
+function result=checkCorrectedSweep(F,out)
+% Independent pointwise comparison against the archived full H=6 sweep.
+source=readtable(fullfile(out,'rotating_mesh_sweep.csv'));
+source=source(source.elements==266,:);
+speeds=unique(source.rpm);
+rows={};
+for rpm=speeds'
+    y=solveCase(F,[],rpm*pi/30,5,false,-5:5,2);
+    for c=[1 4]
+        row=source(source.rpm==rpm & source.channel==c,:);
+        reference=row.periodicAbs*exp(1i*pi/180*row.periodicPhase);
+        response=2*y(c,28,1);
+        rows(end+1,:)={rpm,c,abs(response),angle(response)*180/pi,...
+            abs(reference),row.periodicPhase,100*abs(response-reference)/abs(reference)};
+    end
+end
+result=cell2table(rows,'VariableNames',{'rpm','channel','correctedAmplitude','correctedPhaseDeg','referenceAmplitude','referencePhaseDeg','relative3PErrorPercent'});
+writetable(result,fullfile(out,'correction_sweep266.csv'));
 end
