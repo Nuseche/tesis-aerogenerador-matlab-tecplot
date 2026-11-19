@@ -1,14 +1,18 @@
-function check_floquet_leading(elements,rpms,targets,steps)
+function check_floquet_leading(elements,rpms,targets,steps,F,out)
 % Leading multipliers of the full monodromy via matrix-free Arnoldi.
 % SDIRK2 uses two full-coordinate sparse dynamic stiffness factorizations
 % per step, reused for every Krylov vector.
 root=fileparts(fileparts(mfilename('fullpath')));
 data=fullfile(root,'runs','periodic_loads_20261118');
-out=fullfile(root,'runs','stability_20261119');
+if nargin==4
+    out=fullfile(root,'runs','stability_20261119');
+    if elements==133, source='operators64.mat';
+    else, source=sprintf('correctionOperators%d.mat',elements); end
+    load(fullfile(data,source),'F');
+elseif nargin~=6
+    error('Custom Fourier operators require a separate result directory.');
+end
 if ~isfolder(out),mkdir(out);end
-if elements==133, source='operators64.mat';
-else, source=sprintf('correctionOperators%d.mat',elements); end
-load(fullfile(data,source),'F');
 check_floquet_operator_orders(F);
 g=1-1/sqrt(2); i0=F.L+1; n=size(F.M{i0},1);
 for rpm=rpms
