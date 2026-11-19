@@ -17,6 +17,14 @@ if ~isfile(cache)
  save(cache,'F','checks','V','lam','cfg','-v7.3');
  fprintf('Sampled operators; n=%d, Fourier tail=%g\n',size(V,1),checks.tailRelative);
 else,load(cache,'F','checks','V','lam','cfg');end
+if mode=="mesh_532"
+ results=runThirdMesh(cfg,out);
+ return
+end
+if mode=="mesh_closure"
+ results=runRotatingMeshClosure(F,cfg,out);
+ return
+end
 if mode=="pilot"
  cases=[3.4445,6;3.4445,9];rows={};
  for j=1:size(cases,1)
@@ -177,4 +185,111 @@ for c=1:size(Y,1),for b=1:2
  if valid,ce=100*abs(v(p)-r(p))/primary;ae=100*abs(abs(v(p))-primary)/primary;pe=angle(v(p)/r(p))*180/pi;else,ce=NaN;ae=NaN;pe=NaN;end
  rows(end+1,:)={rpm,label,n,H,c,b,100*norm(v-r)/den,ce,ae,pe,2*primary,den,100*norm(v-a)/den,100*norm(a-fa)/max(norm(fa),1e-30)};
 end,end
+end
+
+function result=runRotatingMeshClosure(coarse,cfg,out)
+base=model.build_model(io.load_model_data(cfg),cfg);
+fine=bisectRotatingMesh(base);
+s=aero.prepare_structure(fine,cfg);
+[~,~,ec]=assembly.assemble_structural_matrices(fine,cfg);
+assert(s.n==1602 && all(ismember(fine.bladeDofMap.nodeIds(:),s.rotatingNodes)));
+sc=aero.prepare_structure(base,cfg);
+% Rigid translation of the unconstrained model gives the physical total mass.
+mass=zeros(2,1);
+for k=1:2
+ if k==1,system=sc;else,system=s;end
+ tr=zeros(system.ndof,1);tr(system.model.dofs.node(:,1))=1;
+ mass(k)=tr'*system.M*tr;
+end
+assert(abs(mass(2)/mass(1)-1)<1e-10);
+[refined,checks]=sampleFourier(s,ec,64,12);
+assert(checks.reconstruction<1e-10);
+fprintf('Refined system %d DOFs, rigid translational mass %.10g vs %.10g kg, Fourier check %.3g\n',s.n,mass(1),mass(2),checks.reconstruction);
+writetable(table([133;266],[sc.n;s.n],[numel(sc.rotatingNodes);numel(s.rotatingNodes)],mass, ...
+ 'VariableNames',{'elements','coordinates','rotatingNodes','rigidMassKg'}),fullfile(out,'rotating_mesh_checks.csv'));
+rows={};harm={};speeds=unique(round([3.32:.002:3.54,3.4445,3.35,3.55,2.8,4],5));
+for j=1:numel(speeds)
+ rpm=speeds(j);w=rpm*pi/30;
+ for level=1:2
+  if level==1,F=coarse;ne=133;else,F=refined;ne=266;end
+  [y,meta]=solveCase(F,[],w,6,false);a=solveCase(F,[],w,0,true);
+  for c=[1 4]
+   p=y(c,:,1);v=a(c,:,1);
+   rows(end+1,:)={ne,rpm,c,abs(2*p(28)),angle(p(28))*180/pi,abs(2*v(28)),angle(v(28))*180/pi,100*norm(v-p)/norm(p),meta.residual};
+  end
+  if abs(rpm-3.4445)<1e-8 || abs(rpm-3.394)<1e-8 || abs(rpm-3.49)<1e-8
+   r=solveCase(F,[],w,12,false);
+   for c=[1 4]
+    harm(end+1,:)={ne,rpm,c,100*norm(y(c,:,1)-r(c,:,1))/norm(r(c,:,1)),100*norm(a(c,:,1)-r(c,:,1))/norm(r(c,:,1))};
+   end
+  end
+ end
+ if mod(j,10)==0,fprintf('Mesh sweep %d/%d, rpm %.5f\n',j,numel(speeds),rpm);end
+end
+result=cell2table(rows,'VariableNames',{'elements','rpm','channel','periodicAbs','periodicPhase','averageAbs','averagePhase','historyErrorPercent','solveResidual'});
+writetable(result,fullfile(out,'rotating_mesh_sweep.csv'));
+writetable(cell2table(harm,'VariableNames',{'elements','rpm','channel','H6to12Percent','averageToH12Percent'}),fullfile(out,'rotating_mesh_harmonics.csv'));
+end
+
+function refined=bisectRotatingMesh(base)
+% Keep original IDs at interfaces, hub and outputs. All new non-root blade
+% stations enter the homologous MBC map with the frame of the parent beam.
+refined=base; orig=base.mesh.elements; ne=numel(orig.id);
+xyz=base.mesh.nodes.xyz; mid=size(xyz,1)+(1:ne)';
+refined.mesh.nodes.xyz=[xyz;(xyz(orig.nodeI,:)+xyz(orig.nodeJ,:))/2];
+refined.mesh.nodes.id=(1:size(refined.mesh.nodes.xyz,1))';
+e=orig;
+for name=string(fieldnames(e))'
+ e.(name)=repelem(orig.(name),2,1);
+end
+e.id=(1:2*ne)';e.nodeI(2:2:end)=mid;e.nodeJ(1:2:end)=mid;
+refined.mesh.elements=e;refined.dofs=model.build_dof_map(refined.mesh,base.boundaryConditions);
+bm=base.bladeDofMap;
+for b=1:3
+ parent=bm.frameElementIds(:,b);
+ assert(isequal(orig.nodeJ(parent),bm.nodeIds(:,b)) && all(orig.blade(parent)==b));
+ ids=reshape([mid(parent),bm.nodeIds(:,b)].',[],1);full=refined.dofs.node(ids,:);
+ nodeIds(:,b)=ids;fullMap(:,:,b)=full;map(:,b)=reshape(full.',[],1);
+ elementIds(:,b)=reshape([2*parent-1,2*parent].',[],1);
+end
+bm.nodeIds=nodeIds;bm.station=(1:size(nodeIds,1))';bm.full=fullMap;bm.frameElementIds=elementIds;
+bm.map=map;bm.dofMap=map;bm.frameR=repelem(bm.frameR,1,1,2,1);
+refined.bladeDofMap=bm;refined.meta.flexibleElementCount=2*ne;
+% Legacy station summaries are not inputs to the rotating structural solver.
+refined=rmfield(refined,intersect({'referenceFrames','summary'},fieldnames(refined)));
+end
+
+
+function result=runThirdMesh(cfg,out)
+% A second bisection checks whether the averaged transfer function stabilizes.
+base=model.build_model(io.load_model_data(cfg),cfg);
+fine=bisectRotatingMesh(bisectRotatingMesh(base));
+s=aero.prepare_structure(fine,cfg);
+assert(s.n==3198 && all(ismember(fine.bladeDofMap.nodeIds(:),s.rotatingNodes)));
+[~,~,ec]=assembly.assemble_structural_matrices(fine,cfg);
+[F,checks]=sampleFourier(s,ec,64,12);
+assert(checks.reconstruction<1e-10);
+tr=zeros(s.ndof,1);tr(s.model.dofs.node(:,1))=1;
+fprintf('532 elements, mass %.12g, %d rotating nodes, Fourier check %.3g\n',tr'*s.M*tr,numel(s.rotatingNodes),checks.reconstruction);
+rows={};paired={};
+for rpm=unique(round([3.30:.002:3.80,3.4445,2.8,4],5))
+ a=solveCase(F,[],rpm*pi/30,0,true);
+ for c=[1 4]
+  v=2*a(c,28,1);
+  rows(end+1,:)={532,rpm,c,abs(v),angle(v)*180/pi};
+ end
+ if ismember(rpm,[3.394,3.4445])
+  for H=[6 12]
+   [y,m]=solveCase(F,[],rpm*pi/30,H,false);
+   for c=[1 4]
+    v=2*y(c,28,1);err=100*norm(y(c,:,1)-a(c,:,1))/norm(y(c,:,1));
+    paired(end+1,:)={532,rpm,c,H,abs(v),angle(v)*180/pi,err,m.residual};
+   end
+   fprintf('532 periodic check at %.4f H=%d\n',rpm,H);
+  end
+ end
+end
+result=cell2table(rows,'VariableNames',{'elements','rpm','channel','averageAbs','averagePhase'});
+writetable(result,fullfile(out,'rotating_mesh_532_average.csv'));
+writetable(cell2table(paired,'VariableNames',{'elements','rpm','channel','H','periodicAbs','periodicPhase','historyErrorPercent','residual'}),fullfile(out,'rotating_mesh_532_periodic.csv'));
 end
