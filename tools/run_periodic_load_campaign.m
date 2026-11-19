@@ -4,7 +4,7 @@ if nargin<1,mode="pilot";end
 root=fileparts(fileparts(mfilename('fullpath')));addpath(root,fullfile(root,'cases'));
 out=fullfile(root,'runs','periodic_loads_20261118');if ~isfolder(out),mkdir(out);end
 if mode=="solver_handles"
- results=struct('solve',@solveCase,'project',@project);
+ results=struct('solve',@solveCase,'project',@project,'bisect',@bisectRotatingMesh);
  return
 end
 rng(20261118);maxNumCompThreads(1);
