@@ -57,3 +57,11 @@ check_periodic_snapshot_basis(133,1e-12);
 ```
 
 On 266 elements at 3.4445 rpm, averaging only the transformed elastic stiffness reproduces the 199.96% error. Restoring its periodic coefficients in the averaged equations gives 0.626%. Retaining the complete periodic operators and five response orders around positive 3P gives 0.000043% after conjugate reconstruction. These figures quantify the effect of the approximation on the base moment for this excitation.
+
+The manuscript figures can be regenerated from the archived results with these commands. Each writes a complete LaTeX figure to standard output.
+
+```sh
+python3 tools/build_benchmark_basis_figures.py benchmark
+python3 tools/build_base_moment_phase_figure.py
+python3 tools/build_benchmark_basis_figures.py basis
+```
