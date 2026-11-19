@@ -26,5 +26,5 @@ for k,label,marker in [(cycles["t1_s"]<800,"Antes del ajuste","."),((cycles["t0_
     ax[1].scatter(a[k],err[k],s=19,marker=marker,color="0.2",label=label)
 ax[1].axhline(5,ls="--",lw=1,color="0.45",label="Criterio del 5 %")
 ax[1].set(yscale="log",ylim=(.002,8),xlabel="Amplitud fundamental de X por ciclo en SIMPACT (m)",ylabel="Variación de C5/X (%)")
-ax[1].legend(frameon=False,ncol=2,loc="upper center",fontsize=8)
+ax[1].legend(frameon=False,ncol=2,loc="upper center",bbox_to_anchor=(.5,.85),fontsize=8)
 fig.savefig(out/"case00_comparison.png",dpi=180)
